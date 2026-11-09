@@ -1,0 +1,12 @@
+{
+  "regime": "START",
+  "e0": "2/5",
+  "ceiling": "1/5",
+  "feasible_smt": "unsat",
+  "bad_smt": "unsat",
+  "errors": [],
+  "feasible_qe": "UNKNOWN",
+  "bad_qe": "UNKNOWN",
+  "lp_feasible": false,
+  "lp_max_margin": null
+}

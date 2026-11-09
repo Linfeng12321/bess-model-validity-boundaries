@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "Please cite this archived research material version when using these files."
+type: software
+title: "Validity Boundaries of Relaxed Battery Energy Storage System Models across Operating States: Code and Supplementary Information"
+version: 1.0.0
+date-released: 2026-11-09
+license: MIT
+repository-code: "https://github.com/Linfeng12321/bess-model-validity-boundaries"
+authors:
+  - family-names: "Liu"
+    given-names: "Linfeng"
+  - family-names: "Juwono"
+    given-names: "Filbert H."
+  - family-names: "Jia"
+    given-names: "Kai"
+  - family-names: "Ko"
+    given-names: "Nok"
+  - family-names: "Ma"
+    given-names: "Zhiqin"
+  - family-names: "Wang"
+    given-names: "Qin"

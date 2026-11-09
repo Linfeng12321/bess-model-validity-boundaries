@@ -1,0 +1,9 @@
+{
+  "availability_models": 18,
+  "perfect_foresight_feasible": 18,
+  "causal_feasible": 15,
+  "information_timing_gaps": 3,
+  "prefix_traces": 16,
+  "prefix_count": 30,
+  "qa_failures": 0
+}

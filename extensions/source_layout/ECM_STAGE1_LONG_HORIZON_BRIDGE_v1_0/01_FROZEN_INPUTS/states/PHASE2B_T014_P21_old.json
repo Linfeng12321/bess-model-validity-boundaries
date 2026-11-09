@@ -1,0 +1,28 @@
+{
+  "paired_setting_id": "PHASE2B_T014_P21",
+  "phase": "PHASE2B",
+  "T": 14,
+  "eta_c": "9/10",
+  "eta_d": "1",
+  "rho": "1",
+  "h": "1/4",
+  "row_form": "N",
+  "initial_rule": "boundary_relative",
+  "e0": "-2027/2000",
+  "e1": "-3611/4000",
+  "gain": "443/4000",
+  "eligible": false,
+  "valid_first_charge": false,
+  "not_applicable_reason": "INITIAL_STATE_OR_FIRST_NATIVE_ACTION_INVALID",
+  "legacy_case_index": null,
+  "case_id": "PHASE2B_T014_P21_old",
+  "state": "old",
+  "effective_initial_energy": "-2027/2000",
+  "planned_work": {
+    "predicted_reduced_subproblems": 42,
+    "target_rows": 84,
+    "automatic_rows": 43,
+    "checked_rows": 41,
+    "predicted_full_sign_upper_bound": 1605632
+  }
+}

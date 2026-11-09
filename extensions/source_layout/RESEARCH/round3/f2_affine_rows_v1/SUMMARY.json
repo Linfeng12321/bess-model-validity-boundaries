@@ -1,0 +1,11 @@
+{
+  "models": 48,
+  "rows": 316,
+  "equal": 30,
+  "strict": 18,
+  "new_failure_beyond_box": 15,
+  "qa_failures": 0,
+  "maximum_numeric_difference": 2.220446049250313e-16,
+  "reduced_LP_solves": 92,
+  "full_sign_LP_solves": 2016
+}

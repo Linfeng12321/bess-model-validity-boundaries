@@ -1,0 +1,274 @@
+{
+  "input": {
+    "paired_setting_id": "PHASE2_T004_P02",
+    "phase": "PHASE2",
+    "T": 4,
+    "eta_c": "13/20",
+    "eta_d": "1",
+    "rho": "1",
+    "h": "1/60",
+    "row_form": "G",
+    "initial_rule": "source60",
+    "e0": "9/25",
+    "e1": "3653/10000",
+    "gain": "53/10000",
+    "eligible": true,
+    "valid_first_charge": true,
+    "not_applicable_reason": "",
+    "legacy_case_index": null,
+    "case_id": "PHASE2_T004_P02_old",
+    "state": "old",
+    "effective_initial_energy": "9/25",
+    "planned_work": {
+      "predicted_reduced_subproblems": 17,
+      "target_rows": 24,
+      "automatic_rows": 14,
+      "checked_rows": 10,
+      "predicted_full_sign_upper_bound": 432
+    }
+  },
+  "classification": "EQ",
+  "certificate_level": "EQ_CERTIFIED",
+  "routes": {
+    "R2": {
+      "route": "R2",
+      "status": "COMPLETED",
+      "exact": "EQ",
+      "queries": {
+        "feasible_smt": {
+          "status": "sat",
+          "reason": "",
+          "time": 0.0009433999985049013,
+          "timeout": false
+        },
+        "bad_smt": {
+          "status": "unsat",
+          "reason": "",
+          "time": 0.031163700001343386,
+          "timeout": false
+        },
+        "SOC_pass_power_fail_smt": {
+          "status": "unsat",
+          "reason": "",
+          "time": 0.02211160000115342,
+          "timeout": false
+        }
+      },
+      "witnesses": [],
+      "witness_verification_time": 0.0,
+      "wall_time": 0.07264310000027763,
+      "LP_calls": 0,
+      "solver_version": "4.15.3"
+    },
+    "R1": {
+      "route": "R1",
+      "predicted_subproblem_count": 17,
+      "auto_preserved_rows": 14,
+      "margin_scope": "NON_AUTOMATIC_TARGETS_PLUS_ZERO_UPPER_BOUNDS",
+      "status": "COMPLETED",
+      "LP_verdict": "NONPOSITIVE_WITH_TOLERANCE",
+      "max_value": -0.1888,
+      "global_max_value": null,
+      "global_max_note": "Floating optimum across all targets only when complete and all optimized or positive maximum dominates auto-preserved targets; otherwise NOT_COMPUTED, partial best is a lower bound",
+      "LP_calls": 17,
+      "wall_time": 0.03187969999999041,
+      "feasible": true,
+      "row_results": [
+        {
+          "row_name": "E_hi_0",
+          "family": "SOC_UPPER",
+          "period": 0,
+          "mode": "REDUCED_FINITE_LP",
+          "max_value": -0.2047,
+          "subproblems": 1
+        },
+        {
+          "row_name": "E_lo_0",
+          "mode": "AUTO_PRESERVED",
+          "upper_bound": 0,
+          "max_value": null
+        },
+        {
+          "row_name": "CHARGE_START_0",
+          "mode": "AUTO_PRESERVED",
+          "upper_bound": 0,
+          "max_value": null
+        },
+        {
+          "row_name": "DISCHARGE_START_0",
+          "mode": "AUTO_PRESERVED",
+          "upper_bound": 0,
+          "max_value": null
+        },
+        {
+          "row_name": "CHARGE_END_0",
+          "mode": "AUTO_PRESERVED",
+          "upper_bound": 0,
+          "max_value": null
+        },
+        {
+          "row_name": "DISCHARGE_END_0",
+          "mode": "AUTO_PRESERVED",
+          "upper_bound": 0,
+          "max_value": null
+        },
+        {
+          "row_name": "E_hi_1",
+          "family": "SOC_UPPER",
+          "period": 1,
+          "mode": "REDUCED_FINITE_LP",
+          "max_value": -0.1994,
+          "subproblems": 1
+        },
+        {
+          "row_name": "E_lo_1",
+          "mode": "AUTO_PRESERVED",
+          "upper_bound": 0,
+          "max_value": null
+        },
+        {
+          "row_name": "CHARGE_START_1",
+          "family": "CHARGE_START",
+          "period": 1,
+          "mode": "REDUCED_FINITE_LP",
+          "max_value": -2.9116666666666666,
+          "subproblems": 2
+        },
+        {
+          "row_name": "DISCHARGE_START_1",
+          "mode": "AUTO_PRESERVED",
+          "upper_bound": 0,
+          "max_value": null
+        },
+        {
+          "row_name": "CHARGE_END_1",
+          "family": "CHARGE_END",
+          "period": 1,
+          "mode": "REDUCED_FINITE_LP",
+          "max_value": -2.8233333333333333,
+          "subproblems": 2
+        },
+        {
+          "row_name": "DISCHARGE_END_1",
+          "mode": "AUTO_PRESERVED",
+          "upper_bound": 0,
+          "max_value": null
+        },
+        {
+          "row_name": "E_hi_2",
+          "family": "SOC_UPPER",
+          "period": 2,
+          "mode": "REDUCED_FINITE_LP",
+          "max_value": -0.1941,
+          "subproblems": 1
+        },
+        {
+          "row_name": "E_lo_2",
+          "mode": "AUTO_PRESERVED",
+          "upper_bound": 0,
+          "max_value": null
+        },
+        {
+          "row_name": "CHARGE_START_2",
+          "family": "CHARGE_START",
+          "period": 2,
+          "mode": "REDUCED_FINITE_LP",
+          "max_value": -2.8233333333333337,
+          "subproblems": 2
+        },
+        {
+          "row_name": "DISCHARGE_START_2",
+          "mode": "AUTO_PRESERVED",
+          "upper_bound": 0,
+          "max_value": null
+        },
+        {
+          "row_name": "CHARGE_END_2",
+          "family": "CHARGE_END",
+          "period": 2,
+          "mode": "REDUCED_FINITE_LP",
+          "max_value": -2.7350000000000003,
+          "subproblems": 2
+        },
+        {
+          "row_name": "DISCHARGE_END_2",
+          "mode": "AUTO_PRESERVED",
+          "upper_bound": 0,
+          "max_value": null
+        },
+        {
+          "row_name": "E_hi_3",
+          "family": "SOC_UPPER",
+          "period": 3,
+          "mode": "REDUCED_FINITE_LP",
+          "max_value": -0.1888,
+          "subproblems": 1
+        },
+        {
+          "row_name": "E_lo_3",
+          "mode": "AUTO_PRESERVED",
+          "upper_bound": 0,
+          "max_value": null
+        },
+        {
+          "row_name": "CHARGE_START_3",
+          "family": "CHARGE_START",
+          "period": 3,
+          "mode": "REDUCED_FINITE_LP",
+          "max_value": -2.7350000000000003,
+          "subproblems": 2
+        },
+        {
+          "row_name": "DISCHARGE_START_3",
+          "mode": "AUTO_PRESERVED",
+          "upper_bound": 0,
+          "max_value": null
+        },
+        {
+          "row_name": "CHARGE_END_3",
+          "family": "CHARGE_END",
+          "period": 3,
+          "mode": "REDUCED_FINITE_LP",
+          "max_value": -2.6466666666666665,
+          "subproblems": 2
+        },
+        {
+          "row_name": "DISCHARGE_END_3",
+          "mode": "AUTO_PRESERVED",
+          "upper_bound": 0,
+          "max_value": null
+        }
+      ],
+      "witness": null
+    },
+    "R3": {
+      "route": "R3",
+      "status": "COMPLETED",
+      "LP_calls": 432,
+      "predicted_subproblem_count": 432,
+      "feasible": true,
+      "max_value": -0.1888,
+      "max_SOC_valid_power_excess": -1.2183333333333333,
+      "SOC_power_partial_lower_bound": null,
+      "SOC_max_note": "Existing SOC-constrained power endpoint computed only where R3 permitted; at larger T exact existence and witness retained without a new optimizer",
+      "wall_time": 0.7435860999994475,
+      "LP_verdict": "NONPOSITIVE_WITH_TOLERANCE",
+      "witness": null
+    }
+  },
+  "witnesses": [],
+  "model_construction_time": 0.0001880999989225529,
+  "transform_time": 0.0011080000003858004,
+  "total_wall_time": 0.8791904999998224,
+  "cpu_time": 0.84375,
+  "peak_memory": 106905600,
+  "errors": [],
+  "process_status": "PASS",
+  "attempt_history": [],
+  "input_hash": "80d407e0c1593be0a75d0949d2a0eec51d72620d5800d37b102f70fe7b99b6d9",
+  "implementation_hash": "28894b646da5e014ba54fe9c0a45f7d3c76797d77a19766b5f2fbb9f1e4b8b2a",
+  "environment_hash": "7f244610dcbe2bf4d744d150020a0753a636ffe8363e7cef19311d8f3bebeadb",
+  "completed_utc": "2026-10-02T12:27:17.414591+00:00",
+  "execution_id": "PHASE2_T004_P02_old",
+  "payload_sha256": "03f1806b5986c56966f3f2a10fc503c20fc4a9364d2db48ccadf77b2adf89068"
+}

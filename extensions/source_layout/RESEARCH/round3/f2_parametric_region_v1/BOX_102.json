@@ -1,0 +1,18 @@
+{
+  "regime": "BOX",
+  "e0": "1",
+  "ceiling": "3/5",
+  "feasible_smt": "sat",
+  "bad_smt": "sat",
+  "errors": [],
+  "witness": {
+    "c0": "50/181",
+    "d0": "81/362",
+    "c1": "0",
+    "d1": "0"
+  },
+  "feasible_qe": "True",
+  "bad_qe": "True",
+  "lp_feasible": true,
+  "lp_max_margin": 0.01889502762430939
+}

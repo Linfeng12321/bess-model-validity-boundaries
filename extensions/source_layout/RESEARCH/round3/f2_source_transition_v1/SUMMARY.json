@@ -1,0 +1,23 @@
+{
+  "paired_settings": 36,
+  "states": 72,
+  "qa_failures": 0,
+  "SMT_unknown": 0,
+  "valid_first_charge": 36,
+  "stale_GO_native_failure": 14,
+  "by_efficiency": {
+    "13/20": {
+      "settings": 12,
+      "stale_GO_native_failure": 8
+    },
+    "9/10": {
+      "settings": 12,
+      "stale_GO_native_failure": 6
+    },
+    "1": {
+      "settings": 12,
+      "stale_GO_native_failure": 0
+    }
+  },
+  "scale_checks": 5
+}

@@ -1,0 +1,2075 @@
+{
+  "description": "Faithful conversion of an existing author field-register TeX; field_tex and value_tex retain original LaTeX text. It is descriptive source metadata, not a new screening decision or new experiments. Frozen model/state masters retain scientific authority.",
+  "source_filename": "17_SM_T06_Operational_Data_Mapping_v0_1.tex",
+  "source_sha256": "e86bbc2f0d3fd6ed5fce5e7c8d555405785d2eb53ba0e426963727d9c0c3924a",
+  "record_count": 39,
+  "records": [
+    {
+      "legacy_heading": "M5BAT operational data (2023)",
+      "fields": [
+        {
+          "field_tex": "Available state information",
+          "value_tex": "Reported available; source qualification applies."
+        },
+        {
+          "field_tex": "Power information",
+          "value_tex": "Reported available; source qualification applies."
+        },
+        {
+          "field_tex": "Capacity information",
+          "value_tex": "published unit capacities, report p3"
+        },
+        {
+          "field_tex": "Efficiency information",
+          "value_tex": "Not established for a complete native device model in the reviewed source record."
+        },
+        {
+          "field_tex": "Native limits",
+          "value_tex": "Not established for a complete native device model in the reviewed source record."
+        },
+        {
+          "field_tex": "Native constraint definitions",
+          "value_tex": "Not established for a complete native device model in the reviewed source record."
+        },
+        {
+          "field_tex": "Measurement identity",
+          "value_tex": "Provider/source type: RWTH Aachen. Complete native measurement-to-model identity not established."
+        },
+        {
+          "field_tex": "Temporal information",
+          "value_tex": "1 s 30 days"
+        },
+        {
+          "field_tex": "Controller / EMS information",
+          "value_tex": "Not established where required by the native admissibility model."
+        },
+        {
+          "field_tex": "Eligibility status",
+          "value_tex": "Raw access unresolved"
+        },
+        {
+          "field_tex": "Missing information",
+          "value_tex": "Raw data retrieval and complete native device linkage."
+        },
+        {
+          "field_tex": "Allowed interpretation",
+          "value_tex": "Metadata only; no claim that data do not exist."
+        }
+      ]
+    },
+    {
+      "legacy_heading": "M5BAT lead-acid unit data (2026)",
+      "fields": [
+        {
+          "field_tex": "Available state information",
+          "value_tex": "Reported available; source qualification applies."
+        },
+        {
+          "field_tex": "Power information",
+          "value_tex": "Reported available; source qualification applies."
+        },
+        {
+          "field_tex": "Capacity information",
+          "value_tex": "Pb1 nameplate 1066kWh in 2023 report; historical effective capacity not inferred"
+        },
+        {
+          "field_tex": "Efficiency information",
+          "value_tex": "Not established for a complete native device model in the reviewed source record."
+        },
+        {
+          "field_tex": "Native limits",
+          "value_tex": "Not established for a complete native device model in the reviewed source record."
+        },
+        {
+          "field_tex": "Native constraint definitions",
+          "value_tex": "Not established for a complete native device model in the reviewed source record."
+        },
+        {
+          "field_tex": "Measurement identity",
+          "value_tex": "Provider/source type: RWTH Aachen. Complete native measurement-to-model identity not established."
+        },
+        {
+          "field_tex": "Temporal information",
+          "value_tex": "1 s 2017-2025"
+        },
+        {
+          "field_tex": "Controller / EMS information",
+          "value_tex": "Not established where required by the native admissibility model."
+        },
+        {
+          "field_tex": "Eligibility status",
+          "value_tex": "Raw access and native-state mapping unresolved"
+        },
+        {
+          "field_tex": "Missing information",
+          "value_tex": "Accessible raw series, calibrated BMS-state interpretation and historical effective capacity."
+        },
+        {
+          "field_tex": "Allowed interpretation",
+          "value_tex": "Published metadata only; nameplate capacity is not historical effective capacity."
+        }
+      ]
+    },
+    {
+      "legacy_heading": "Brazil STAR operational dataset",
+      "fields": [
+        {
+          "field_tex": "Available state information",
+          "value_tex": "Reported available; source qualification applies."
+        },
+        {
+          "field_tex": "Power information",
+          "value_tex": "Reported available; source qualification applies."
+        },
+        {
+          "field_tex": "Capacity information",
+          "value_tex": "Not located in reviewed metadata."
+        },
+        {
+          "field_tex": "Efficiency information",
+          "value_tex": "Not established for a complete native device model in the reviewed source record."
+        },
+        {
+          "field_tex": "Native limits",
+          "value_tex": "Not established for a complete native device model in the reviewed source record."
+        },
+        {
+          "field_tex": "Native constraint definitions",
+          "value_tex": "Not established for a complete native device model in the reviewed source record."
+        },
+        {
+          "field_tex": "Measurement identity",
+          "value_tex": "Provider/source type: Coventry/UFAM Zenodo. Complete native measurement-to-model identity not established."
+        },
+        {
+          "field_tex": "Temporal information",
+          "value_tex": "irregular/see raw timestamps 2018-2019"
+        },
+        {
+          "field_tex": "Controller / EMS information",
+          "value_tex": "Not established where required by the native admissibility model."
+        },
+        {
+          "field_tex": "Eligibility status",
+          "value_tex": "Native metadata insufficient"
+        },
+        {
+          "field_tex": "Missing information",
+          "value_tex": "Published nominal energy, power ratings and complete native model."
+        },
+        {
+          "field_tex": "Allowed interpretation",
+          "value_tex": "Describe measured records; never infer ratings from observed maxima."
+        }
+      ]
+    },
+    {
+      "legacy_heading": "URI PBEST battery tests",
+      "fields": [
+        {
+          "field_tex": "Available state information",
+          "value_tex": "Reported available; source qualification applies."
+        },
+        {
+          "field_tex": "Power information",
+          "value_tex": "Reported available; source qualification applies."
+        },
+        {
+          "field_tex": "Capacity information",
+          "value_tex": "cell/test metadata"
+        },
+        {
+          "field_tex": "Efficiency information",
+          "value_tex": "Not established for a complete native device model in the reviewed source record."
+        },
+        {
+          "field_tex": "Native limits",
+          "value_tex": "Not established for a complete native device model in the reviewed source record."
+        },
+        {
+          "field_tex": "Native constraint definitions",
+          "value_tex": "Not established for a complete native device model in the reviewed source record."
+        },
+        {
+          "field_tex": "Measurement identity",
+          "value_tex": "Provider/source type: University Rhode Island Zenodo. Complete native measurement-to-model identity not established."
+        },
+        {
+          "field_tex": "Temporal information",
+          "value_tex": "1 min 3-hour charging segments plus discharge tests"
+        },
+        {
+          "field_tex": "Controller / EMS information",
+          "value_tex": "Not established where required by the native admissibility model."
+        },
+        {
+          "field_tex": "Eligibility status",
+          "value_tex": "Continuous operational window unavailable"
+        },
+        {
+          "field_tex": "Missing information",
+          "value_tex": "Qualifying continuous operating windows and complete native model linkage."
+        },
+        {
+          "field_tex": "Allowed interpretation",
+          "value_tex": "Segmented charging/discharge tests only."
+        }
+      ]
+    },
+    {
+      "legacy_heading": "Qu et al. operational extracts (2026)",
+      "fields": [
+        {
+          "field_tex": "Available state information",
+          "value_tex": "Reported available; source qualification applies."
+        },
+        {
+          "field_tex": "Power information",
+          "value_tex": "Reported available; source qualification applies."
+        },
+        {
+          "field_tex": "Capacity information",
+          "value_tex": "Not located in reviewed metadata."
+        },
+        {
+          "field_tex": "Efficiency information",
+          "value_tex": "Not established for a complete native device model in the reviewed source record."
+        },
+        {
+          "field_tex": "Native limits",
+          "value_tex": "Not established for a complete native device model in the reviewed source record."
+        },
+        {
+          "field_tex": "Native constraint definitions",
+          "value_tex": "Not established for a complete native device model in the reviewed source record."
+        },
+        {
+          "field_tex": "Measurement identity",
+          "value_tex": "Provider/source type: Shanghai Jiao Tong Zenodo. Complete native measurement-to-model identity not established."
+        },
+        {
+          "field_tex": "Temporal information",
+          "value_tex": "separate Time/Value arrays 8months, >400 extracted operations"
+        },
+        {
+          "field_tex": "Controller / EMS information",
+          "value_tex": "Not established where required by the native admissibility model."
+        },
+        {
+          "field_tex": "Eligibility status",
+          "value_tex": "Continuity and native metadata unresolved"
+        },
+        {
+          "field_tex": "Missing information",
+          "value_tex": "Idle-time continuum, complete operating windows and native parameters."
+        },
+        {
+          "field_tex": "Allowed interpretation",
+          "value_tex": "Extracted operation segments; no fabricated continuous trajectory."
+        }
+      ]
+    },
+    {
+      "legacy_heading": "Battery-station dataset (2026)",
+      "fields": [
+        {
+          "field_tex": "Available state information",
+          "value_tex": "Not documented in reviewed metadata."
+        },
+        {
+          "field_tex": "Power information",
+          "value_tex": "Not documented in reviewed metadata."
+        },
+        {
+          "field_tex": "Capacity information",
+          "value_tex": "Not located in reviewed metadata."
+        },
+        {
+          "field_tex": "Efficiency information",
+          "value_tex": "Not established for a complete native device model in the reviewed source record."
+        },
+        {
+          "field_tex": "Native limits",
+          "value_tex": "Not established for a complete native device model in the reviewed source record."
+        },
+        {
+          "field_tex": "Native constraint definitions",
+          "value_tex": "Not established for a complete native device model in the reviewed source record."
+        },
+        {
+          "field_tex": "Measurement identity",
+          "value_tex": "Provider/source type: Zenodo. Complete native measurement-to-model identity not established."
+        },
+        {
+          "field_tex": "Temporal information",
+          "value_tex": "Not documented in reviewed metadata."
+        },
+        {
+          "field_tex": "Controller / EMS information",
+          "value_tex": "Not established where required by the native admissibility model."
+        },
+        {
+          "field_tex": "Eligibility status",
+          "value_tex": "Device-level schema insufficient"
+        },
+        {
+          "field_tex": "Missing information",
+          "value_tex": "Device power, state, capacity and time schema."
+        },
+        {
+          "field_tex": "Allowed interpretation",
+          "value_tex": "Cell current/voltage/temperature descriptions only."
+        }
+      ]
+    },
+    {
+      "legacy_heading": "Mendeley PV--EMS dataset, version 2",
+      "fields": [
+        {
+          "field_tex": "Available state information",
+          "value_tex": "SOC and integrated energy supplied; independent measurement lineage unresolved."
+        },
+        {
+          "field_tex": "Power information",
+          "value_tex": "Signed power is charge-positive under the retained balance check; manuscript p=-Psource; metadata describes the opposite sign."
+        },
+        {
+          "field_tex": "Capacity information",
+          "value_tex": "30.72 kWh as documented in the files."
+        },
+        {
+          "field_tex": "Efficiency information",
+          "value_tex": "Not established for a complete native device model in the reviewed source record."
+        },
+        {
+          "field_tex": "Native limits",
+          "value_tex": "Not established for a complete native device model in the reviewed source record."
+        },
+        {
+          "field_tex": "Native constraint definitions",
+          "value_tex": "Not established for a complete native device model in the reviewed source record."
+        },
+        {
+          "field_tex": "Measurement identity",
+          "value_tex": "Provider/source type: Mendeley Data. Complete native measurement-to-model identity not established."
+        },
+        {
+          "field_tex": "Temporal information",
+          "value_tex": "1 min multiple daily CSVs"
+        },
+        {
+          "field_tex": "Controller / EMS information",
+          "value_tex": "Not established where required by the native admissibility model."
+        },
+        {
+          "field_tex": "Eligibility status",
+          "value_tex": "Native complete-query evaluation not eligible under the available model information."
+        },
+        {
+          "field_tex": "Missing information",
+          "value_tex": "Independent measured-state lineage, directional efficiencies and native ratings."
+        },
+        {
+          "field_tex": "Allowed interpretation",
+          "value_tex": "Describe the supplied series and documented sign conflict; no native field-validity classification."
+        }
+      ]
+    },
+    {
+      "legacy_heading": "OEDI solar-plus-storage dataset 8687",
+      "fields": [
+        {
+          "field_tex": "Available state information",
+          "value_tex": "Modeled rather than measured."
+        },
+        {
+          "field_tex": "Power information",
+          "value_tex": "Modeled rather than measured."
+        },
+        {
+          "field_tex": "Capacity information",
+          "value_tex": "model metadata"
+        },
+        {
+          "field_tex": "Efficiency information",
+          "value_tex": "Not established for a complete native device model in the reviewed source record."
+        },
+        {
+          "field_tex": "Native limits",
+          "value_tex": "Not established for a complete native device model in the reviewed source record."
+        },
+        {
+          "field_tex": "Native constraint definitions",
+          "value_tex": "Not established for a complete native device model in the reviewed source record."
+        },
+        {
+          "field_tex": "Measurement identity",
+          "value_tex": "Provider/source type: NREL/OEDI. Complete native measurement-to-model identity not established."
+        },
+        {
+          "field_tex": "Temporal information",
+          "value_tex": "1 h 2020-2024"
+        },
+        {
+          "field_tex": "Controller / EMS information",
+          "value_tex": "Not established where required by the native admissibility model."
+        },
+        {
+          "field_tex": "Eligibility status",
+          "value_tex": "Simulated, outside measured-data scope"
+        },
+        {
+          "field_tex": "Missing information",
+          "value_tex": "Not a measured battery trajectory."
+        },
+        {
+          "field_tex": "Allowed interpretation",
+          "value_tex": "Modeled optimization data only."
+        }
+      ]
+    },
+    {
+      "legacy_heading": "OEDI dsgrid TEMPO dataset 5958",
+      "fields": [
+        {
+          "field_tex": "Available state information",
+          "value_tex": "Not applicable to this source."
+        },
+        {
+          "field_tex": "Power information",
+          "value_tex": "Simulated EV charging."
+        },
+        {
+          "field_tex": "Capacity information",
+          "value_tex": "Not applicable to this source."
+        },
+        {
+          "field_tex": "Efficiency information",
+          "value_tex": "Not established for a complete native device model in the reviewed source record."
+        },
+        {
+          "field_tex": "Native limits",
+          "value_tex": "Not established for a complete native device model in the reviewed source record."
+        },
+        {
+          "field_tex": "Native constraint definitions",
+          "value_tex": "Not established for a complete native device model in the reviewed source record."
+        },
+        {
+          "field_tex": "Measurement identity",
+          "value_tex": "Provider/source type: NREL/OEDI. Complete native measurement-to-model identity not established."
+        },
+        {
+          "field_tex": "Temporal information",
+          "value_tex": "varies varies"
+        },
+        {
+          "field_tex": "Controller / EMS information",
+          "value_tex": "Not established where required by the native admissibility model."
+        },
+        {
+          "field_tex": "Eligibility status",
+          "value_tex": "Modeled EV data, outside declared scope"
+        },
+        {
+          "field_tex": "Missing information",
+          "value_tex": "No measured stationary BESS trajectory."
+        },
+        {
+          "field_tex": "Allowed interpretation",
+          "value_tex": "EV charging simulation only."
+        }
+      ]
+    },
+    {
+      "legacy_heading": "Braun cell dataset 6985321",
+      "fields": [
+        {
+          "field_tex": "Available state information",
+          "value_tex": "Model state."
+        },
+        {
+          "field_tex": "Power information",
+          "value_tex": "Cell-test measurements."
+        },
+        {
+          "field_tex": "Capacity information",
+          "value_tex": "cell metadata"
+        },
+        {
+          "field_tex": "Efficiency information",
+          "value_tex": "Not established for a complete native device model in the reviewed source record."
+        },
+        {
+          "field_tex": "Native limits",
+          "value_tex": "Not established for a complete native device model in the reviewed source record."
+        },
+        {
+          "field_tex": "Native constraint definitions",
+          "value_tex": "Not established for a complete native device model in the reviewed source record."
+        },
+        {
+          "field_tex": "Measurement identity",
+          "value_tex": "Provider/source type: Zenodo. Complete native measurement-to-model identity not established."
+        },
+        {
+          "field_tex": "Temporal information",
+          "value_tex": "test-dependent cycles"
+        },
+        {
+          "field_tex": "Controller / EMS information",
+          "value_tex": "Not established where required by the native admissibility model."
+        },
+        {
+          "field_tex": "Eligibility status",
+          "value_tex": "Laboratory characterization, outside field scope"
+        },
+        {
+          "field_tex": "Missing information",
+          "value_tex": "Continuous stationary operation and matching native operational pair."
+        },
+        {
+          "field_tex": "Allowed interpretation",
+          "value_tex": "Cell tests only."
+        }
+      ]
+    },
+    {
+      "legacy_heading": "Braun cell dataset 17227538",
+      "fields": [
+        {
+          "field_tex": "Available state information",
+          "value_tex": "OCV/SOC laboratory characterization."
+        },
+        {
+          "field_tex": "Power information",
+          "value_tex": "Cell-test measurements."
+        },
+        {
+          "field_tex": "Capacity information",
+          "value_tex": "cell metadata"
+        },
+        {
+          "field_tex": "Efficiency information",
+          "value_tex": "Not established for a complete native device model in the reviewed source record."
+        },
+        {
+          "field_tex": "Native limits",
+          "value_tex": "Not established for a complete native device model in the reviewed source record."
+        },
+        {
+          "field_tex": "Native constraint definitions",
+          "value_tex": "Not established for a complete native device model in the reviewed source record."
+        },
+        {
+          "field_tex": "Measurement identity",
+          "value_tex": "Provider/source type: Zenodo. Complete native measurement-to-model identity not established."
+        },
+        {
+          "field_tex": "Temporal information",
+          "value_tex": "test-dependent cycles"
+        },
+        {
+          "field_tex": "Controller / EMS information",
+          "value_tex": "Not established where required by the native admissibility model."
+        },
+        {
+          "field_tex": "Eligibility status",
+          "value_tex": "Laboratory characterization, outside field scope"
+        },
+        {
+          "field_tex": "Missing information",
+          "value_tex": "Continuous stationary operation and matching native operational pair."
+        },
+        {
+          "field_tex": "Allowed interpretation",
+          "value_tex": "Fresh-cell OCV/WLTP tests only."
+        }
+      ]
+    },
+    {
+      "legacy_heading": "Bessler dataset 13142016",
+      "fields": [
+        {
+          "field_tex": "Available state information",
+          "value_tex": "Diagnostic measurements."
+        },
+        {
+          "field_tex": "Power information",
+          "value_tex": "Cell-test measurements."
+        },
+        {
+          "field_tex": "Capacity information",
+          "value_tex": "cell metadata"
+        },
+        {
+          "field_tex": "Efficiency information",
+          "value_tex": "Not established for a complete native device model in the reviewed source record."
+        },
+        {
+          "field_tex": "Native limits",
+          "value_tex": "Not established for a complete native device model in the reviewed source record."
+        },
+        {
+          "field_tex": "Native constraint definitions",
+          "value_tex": "Not established for a complete native device model in the reviewed source record."
+        },
+        {
+          "field_tex": "Measurement identity",
+          "value_tex": "Provider/source type: Zenodo. Complete native measurement-to-model identity not established."
+        },
+        {
+          "field_tex": "Temporal information",
+          "value_tex": "test-dependent cycles"
+        },
+        {
+          "field_tex": "Controller / EMS information",
+          "value_tex": "Not established where required by the native admissibility model."
+        },
+        {
+          "field_tex": "Eligibility status",
+          "value_tex": "Diagnostic tests, outside field scope"
+        },
+        {
+          "field_tex": "Missing information",
+          "value_tex": "Qualifying device operational trajectory."
+        },
+        {
+          "field_tex": "Allowed interpretation",
+          "value_tex": "Capacity/resistance diagnostics only."
+        }
+      ]
+    },
+    {
+      "legacy_heading": "Neural-ODE cell dataset 6323595",
+      "fields": [
+        {
+          "field_tex": "Available state information",
+          "value_tex": "Model state."
+        },
+        {
+          "field_tex": "Power information",
+          "value_tex": "Cell-test measurements."
+        },
+        {
+          "field_tex": "Capacity information",
+          "value_tex": "cell metadata"
+        },
+        {
+          "field_tex": "Efficiency information",
+          "value_tex": "Not established for a complete native device model in the reviewed source record."
+        },
+        {
+          "field_tex": "Native limits",
+          "value_tex": "Not established for a complete native device model in the reviewed source record."
+        },
+        {
+          "field_tex": "Native constraint definitions",
+          "value_tex": "Not established for a complete native device model in the reviewed source record."
+        },
+        {
+          "field_tex": "Measurement identity",
+          "value_tex": "Provider/source type: Zenodo. Complete native measurement-to-model identity not established."
+        },
+        {
+          "field_tex": "Temporal information",
+          "value_tex": "threshold-downsampled cycles"
+        },
+        {
+          "field_tex": "Controller / EMS information",
+          "value_tex": "Not established where required by the native admissibility model."
+        },
+        {
+          "field_tex": "Eligibility status",
+          "value_tex": "Cell-model data, outside field scope"
+        },
+        {
+          "field_tex": "Missing information",
+          "value_tex": "Continuous stationary device operation and native model linkage."
+        },
+        {
+          "field_tex": "Allowed interpretation",
+          "value_tex": "Equivalent-circuit/model-development data only."
+        }
+      ]
+    },
+    {
+      "legacy_heading": "Energinet DK1 January 2025 market prices",
+      "fields": [
+        {
+          "field_tex": "Available state information",
+          "value_tex": "No measured battery state."
+        },
+        {
+          "field_tex": "Power information",
+          "value_tex": "Market prices; battery dispatch is simulated separately."
+        },
+        {
+          "field_tex": "Capacity information",
+          "value_tex": "Published Pozo device parameters belong to the simulated model."
+        },
+        {
+          "field_tex": "Efficiency information",
+          "value_tex": "Source-device values belong to simulation, not the price dataset."
+        },
+        {
+          "field_tex": "Native limits",
+          "value_tex": "Not established for a complete native device model in the reviewed source record."
+        },
+        {
+          "field_tex": "Native constraint definitions",
+          "value_tex": "Not established for a complete native device model in the reviewed source record."
+        },
+        {
+          "field_tex": "Measurement identity",
+          "value_tex": "Real exogenous market signal, not battery telemetry."
+        },
+        {
+          "field_tex": "Temporal information",
+          "value_tex": "Hourly market-price data."
+        },
+        {
+          "field_tex": "Controller / EMS information",
+          "value_tex": "Not established where required by the native admissibility model."
+        },
+        {
+          "field_tex": "Eligibility status",
+          "value_tex": "Native complete-query evaluation not eligible under the available model information."
+        },
+        {
+          "field_tex": "Missing information",
+          "value_tex": "No measured battery operational trajectory in this source."
+        },
+        {
+          "field_tex": "Allowed interpretation",
+          "value_tex": "Source-driven simulated state coverage only; not measured field data."
+        }
+      ]
+    },
+    {
+      "legacy_heading": "ACEN New England BESS",
+      "fields": [
+        {
+          "field_tex": "Available state information",
+          "value_tex": "BMS-reported SOC; SOC times nominal capacity is a nominal-energy proxy."
+        },
+        {
+          "field_tex": "Power information",
+          "value_tex": "AC power; positive discharge. Published dashboard conversion: raw value divided by 1000 gives MW, without display rounding."
+        },
+        {
+          "field_tex": "Capacity information",
+          "value_tex": "200 MWh per registered 100 MW unit."
+        },
+        {
+          "field_tex": "Efficiency information",
+          "value_tex": "Registered charge and discharge efficiencies 0.9 and 0.9."
+        },
+        {
+          "field_tex": "Native limits",
+          "value_tex": "100 MW rating and nominal capacity identified; dynamic operating/bid bounds unresolved."
+        },
+        {
+          "field_tex": "Native constraint definitions",
+          "value_tex": "Native zero-crossing integration, prior/target power and FCAS dependencies not mapped to the declared affine pair."
+        },
+        {
+          "field_tex": "Measurement identity",
+          "value_tex": "Registered NESBESS1/2 join to site units; AC power and BMS SOC."
+        },
+        {
+          "field_tex": "Temporal information",
+          "value_tex": "5 min; May--August 2026 source data; earliest, middle and latest complete seven-day windows per unit."
+        },
+        {
+          "field_tex": "Controller / EMS information",
+          "value_tex": "Dynamic bids, FCAS and native tracker admissibility unresolved."
+        },
+        {
+          "field_tex": "Eligibility status",
+          "value_tex": "Native complete-query evaluation not eligible under the available model information."
+        },
+        {
+          "field_tex": "Missing information",
+          "value_tex": "Native tracker/bid constraints and their linkage to the reported BMS state."
+        },
+        {
+          "field_tex": "Allowed interpretation",
+          "value_tex": "Measured operating-state coverage and sign/unit characterization only."
+        }
+      ]
+    },
+    {
+      "legacy_heading": "EPRI PERIOD field dataset",
+      "fields": [
+        {
+          "field_tex": "Available state information",
+          "value_tex": "Reported SOC and DC power available."
+        },
+        {
+          "field_tex": "Power information",
+          "value_tex": "DC power; discharge-positive interpretation supported under both documented capacity alternatives."
+        },
+        {
+          "field_tex": "Capacity information",
+          "value_tex": "Conflict retained: website 5.14 MWh versus specification 5 MWh."
+        },
+        {
+          "field_tex": "Efficiency information",
+          "value_tex": "Battery directional efficiencies unavailable; inverter maximum/CEC efficiency is not a substitute."
+        },
+        {
+          "field_tex": "Native limits",
+          "value_tex": "Capacity conflict prevents a unique native tuple; complete native bounds not established."
+        },
+        {
+          "field_tex": "Native constraint definitions",
+          "value_tex": "Complete battery-side constraint definitions unresolved."
+        },
+        {
+          "field_tex": "Measurement identity",
+          "value_tex": "Battery DC measurement differs from grid AC query."
+        },
+        {
+          "field_tex": "Temporal information",
+          "value_tex": "15 min, 2024; earliest, middle and latest complete seven-day windows."
+        },
+        {
+          "field_tex": "Controller / EMS information",
+          "value_tex": "Not established where required by the native admissibility model."
+        },
+        {
+          "field_tex": "Eligibility status",
+          "value_tex": "Native complete-query evaluation not eligible under the available model information."
+        },
+        {
+          "field_tex": "Missing information",
+          "value_tex": "Capacity reconciliation, battery directional efficiencies and complete native model semantics."
+        },
+        {
+          "field_tex": "Allowed interpretation",
+          "value_tex": "Measured SOC/power coverage; no capacity choice or native full-query classification."
+        }
+      ]
+    },
+    {
+      "legacy_heading": "M5BAT LMO field tests (2025)",
+      "fields": [
+        {
+          "field_tex": "Available state information",
+          "value_tex": "Not established in the reviewed record."
+        },
+        {
+          "field_tex": "Power information",
+          "value_tex": "Not established in the reviewed record."
+        },
+        {
+          "field_tex": "Capacity information",
+          "value_tex": "Published LMO nameplate 774 kWh."
+        },
+        {
+          "field_tex": "Efficiency information",
+          "value_tex": "Not established for a complete native device model in the reviewed source record."
+        },
+        {
+          "field_tex": "Native limits",
+          "value_tex": "Not established for a complete native device model in the reviewed source record."
+        },
+        {
+          "field_tex": "Native constraint definitions",
+          "value_tex": "Not established for a complete native device model in the reviewed source record."
+        },
+        {
+          "field_tex": "Measurement identity",
+          "value_tex": "Provider/source type: RWTH institutional. Complete native measurement-to-model identity not established."
+        },
+        {
+          "field_tex": "Temporal information",
+          "value_tex": "1 s two field tests"
+        },
+        {
+          "field_tex": "Controller / EMS information",
+          "value_tex": "Not established where required by the native admissibility model."
+        },
+        {
+          "field_tex": "Eligibility status",
+          "value_tex": "Raw access unresolved"
+        },
+        {
+          "field_tex": "Missing information",
+          "value_tex": "Accessible raw series and complete native query-state model."
+        },
+        {
+          "field_tex": "Allowed interpretation",
+          "value_tex": "Published metadata only; preserve separate schedule and measurement time zones."
+        }
+      ]
+    },
+    {
+      "legacy_heading": "ERCOT ESR state-of-charge reports (2026)",
+      "fields": [
+        {
+          "field_tex": "Available state information",
+          "value_tex": "Not established in the reviewed record."
+        },
+        {
+          "field_tex": "Power information",
+          "value_tex": "Not established in the reviewed record."
+        },
+        {
+          "field_tex": "Capacity information",
+          "value_tex": "SOC reported in MWh; not an identified energy capacity."
+        },
+        {
+          "field_tex": "Efficiency information",
+          "value_tex": "Not established for a complete native device model in the reviewed source record."
+        },
+        {
+          "field_tex": "Native limits",
+          "value_tex": "Not established for a complete native device model in the reviewed source record."
+        },
+        {
+          "field_tex": "Native constraint definitions",
+          "value_tex": "Not established for a complete native device model in the reviewed source record."
+        },
+        {
+          "field_tex": "Measurement identity",
+          "value_tex": "Provider/source type: ERCOT official. Complete native measurement-to-model identity not established."
+        },
+        {
+          "field_tex": "Temporal information",
+          "value_tex": "SCED intervals 2026reports"
+        },
+        {
+          "field_tex": "Controller / EMS information",
+          "value_tex": "Not established where required by the native admissibility model."
+        },
+        {
+          "field_tex": "Eligibility status",
+          "value_tex": "Access and native parameters unresolved"
+        },
+        {
+          "field_tex": "Missing information",
+          "value_tex": "Accessible source records and a complete mapped device tuple."
+        },
+        {
+          "field_tex": "Allowed interpretation",
+          "value_tex": "Report availability is not a validated raw-data/model link."
+        }
+      ]
+    },
+    {
+      "legacy_heading": "Platone operational submission dataset",
+      "fields": [
+        {
+          "field_tex": "Available state information",
+          "value_tex": "SOC/SOE readings supplied."
+        },
+        {
+          "field_tex": "Power information",
+          "value_tex": "Power readings supplied."
+        },
+        {
+          "field_tex": "Capacity information",
+          "value_tex": "850 kWh; 300 kW rating reported."
+        },
+        {
+          "field_tex": "Efficiency information",
+          "value_tex": "Not established for a complete native device model in the reviewed source record."
+        },
+        {
+          "field_tex": "Native limits",
+          "value_tex": "Not established for a complete native device model in the reviewed source record."
+        },
+        {
+          "field_tex": "Native constraint definitions",
+          "value_tex": "Not established for a complete native device model in the reviewed source record."
+        },
+        {
+          "field_tex": "Measurement identity",
+          "value_tex": "Provider/source type: EU project author Zenodo. Complete native measurement-to-model identity not established."
+        },
+        {
+          "field_tex": "Temporal information",
+          "value_tex": "Published timestamps are use-case submissions; distinct measurements share submission times."
+        },
+        {
+          "field_tex": "Controller / EMS information",
+          "value_tex": "Not established where required by the native admissibility model."
+        },
+        {
+          "field_tex": "Eligibility status",
+          "value_tex": "Native complete-query evaluation not eligible under the available model information."
+        },
+        {
+          "field_tex": "Missing information",
+          "value_tex": "Individual measurement timestamps, native efficiencies and complete model semantics."
+        },
+        {
+          "field_tex": "Allowed interpretation",
+          "value_tex": "Submission-level records only; no invented interval or continuous trajectory."
+        }
+      ]
+    },
+    {
+      "legacy_heading": "Platone counterfactual baseline dataset",
+      "fields": [
+        {
+          "field_tex": "Available state information",
+          "value_tex": "No measured battery state trajectory established."
+        },
+        {
+          "field_tex": "Power information",
+          "value_tex": "Computed point-of-common-coupling baseline power."
+        },
+        {
+          "field_tex": "Capacity information",
+          "value_tex": "Related project metadata only."
+        },
+        {
+          "field_tex": "Efficiency information",
+          "value_tex": "Not established for a complete native device model in the reviewed source record."
+        },
+        {
+          "field_tex": "Native limits",
+          "value_tex": "Not established for a complete native device model in the reviewed source record."
+        },
+        {
+          "field_tex": "Native constraint definitions",
+          "value_tex": "Not established for a complete native device model in the reviewed source record."
+        },
+        {
+          "field_tex": "Measurement identity",
+          "value_tex": "Provider/source type: EU project author Zenodo. Complete native measurement-to-model identity not established."
+        },
+        {
+          "field_tex": "Temporal information",
+          "value_tex": "15 min baseline series."
+        },
+        {
+          "field_tex": "Controller / EMS information",
+          "value_tex": "Not established where required by the native admissibility model."
+        },
+        {
+          "field_tex": "Eligibility status",
+          "value_tex": "Native complete-query evaluation not eligible under the available model information."
+        },
+        {
+          "field_tex": "Missing information",
+          "value_tex": "Measured battery states and matching complete native model."
+        },
+        {
+          "field_tex": "Allowed interpretation",
+          "value_tex": "Counterfactual baseline only, not battery telemetry."
+        }
+      ]
+    },
+    {
+      "legacy_heading": "Battery figure-data record 12704285",
+      "fields": [
+        {
+          "field_tex": "Available state information",
+          "value_tex": "Not established in the reviewed record."
+        },
+        {
+          "field_tex": "Power information",
+          "value_tex": "Not established in the reviewed record."
+        },
+        {
+          "field_tex": "Capacity information",
+          "value_tex": "cell/test"
+        },
+        {
+          "field_tex": "Efficiency information",
+          "value_tex": "Not established for a complete native device model in the reviewed source record."
+        },
+        {
+          "field_tex": "Native limits",
+          "value_tex": "Not established for a complete native device model in the reviewed source record."
+        },
+        {
+          "field_tex": "Native constraint definitions",
+          "value_tex": "Not established for a complete native device model in the reviewed source record."
+        },
+        {
+          "field_tex": "Measurement identity",
+          "value_tex": "Provider/source type: author Figshare. Complete native measurement-to-model identity not established."
+        },
+        {
+          "field_tex": "Temporal information",
+          "value_tex": "figuredata tests"
+        },
+        {
+          "field_tex": "Controller / EMS information",
+          "value_tex": "Not established where required by the native admissibility model."
+        },
+        {
+          "field_tex": "Eligibility status",
+          "value_tex": "Tester/algorithm data, outside field scope"
+        },
+        {
+          "field_tex": "Missing information",
+          "value_tex": "Continuous station operation and native model linkage."
+        },
+        {
+          "field_tex": "Allowed interpretation",
+          "value_tex": "Figure-specific test and algorithm outputs only."
+        }
+      ]
+    },
+    {
+      "legacy_heading": "NAUTILUS hybrid-battery record 14643552",
+      "fields": [
+        {
+          "field_tex": "Available state information",
+          "value_tex": "Not established in the reviewed record."
+        },
+        {
+          "field_tex": "Power information",
+          "value_tex": "Not established in the reviewed record."
+        },
+        {
+          "field_tex": "Capacity information",
+          "value_tex": "40 kWh hybrid battery."
+        },
+        {
+          "field_tex": "Efficiency information",
+          "value_tex": "Not established for a complete native device model in the reviewed source record."
+        },
+        {
+          "field_tex": "Native limits",
+          "value_tex": "Not established for a complete native device model in the reviewed source record."
+        },
+        {
+          "field_tex": "Native constraint definitions",
+          "value_tex": "Not established for a complete native device model in the reviewed source record."
+        },
+        {
+          "field_tex": "Measurement identity",
+          "value_tex": "Provider/source type: DLR author Zenodo. Complete native measurement-to-model identity not established."
+        },
+        {
+          "field_tex": "Temporal information",
+          "value_tex": "campaign Sep-Dec2024"
+        },
+        {
+          "field_tex": "Controller / EMS information",
+          "value_tex": "Not established where required by the native admissibility model."
+        },
+        {
+          "field_tex": "Eligibility status",
+          "value_tex": "Raw access restricted"
+        },
+        {
+          "field_tex": "Missing information",
+          "value_tex": "Permitted raw access and native model linkage."
+        },
+        {
+          "field_tex": "Allowed interpretation",
+          "value_tex": "Public metadata only."
+        }
+      ]
+    },
+    {
+      "legacy_heading": "Figgener multi-year home-storage data",
+      "fields": [
+        {
+          "field_tex": "Available state information",
+          "value_tex": "Published raw schema has no SOC or stored-energy column."
+        },
+        {
+          "field_tex": "Power information",
+          "value_tex": "Power, voltage and current supplied."
+        },
+        {
+          "field_tex": "Capacity information",
+          "value_tex": "Published system metadata; no single capacity assigned here."
+        },
+        {
+          "field_tex": "Efficiency information",
+          "value_tex": "Not established for a complete native device model in the reviewed source record."
+        },
+        {
+          "field_tex": "Native limits",
+          "value_tex": "Not established for a complete native device model in the reviewed source record."
+        },
+        {
+          "field_tex": "Native constraint definitions",
+          "value_tex": "Not established for a complete native device model in the reviewed source record."
+        },
+        {
+          "field_tex": "Measurement identity",
+          "value_tex": "Provider/source type: RWTH author Zenodo. Complete native measurement-to-model identity not established."
+        },
+        {
+          "field_tex": "Temporal information",
+          "value_tex": "1 s, 2015--2022; interpolation flag documented."
+        },
+        {
+          "field_tex": "Controller / EMS information",
+          "value_tex": "Not established where required by the native admissibility model."
+        },
+        {
+          "field_tex": "Eligibility status",
+          "value_tex": "Native complete-query evaluation not eligible under the available model information."
+        },
+        {
+          "field_tex": "Missing information",
+          "value_tex": "Measured state trajectory and complete native operating model."
+        },
+        {
+          "field_tex": "Allowed interpretation",
+          "value_tex": "Observed electrical/thermal data only; no synthetic state promoted to measured SOC."
+        }
+      ]
+    },
+    {
+      "legacy_heading": "TEMPEST battery-pack record 20816912",
+      "fields": [
+        {
+          "field_tex": "Available state information",
+          "value_tex": "Not established in the reviewed record."
+        },
+        {
+          "field_tex": "Power information",
+          "value_tex": "Not established in the reviewed record."
+        },
+        {
+          "field_tex": "Capacity information",
+          "value_tex": "Pack metadata."
+        },
+        {
+          "field_tex": "Efficiency information",
+          "value_tex": "Not established for a complete native device model in the reviewed source record."
+        },
+        {
+          "field_tex": "Native limits",
+          "value_tex": "Not established for a complete native device model in the reviewed source record."
+        },
+        {
+          "field_tex": "Native constraint definitions",
+          "value_tex": "Not established for a complete native device model in the reviewed source record."
+        },
+        {
+          "field_tex": "Measurement identity",
+          "value_tex": "Provider/source type: author Zenodo. Complete native measurement-to-model identity not established."
+        },
+        {
+          "field_tex": "Temporal information",
+          "value_tex": "test-dependent CCCV and drive cycles."
+        },
+        {
+          "field_tex": "Controller / EMS information",
+          "value_tex": "Not established where required by the native admissibility model."
+        },
+        {
+          "field_tex": "Eligibility status",
+          "value_tex": "Pack tests, outside field scope"
+        },
+        {
+          "field_tex": "Missing information",
+          "value_tex": "Continuous stationary SOC and native-model trajectory."
+        },
+        {
+          "field_tex": "Allowed interpretation",
+          "value_tex": "CCCV/drive-cycle demonstrator data only."
+        }
+      ]
+    },
+    {
+      "legacy_heading": "BESS-Set Simulink model",
+      "fields": [
+        {
+          "field_tex": "Available state information",
+          "value_tex": "Not established in the reviewed record."
+        },
+        {
+          "field_tex": "Power information",
+          "value_tex": "Not established in the reviewed record."
+        },
+        {
+          "field_tex": "Capacity information",
+          "value_tex": "model"
+        },
+        {
+          "field_tex": "Efficiency information",
+          "value_tex": "Not established for a complete native device model in the reviewed source record."
+        },
+        {
+          "field_tex": "Native limits",
+          "value_tex": "Not established for a complete native device model in the reviewed source record."
+        },
+        {
+          "field_tex": "Native constraint definitions",
+          "value_tex": "Not established for a complete native device model in the reviewed source record."
+        },
+        {
+          "field_tex": "Measurement identity",
+          "value_tex": "Provider/source type: author GitHub. Complete native measurement-to-model identity not established."
+        },
+        {
+          "field_tex": "Temporal information",
+          "value_tex": "Simulated."
+        },
+        {
+          "field_tex": "Controller / EMS information",
+          "value_tex": "Not established where required by the native admissibility model."
+        },
+        {
+          "field_tex": "Eligibility status",
+          "value_tex": "Simulated, outside measured-data scope"
+        },
+        {
+          "field_tex": "Missing information",
+          "value_tex": "No measured operational trajectory supplied."
+        },
+        {
+          "field_tex": "Allowed interpretation",
+          "value_tex": "Simulation model only."
+        }
+      ]
+    },
+    {
+      "legacy_heading": "Agkistron hybrid living-lab study (2026)",
+      "fields": [
+        {
+          "field_tex": "Available state information",
+          "value_tex": "Not established in the reviewed record."
+        },
+        {
+          "field_tex": "Power information",
+          "value_tex": "Not established in the reviewed record."
+        },
+        {
+          "field_tex": "Capacity information",
+          "value_tex": "92 kWh reported."
+        },
+        {
+          "field_tex": "Efficiency information",
+          "value_tex": "Not established for a complete native device model in the reviewed source record."
+        },
+        {
+          "field_tex": "Native limits",
+          "value_tex": "Not established for a complete native device model in the reviewed source record."
+        },
+        {
+          "field_tex": "Native constraint definitions",
+          "value_tex": "Not established for a complete native device model in the reviewed source record."
+        },
+        {
+          "field_tex": "Measurement identity",
+          "value_tex": "Provider/source type: primary journal. Complete native measurement-to-model identity not established."
+        },
+        {
+          "field_tex": "Temporal information",
+          "value_tex": "1 min 12months"
+        },
+        {
+          "field_tex": "Controller / EMS information",
+          "value_tex": "Not established where required by the native admissibility model."
+        },
+        {
+          "field_tex": "Eligibility status",
+          "value_tex": "Raw access unresolved"
+        },
+        {
+          "field_tex": "Missing information",
+          "value_tex": "Located raw measured state/power and native parameter package."
+        },
+        {
+          "field_tex": "Allowed interpretation",
+          "value_tex": "Published field-study description only."
+        }
+      ]
+    },
+    {
+      "legacy_heading": "BESS emulator",
+      "fields": [
+        {
+          "field_tex": "Available state information",
+          "value_tex": "Not established in the reviewed record."
+        },
+        {
+          "field_tex": "Power information",
+          "value_tex": "Not established in the reviewed record."
+        },
+        {
+          "field_tex": "Capacity information",
+          "value_tex": "model"
+        },
+        {
+          "field_tex": "Efficiency information",
+          "value_tex": "Not established for a complete native device model in the reviewed source record."
+        },
+        {
+          "field_tex": "Native limits",
+          "value_tex": "Not established for a complete native device model in the reviewed source record."
+        },
+        {
+          "field_tex": "Native constraint definitions",
+          "value_tex": "Not established for a complete native device model in the reviewed source record."
+        },
+        {
+          "field_tex": "Measurement identity",
+          "value_tex": "Provider/source type: author GitHub. Complete native measurement-to-model identity not established."
+        },
+        {
+          "field_tex": "Temporal information",
+          "value_tex": "Synthetic SCADA. synthetic"
+        },
+        {
+          "field_tex": "Controller / EMS information",
+          "value_tex": "Not established where required by the native admissibility model."
+        },
+        {
+          "field_tex": "Eligibility status",
+          "value_tex": "Synthetic, outside measured-data scope"
+        },
+        {
+          "field_tex": "Missing information",
+          "value_tex": "No measured battery state supplied."
+        },
+        {
+          "field_tex": "Allowed interpretation",
+          "value_tex": "Emulated telemetry driven by exogenous signals only."
+        }
+      ]
+    },
+    {
+      "legacy_heading": "EPRI Alliant Madison",
+      "fields": [
+        {
+          "field_tex": "Available state information",
+          "value_tex": "SOC unavailable in inspected chart data."
+        },
+        {
+          "field_tex": "Power information",
+          "value_tex": "Power and cumulative-energy chart data."
+        },
+        {
+          "field_tex": "Capacity information",
+          "value_tex": "30 kWh."
+        },
+        {
+          "field_tex": "Efficiency information",
+          "value_tex": "Not established for a complete native device model in the reviewed source record."
+        },
+        {
+          "field_tex": "Native limits",
+          "value_tex": "30 kW rating; complete native energy/control bounds unresolved."
+        },
+        {
+          "field_tex": "Native constraint definitions",
+          "value_tex": "Not established for a complete native device model in the reviewed source record."
+        },
+        {
+          "field_tex": "Measurement identity",
+          "value_tex": "Provider/source type: EPRI. Complete native measurement-to-model identity not established."
+        },
+        {
+          "field_tex": "Temporal information",
+          "value_tex": "2016--2020 chart data."
+        },
+        {
+          "field_tex": "Controller / EMS information",
+          "value_tex": "Not established where required by the native admissibility model."
+        },
+        {
+          "field_tex": "Eligibility status",
+          "value_tex": "Native complete-query evaluation not eligible under the available model information."
+        },
+        {
+          "field_tex": "Missing information",
+          "value_tex": "Anchored SOC trajectory and native efficiencies/model."
+        },
+        {
+          "field_tex": "Allowed interpretation",
+          "value_tex": "Power/energy characterization; do not integrate an unanchored measured SOC."
+        }
+      ]
+    },
+    {
+      "legacy_heading": "Dingle residential storage dataset (2026)",
+      "fields": [
+        {
+          "field_tex": "Available state information",
+          "value_tex": "SOC supplied in the inspected household file."
+        },
+        {
+          "field_tex": "Power information",
+          "value_tex": "Charging/discharging energy in kWh per interval; not automatically instantaneous power."
+        },
+        {
+          "field_tex": "Capacity information",
+          "value_tex": "5 kWh Sonnen units in this source; do not substitute StoreNet 10 kWh."
+        },
+        {
+          "field_tex": "Efficiency information",
+          "value_tex": "Not established for a complete native device model in the reviewed source record."
+        },
+        {
+          "field_tex": "Native limits",
+          "value_tex": "Not established for a complete native device model in the reviewed source record."
+        },
+        {
+          "field_tex": "Native constraint definitions",
+          "value_tex": "Not established for a complete native device model in the reviewed source record."
+        },
+        {
+          "field_tex": "Measurement identity",
+          "value_tex": "Provider/source type: ScientificData/Figshare. Complete native measurement-to-model identity not established."
+        },
+        {
+          "field_tex": "Temporal information",
+          "value_tex": "Half-hour UTC preprocessing includes short-gap interpolation; raw provenance flag absent from inspected file."
+        },
+        {
+          "field_tex": "Controller / EMS information",
+          "value_tex": "Not established where required by the native admissibility model."
+        },
+        {
+          "field_tex": "Eligibility status",
+          "value_tex": "Native complete-query evaluation not eligible under the available model information."
+        },
+        {
+          "field_tex": "Missing information",
+          "value_tex": "Native ratings, directional efficiencies, operating bounds and interpolation provenance."
+        },
+        {
+          "field_tex": "Allowed interpretation",
+          "value_tex": "Describe preprocessed residential operating states with interpolation qualification."
+        }
+      ]
+    },
+    {
+      "legacy_heading": "Tziovani building hardware study (2025)",
+      "fields": [
+        {
+          "field_tex": "Available state information",
+          "value_tex": "Raw timestamped SOC series not located in retained access."
+        },
+        {
+          "field_tex": "Power information",
+          "value_tex": "Raw timestamped battery power series not located."
+        },
+        {
+          "field_tex": "Capacity information",
+          "value_tex": "9.8 kWh source experimental system."
+        },
+        {
+          "field_tex": "Efficiency information",
+          "value_tex": "Approximate constant 91\\% model published; not a measured exact physical model."
+        },
+        {
+          "field_tex": "Native limits",
+          "value_tex": "5 kW and source SOC/terminal bounds available for the separately mapped approximate model."
+        },
+        {
+          "field_tex": "Native constraint definitions",
+          "value_tex": "Approximate device model documented; complete native measured-device truth not established."
+        },
+        {
+          "field_tex": "Measurement identity",
+          "value_tex": "Published physical experiment exists; public record provides paper rather than located raw operating series."
+        },
+        {
+          "field_tex": "Temporal information",
+          "value_tex": "Paper specifies experimental timing; no retrieved complete measured series."
+        },
+        {
+          "field_tex": "Controller / EMS information",
+          "value_tex": "Source MPC and softening are excluded from the approximate device pair."
+        },
+        {
+          "field_tex": "Eligibility status",
+          "value_tex": "Native complete-query evaluation not eligible under the available model information."
+        },
+        {
+          "field_tex": "Missing information",
+          "value_tex": "Public raw state/power series and complete native physical/controller linkage."
+        },
+        {
+          "field_tex": "Allowed interpretation",
+          "value_tex": "Use the source-defined approximate model separately; no new measured validation."
+        }
+      ]
+    },
+    {
+      "legacy_heading": "StoreNet residential dataset (2024)",
+      "fields": [
+        {
+          "field_tex": "Available state information",
+          "value_tex": "SOC supplied; no clipping to a separate paper's SOC limits."
+        },
+        {
+          "field_tex": "Power information",
+          "value_tex": "Explicit charging/discharging and W/Wh channels in the inspected household data."
+        },
+        {
+          "field_tex": "Capacity information",
+          "value_tex": "Published related systems: 10 kWh; dataset-to-controller instance identity unresolved."
+        },
+        {
+          "field_tex": "Efficiency information",
+          "value_tex": "Related publications report/estimate 95\\% directional efficiency; not automatically assigned to the downloaded household."
+        },
+        {
+          "field_tex": "Native limits",
+          "value_tex": "Related source uses 3.3 kW and SOC 10--90\\%; native linkage to the downloaded trace unresolved."
+        },
+        {
+          "field_tex": "Native constraint definitions",
+          "value_tex": "AC-grid/PV-DC split, self-discharge interpretation and terminal rules require the correct source model."
+        },
+        {
+          "field_tex": "Measurement identity",
+          "value_tex": "Household, controller version and AC/DC boundary not matched completely."
+        },
+        {
+          "field_tex": "Temporal information",
+          "value_tex": "Published household time series; linked control-trial time base is not assumed identical."
+        },
+        {
+          "field_tex": "Controller / EMS information",
+          "value_tex": "Hierarchical controller and household/model-version linkage unresolved."
+        },
+        {
+          "field_tex": "Eligibility status",
+          "value_tex": "Native complete-query evaluation not eligible under the available model information."
+        },
+        {
+          "field_tex": "Missing information",
+          "value_tex": "Port relations, self-discharge meaning and dataset-to-controller-model identity."
+        },
+        {
+          "field_tex": "Allowed interpretation",
+          "value_tex": "Describe observed household operation; no unverified single-port substitution."
+        }
+      ]
+    },
+    {
+      "legacy_heading": "HyStorization record 16876906",
+      "fields": [
+        {
+          "field_tex": "Available state information",
+          "value_tex": "Not established in the reviewed record."
+        },
+        {
+          "field_tex": "Power information",
+          "value_tex": "Not established in the reviewed record."
+        },
+        {
+          "field_tex": "Capacity information",
+          "value_tex": "Not established in the reviewed record."
+        },
+        {
+          "field_tex": "Efficiency information",
+          "value_tex": "Not established for a complete native device model in the reviewed source record."
+        },
+        {
+          "field_tex": "Native limits",
+          "value_tex": "Not established for a complete native device model in the reviewed source record."
+        },
+        {
+          "field_tex": "Native constraint definitions",
+          "value_tex": "Not established for a complete native device model in the reviewed source record."
+        },
+        {
+          "field_tex": "Measurement identity",
+          "value_tex": "Provider/source type: Zenodo. Complete native measurement-to-model identity not established."
+        },
+        {
+          "field_tex": "Temporal information",
+          "value_tex": "Not established in the reviewed record."
+        },
+        {
+          "field_tex": "Controller / EMS information",
+          "value_tex": "Not established where required by the native admissibility model."
+        },
+        {
+          "field_tex": "Eligibility status",
+          "value_tex": "Laboratory tests, outside field scope"
+        },
+        {
+          "field_tex": "Missing information",
+          "value_tex": "Continuous real stationary operation and corresponding native model."
+        },
+        {
+          "field_tex": "Allowed interpretation",
+          "value_tex": "Constant-power/current characterization of BYD and flow-battery systems only."
+        }
+      ]
+    },
+    {
+      "legacy_heading": "CatSelof record 5196334",
+      "fields": [
+        {
+          "field_tex": "Available state information",
+          "value_tex": "Not established in the reviewed record."
+        },
+        {
+          "field_tex": "Power information",
+          "value_tex": "Not established in the reviewed record."
+        },
+        {
+          "field_tex": "Capacity information",
+          "value_tex": "Not established in the reviewed record."
+        },
+        {
+          "field_tex": "Efficiency information",
+          "value_tex": "Not established for a complete native device model in the reviewed source record."
+        },
+        {
+          "field_tex": "Native limits",
+          "value_tex": "Not established for a complete native device model in the reviewed source record."
+        },
+        {
+          "field_tex": "Native constraint definitions",
+          "value_tex": "Not established for a complete native device model in the reviewed source record."
+        },
+        {
+          "field_tex": "Measurement identity",
+          "value_tex": "Provider/source type: author Zenodo. Complete native measurement-to-model identity not established."
+        },
+        {
+          "field_tex": "Temporal information",
+          "value_tex": "Not established in the reviewed record."
+        },
+        {
+          "field_tex": "Controller / EMS information",
+          "value_tex": "Not established where required by the native admissibility model."
+        },
+        {
+          "field_tex": "Eligibility status",
+          "value_tex": "Laboratory tests, outside field scope"
+        },
+        {
+          "field_tex": "Missing information",
+          "value_tex": "Continuous field-operation trajectory and native model linkage."
+        },
+        {
+          "field_tex": "Allowed interpretation",
+          "value_tex": "Pack constant-power tests with voltage/current/SOC/temperature only."
+        }
+      ]
+    },
+    {
+      "legacy_heading": "NYSERDA storage performance sources (2024)",
+      "fields": [
+        {
+          "field_tex": "Available state information",
+          "value_tex": "Not established in the reviewed record."
+        },
+        {
+          "field_tex": "Power information",
+          "value_tex": "Not established in the reviewed record."
+        },
+        {
+          "field_tex": "Capacity information",
+          "value_tex": "Not established in the reviewed record."
+        },
+        {
+          "field_tex": "Efficiency information",
+          "value_tex": "Not established for a complete native device model in the reviewed source record."
+        },
+        {
+          "field_tex": "Native limits",
+          "value_tex": "Not established for a complete native device model in the reviewed source record."
+        },
+        {
+          "field_tex": "Native constraint definitions",
+          "value_tex": "Not established for a complete native device model in the reviewed source record."
+        },
+        {
+          "field_tex": "Measurement identity",
+          "value_tex": "Provider/source type: NYSERDA official. Complete native measurement-to-model identity not established."
+        },
+        {
+          "field_tex": "Temporal information",
+          "value_tex": "Not established in the reviewed record."
+        },
+        {
+          "field_tex": "Controller / EMS information",
+          "value_tex": "Not established where required by the native admissibility model."
+        },
+        {
+          "field_tex": "Eligibility status",
+          "value_tex": "Public SOC/native-model mapping unresolved"
+        },
+        {
+          "field_tex": "Missing information",
+          "value_tex": "Accessible source-specific SOC series, directional efficiencies and native-state tuple."
+        },
+        {
+          "field_tex": "Allowed interpretation",
+          "value_tex": "Public performance access does not establish complete source-native validation."
+        }
+      ]
+    },
+    {
+      "legacy_heading": "AEMO public bidirectional-unit metadata",
+      "fields": [
+        {
+          "field_tex": "Available state information",
+          "value_tex": "Public SCADA/initial-storage metadata; not a complete native device-state tuple."
+        },
+        {
+          "field_tex": "Power information",
+          "value_tex": "Registered import/export and public SCADA quantities."
+        },
+        {
+          "field_tex": "Capacity information",
+          "value_tex": "NESBESS1/2 metadata: 200 MWh and 100 MW; other registrations remain source-specific."
+        },
+        {
+          "field_tex": "Efficiency information",
+          "value_tex": "NESBESS1/2 import/export efficiencies 0.9/0.9."
+        },
+        {
+          "field_tex": "Native limits",
+          "value_tex": "Registered ratings do not close dynamic bid/FCAS bounds."
+        },
+        {
+          "field_tex": "Native constraint definitions",
+          "value_tex": "Tracker includes prior/target power, zero-crossing integration and FCAS."
+        },
+        {
+          "field_tex": "Measurement identity",
+          "value_tex": "Registration-to-device identity required; ACEN linkage documented for NESBESS1/2."
+        },
+        {
+          "field_tex": "Temporal information",
+          "value_tex": "Not established in the reviewed record."
+        },
+        {
+          "field_tex": "Controller / EMS information",
+          "value_tex": "Native bid-state and tracker rules cannot be replaced by rectangular integration."
+        },
+        {
+          "field_tex": "Eligibility status",
+          "value_tex": "Native complete-query evaluation not eligible under the available model information."
+        },
+        {
+          "field_tex": "Missing information",
+          "value_tex": "Complete native affine-compatible query and tracker/bid/state mapping."
+        },
+        {
+          "field_tex": "Allowed interpretation",
+          "value_tex": "Use metadata to clarify source identity; not independent field-validation units."
+        }
+      ]
+    },
+    {
+      "legacy_heading": "Portable LFP systems record 13715694",
+      "fields": [
+        {
+          "field_tex": "Available state information",
+          "value_tex": "Not established in the reviewed record."
+        },
+        {
+          "field_tex": "Power information",
+          "value_tex": "Not established in the reviewed record."
+        },
+        {
+          "field_tex": "Capacity information",
+          "value_tex": "Not established in the reviewed record."
+        },
+        {
+          "field_tex": "Efficiency information",
+          "value_tex": "Not established for a complete native device model in the reviewed source record."
+        },
+        {
+          "field_tex": "Native limits",
+          "value_tex": "Not established for a complete native device model in the reviewed source record."
+        },
+        {
+          "field_tex": "Native constraint definitions",
+          "value_tex": "Not established for a complete native device model in the reviewed source record."
+        },
+        {
+          "field_tex": "Measurement identity",
+          "value_tex": "Provider/source type: TU Darmstadt/MIT Zenodo. Complete native measurement-to-model identity not established."
+        },
+        {
+          "field_tex": "Temporal information",
+          "value_tex": "Not established in the reviewed record."
+        },
+        {
+          "field_tex": "Controller / EMS information",
+          "value_tex": "Not established where required by the native admissibility model."
+        },
+        {
+          "field_tex": "Eligibility status",
+          "value_tex": "Portable-system data, outside stationary field scope"
+        },
+        {
+          "field_tex": "Missing information",
+          "value_tex": "Stationary service identity and complete native operational pair."
+        },
+        {
+          "field_tex": "Allowed interpretation",
+          "value_tex": "Returned portable systems; individual use cases unresolved."
+        }
+      ]
+    },
+    {
+      "legacy_heading": "Yangon microgrid operational dataset",
+      "fields": [
+        {
+          "field_tex": "Available state information",
+          "value_tex": "SOC available."
+        },
+        {
+          "field_tex": "Power information",
+          "value_tex": "Signed and separate directional powers; reported 100 A discharge limit is not a constant power rating."
+        },
+        {
+          "field_tex": "Capacity information",
+          "value_tex": "83.2 kWh verified in retained source."
+        },
+        {
+          "field_tex": "Efficiency information",
+          "value_tex": "90.8\\% mean round-trip performance; no independently identified directional coefficients."
+        },
+        {
+          "field_tex": "Native limits",
+          "value_tex": "Native SOC thresholds and grid limits inaccessible; current-to-power relation depends on voltage."
+        },
+        {
+          "field_tex": "Native constraint definitions",
+          "value_tex": "Complete native device and operational admissibility definition unavailable."
+        },
+        {
+          "field_tex": "Measurement identity",
+          "value_tex": "Measured microgrid battery series; complete native conversion model unresolved."
+        },
+        {
+          "field_tex": "Temporal information",
+          "value_tex": "Timestamped records in UTC+06:30; use recorded sampling times."
+        },
+        {
+          "field_tex": "Controller / EMS information",
+          "value_tex": "Companion paper states EMS rules and SOC thresholds are inaccessible."
+        },
+        {
+          "field_tex": "Eligibility status",
+          "value_tex": "Native complete-query evaluation not eligible under the available model information."
+        },
+        {
+          "field_tex": "Missing information",
+          "value_tex": "Directional efficiencies, EMS rules, native SOC/grid limits and required voltage-dependent constraints."
+        },
+        {
+          "field_tex": "Allowed interpretation",
+          "value_tex": "Characterize visited operating states; no fitted efficiencies or invented limits."
+        }
+      ]
+    },
+    {
+      "legacy_heading": "SimSES standard profiles",
+      "fields": [
+        {
+          "field_tex": "Available state information",
+          "value_tex": "Not established in the reviewed record."
+        },
+        {
+          "field_tex": "Power information",
+          "value_tex": "Not established in the reviewed record."
+        },
+        {
+          "field_tex": "Capacity information",
+          "value_tex": "Not established in the reviewed record."
+        },
+        {
+          "field_tex": "Efficiency information",
+          "value_tex": "Not established for a complete native device model in the reviewed source record."
+        },
+        {
+          "field_tex": "Native limits",
+          "value_tex": "Not established for a complete native device model in the reviewed source record."
+        },
+        {
+          "field_tex": "Native constraint definitions",
+          "value_tex": "Not established for a complete native device model in the reviewed source record."
+        },
+        {
+          "field_tex": "Measurement identity",
+          "value_tex": "Provider/source type: TUM/official GovData. Complete native measurement-to-model identity not established."
+        },
+        {
+          "field_tex": "Temporal information",
+          "value_tex": "Not established in the reviewed record."
+        },
+        {
+          "field_tex": "Controller / EMS information",
+          "value_tex": "Not established where required by the native admissibility model."
+        },
+        {
+          "field_tex": "Eligibility status",
+          "value_tex": "Simulated, outside measured-data scope"
+        },
+        {
+          "field_tex": "Missing information",
+          "value_tex": "No measured battery-state trajectory in generated profiles."
+        },
+        {
+          "field_tex": "Allowed interpretation",
+          "value_tex": "Simulated storage profiles from real inputs only."
+        }
+      ]
+    },
+    {
+      "legacy_heading": "Railway SOC study (2025)",
+      "fields": [
+        {
+          "field_tex": "Available state information",
+          "value_tex": "Not established in the reviewed record."
+        },
+        {
+          "field_tex": "Power information",
+          "value_tex": "Not established in the reviewed record."
+        },
+        {
+          "field_tex": "Capacity information",
+          "value_tex": "Not established in the reviewed record."
+        },
+        {
+          "field_tex": "Efficiency information",
+          "value_tex": "Not established for a complete native device model in the reviewed source record."
+        },
+        {
+          "field_tex": "Native limits",
+          "value_tex": "Not established for a complete native device model in the reviewed source record."
+        },
+        {
+          "field_tex": "Native constraint definitions",
+          "value_tex": "Not established for a complete native device model in the reviewed source record."
+        },
+        {
+          "field_tex": "Measurement identity",
+          "value_tex": "Provider/source type: Energies primary article. Complete native measurement-to-model identity not established."
+        },
+        {
+          "field_tex": "Temporal information",
+          "value_tex": "Not established in the reviewed record."
+        },
+        {
+          "field_tex": "Controller / EMS information",
+          "value_tex": "Not established where required by the native admissibility model."
+        },
+        {
+          "field_tex": "Eligibility status",
+          "value_tex": "Raw data require permission"
+        },
+        {
+          "field_tex": "Missing information",
+          "value_tex": "Permitted raw state/power access and native-model linkage."
+        },
+        {
+          "field_tex": "Allowed interpretation",
+          "value_tex": "Telemetry-hardware description does not establish public native data."
+        }
+      ]
+    }
+  ]
+}

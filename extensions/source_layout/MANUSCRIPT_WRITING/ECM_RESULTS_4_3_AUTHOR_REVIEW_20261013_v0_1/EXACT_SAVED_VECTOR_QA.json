@@ -1,0 +1,240 @@
+{
+  "task": "Phase A only",
+  "kind": "exact read-only substitution of stored vectors",
+  "new_cases": 0,
+  "solvers_run": 0,
+  "origin_sessions_touched": 0,
+  "counts": {
+    "endpoint_intervals": 36,
+    "midpoint_intervals": 18,
+    "reconstruction_intervals": 18,
+    "dynamics_equalities": 72,
+    "inequality_substitutions": 648
+  },
+  "cases": [
+    {
+      "record": 0,
+      "eta_c": "13/20",
+      "amplitude_MW": "0",
+      "query_MW": [
+        "0",
+        "-109/445"
+      ],
+      "endpoint_feasibility": "PASS",
+      "midpoint_feasibility": "PASS",
+      "reconstructed_energy_bounds": "PASS",
+      "energy_shift_kWh": "0",
+      "charging_excess_kW": "0",
+      "charging_excess_MW": "0",
+      "status": "ZERO",
+      "reconstruction_failed_rows": [],
+      "whole_query_equality_certificate": false,
+      "zero_reason": "zero amplitude"
+    },
+    {
+      "record": 1,
+      "eta_c": "13/20",
+      "amplitude_MW": "1/20",
+      "query_MW": [
+        "0",
+        "-907/3560"
+      ],
+      "endpoint_feasibility": "PASS",
+      "midpoint_feasibility": "PASS",
+      "reconstructed_energy_bounds": "PASS",
+      "energy_shift_kWh": "35/16",
+      "charging_excess_kW": "875/24",
+      "charging_excess_MW": "7/192",
+      "status": "POSITIVE",
+      "reconstruction_failed_rows": [
+        {
+          "interval": 2,
+          "row": "charging_end",
+          "excess_MW": "7/192"
+        }
+      ],
+      "whole_query_equality_certificate": false,
+      "zero_reason": null
+    },
+    {
+      "record": 2,
+      "eta_c": "13/20",
+      "amplitude_MW": "1/10",
+      "query_MW": [
+        "0",
+        "-471/1780"
+      ],
+      "endpoint_feasibility": "PASS",
+      "midpoint_feasibility": "PASS",
+      "reconstructed_energy_bounds": "PASS",
+      "energy_shift_kWh": "35/8",
+      "charging_excess_kW": "875/12",
+      "charging_excess_MW": "7/96",
+      "status": "POSITIVE",
+      "reconstruction_failed_rows": [
+        {
+          "interval": 2,
+          "row": "charging_end",
+          "excess_MW": "7/96"
+        }
+      ],
+      "whole_query_equality_certificate": false,
+      "zero_reason": null
+    },
+    {
+      "record": 3,
+      "eta_c": "9/10",
+      "amplitude_MW": "0",
+      "query_MW": [
+        "0",
+        "-109/570"
+      ],
+      "endpoint_feasibility": "PASS",
+      "midpoint_feasibility": "PASS",
+      "reconstructed_energy_bounds": "PASS",
+      "energy_shift_kWh": "0",
+      "charging_excess_kW": "0",
+      "charging_excess_MW": "0",
+      "status": "ZERO",
+      "reconstruction_failed_rows": [],
+      "whole_query_equality_certificate": false,
+      "zero_reason": "zero amplitude"
+    },
+    {
+      "record": 4,
+      "eta_c": "9/10",
+      "amplitude_MW": "1/20",
+      "query_MW": [
+        "0",
+        "-147/760"
+      ],
+      "endpoint_feasibility": "PASS",
+      "midpoint_feasibility": "PASS",
+      "reconstructed_energy_bounds": "PASS",
+      "energy_shift_kWh": "5/8",
+      "charging_excess_kW": "125/12",
+      "charging_excess_MW": "1/96",
+      "status": "POSITIVE",
+      "reconstruction_failed_rows": [
+        {
+          "interval": 2,
+          "row": "charging_end",
+          "excess_MW": "1/96"
+        }
+      ],
+      "whole_query_equality_certificate": false,
+      "zero_reason": null
+    },
+    {
+      "record": 5,
+      "eta_c": "9/10",
+      "amplitude_MW": "1/10",
+      "query_MW": [
+        "0",
+        "-223/1140"
+      ],
+      "endpoint_feasibility": "PASS",
+      "midpoint_feasibility": "PASS",
+      "reconstructed_energy_bounds": "PASS",
+      "energy_shift_kWh": "5/4",
+      "charging_excess_kW": "125/6",
+      "charging_excess_MW": "1/48",
+      "status": "POSITIVE",
+      "reconstruction_failed_rows": [
+        {
+          "interval": 2,
+          "row": "charging_end",
+          "excess_MW": "1/48"
+        }
+      ],
+      "whole_query_equality_certificate": false,
+      "zero_reason": null
+    },
+    {
+      "record": 6,
+      "eta_c": "1",
+      "amplitude_MW": "0",
+      "query_MW": [
+        "0",
+        "-109/620"
+      ],
+      "endpoint_feasibility": "PASS",
+      "midpoint_feasibility": "PASS",
+      "reconstructed_energy_bounds": "PASS",
+      "energy_shift_kWh": "0",
+      "charging_excess_kW": "0",
+      "charging_excess_MW": "0",
+      "status": "ZERO",
+      "reconstruction_failed_rows": [],
+      "whole_query_equality_certificate": false,
+      "zero_reason": "zero amplitude and lossless"
+    },
+    {
+      "record": 7,
+      "eta_c": "1",
+      "amplitude_MW": "1/20",
+      "query_MW": [
+        "0",
+        "-109/620"
+      ],
+      "endpoint_feasibility": "PASS",
+      "midpoint_feasibility": "PASS",
+      "reconstructed_energy_bounds": "PASS",
+      "energy_shift_kWh": "0",
+      "charging_excess_kW": "0",
+      "charging_excess_MW": "0",
+      "status": "ZERO",
+      "reconstruction_failed_rows": [],
+      "whole_query_equality_certificate": false,
+      "zero_reason": "lossless"
+    },
+    {
+      "record": 8,
+      "eta_c": "1",
+      "amplitude_MW": "1/10",
+      "query_MW": [
+        "0",
+        "-109/620"
+      ],
+      "endpoint_feasibility": "PASS",
+      "midpoint_feasibility": "PASS",
+      "reconstructed_energy_bounds": "PASS",
+      "energy_shift_kWh": "0",
+      "charging_excess_kW": "0",
+      "charging_excess_MW": "0",
+      "status": "ZERO",
+      "reconstruction_failed_rows": [],
+      "whole_query_equality_certificate": false,
+      "zero_reason": "lossless"
+    }
+  ],
+  "geometry_source_record": 2,
+  "geometry_coordinates": [
+    [
+      "12453/22250",
+      "-153/890"
+    ],
+    [
+      "24411/44500",
+      "-159/445"
+    ],
+    [
+      "49317/89000",
+      "-471/1780"
+    ],
+    [
+      "397651/712000",
+      "-471/1780"
+    ]
+  ],
+  "native_contract_numeric_cells_matched": 34,
+  "native_editability_basis": "Existing reopen receipt plus unchanged OPJU hash; no new Origin reopen in Phase A",
+  "si_exact_rows_matched": 9,
+  "canonical_sm_duplicate_hits": [],
+  "source_files_unchanged": 29,
+  "scientific_conflicts": [],
+  "expanded_TH06_baseline_content_retained": true,
+  "canonical_review_entry_already_includes_expanded_TH06_and_T07": true,
+  "source_files_unchanged_at_final_check": 35,
+  "source_hash_final_gate": "PASS"
+}

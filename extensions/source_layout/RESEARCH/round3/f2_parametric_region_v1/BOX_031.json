@@ -1,0 +1,12 @@
+{
+  "regime": "BOX",
+  "e0": "3/10",
+  "ceiling": "2/5",
+  "feasible_smt": "sat",
+  "bad_smt": "unsat",
+  "errors": [],
+  "feasible_qe": "True",
+  "bad_qe": "False",
+  "lp_feasible": true,
+  "lp_max_margin": -0.07777777777777778
+}

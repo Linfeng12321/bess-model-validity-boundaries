@@ -1,0 +1,28 @@
+{
+  "paired_setting_id": "PHASE2_T008_P08",
+  "phase": "PHASE2",
+  "T": 8,
+  "eta_c": "13/20",
+  "eta_d": "1",
+  "rho": "1",
+  "h": "1/4",
+  "row_form": "N",
+  "initial_rule": "source60",
+  "e0": "9/25",
+  "e1": "879/2000",
+  "gain": "159/2000",
+  "eligible": true,
+  "valid_first_charge": true,
+  "not_applicable_reason": "",
+  "legacy_case_index": null,
+  "case_id": "PHASE2_T008_P08_new",
+  "state": "new",
+  "effective_initial_energy": "879/2000",
+  "planned_work": {
+    "predicted_reduced_subproblems": 24,
+    "target_rows": 48,
+    "automatic_rows": 25,
+    "checked_rows": 23,
+    "predicted_full_sign_upper_bound": 14336
+  }
+}

@@ -1,0 +1,2626 @@
+{
+  "description": "Faithful conversion of an existing author field-register TeX; field_tex and value_tex retain original LaTeX text. It is descriptive source metadata, not a new screening decision or new experiments. Frozen model/state masters retain scientific authority.",
+  "source_filename": "15_TABLE_EXECUTABLE_MAPPING_34_CANDIDATE.tex",
+  "source_sha256": "f69bb1c1404eb99e501428eb32f574e136f3672d810821c28dc1a3d3cb1dac55",
+  "record_count": 34,
+  "records": [
+    {
+      "legacy_heading": "1. PRAT_FIRST",
+      "fields": [
+        {
+          "field_tex": "Source identifier",
+          "value_tex": "Prat2025"
+        },
+        {
+          "field_tex": "Source",
+          "value_tex": "Prat2025 / PRAT\\_\\allowbreak{}FIRST; Sufficient A Priori Conditions for the Linear Relaxation of the Energy Storage Scheduling Problem; 10.48550/arXiv.2508.12999"
+        },
+        {
+          "field_tex": "Parameter instance",
+          "value_tex": "PRAT\\_\\allowbreak{}FIRST"
+        },
+        {
+          "field_tex": "Source formulation",
+          "value_tex": "BOX"
+        },
+        {
+          "field_tex": "Source equations",
+          "value_tex": "Eq1-5; section3.3 first instance and all Table1 published modes; p8-9"
+        },
+        {
+          "field_tex": "Mapped state",
+          "value_tex": "initial\\_\\allowbreak{}energy E0 in [0,1] MWh; state\\_\\allowbreak{}dimensions=initial\\_\\allowbreak{}energy; dimension\\_\\allowbreak{}count=1"
+        },
+        {
+          "field_tex": "Declared query",
+          "value_tex": "pi=(d0-c0,...,d(T-1)-c(T-1)); entire net power trajectory"
+        },
+        {
+          "field_tex": "Mapped device variables",
+          "value_tex": "c\\_\\allowbreak{}t,d\\_\\allowbreak{}t >= 0 [MW]; E\\_\\allowbreak{}t [MWh]"
+        },
+        {
+          "field_tex": "Retained constraints",
+          "value_tex": "Nonnegative c,d; source fixed charging/discharging ratings; bounded energy; exact constant-efficiency energy dynamics; X adds c\\_\\allowbreak{}t*d\\_\\allowbreak{}t=0 to the mapped R. No sum-power hull row added by BOX adapter. Terminal=free; terminal\\_\\allowbreak{}floor=NOT\\_\\allowbreak{}APPLICABLE."
+        },
+        {
+          "field_tex": "Excluded components",
+          "value_tex": "Price/objective optimality and dispatch policy; published parameter modes are not independent papers."
+        },
+        {
+          "field_tex": "Parameter source",
+          "value_tex": "lo=0; hi=1; charge\\_\\allowbreak{}rating=3/2; discharge\\_\\allowbreak{}rating=3/2; eta\\_\\allowbreak{}charge=9/10; eta\\_\\allowbreak{}discharge=9/10; T=24; interval\\_\\allowbreak{}h=1; energy\\_\\allowbreak{}unit=MWh; power\\_\\allowbreak{}unit=MW; terminal=free; terminal\\_\\allowbreak{}floor=NOT\\_\\allowbreak{}APPLICABLE | Source section3.3 first instance and all Table1 published lossless/lossy/slow modes, pp8-9."
+        },
+        {
+          "field_tex": "Executed-instance exact mapping status",
+          "value_tex": "FULL\\_\\allowbreak{}DEVICE\\_\\allowbreak{}MAPPING"
+        },
+        {
+          "field_tex": "Source sign convention",
+          "value_tex": "Not established from the available source information"
+        },
+        {
+          "field_tex": "Documented transformation",
+          "value_tex": "Separate nonnegative pC and pD; p=pD-pC. No flow sign conversion."
+        },
+        {
+          "field_tex": "Reader-facing mapping scope",
+          "value_tex": "Complete declared device reconstruction."
+        },
+        {
+          "field_tex": "Domain-evaluation eligibility",
+          "value_tex": "YES\\_\\allowbreak{}RECORDED\\_\\allowbreak{}FOR\\_\\allowbreak{}DECLARED\\_\\allowbreak{}DEVICE\\_\\allowbreak{}SCOPE"
+        },
+        {
+          "field_tex": "Transition-evidence status",
+          "value_tex": "No certified state transition is available for this instance; this absence does not establish that such transitions are impossible."
+        },
+        {
+          "field_tex": "Limitation",
+          "value_tex": "Four published parameter settings; whole source initial-energy domains. Initial state not guessed. Price/objective optimality and dispatch policy; published parameter modes are not independent papers. | source-original net-power sign not separately recorded in inspected mapping authority; adapter query is separately recorded"
+        }
+      ]
+    },
+    {
+      "legacy_heading": "2. PRAT_TABLE1_LOSSLESS",
+      "fields": [
+        {
+          "field_tex": "Source identifier",
+          "value_tex": "Prat2025"
+        },
+        {
+          "field_tex": "Source",
+          "value_tex": "Prat2025 / PRAT\\_\\allowbreak{}TABLE1\\_\\allowbreak{}LOSSLESS; Sufficient A Priori Conditions for the Linear Relaxation of the Energy Storage Scheduling Problem; 10.48550/arXiv.2508.12999"
+        },
+        {
+          "field_tex": "Parameter instance",
+          "value_tex": "PRAT\\_\\allowbreak{}TABLE1\\_\\allowbreak{}LOSSLESS"
+        },
+        {
+          "field_tex": "Source formulation",
+          "value_tex": "BOX"
+        },
+        {
+          "field_tex": "Source equations",
+          "value_tex": "Eq1-5; section3.3 first instance and all Table1 published modes; p8-9"
+        },
+        {
+          "field_tex": "Mapped state",
+          "value_tex": "initial\\_\\allowbreak{}energy E0 in [0,1] MWh; state\\_\\allowbreak{}dimensions=initial\\_\\allowbreak{}energy; dimension\\_\\allowbreak{}count=1"
+        },
+        {
+          "field_tex": "Declared query",
+          "value_tex": "pi=(d0-c0,...,d(T-1)-c(T-1)); entire net power trajectory"
+        },
+        {
+          "field_tex": "Mapped device variables",
+          "value_tex": "c\\_\\allowbreak{}t,d\\_\\allowbreak{}t >= 0 [MW]; E\\_\\allowbreak{}t [MWh]"
+        },
+        {
+          "field_tex": "Retained constraints",
+          "value_tex": "Nonnegative c,d; source fixed charging/discharging ratings; bounded energy; exact constant-efficiency energy dynamics; X adds c\\_\\allowbreak{}t*d\\_\\allowbreak{}t=0 to the mapped R. No sum-power hull row added by BOX adapter. Terminal=free; terminal\\_\\allowbreak{}floor=NOT\\_\\allowbreak{}APPLICABLE."
+        },
+        {
+          "field_tex": "Excluded components",
+          "value_tex": "Price/objective optimality and dispatch policy; published parameter modes are not independent papers."
+        },
+        {
+          "field_tex": "Parameter source",
+          "value_tex": "lo=0; hi=1; charge\\_\\allowbreak{}rating=3/5; discharge\\_\\allowbreak{}rating=3/5; eta\\_\\allowbreak{}charge=1; eta\\_\\allowbreak{}discharge=1; T=24; interval\\_\\allowbreak{}h=1; energy\\_\\allowbreak{}unit=MWh; power\\_\\allowbreak{}unit=MW; terminal=free; terminal\\_\\allowbreak{}floor=NOT\\_\\allowbreak{}APPLICABLE | Source section3.3 first instance and all Table1 published lossless/lossy/slow modes, pp8-9."
+        },
+        {
+          "field_tex": "Executed-instance exact mapping status",
+          "value_tex": "FULL\\_\\allowbreak{}DEVICE\\_\\allowbreak{}MAPPING"
+        },
+        {
+          "field_tex": "Source sign convention",
+          "value_tex": "Not established from the available source information"
+        },
+        {
+          "field_tex": "Documented transformation",
+          "value_tex": "Separate nonnegative pC and pD; p=pD-pC. No flow sign conversion."
+        },
+        {
+          "field_tex": "Reader-facing mapping scope",
+          "value_tex": "Complete declared device reconstruction."
+        },
+        {
+          "field_tex": "Domain-evaluation eligibility",
+          "value_tex": "YES\\_\\allowbreak{}RECORDED\\_\\allowbreak{}FOR\\_\\allowbreak{}DECLARED\\_\\allowbreak{}DEVICE\\_\\allowbreak{}SCOPE"
+        },
+        {
+          "field_tex": "Transition-evidence status",
+          "value_tex": "No certified state transition is available for this instance; this absence does not establish that such transitions are impossible."
+        },
+        {
+          "field_tex": "Limitation",
+          "value_tex": "Four published parameter settings; whole source initial-energy domains. Initial state not guessed. Price/objective optimality and dispatch policy; published parameter modes are not independent papers. | source-original net-power sign not separately recorded in inspected mapping authority; adapter query is separately recorded"
+        }
+      ]
+    },
+    {
+      "legacy_heading": "3. PRAT_TABLE1_LOSSY",
+      "fields": [
+        {
+          "field_tex": "Source identifier",
+          "value_tex": "Prat2025"
+        },
+        {
+          "field_tex": "Source",
+          "value_tex": "Prat2025 / PRAT\\_\\allowbreak{}TABLE1\\_\\allowbreak{}LOSSY; Sufficient A Priori Conditions for the Linear Relaxation of the Energy Storage Scheduling Problem; 10.48550/arXiv.2508.12999"
+        },
+        {
+          "field_tex": "Parameter instance",
+          "value_tex": "PRAT\\_\\allowbreak{}TABLE1\\_\\allowbreak{}LOSSY"
+        },
+        {
+          "field_tex": "Source formulation",
+          "value_tex": "BOX"
+        },
+        {
+          "field_tex": "Source equations",
+          "value_tex": "Eq1-5; section3.3 first instance and all Table1 published modes; p8-9"
+        },
+        {
+          "field_tex": "Mapped state",
+          "value_tex": "initial\\_\\allowbreak{}energy E0 in [0,1] MWh; state\\_\\allowbreak{}dimensions=initial\\_\\allowbreak{}energy; dimension\\_\\allowbreak{}count=1"
+        },
+        {
+          "field_tex": "Declared query",
+          "value_tex": "pi=(d0-c0,...,d(T-1)-c(T-1)); entire net power trajectory"
+        },
+        {
+          "field_tex": "Mapped device variables",
+          "value_tex": "c\\_\\allowbreak{}t,d\\_\\allowbreak{}t >= 0 [MW]; E\\_\\allowbreak{}t [MWh]"
+        },
+        {
+          "field_tex": "Retained constraints",
+          "value_tex": "Nonnegative c,d; source fixed charging/discharging ratings; bounded energy; exact constant-efficiency energy dynamics; X adds c\\_\\allowbreak{}t*d\\_\\allowbreak{}t=0 to the mapped R. No sum-power hull row added by BOX adapter. Terminal=free; terminal\\_\\allowbreak{}floor=NOT\\_\\allowbreak{}APPLICABLE."
+        },
+        {
+          "field_tex": "Excluded components",
+          "value_tex": "Price/objective optimality and dispatch policy; published parameter modes are not independent papers."
+        },
+        {
+          "field_tex": "Parameter source",
+          "value_tex": "lo=0; hi=1; charge\\_\\allowbreak{}rating=3/5; discharge\\_\\allowbreak{}rating=3/5; eta\\_\\allowbreak{}charge=9/10; eta\\_\\allowbreak{}discharge=9/10; T=24; interval\\_\\allowbreak{}h=1; energy\\_\\allowbreak{}unit=MWh; power\\_\\allowbreak{}unit=MW; terminal=free; terminal\\_\\allowbreak{}floor=NOT\\_\\allowbreak{}APPLICABLE | Source section3.3 first instance and all Table1 published lossless/lossy/slow modes, pp8-9."
+        },
+        {
+          "field_tex": "Executed-instance exact mapping status",
+          "value_tex": "FULL\\_\\allowbreak{}DEVICE\\_\\allowbreak{}MAPPING"
+        },
+        {
+          "field_tex": "Source sign convention",
+          "value_tex": "Not established from the available source information"
+        },
+        {
+          "field_tex": "Documented transformation",
+          "value_tex": "Separate nonnegative pC and pD; p=pD-pC. No flow sign conversion."
+        },
+        {
+          "field_tex": "Reader-facing mapping scope",
+          "value_tex": "Complete declared device reconstruction."
+        },
+        {
+          "field_tex": "Domain-evaluation eligibility",
+          "value_tex": "YES\\_\\allowbreak{}RECORDED\\_\\allowbreak{}FOR\\_\\allowbreak{}DECLARED\\_\\allowbreak{}DEVICE\\_\\allowbreak{}SCOPE"
+        },
+        {
+          "field_tex": "Transition-evidence status",
+          "value_tex": "No certified state transition is available for this instance; this absence does not establish that such transitions are impossible."
+        },
+        {
+          "field_tex": "Limitation",
+          "value_tex": "Four published parameter settings; whole source initial-energy domains. Initial state not guessed. Price/objective optimality and dispatch policy; published parameter modes are not independent papers. | source-original net-power sign not separately recorded in inspected mapping authority; adapter query is separately recorded"
+        }
+      ]
+    },
+    {
+      "legacy_heading": "4. PRAT_TABLE1_SLOW",
+      "fields": [
+        {
+          "field_tex": "Source identifier",
+          "value_tex": "Prat2025"
+        },
+        {
+          "field_tex": "Source",
+          "value_tex": "Prat2025 / PRAT\\_\\allowbreak{}TABLE1\\_\\allowbreak{}SLOW; Sufficient A Priori Conditions for the Linear Relaxation of the Energy Storage Scheduling Problem; 10.48550/arXiv.2508.12999"
+        },
+        {
+          "field_tex": "Parameter instance",
+          "value_tex": "PRAT\\_\\allowbreak{}TABLE1\\_\\allowbreak{}SLOW"
+        },
+        {
+          "field_tex": "Source formulation",
+          "value_tex": "BOX"
+        },
+        {
+          "field_tex": "Source equations",
+          "value_tex": "Eq1-5; section3.3 first instance and all Table1 published modes; p8-9"
+        },
+        {
+          "field_tex": "Mapped state",
+          "value_tex": "initial\\_\\allowbreak{}energy E0 in [0,1] MWh; state\\_\\allowbreak{}dimensions=initial\\_\\allowbreak{}energy; dimension\\_\\allowbreak{}count=1"
+        },
+        {
+          "field_tex": "Declared query",
+          "value_tex": "pi=(d0-c0,...,d(T-1)-c(T-1)); entire net power trajectory"
+        },
+        {
+          "field_tex": "Mapped device variables",
+          "value_tex": "c\\_\\allowbreak{}t,d\\_\\allowbreak{}t >= 0 [MW]; E\\_\\allowbreak{}t [MWh]"
+        },
+        {
+          "field_tex": "Retained constraints",
+          "value_tex": "Nonnegative c,d; source fixed charging/discharging ratings; bounded energy; exact constant-efficiency energy dynamics; X adds c\\_\\allowbreak{}t*d\\_\\allowbreak{}t=0 to the mapped R. No sum-power hull row added by BOX adapter. Terminal=free; terminal\\_\\allowbreak{}floor=NOT\\_\\allowbreak{}APPLICABLE."
+        },
+        {
+          "field_tex": "Excluded components",
+          "value_tex": "Price/objective optimality and dispatch policy; published parameter modes are not independent papers."
+        },
+        {
+          "field_tex": "Parameter source",
+          "value_tex": "lo=0; hi=1; charge\\_\\allowbreak{}rating=1/5; discharge\\_\\allowbreak{}rating=1/5; eta\\_\\allowbreak{}charge=9/10; eta\\_\\allowbreak{}discharge=9/10; T=24; interval\\_\\allowbreak{}h=1; energy\\_\\allowbreak{}unit=MWh; power\\_\\allowbreak{}unit=MW; terminal=free; terminal\\_\\allowbreak{}floor=NOT\\_\\allowbreak{}APPLICABLE | Source section3.3 first instance and all Table1 published lossless/lossy/slow modes, pp8-9."
+        },
+        {
+          "field_tex": "Executed-instance exact mapping status",
+          "value_tex": "FULL\\_\\allowbreak{}DEVICE\\_\\allowbreak{}MAPPING"
+        },
+        {
+          "field_tex": "Source sign convention",
+          "value_tex": "Not established from the available source information"
+        },
+        {
+          "field_tex": "Documented transformation",
+          "value_tex": "Separate nonnegative pC and pD; p=pD-pC. No flow sign conversion."
+        },
+        {
+          "field_tex": "Reader-facing mapping scope",
+          "value_tex": "Complete declared device reconstruction."
+        },
+        {
+          "field_tex": "Domain-evaluation eligibility",
+          "value_tex": "YES\\_\\allowbreak{}RECORDED\\_\\allowbreak{}FOR\\_\\allowbreak{}DECLARED\\_\\allowbreak{}DEVICE\\_\\allowbreak{}SCOPE"
+        },
+        {
+          "field_tex": "Transition-evidence status",
+          "value_tex": "No certified state transition is available for this instance; this absence does not establish that such transitions are impossible."
+        },
+        {
+          "field_tex": "Limitation",
+          "value_tex": "Four published parameter settings; whole source initial-energy domains. Initial state not guessed. Price/objective optimality and dispatch policy; published parameter modes are not independent papers. | source-original net-power sign not separately recorded in inspected mapping authority; adapter query is separately recorded"
+        }
+      ]
+    },
+    {
+      "legacy_heading": "5. MORALES_NATURAL_LP",
+      "fields": [
+        {
+          "field_tex": "Source identifier",
+          "value_tex": "Morales2025"
+        },
+        {
+          "field_tex": "Source",
+          "value_tex": "Morales2025 / MORALES\\_\\allowbreak{}NATURAL\\_\\allowbreak{}LP; Linear and Second-order-cone Valid Inequalities for Problems with Storage; 10.48550/arXiv.2506.21470"
+        },
+        {
+          "field_tex": "Parameter instance",
+          "value_tex": "MORALES\\_\\allowbreak{}NATURAL\\_\\allowbreak{}LP"
+        },
+        {
+          "field_tex": "Source formulation",
+          "value_tex": "HULL"
+        },
+        {
+          "field_tex": "Source equations",
+          "value_tex": "Pozo HCH / Morales Eq1-4 and Theorem1 Eq8-11; author scheduling.py and published first ESS row R000"
+        },
+        {
+          "field_tex": "Mapped state",
+          "value_tex": "initial\\_\\allowbreak{}energy E0 in [30,60] kWh; state\\_\\allowbreak{}dimensions=initial\\_\\allowbreak{}energy; dimension\\_\\allowbreak{}count=1"
+        },
+        {
+          "field_tex": "Declared query",
+          "value_tex": "pi=(d0-c0,...,d(T-1)-c(T-1)); entire net power trajectory"
+        },
+        {
+          "field_tex": "Mapped device variables",
+          "value_tex": "c\\_\\allowbreak{}t,d\\_\\allowbreak{}t >= 0 [kW]; E\\_\\allowbreak{}t [kWh]"
+        },
+        {
+          "field_tex": "Retained constraints",
+          "value_tex": "Nonnegative c,d; source fixed charging/discharging ratings; bounded energy; exact constant-efficiency energy dynamics; X adds c\\_\\allowbreak{}t*d\\_\\allowbreak{}t=0 to the mapped R. Retains c/Pc+d/Pd<=1. Terminal=free; terminal\\_\\allowbreak{}floor=NOT\\_\\allowbreak{}APPLICABLE."
+        },
+        {
+          "field_tex": "Excluded components",
+          "value_tex": "Network, objective, fleet and conic extensions outside the selected linear formulation; natural-LP and linear-cut anchors are separate."
+        },
+        {
+          "field_tex": "Parameter source",
+          "value_tex": "lo=30; hi=60; charge\\_\\allowbreak{}rating=20; discharge\\_\\allowbreak{}rating=20; eta\\_\\allowbreak{}charge=9/10; eta\\_\\allowbreak{}discharge=19/20; T=24; interval\\_\\allowbreak{}h=1; energy\\_\\allowbreak{}unit=kWh; power\\_\\allowbreak{}unit=kW; terminal=free; terminal\\_\\allowbreak{}floor=NOT\\_\\allowbreak{}APPLICABLE | Source Eqs1-4, Theorem1 Eqs8-11; author scheduling.py and published first ESS row R000. Selected family determines which rows apply; not every anchor includes all equations in shared locator."
+        },
+        {
+          "field_tex": "Executed-instance exact mapping status",
+          "value_tex": "FULL\\_\\allowbreak{}DEVICE\\_\\allowbreak{}MAPPING"
+        },
+        {
+          "field_tex": "Source sign convention",
+          "value_tex": "Not established from the available source information"
+        },
+        {
+          "field_tex": "Documented transformation",
+          "value_tex": "Separate nonnegative charge/discharge variables; form p=d-c. No directional-flow sign conversion."
+        },
+        {
+          "field_tex": "Reader-facing mapping scope",
+          "value_tex": "Complete declared device reconstruction."
+        },
+        {
+          "field_tex": "Domain-evaluation eligibility",
+          "value_tex": "YES\\_\\allowbreak{}RECORDED\\_\\allowbreak{}FOR\\_\\allowbreak{}DECLARED\\_\\allowbreak{}DEVICE\\_\\allowbreak{}SCOPE"
+        },
+        {
+          "field_tex": "Transition-evidence status",
+          "value_tex": "No certified state transition is available for this instance; this absence does not establish that such transitions are impossible."
+        },
+        {
+          "field_tex": "Limitation",
+          "value_tex": "Natural LP and author Theorem1 multiperiod linear inequalities both mapped. Shared Pozo parameter table does not invalidate independent constraint-family contribution. SOC cones excluded. Network, objective, fleet and conic extensions outside the selected linear formulation; natural-LP and linear-cut anchors are separate. | source-original net-power sign not separately recorded in inspected mapping authority; adapter query is separately recorded"
+        }
+      ]
+    },
+    {
+      "legacy_heading": "6. MORALES_LINEAR_CUTS",
+      "fields": [
+        {
+          "field_tex": "Source identifier",
+          "value_tex": "Morales2025"
+        },
+        {
+          "field_tex": "Source",
+          "value_tex": "Morales2025 / MORALES\\_\\allowbreak{}LINEAR\\_\\allowbreak{}CUTS; Linear and Second-order-cone Valid Inequalities for Problems with Storage; 10.48550/arXiv.2506.21470"
+        },
+        {
+          "field_tex": "Parameter instance",
+          "value_tex": "MORALES\\_\\allowbreak{}LINEAR\\_\\allowbreak{}CUTS"
+        },
+        {
+          "field_tex": "Source formulation",
+          "value_tex": "MORALES"
+        },
+        {
+          "field_tex": "Source equations",
+          "value_tex": "Pozo HCH / Morales Eq1-4 and Theorem1 Eq8-11; author scheduling.py and published first ESS row R000"
+        },
+        {
+          "field_tex": "Mapped state",
+          "value_tex": "initial\\_\\allowbreak{}energy E0 in [30,60] kWh; state\\_\\allowbreak{}dimensions=initial\\_\\allowbreak{}energy; dimension\\_\\allowbreak{}count=1"
+        },
+        {
+          "field_tex": "Declared query",
+          "value_tex": "pi=(d0-c0,...,d(T-1)-c(T-1)); entire net power trajectory"
+        },
+        {
+          "field_tex": "Mapped device variables",
+          "value_tex": "c\\_\\allowbreak{}t,d\\_\\allowbreak{}t >= 0 [kW]; E\\_\\allowbreak{}t [kWh]"
+        },
+        {
+          "field_tex": "Retained constraints",
+          "value_tex": "Nonnegative c,d; source fixed charging/discharging ratings; bounded energy; exact constant-efficiency energy dynamics; X adds c\\_\\allowbreak{}t*d\\_\\allowbreak{}t=0 to the mapped R. Retains sum-power and headroom rows, source reachable-state bounds and multiperiod linear cuts; zero availability fixes the corresponding flow to zero. Terminal=free; terminal\\_\\allowbreak{}floor=NOT\\_\\allowbreak{}APPLICABLE."
+        },
+        {
+          "field_tex": "Excluded components",
+          "value_tex": "Network, objective, fleet and conic extensions outside the selected linear formulation; natural-LP and linear-cut anchors are separate."
+        },
+        {
+          "field_tex": "Parameter source",
+          "value_tex": "lo=30; hi=60; charge\\_\\allowbreak{}rating=20; discharge\\_\\allowbreak{}rating=20; eta\\_\\allowbreak{}charge=9/10; eta\\_\\allowbreak{}discharge=19/20; T=24; interval\\_\\allowbreak{}h=1; energy\\_\\allowbreak{}unit=kWh; power\\_\\allowbreak{}unit=kW; terminal=free; terminal\\_\\allowbreak{}floor=NOT\\_\\allowbreak{}APPLICABLE | Source Eqs1-4, Theorem1 Eqs8-11; author scheduling.py and published first ESS row R000. Selected family determines which rows apply; not every anchor includes all equations in shared locator."
+        },
+        {
+          "field_tex": "Executed-instance exact mapping status",
+          "value_tex": "FULL\\_\\allowbreak{}DEVICE\\_\\allowbreak{}MAPPING"
+        },
+        {
+          "field_tex": "Source sign convention",
+          "value_tex": "Not established from the available source information"
+        },
+        {
+          "field_tex": "Documented transformation",
+          "value_tex": "Separate nonnegative charge/discharge variables; form p=d-c. No directional-flow sign conversion."
+        },
+        {
+          "field_tex": "Reader-facing mapping scope",
+          "value_tex": "Complete declared device reconstruction."
+        },
+        {
+          "field_tex": "Domain-evaluation eligibility",
+          "value_tex": "YES\\_\\allowbreak{}RECORDED\\_\\allowbreak{}FOR\\_\\allowbreak{}DECLARED\\_\\allowbreak{}DEVICE\\_\\allowbreak{}SCOPE"
+        },
+        {
+          "field_tex": "Transition-evidence status",
+          "value_tex": "No certified state transition is available for this instance; this absence does not establish that such transitions are impossible."
+        },
+        {
+          "field_tex": "Limitation",
+          "value_tex": "Natural LP and author Theorem1 multiperiod linear inequalities both mapped. Shared Pozo parameter table does not invalidate independent constraint-family contribution. SOC cones excluded. Network, objective, fleet and conic extensions outside the selected linear formulation; natural-LP and linear-cut anchors are separate. | source-original net-power sign not separately recorded in inspected mapping authority; adapter query is separately recorded"
+        }
+      ]
+    },
+    {
+      "legacy_heading": "7. TZIOVANI_UC1_T24",
+      "fields": [
+        {
+          "field_tex": "Source identifier",
+          "value_tex": "Tziovani2024"
+        },
+        {
+          "field_tex": "Source",
+          "value_tex": "Tziovani2024 / TZIOVANI\\_\\allowbreak{}UC1\\_\\allowbreak{}T24; Successive Convexification Algorithms for Optimizing Power Systems With Energy Storage Models; 10.1109/TSG.2023.3316720"
+        },
+        {
+          "field_tex": "Parameter instance",
+          "value_tex": "TZIOVANI\\_\\allowbreak{}UC1\\_\\allowbreak{}T24"
+        },
+        {
+          "field_tex": "Source formulation",
+          "value_tex": "HULL"
+        },
+        {
+          "field_tex": "Source equations",
+          "value_tex": "Author manuscript pp3-4 Eqs1,2,11-16; p8 TableII; p8 TableV T5; pp10-11 PSEA T480"
+        },
+        {
+          "field_tex": "Mapped state",
+          "value_tex": "initial\\_\\allowbreak{}energy E0 in [1,4] MWh; state\\_\\allowbreak{}dimensions=initial\\_\\allowbreak{}energy; dimension\\_\\allowbreak{}count=1"
+        },
+        {
+          "field_tex": "Declared query",
+          "value_tex": "pi=(d0-c0,...,d(T-1)-c(T-1)); entire net power trajectory"
+        },
+        {
+          "field_tex": "Mapped device variables",
+          "value_tex": "c\\_\\allowbreak{}t,d\\_\\allowbreak{}t >= 0 [MW]; E\\_\\allowbreak{}t [MWh]"
+        },
+        {
+          "field_tex": "Retained constraints",
+          "value_tex": "Nonnegative c,d; source fixed charging/discharging ratings; bounded energy; exact constant-efficiency energy dynamics; X adds c\\_\\allowbreak{}t*d\\_\\allowbreak{}t=0 to the mapped R. Retains c/Pc+d/Pd<=1. Terminal=free; terminal\\_\\allowbreak{}floor=NOT\\_\\allowbreak{}APPLICABLE."
+        },
+        {
+          "field_tex": "Excluded components",
+          "value_tex": "Network/unit commitment, objectives, quadratic-loss variant and trust-region algorithm."
+        },
+        {
+          "field_tex": "Parameter source",
+          "value_tex": "lo=1; hi=4; charge\\_\\allowbreak{}rating=5; discharge\\_\\allowbreak{}rating=5; eta\\_\\allowbreak{}charge=89/100; eta\\_\\allowbreak{}discharge=89/100; T=24; interval\\_\\allowbreak{}h=1; energy\\_\\allowbreak{}unit=MWh; power\\_\\allowbreak{}unit=MW; terminal=free; terminal\\_\\allowbreak{}floor=NOT\\_\\allowbreak{}APPLICABLE | TableII devices; TableIII T24, TableV/Figs5-6 T5, pp10-11 PSEA T480,h=3/60. PSEA E is relative usable energy, not physical SOC0; energy-origin translation valid for rho=1. Use eta=.96, not rounded displayed loss coefficient .0416 as an independent exact value."
+        },
+        {
+          "field_tex": "Executed-instance exact mapping status",
+          "value_tex": "PARTIAL\\_\\allowbreak{}MAPPING\\_\\allowbreak{}DEVICE\\_\\allowbreak{}PATH\\_\\allowbreak{}ONLY\\_\\allowbreak{}NETWORK\\_\\allowbreak{}OBJECTIVE\\_\\allowbreak{}ALGORITHM\\_\\allowbreak{}EXCLUDED"
+        },
+        {
+          "field_tex": "Source sign convention",
+          "value_tex": "Source Eqs13-15: net discharge P=d-c; ell=(1/eta\\_\\allowbreak{}d-1)d+(1-eta\\_\\allowbreak{}c)c. This is the documented sign transformation."
+        },
+        {
+          "field_tex": "Documented transformation",
+          "value_tex": "Native net discharge P=d-c; p=P, no sign conversion."
+        },
+        {
+          "field_tex": "Reader-facing mapping scope",
+          "value_tex": "Specific device constraint path only."
+        },
+        {
+          "field_tex": "Domain-evaluation eligibility",
+          "value_tex": "YES\\_\\allowbreak{}RECORDED\\_\\allowbreak{}FOR\\_\\allowbreak{}DECLARED\\_\\allowbreak{}DEVICE\\_\\allowbreak{}SCOPE"
+        },
+        {
+          "field_tex": "Transition-evidence status",
+          "value_tex": "No certified state transition is available for this instance; this absence does not establish that such transitions are impossible."
+        },
+        {
+          "field_tex": "Limitation",
+          "value_tex": "New author full text closes prior mapping gap. Eqs11-16 loss-power chord is affinely equivalent to HULL. Six TableII devices at published T24 and T5, plus PSEA relative usable-energy T480 source mode. Not thirteen independent families. Network/unit commitment, objectives, quadratic-loss variant and trust-region algorithm."
+        }
+      ]
+    },
+    {
+      "legacy_heading": "8. TZIOVANI_UC2_T24",
+      "fields": [
+        {
+          "field_tex": "Source identifier",
+          "value_tex": "Tziovani2024"
+        },
+        {
+          "field_tex": "Source",
+          "value_tex": "Tziovani2024 / TZIOVANI\\_\\allowbreak{}UC2\\_\\allowbreak{}T24; Successive Convexification Algorithms for Optimizing Power Systems With Energy Storage Models; 10.1109/TSG.2023.3316720"
+        },
+        {
+          "field_tex": "Parameter instance",
+          "value_tex": "TZIOVANI\\_\\allowbreak{}UC2\\_\\allowbreak{}T24"
+        },
+        {
+          "field_tex": "Source formulation",
+          "value_tex": "HULL"
+        },
+        {
+          "field_tex": "Source equations",
+          "value_tex": "Author manuscript pp3-4 Eqs1,2,11-16; p8 TableII; p8 TableV T5; pp10-11 PSEA T480"
+        },
+        {
+          "field_tex": "Mapped state",
+          "value_tex": "initial\\_\\allowbreak{}energy E0 in [3,13/2] MWh; state\\_\\allowbreak{}dimensions=initial\\_\\allowbreak{}energy; dimension\\_\\allowbreak{}count=1"
+        },
+        {
+          "field_tex": "Declared query",
+          "value_tex": "pi=(d0-c0,...,d(T-1)-c(T-1)); entire net power trajectory"
+        },
+        {
+          "field_tex": "Mapped device variables",
+          "value_tex": "c\\_\\allowbreak{}t,d\\_\\allowbreak{}t >= 0 [MW]; E\\_\\allowbreak{}t [MWh]"
+        },
+        {
+          "field_tex": "Retained constraints",
+          "value_tex": "Nonnegative c,d; source fixed charging/discharging ratings; bounded energy; exact constant-efficiency energy dynamics; X adds c\\_\\allowbreak{}t*d\\_\\allowbreak{}t=0 to the mapped R. Retains c/Pc+d/Pd<=1. Terminal=free; terminal\\_\\allowbreak{}floor=NOT\\_\\allowbreak{}APPLICABLE."
+        },
+        {
+          "field_tex": "Excluded components",
+          "value_tex": "Network/unit commitment, objectives, quadratic-loss variant and trust-region algorithm."
+        },
+        {
+          "field_tex": "Parameter source",
+          "value_tex": "lo=3; hi=13/2; charge\\_\\allowbreak{}rating=11/2; discharge\\_\\allowbreak{}rating=11/2; eta\\_\\allowbreak{}charge=91/100; eta\\_\\allowbreak{}discharge=91/100; T=24; interval\\_\\allowbreak{}h=1; energy\\_\\allowbreak{}unit=MWh; power\\_\\allowbreak{}unit=MW; terminal=free; terminal\\_\\allowbreak{}floor=NOT\\_\\allowbreak{}APPLICABLE | TableII devices; TableIII T24, TableV/Figs5-6 T5, pp10-11 PSEA T480,h=3/60. PSEA E is relative usable energy, not physical SOC0; energy-origin translation valid for rho=1. Use eta=.96, not rounded displayed loss coefficient .0416 as an independent exact value."
+        },
+        {
+          "field_tex": "Executed-instance exact mapping status",
+          "value_tex": "PARTIAL\\_\\allowbreak{}MAPPING\\_\\allowbreak{}DEVICE\\_\\allowbreak{}PATH\\_\\allowbreak{}ONLY\\_\\allowbreak{}NETWORK\\_\\allowbreak{}OBJECTIVE\\_\\allowbreak{}ALGORITHM\\_\\allowbreak{}EXCLUDED"
+        },
+        {
+          "field_tex": "Source sign convention",
+          "value_tex": "Source Eqs13-15: net discharge P=d-c; ell=(1/eta\\_\\allowbreak{}d-1)d+(1-eta\\_\\allowbreak{}c)c. This is the documented sign transformation."
+        },
+        {
+          "field_tex": "Documented transformation",
+          "value_tex": "Native net discharge P=d-c; p=P, no sign conversion."
+        },
+        {
+          "field_tex": "Reader-facing mapping scope",
+          "value_tex": "Specific device constraint path only."
+        },
+        {
+          "field_tex": "Domain-evaluation eligibility",
+          "value_tex": "YES\\_\\allowbreak{}RECORDED\\_\\allowbreak{}FOR\\_\\allowbreak{}DECLARED\\_\\allowbreak{}DEVICE\\_\\allowbreak{}SCOPE"
+        },
+        {
+          "field_tex": "Transition-evidence status",
+          "value_tex": "No certified state transition is available for this instance; this absence does not establish that such transitions are impossible."
+        },
+        {
+          "field_tex": "Limitation",
+          "value_tex": "New author full text closes prior mapping gap. Eqs11-16 loss-power chord is affinely equivalent to HULL. Six TableII devices at published T24 and T5, plus PSEA relative usable-energy T480 source mode. Not thirteen independent families. Network/unit commitment, objectives, quadratic-loss variant and trust-region algorithm."
+        }
+      ]
+    },
+    {
+      "legacy_heading": "9. TZIOVANI_UC3_T24",
+      "fields": [
+        {
+          "field_tex": "Source identifier",
+          "value_tex": "Tziovani2024"
+        },
+        {
+          "field_tex": "Source",
+          "value_tex": "Tziovani2024 / TZIOVANI\\_\\allowbreak{}UC3\\_\\allowbreak{}T24; Successive Convexification Algorithms for Optimizing Power Systems With Energy Storage Models; 10.1109/TSG.2023.3316720"
+        },
+        {
+          "field_tex": "Parameter instance",
+          "value_tex": "TZIOVANI\\_\\allowbreak{}UC3\\_\\allowbreak{}T24"
+        },
+        {
+          "field_tex": "Source formulation",
+          "value_tex": "HULL"
+        },
+        {
+          "field_tex": "Source equations",
+          "value_tex": "Author manuscript pp3-4 Eqs1,2,11-16; p8 TableII; p8 TableV T5; pp10-11 PSEA T480"
+        },
+        {
+          "field_tex": "Mapped state",
+          "value_tex": "initial\\_\\allowbreak{}energy E0 in [1/2,3/2] MWh; state\\_\\allowbreak{}dimensions=initial\\_\\allowbreak{}energy; dimension\\_\\allowbreak{}count=1"
+        },
+        {
+          "field_tex": "Declared query",
+          "value_tex": "pi=(d0-c0,...,d(T-1)-c(T-1)); entire net power trajectory"
+        },
+        {
+          "field_tex": "Mapped device variables",
+          "value_tex": "c\\_\\allowbreak{}t,d\\_\\allowbreak{}t >= 0 [MW]; E\\_\\allowbreak{}t [MWh]"
+        },
+        {
+          "field_tex": "Retained constraints",
+          "value_tex": "Nonnegative c,d; source fixed charging/discharging ratings; bounded energy; exact constant-efficiency energy dynamics; X adds c\\_\\allowbreak{}t*d\\_\\allowbreak{}t=0 to the mapped R. Retains c/Pc+d/Pd<=1. Terminal=free; terminal\\_\\allowbreak{}floor=NOT\\_\\allowbreak{}APPLICABLE."
+        },
+        {
+          "field_tex": "Excluded components",
+          "value_tex": "Network/unit commitment, objectives, quadratic-loss variant and trust-region algorithm."
+        },
+        {
+          "field_tex": "Parameter source",
+          "value_tex": "lo=1/2; hi=3/2; charge\\_\\allowbreak{}rating=3/2; discharge\\_\\allowbreak{}rating=3/2; eta\\_\\allowbreak{}charge=22/25; eta\\_\\allowbreak{}discharge=22/25; T=24; interval\\_\\allowbreak{}h=1; energy\\_\\allowbreak{}unit=MWh; power\\_\\allowbreak{}unit=MW; terminal=free; terminal\\_\\allowbreak{}floor=NOT\\_\\allowbreak{}APPLICABLE | TableII devices; TableIII T24, TableV/Figs5-6 T5, pp10-11 PSEA T480,h=3/60. PSEA E is relative usable energy, not physical SOC0; energy-origin translation valid for rho=1. Use eta=.96, not rounded displayed loss coefficient .0416 as an independent exact value."
+        },
+        {
+          "field_tex": "Executed-instance exact mapping status",
+          "value_tex": "PARTIAL\\_\\allowbreak{}MAPPING\\_\\allowbreak{}DEVICE\\_\\allowbreak{}PATH\\_\\allowbreak{}ONLY\\_\\allowbreak{}NETWORK\\_\\allowbreak{}OBJECTIVE\\_\\allowbreak{}ALGORITHM\\_\\allowbreak{}EXCLUDED"
+        },
+        {
+          "field_tex": "Source sign convention",
+          "value_tex": "Source Eqs13-15: net discharge P=d-c; ell=(1/eta\\_\\allowbreak{}d-1)d+(1-eta\\_\\allowbreak{}c)c. This is the documented sign transformation."
+        },
+        {
+          "field_tex": "Documented transformation",
+          "value_tex": "Native net discharge P=d-c; p=P, no sign conversion."
+        },
+        {
+          "field_tex": "Reader-facing mapping scope",
+          "value_tex": "Specific device constraint path only."
+        },
+        {
+          "field_tex": "Domain-evaluation eligibility",
+          "value_tex": "YES\\_\\allowbreak{}RECORDED\\_\\allowbreak{}FOR\\_\\allowbreak{}DECLARED\\_\\allowbreak{}DEVICE\\_\\allowbreak{}SCOPE"
+        },
+        {
+          "field_tex": "Transition-evidence status",
+          "value_tex": "No certified state transition is available for this instance; this absence does not establish that such transitions are impossible."
+        },
+        {
+          "field_tex": "Limitation",
+          "value_tex": "New author full text closes prior mapping gap. Eqs11-16 loss-power chord is affinely equivalent to HULL. Six TableII devices at published T24 and T5, plus PSEA relative usable-energy T480 source mode. Not thirteen independent families. Network/unit commitment, objectives, quadratic-loss variant and trust-region algorithm."
+        }
+      ]
+    },
+    {
+      "legacy_heading": "10. TZIOVANI_UC4_T24",
+      "fields": [
+        {
+          "field_tex": "Source identifier",
+          "value_tex": "Tziovani2024"
+        },
+        {
+          "field_tex": "Source",
+          "value_tex": "Tziovani2024 / TZIOVANI\\_\\allowbreak{}UC4\\_\\allowbreak{}T24; Successive Convexification Algorithms for Optimizing Power Systems With Energy Storage Models; 10.1109/TSG.2023.3316720"
+        },
+        {
+          "field_tex": "Parameter instance",
+          "value_tex": "TZIOVANI\\_\\allowbreak{}UC4\\_\\allowbreak{}T24"
+        },
+        {
+          "field_tex": "Source formulation",
+          "value_tex": "HULL"
+        },
+        {
+          "field_tex": "Source equations",
+          "value_tex": "Author manuscript pp3-4 Eqs1,2,11-16; p8 TableII; p8 TableV T5; pp10-11 PSEA T480"
+        },
+        {
+          "field_tex": "Mapped state",
+          "value_tex": "initial\\_\\allowbreak{}energy E0 in [1/2,1] MWh; state\\_\\allowbreak{}dimensions=initial\\_\\allowbreak{}energy; dimension\\_\\allowbreak{}count=1"
+        },
+        {
+          "field_tex": "Declared query",
+          "value_tex": "pi=(d0-c0,...,d(T-1)-c(T-1)); entire net power trajectory"
+        },
+        {
+          "field_tex": "Mapped device variables",
+          "value_tex": "c\\_\\allowbreak{}t,d\\_\\allowbreak{}t >= 0 [MW]; E\\_\\allowbreak{}t [MWh]"
+        },
+        {
+          "field_tex": "Retained constraints",
+          "value_tex": "Nonnegative c,d; source fixed charging/discharging ratings; bounded energy; exact constant-efficiency energy dynamics; X adds c\\_\\allowbreak{}t*d\\_\\allowbreak{}t=0 to the mapped R. Retains c/Pc+d/Pd<=1. Terminal=free; terminal\\_\\allowbreak{}floor=NOT\\_\\allowbreak{}APPLICABLE."
+        },
+        {
+          "field_tex": "Excluded components",
+          "value_tex": "Network/unit commitment, objectives, quadratic-loss variant and trust-region algorithm."
+        },
+        {
+          "field_tex": "Parameter source",
+          "value_tex": "lo=1/2; hi=1; charge\\_\\allowbreak{}rating=1/2; discharge\\_\\allowbreak{}rating=1/2; eta\\_\\allowbreak{}charge=23/25; eta\\_\\allowbreak{}discharge=23/25; T=24; interval\\_\\allowbreak{}h=1; energy\\_\\allowbreak{}unit=MWh; power\\_\\allowbreak{}unit=MW; terminal=free; terminal\\_\\allowbreak{}floor=NOT\\_\\allowbreak{}APPLICABLE | TableII devices; TableIII T24, TableV/Figs5-6 T5, pp10-11 PSEA T480,h=3/60. PSEA E is relative usable energy, not physical SOC0; energy-origin translation valid for rho=1. Use eta=.96, not rounded displayed loss coefficient .0416 as an independent exact value."
+        },
+        {
+          "field_tex": "Executed-instance exact mapping status",
+          "value_tex": "PARTIAL\\_\\allowbreak{}MAPPING\\_\\allowbreak{}DEVICE\\_\\allowbreak{}PATH\\_\\allowbreak{}ONLY\\_\\allowbreak{}NETWORK\\_\\allowbreak{}OBJECTIVE\\_\\allowbreak{}ALGORITHM\\_\\allowbreak{}EXCLUDED"
+        },
+        {
+          "field_tex": "Source sign convention",
+          "value_tex": "Source Eqs13-15: net discharge P=d-c; ell=(1/eta\\_\\allowbreak{}d-1)d+(1-eta\\_\\allowbreak{}c)c. This is the documented sign transformation."
+        },
+        {
+          "field_tex": "Documented transformation",
+          "value_tex": "Native net discharge P=d-c; p=P, no sign conversion."
+        },
+        {
+          "field_tex": "Reader-facing mapping scope",
+          "value_tex": "Specific device constraint path only."
+        },
+        {
+          "field_tex": "Domain-evaluation eligibility",
+          "value_tex": "YES\\_\\allowbreak{}RECORDED\\_\\allowbreak{}FOR\\_\\allowbreak{}DECLARED\\_\\allowbreak{}DEVICE\\_\\allowbreak{}SCOPE"
+        },
+        {
+          "field_tex": "Transition-evidence status",
+          "value_tex": "No certified state transition is available for this instance; this absence does not establish that such transitions are impossible."
+        },
+        {
+          "field_tex": "Limitation",
+          "value_tex": "New author full text closes prior mapping gap. Eqs11-16 loss-power chord is affinely equivalent to HULL. Six TableII devices at published T24 and T5, plus PSEA relative usable-energy T480 source mode. Not thirteen independent families. Network/unit commitment, objectives, quadratic-loss variant and trust-region algorithm."
+        }
+      ]
+    },
+    {
+      "legacy_heading": "11. TZIOVANI_UC5_T24",
+      "fields": [
+        {
+          "field_tex": "Source identifier",
+          "value_tex": "Tziovani2024"
+        },
+        {
+          "field_tex": "Source",
+          "value_tex": "Tziovani2024 / TZIOVANI\\_\\allowbreak{}UC5\\_\\allowbreak{}T24; Successive Convexification Algorithms for Optimizing Power Systems With Energy Storage Models; 10.1109/TSG.2023.3316720"
+        },
+        {
+          "field_tex": "Parameter instance",
+          "value_tex": "TZIOVANI\\_\\allowbreak{}UC5\\_\\allowbreak{}T24"
+        },
+        {
+          "field_tex": "Source formulation",
+          "value_tex": "HULL"
+        },
+        {
+          "field_tex": "Source equations",
+          "value_tex": "Author manuscript pp3-4 Eqs1,2,11-16; p8 TableII; p8 TableV T5; pp10-11 PSEA T480"
+        },
+        {
+          "field_tex": "Mapped state",
+          "value_tex": "initial\\_\\allowbreak{}energy E0 in [1/2,7/10] MWh; state\\_\\allowbreak{}dimensions=initial\\_\\allowbreak{}energy; dimension\\_\\allowbreak{}count=1"
+        },
+        {
+          "field_tex": "Declared query",
+          "value_tex": "pi=(d0-c0,...,d(T-1)-c(T-1)); entire net power trajectory"
+        },
+        {
+          "field_tex": "Mapped device variables",
+          "value_tex": "c\\_\\allowbreak{}t,d\\_\\allowbreak{}t >= 0 [MW]; E\\_\\allowbreak{}t [MWh]"
+        },
+        {
+          "field_tex": "Retained constraints",
+          "value_tex": "Nonnegative c,d; source fixed charging/discharging ratings; bounded energy; exact constant-efficiency energy dynamics; X adds c\\_\\allowbreak{}t*d\\_\\allowbreak{}t=0 to the mapped R. Retains c/Pc+d/Pd<=1. Terminal=free; terminal\\_\\allowbreak{}floor=NOT\\_\\allowbreak{}APPLICABLE."
+        },
+        {
+          "field_tex": "Excluded components",
+          "value_tex": "Network/unit commitment, objectives, quadratic-loss variant and trust-region algorithm."
+        },
+        {
+          "field_tex": "Parameter source",
+          "value_tex": "lo=1/2; hi=7/10; charge\\_\\allowbreak{}rating=1/2; discharge\\_\\allowbreak{}rating=1/2; eta\\_\\allowbreak{}charge=89/100; eta\\_\\allowbreak{}discharge=89/100; T=24; interval\\_\\allowbreak{}h=1; energy\\_\\allowbreak{}unit=MWh; power\\_\\allowbreak{}unit=MW; terminal=free; terminal\\_\\allowbreak{}floor=NOT\\_\\allowbreak{}APPLICABLE | TableII devices; TableIII T24, TableV/Figs5-6 T5, pp10-11 PSEA T480,h=3/60. PSEA E is relative usable energy, not physical SOC0; energy-origin translation valid for rho=1. Use eta=.96, not rounded displayed loss coefficient .0416 as an independent exact value."
+        },
+        {
+          "field_tex": "Executed-instance exact mapping status",
+          "value_tex": "PARTIAL\\_\\allowbreak{}MAPPING\\_\\allowbreak{}DEVICE\\_\\allowbreak{}PATH\\_\\allowbreak{}ONLY\\_\\allowbreak{}NETWORK\\_\\allowbreak{}OBJECTIVE\\_\\allowbreak{}ALGORITHM\\_\\allowbreak{}EXCLUDED"
+        },
+        {
+          "field_tex": "Source sign convention",
+          "value_tex": "Source Eqs13-15: net discharge P=d-c; ell=(1/eta\\_\\allowbreak{}d-1)d+(1-eta\\_\\allowbreak{}c)c. This is the documented sign transformation."
+        },
+        {
+          "field_tex": "Documented transformation",
+          "value_tex": "Native net discharge P=d-c; p=P, no sign conversion."
+        },
+        {
+          "field_tex": "Reader-facing mapping scope",
+          "value_tex": "Specific device constraint path only."
+        },
+        {
+          "field_tex": "Domain-evaluation eligibility",
+          "value_tex": "YES\\_\\allowbreak{}RECORDED\\_\\allowbreak{}FOR\\_\\allowbreak{}DECLARED\\_\\allowbreak{}DEVICE\\_\\allowbreak{}SCOPE"
+        },
+        {
+          "field_tex": "Transition-evidence status",
+          "value_tex": "No certified state transition is available for this instance; this absence does not establish that such transitions are impossible."
+        },
+        {
+          "field_tex": "Limitation",
+          "value_tex": "New author full text closes prior mapping gap. Eqs11-16 loss-power chord is affinely equivalent to HULL. Six TableII devices at published T24 and T5, plus PSEA relative usable-energy T480 source mode. Not thirteen independent families. Network/unit commitment, objectives, quadratic-loss variant and trust-region algorithm."
+        }
+      ]
+    },
+    {
+      "legacy_heading": "12. TZIOVANI_UC6_T24",
+      "fields": [
+        {
+          "field_tex": "Source identifier",
+          "value_tex": "Tziovani2024"
+        },
+        {
+          "field_tex": "Source",
+          "value_tex": "Tziovani2024 / TZIOVANI\\_\\allowbreak{}UC6\\_\\allowbreak{}T24; Successive Convexification Algorithms for Optimizing Power Systems With Energy Storage Models; 10.1109/TSG.2023.3316720"
+        },
+        {
+          "field_tex": "Parameter instance",
+          "value_tex": "TZIOVANI\\_\\allowbreak{}UC6\\_\\allowbreak{}T24"
+        },
+        {
+          "field_tex": "Source formulation",
+          "value_tex": "HULL"
+        },
+        {
+          "field_tex": "Source equations",
+          "value_tex": "Author manuscript pp3-4 Eqs1,2,11-16; p8 TableII; p8 TableV T5; pp10-11 PSEA T480"
+        },
+        {
+          "field_tex": "Mapped state",
+          "value_tex": "initial\\_\\allowbreak{}energy E0 in [1/2,7/10] MWh; state\\_\\allowbreak{}dimensions=initial\\_\\allowbreak{}energy; dimension\\_\\allowbreak{}count=1"
+        },
+        {
+          "field_tex": "Declared query",
+          "value_tex": "pi=(d0-c0,...,d(T-1)-c(T-1)); entire net power trajectory"
+        },
+        {
+          "field_tex": "Mapped device variables",
+          "value_tex": "c\\_\\allowbreak{}t,d\\_\\allowbreak{}t >= 0 [MW]; E\\_\\allowbreak{}t [MWh]"
+        },
+        {
+          "field_tex": "Retained constraints",
+          "value_tex": "Nonnegative c,d; source fixed charging/discharging ratings; bounded energy; exact constant-efficiency energy dynamics; X adds c\\_\\allowbreak{}t*d\\_\\allowbreak{}t=0 to the mapped R. Retains c/Pc+d/Pd<=1. Terminal=free; terminal\\_\\allowbreak{}floor=NOT\\_\\allowbreak{}APPLICABLE."
+        },
+        {
+          "field_tex": "Excluded components",
+          "value_tex": "Network/unit commitment, objectives, quadratic-loss variant and trust-region algorithm."
+        },
+        {
+          "field_tex": "Parameter source",
+          "value_tex": "lo=1/2; hi=7/10; charge\\_\\allowbreak{}rating=1/2; discharge\\_\\allowbreak{}rating=1/2; eta\\_\\allowbreak{}charge=91/100; eta\\_\\allowbreak{}discharge=91/100; T=24; interval\\_\\allowbreak{}h=1; energy\\_\\allowbreak{}unit=MWh; power\\_\\allowbreak{}unit=MW; terminal=free; terminal\\_\\allowbreak{}floor=NOT\\_\\allowbreak{}APPLICABLE | TableII devices; TableIII T24, TableV/Figs5-6 T5, pp10-11 PSEA T480,h=3/60. PSEA E is relative usable energy, not physical SOC0; energy-origin translation valid for rho=1. Use eta=.96, not rounded displayed loss coefficient .0416 as an independent exact value."
+        },
+        {
+          "field_tex": "Executed-instance exact mapping status",
+          "value_tex": "PARTIAL\\_\\allowbreak{}MAPPING\\_\\allowbreak{}DEVICE\\_\\allowbreak{}PATH\\_\\allowbreak{}ONLY\\_\\allowbreak{}NETWORK\\_\\allowbreak{}OBJECTIVE\\_\\allowbreak{}ALGORITHM\\_\\allowbreak{}EXCLUDED"
+        },
+        {
+          "field_tex": "Source sign convention",
+          "value_tex": "Source Eqs13-15: net discharge P=d-c; ell=(1/eta\\_\\allowbreak{}d-1)d+(1-eta\\_\\allowbreak{}c)c. This is the documented sign transformation."
+        },
+        {
+          "field_tex": "Documented transformation",
+          "value_tex": "Native net discharge P=d-c; p=P, no sign conversion."
+        },
+        {
+          "field_tex": "Reader-facing mapping scope",
+          "value_tex": "Specific device constraint path only."
+        },
+        {
+          "field_tex": "Domain-evaluation eligibility",
+          "value_tex": "YES\\_\\allowbreak{}RECORDED\\_\\allowbreak{}FOR\\_\\allowbreak{}DECLARED\\_\\allowbreak{}DEVICE\\_\\allowbreak{}SCOPE"
+        },
+        {
+          "field_tex": "Transition-evidence status",
+          "value_tex": "No certified state transition is available for this instance; this absence does not establish that such transitions are impossible."
+        },
+        {
+          "field_tex": "Limitation",
+          "value_tex": "New author full text closes prior mapping gap. Eqs11-16 loss-power chord is affinely equivalent to HULL. Six TableII devices at published T24 and T5, plus PSEA relative usable-energy T480 source mode. Not thirteen independent families. Network/unit commitment, objectives, quadratic-loss variant and trust-region algorithm."
+        }
+      ]
+    },
+    {
+      "legacy_heading": "13. TZIOVANI_UC1_T5",
+      "fields": [
+        {
+          "field_tex": "Source identifier",
+          "value_tex": "Tziovani2024"
+        },
+        {
+          "field_tex": "Source",
+          "value_tex": "Tziovani2024 / TZIOVANI\\_\\allowbreak{}UC1\\_\\allowbreak{}T5; Successive Convexification Algorithms for Optimizing Power Systems With Energy Storage Models; 10.1109/TSG.2023.3316720"
+        },
+        {
+          "field_tex": "Parameter instance",
+          "value_tex": "TZIOVANI\\_\\allowbreak{}UC1\\_\\allowbreak{}T5"
+        },
+        {
+          "field_tex": "Source formulation",
+          "value_tex": "HULL"
+        },
+        {
+          "field_tex": "Source equations",
+          "value_tex": "Author manuscript pp3-4 Eqs1,2,11-16; p8 TableII; p8 TableV T5; pp10-11 PSEA T480"
+        },
+        {
+          "field_tex": "Mapped state",
+          "value_tex": "initial\\_\\allowbreak{}energy E0 in [1,4] MWh; state\\_\\allowbreak{}dimensions=initial\\_\\allowbreak{}energy; dimension\\_\\allowbreak{}count=1"
+        },
+        {
+          "field_tex": "Declared query",
+          "value_tex": "pi=(d0-c0,...,d(T-1)-c(T-1)); entire net power trajectory"
+        },
+        {
+          "field_tex": "Mapped device variables",
+          "value_tex": "c\\_\\allowbreak{}t,d\\_\\allowbreak{}t >= 0 [MW]; E\\_\\allowbreak{}t [MWh]"
+        },
+        {
+          "field_tex": "Retained constraints",
+          "value_tex": "Nonnegative c,d; source fixed charging/discharging ratings; bounded energy; exact constant-efficiency energy dynamics; X adds c\\_\\allowbreak{}t*d\\_\\allowbreak{}t=0 to the mapped R. Retains c/Pc+d/Pd<=1. Terminal=free; terminal\\_\\allowbreak{}floor=NOT\\_\\allowbreak{}APPLICABLE."
+        },
+        {
+          "field_tex": "Excluded components",
+          "value_tex": "Network/unit commitment, objectives, quadratic-loss variant and trust-region algorithm."
+        },
+        {
+          "field_tex": "Parameter source",
+          "value_tex": "lo=1; hi=4; charge\\_\\allowbreak{}rating=5; discharge\\_\\allowbreak{}rating=5; eta\\_\\allowbreak{}charge=89/100; eta\\_\\allowbreak{}discharge=89/100; T=5; interval\\_\\allowbreak{}h=1; energy\\_\\allowbreak{}unit=MWh; power\\_\\allowbreak{}unit=MW; terminal=free; terminal\\_\\allowbreak{}floor=NOT\\_\\allowbreak{}APPLICABLE | TableII devices; TableIII T24, TableV/Figs5-6 T5, pp10-11 PSEA T480,h=3/60. PSEA E is relative usable energy, not physical SOC0; energy-origin translation valid for rho=1. Use eta=.96, not rounded displayed loss coefficient .0416 as an independent exact value."
+        },
+        {
+          "field_tex": "Executed-instance exact mapping status",
+          "value_tex": "PARTIAL\\_\\allowbreak{}MAPPING\\_\\allowbreak{}DEVICE\\_\\allowbreak{}PATH\\_\\allowbreak{}ONLY\\_\\allowbreak{}NETWORK\\_\\allowbreak{}OBJECTIVE\\_\\allowbreak{}ALGORITHM\\_\\allowbreak{}EXCLUDED"
+        },
+        {
+          "field_tex": "Source sign convention",
+          "value_tex": "Source Eqs13-15: net discharge P=d-c; ell=(1/eta\\_\\allowbreak{}d-1)d+(1-eta\\_\\allowbreak{}c)c. This is the documented sign transformation."
+        },
+        {
+          "field_tex": "Documented transformation",
+          "value_tex": "Native net discharge P=d-c; p=P, no sign conversion."
+        },
+        {
+          "field_tex": "Reader-facing mapping scope",
+          "value_tex": "Specific device constraint path only."
+        },
+        {
+          "field_tex": "Domain-evaluation eligibility",
+          "value_tex": "YES\\_\\allowbreak{}RECORDED\\_\\allowbreak{}FOR\\_\\allowbreak{}DECLARED\\_\\allowbreak{}DEVICE\\_\\allowbreak{}SCOPE"
+        },
+        {
+          "field_tex": "Transition-evidence status",
+          "value_tex": "No certified state transition is available for this instance; this absence does not establish that such transitions are impossible."
+        },
+        {
+          "field_tex": "Limitation",
+          "value_tex": "New author full text closes prior mapping gap. Eqs11-16 loss-power chord is affinely equivalent to HULL. Six TableII devices at published T24 and T5, plus PSEA relative usable-energy T480 source mode. Not thirteen independent families. Network/unit commitment, objectives, quadratic-loss variant and trust-region algorithm."
+        }
+      ]
+    },
+    {
+      "legacy_heading": "14. TZIOVANI_UC2_T5",
+      "fields": [
+        {
+          "field_tex": "Source identifier",
+          "value_tex": "Tziovani2024"
+        },
+        {
+          "field_tex": "Source",
+          "value_tex": "Tziovani2024 / TZIOVANI\\_\\allowbreak{}UC2\\_\\allowbreak{}T5; Successive Convexification Algorithms for Optimizing Power Systems With Energy Storage Models; 10.1109/TSG.2023.3316720"
+        },
+        {
+          "field_tex": "Parameter instance",
+          "value_tex": "TZIOVANI\\_\\allowbreak{}UC2\\_\\allowbreak{}T5"
+        },
+        {
+          "field_tex": "Source formulation",
+          "value_tex": "HULL"
+        },
+        {
+          "field_tex": "Source equations",
+          "value_tex": "Author manuscript pp3-4 Eqs1,2,11-16; p8 TableII; p8 TableV T5; pp10-11 PSEA T480"
+        },
+        {
+          "field_tex": "Mapped state",
+          "value_tex": "initial\\_\\allowbreak{}energy E0 in [3,13/2] MWh; state\\_\\allowbreak{}dimensions=initial\\_\\allowbreak{}energy; dimension\\_\\allowbreak{}count=1"
+        },
+        {
+          "field_tex": "Declared query",
+          "value_tex": "pi=(d0-c0,...,d(T-1)-c(T-1)); entire net power trajectory"
+        },
+        {
+          "field_tex": "Mapped device variables",
+          "value_tex": "c\\_\\allowbreak{}t,d\\_\\allowbreak{}t >= 0 [MW]; E\\_\\allowbreak{}t [MWh]"
+        },
+        {
+          "field_tex": "Retained constraints",
+          "value_tex": "Nonnegative c,d; source fixed charging/discharging ratings; bounded energy; exact constant-efficiency energy dynamics; X adds c\\_\\allowbreak{}t*d\\_\\allowbreak{}t=0 to the mapped R. Retains c/Pc+d/Pd<=1. Terminal=free; terminal\\_\\allowbreak{}floor=NOT\\_\\allowbreak{}APPLICABLE."
+        },
+        {
+          "field_tex": "Excluded components",
+          "value_tex": "Network/unit commitment, objectives, quadratic-loss variant and trust-region algorithm."
+        },
+        {
+          "field_tex": "Parameter source",
+          "value_tex": "lo=3; hi=13/2; charge\\_\\allowbreak{}rating=11/2; discharge\\_\\allowbreak{}rating=11/2; eta\\_\\allowbreak{}charge=91/100; eta\\_\\allowbreak{}discharge=91/100; T=5; interval\\_\\allowbreak{}h=1; energy\\_\\allowbreak{}unit=MWh; power\\_\\allowbreak{}unit=MW; terminal=free; terminal\\_\\allowbreak{}floor=NOT\\_\\allowbreak{}APPLICABLE | TableII devices; TableIII T24, TableV/Figs5-6 T5, pp10-11 PSEA T480,h=3/60. PSEA E is relative usable energy, not physical SOC0; energy-origin translation valid for rho=1. Use eta=.96, not rounded displayed loss coefficient .0416 as an independent exact value."
+        },
+        {
+          "field_tex": "Executed-instance exact mapping status",
+          "value_tex": "PARTIAL\\_\\allowbreak{}MAPPING\\_\\allowbreak{}DEVICE\\_\\allowbreak{}PATH\\_\\allowbreak{}ONLY\\_\\allowbreak{}NETWORK\\_\\allowbreak{}OBJECTIVE\\_\\allowbreak{}ALGORITHM\\_\\allowbreak{}EXCLUDED"
+        },
+        {
+          "field_tex": "Source sign convention",
+          "value_tex": "Source Eqs13-15: net discharge P=d-c; ell=(1/eta\\_\\allowbreak{}d-1)d+(1-eta\\_\\allowbreak{}c)c. This is the documented sign transformation."
+        },
+        {
+          "field_tex": "Documented transformation",
+          "value_tex": "Native net discharge P=d-c; p=P, no sign conversion."
+        },
+        {
+          "field_tex": "Reader-facing mapping scope",
+          "value_tex": "Specific device constraint path only."
+        },
+        {
+          "field_tex": "Domain-evaluation eligibility",
+          "value_tex": "YES\\_\\allowbreak{}RECORDED\\_\\allowbreak{}FOR\\_\\allowbreak{}DECLARED\\_\\allowbreak{}DEVICE\\_\\allowbreak{}SCOPE"
+        },
+        {
+          "field_tex": "Transition-evidence status",
+          "value_tex": "No certified state transition is available for this instance; this absence does not establish that such transitions are impossible."
+        },
+        {
+          "field_tex": "Limitation",
+          "value_tex": "New author full text closes prior mapping gap. Eqs11-16 loss-power chord is affinely equivalent to HULL. Six TableII devices at published T24 and T5, plus PSEA relative usable-energy T480 source mode. Not thirteen independent families. Network/unit commitment, objectives, quadratic-loss variant and trust-region algorithm."
+        }
+      ]
+    },
+    {
+      "legacy_heading": "15. TZIOVANI_UC3_T5",
+      "fields": [
+        {
+          "field_tex": "Source identifier",
+          "value_tex": "Tziovani2024"
+        },
+        {
+          "field_tex": "Source",
+          "value_tex": "Tziovani2024 / TZIOVANI\\_\\allowbreak{}UC3\\_\\allowbreak{}T5; Successive Convexification Algorithms for Optimizing Power Systems With Energy Storage Models; 10.1109/TSG.2023.3316720"
+        },
+        {
+          "field_tex": "Parameter instance",
+          "value_tex": "TZIOVANI\\_\\allowbreak{}UC3\\_\\allowbreak{}T5"
+        },
+        {
+          "field_tex": "Source formulation",
+          "value_tex": "HULL"
+        },
+        {
+          "field_tex": "Source equations",
+          "value_tex": "Author manuscript pp3-4 Eqs1,2,11-16; p8 TableII; p8 TableV T5; pp10-11 PSEA T480"
+        },
+        {
+          "field_tex": "Mapped state",
+          "value_tex": "initial\\_\\allowbreak{}energy E0 in [1/2,3/2] MWh; state\\_\\allowbreak{}dimensions=initial\\_\\allowbreak{}energy; dimension\\_\\allowbreak{}count=1"
+        },
+        {
+          "field_tex": "Declared query",
+          "value_tex": "pi=(d0-c0,...,d(T-1)-c(T-1)); entire net power trajectory"
+        },
+        {
+          "field_tex": "Mapped device variables",
+          "value_tex": "c\\_\\allowbreak{}t,d\\_\\allowbreak{}t >= 0 [MW]; E\\_\\allowbreak{}t [MWh]"
+        },
+        {
+          "field_tex": "Retained constraints",
+          "value_tex": "Nonnegative c,d; source fixed charging/discharging ratings; bounded energy; exact constant-efficiency energy dynamics; X adds c\\_\\allowbreak{}t*d\\_\\allowbreak{}t=0 to the mapped R. Retains c/Pc+d/Pd<=1. Terminal=free; terminal\\_\\allowbreak{}floor=NOT\\_\\allowbreak{}APPLICABLE."
+        },
+        {
+          "field_tex": "Excluded components",
+          "value_tex": "Network/unit commitment, objectives, quadratic-loss variant and trust-region algorithm."
+        },
+        {
+          "field_tex": "Parameter source",
+          "value_tex": "lo=1/2; hi=3/2; charge\\_\\allowbreak{}rating=3/2; discharge\\_\\allowbreak{}rating=3/2; eta\\_\\allowbreak{}charge=22/25; eta\\_\\allowbreak{}discharge=22/25; T=5; interval\\_\\allowbreak{}h=1; energy\\_\\allowbreak{}unit=MWh; power\\_\\allowbreak{}unit=MW; terminal=free; terminal\\_\\allowbreak{}floor=NOT\\_\\allowbreak{}APPLICABLE | TableII devices; TableIII T24, TableV/Figs5-6 T5, pp10-11 PSEA T480,h=3/60. PSEA E is relative usable energy, not physical SOC0; energy-origin translation valid for rho=1. Use eta=.96, not rounded displayed loss coefficient .0416 as an independent exact value."
+        },
+        {
+          "field_tex": "Executed-instance exact mapping status",
+          "value_tex": "PARTIAL\\_\\allowbreak{}MAPPING\\_\\allowbreak{}DEVICE\\_\\allowbreak{}PATH\\_\\allowbreak{}ONLY\\_\\allowbreak{}NETWORK\\_\\allowbreak{}OBJECTIVE\\_\\allowbreak{}ALGORITHM\\_\\allowbreak{}EXCLUDED"
+        },
+        {
+          "field_tex": "Source sign convention",
+          "value_tex": "Source Eqs13-15: net discharge P=d-c; ell=(1/eta\\_\\allowbreak{}d-1)d+(1-eta\\_\\allowbreak{}c)c. This is the documented sign transformation."
+        },
+        {
+          "field_tex": "Documented transformation",
+          "value_tex": "Native net discharge P=d-c; p=P, no sign conversion."
+        },
+        {
+          "field_tex": "Reader-facing mapping scope",
+          "value_tex": "Specific device constraint path only."
+        },
+        {
+          "field_tex": "Domain-evaluation eligibility",
+          "value_tex": "YES\\_\\allowbreak{}RECORDED\\_\\allowbreak{}FOR\\_\\allowbreak{}DECLARED\\_\\allowbreak{}DEVICE\\_\\allowbreak{}SCOPE"
+        },
+        {
+          "field_tex": "Transition-evidence status",
+          "value_tex": "No certified state transition is available for this instance; this absence does not establish that such transitions are impossible."
+        },
+        {
+          "field_tex": "Limitation",
+          "value_tex": "New author full text closes prior mapping gap. Eqs11-16 loss-power chord is affinely equivalent to HULL. Six TableII devices at published T24 and T5, plus PSEA relative usable-energy T480 source mode. Not thirteen independent families. Network/unit commitment, objectives, quadratic-loss variant and trust-region algorithm."
+        }
+      ]
+    },
+    {
+      "legacy_heading": "16. TZIOVANI_UC4_T5",
+      "fields": [
+        {
+          "field_tex": "Source identifier",
+          "value_tex": "Tziovani2024"
+        },
+        {
+          "field_tex": "Source",
+          "value_tex": "Tziovani2024 / TZIOVANI\\_\\allowbreak{}UC4\\_\\allowbreak{}T5; Successive Convexification Algorithms for Optimizing Power Systems With Energy Storage Models; 10.1109/TSG.2023.3316720"
+        },
+        {
+          "field_tex": "Parameter instance",
+          "value_tex": "TZIOVANI\\_\\allowbreak{}UC4\\_\\allowbreak{}T5"
+        },
+        {
+          "field_tex": "Source formulation",
+          "value_tex": "HULL"
+        },
+        {
+          "field_tex": "Source equations",
+          "value_tex": "Author manuscript pp3-4 Eqs1,2,11-16; p8 TableII; p8 TableV T5; pp10-11 PSEA T480"
+        },
+        {
+          "field_tex": "Mapped state",
+          "value_tex": "initial\\_\\allowbreak{}energy E0 in [1/2,1] MWh; state\\_\\allowbreak{}dimensions=initial\\_\\allowbreak{}energy; dimension\\_\\allowbreak{}count=1"
+        },
+        {
+          "field_tex": "Declared query",
+          "value_tex": "pi=(d0-c0,...,d(T-1)-c(T-1)); entire net power trajectory"
+        },
+        {
+          "field_tex": "Mapped device variables",
+          "value_tex": "c\\_\\allowbreak{}t,d\\_\\allowbreak{}t >= 0 [MW]; E\\_\\allowbreak{}t [MWh]"
+        },
+        {
+          "field_tex": "Retained constraints",
+          "value_tex": "Nonnegative c,d; source fixed charging/discharging ratings; bounded energy; exact constant-efficiency energy dynamics; X adds c\\_\\allowbreak{}t*d\\_\\allowbreak{}t=0 to the mapped R. Retains c/Pc+d/Pd<=1. Terminal=free; terminal\\_\\allowbreak{}floor=NOT\\_\\allowbreak{}APPLICABLE."
+        },
+        {
+          "field_tex": "Excluded components",
+          "value_tex": "Network/unit commitment, objectives, quadratic-loss variant and trust-region algorithm."
+        },
+        {
+          "field_tex": "Parameter source",
+          "value_tex": "lo=1/2; hi=1; charge\\_\\allowbreak{}rating=1/2; discharge\\_\\allowbreak{}rating=1/2; eta\\_\\allowbreak{}charge=23/25; eta\\_\\allowbreak{}discharge=23/25; T=5; interval\\_\\allowbreak{}h=1; energy\\_\\allowbreak{}unit=MWh; power\\_\\allowbreak{}unit=MW; terminal=free; terminal\\_\\allowbreak{}floor=NOT\\_\\allowbreak{}APPLICABLE | TableII devices; TableIII T24, TableV/Figs5-6 T5, pp10-11 PSEA T480,h=3/60. PSEA E is relative usable energy, not physical SOC0; energy-origin translation valid for rho=1. Use eta=.96, not rounded displayed loss coefficient .0416 as an independent exact value."
+        },
+        {
+          "field_tex": "Executed-instance exact mapping status",
+          "value_tex": "PARTIAL\\_\\allowbreak{}MAPPING\\_\\allowbreak{}DEVICE\\_\\allowbreak{}PATH\\_\\allowbreak{}ONLY\\_\\allowbreak{}NETWORK\\_\\allowbreak{}OBJECTIVE\\_\\allowbreak{}ALGORITHM\\_\\allowbreak{}EXCLUDED"
+        },
+        {
+          "field_tex": "Source sign convention",
+          "value_tex": "Source Eqs13-15: net discharge P=d-c; ell=(1/eta\\_\\allowbreak{}d-1)d+(1-eta\\_\\allowbreak{}c)c. This is the documented sign transformation."
+        },
+        {
+          "field_tex": "Documented transformation",
+          "value_tex": "Native net discharge P=d-c; p=P, no sign conversion."
+        },
+        {
+          "field_tex": "Reader-facing mapping scope",
+          "value_tex": "Specific device constraint path only."
+        },
+        {
+          "field_tex": "Domain-evaluation eligibility",
+          "value_tex": "YES\\_\\allowbreak{}RECORDED\\_\\allowbreak{}FOR\\_\\allowbreak{}DECLARED\\_\\allowbreak{}DEVICE\\_\\allowbreak{}SCOPE"
+        },
+        {
+          "field_tex": "Transition-evidence status",
+          "value_tex": "No certified state transition is available for this instance; this absence does not establish that such transitions are impossible."
+        },
+        {
+          "field_tex": "Limitation",
+          "value_tex": "New author full text closes prior mapping gap. Eqs11-16 loss-power chord is affinely equivalent to HULL. Six TableII devices at published T24 and T5, plus PSEA relative usable-energy T480 source mode. Not thirteen independent families. Network/unit commitment, objectives, quadratic-loss variant and trust-region algorithm."
+        }
+      ]
+    },
+    {
+      "legacy_heading": "17. TZIOVANI_UC5_T5",
+      "fields": [
+        {
+          "field_tex": "Source identifier",
+          "value_tex": "Tziovani2024"
+        },
+        {
+          "field_tex": "Source",
+          "value_tex": "Tziovani2024 / TZIOVANI\\_\\allowbreak{}UC5\\_\\allowbreak{}T5; Successive Convexification Algorithms for Optimizing Power Systems With Energy Storage Models; 10.1109/TSG.2023.3316720"
+        },
+        {
+          "field_tex": "Parameter instance",
+          "value_tex": "TZIOVANI\\_\\allowbreak{}UC5\\_\\allowbreak{}T5"
+        },
+        {
+          "field_tex": "Source formulation",
+          "value_tex": "HULL"
+        },
+        {
+          "field_tex": "Source equations",
+          "value_tex": "Author manuscript pp3-4 Eqs1,2,11-16; p8 TableII; p8 TableV T5; pp10-11 PSEA T480"
+        },
+        {
+          "field_tex": "Mapped state",
+          "value_tex": "initial\\_\\allowbreak{}energy E0 in [1/2,7/10] MWh; state\\_\\allowbreak{}dimensions=initial\\_\\allowbreak{}energy; dimension\\_\\allowbreak{}count=1"
+        },
+        {
+          "field_tex": "Declared query",
+          "value_tex": "pi=(d0-c0,...,d(T-1)-c(T-1)); entire net power trajectory"
+        },
+        {
+          "field_tex": "Mapped device variables",
+          "value_tex": "c\\_\\allowbreak{}t,d\\_\\allowbreak{}t >= 0 [MW]; E\\_\\allowbreak{}t [MWh]"
+        },
+        {
+          "field_tex": "Retained constraints",
+          "value_tex": "Nonnegative c,d; source fixed charging/discharging ratings; bounded energy; exact constant-efficiency energy dynamics; X adds c\\_\\allowbreak{}t*d\\_\\allowbreak{}t=0 to the mapped R. Retains c/Pc+d/Pd<=1. Terminal=free; terminal\\_\\allowbreak{}floor=NOT\\_\\allowbreak{}APPLICABLE."
+        },
+        {
+          "field_tex": "Excluded components",
+          "value_tex": "Network/unit commitment, objectives, quadratic-loss variant and trust-region algorithm."
+        },
+        {
+          "field_tex": "Parameter source",
+          "value_tex": "lo=1/2; hi=7/10; charge\\_\\allowbreak{}rating=1/2; discharge\\_\\allowbreak{}rating=1/2; eta\\_\\allowbreak{}charge=89/100; eta\\_\\allowbreak{}discharge=89/100; T=5; interval\\_\\allowbreak{}h=1; energy\\_\\allowbreak{}unit=MWh; power\\_\\allowbreak{}unit=MW; terminal=free; terminal\\_\\allowbreak{}floor=NOT\\_\\allowbreak{}APPLICABLE | TableII devices; TableIII T24, TableV/Figs5-6 T5, pp10-11 PSEA T480,h=3/60. PSEA E is relative usable energy, not physical SOC0; energy-origin translation valid for rho=1. Use eta=.96, not rounded displayed loss coefficient .0416 as an independent exact value."
+        },
+        {
+          "field_tex": "Executed-instance exact mapping status",
+          "value_tex": "PARTIAL\\_\\allowbreak{}MAPPING\\_\\allowbreak{}DEVICE\\_\\allowbreak{}PATH\\_\\allowbreak{}ONLY\\_\\allowbreak{}NETWORK\\_\\allowbreak{}OBJECTIVE\\_\\allowbreak{}ALGORITHM\\_\\allowbreak{}EXCLUDED"
+        },
+        {
+          "field_tex": "Source sign convention",
+          "value_tex": "Source Eqs13-15: net discharge P=d-c; ell=(1/eta\\_\\allowbreak{}d-1)d+(1-eta\\_\\allowbreak{}c)c. This is the documented sign transformation."
+        },
+        {
+          "field_tex": "Documented transformation",
+          "value_tex": "Native net discharge P=d-c; p=P, no sign conversion."
+        },
+        {
+          "field_tex": "Reader-facing mapping scope",
+          "value_tex": "Specific device constraint path only."
+        },
+        {
+          "field_tex": "Domain-evaluation eligibility",
+          "value_tex": "YES\\_\\allowbreak{}RECORDED\\_\\allowbreak{}FOR\\_\\allowbreak{}DECLARED\\_\\allowbreak{}DEVICE\\_\\allowbreak{}SCOPE"
+        },
+        {
+          "field_tex": "Transition-evidence status",
+          "value_tex": "No certified state transition is available for this instance; this absence does not establish that such transitions are impossible."
+        },
+        {
+          "field_tex": "Limitation",
+          "value_tex": "New author full text closes prior mapping gap. Eqs11-16 loss-power chord is affinely equivalent to HULL. Six TableII devices at published T24 and T5, plus PSEA relative usable-energy T480 source mode. Not thirteen independent families. Network/unit commitment, objectives, quadratic-loss variant and trust-region algorithm."
+        }
+      ]
+    },
+    {
+      "legacy_heading": "18. TZIOVANI_UC6_T5",
+      "fields": [
+        {
+          "field_tex": "Source identifier",
+          "value_tex": "Tziovani2024"
+        },
+        {
+          "field_tex": "Source",
+          "value_tex": "Tziovani2024 / TZIOVANI\\_\\allowbreak{}UC6\\_\\allowbreak{}T5; Successive Convexification Algorithms for Optimizing Power Systems With Energy Storage Models; 10.1109/TSG.2023.3316720"
+        },
+        {
+          "field_tex": "Parameter instance",
+          "value_tex": "TZIOVANI\\_\\allowbreak{}UC6\\_\\allowbreak{}T5"
+        },
+        {
+          "field_tex": "Source formulation",
+          "value_tex": "HULL"
+        },
+        {
+          "field_tex": "Source equations",
+          "value_tex": "Author manuscript pp3-4 Eqs1,2,11-16; p8 TableII; p8 TableV T5; pp10-11 PSEA T480"
+        },
+        {
+          "field_tex": "Mapped state",
+          "value_tex": "initial\\_\\allowbreak{}energy E0 in [1/2,7/10] MWh; state\\_\\allowbreak{}dimensions=initial\\_\\allowbreak{}energy; dimension\\_\\allowbreak{}count=1"
+        },
+        {
+          "field_tex": "Declared query",
+          "value_tex": "pi=(d0-c0,...,d(T-1)-c(T-1)); entire net power trajectory"
+        },
+        {
+          "field_tex": "Mapped device variables",
+          "value_tex": "c\\_\\allowbreak{}t,d\\_\\allowbreak{}t >= 0 [MW]; E\\_\\allowbreak{}t [MWh]"
+        },
+        {
+          "field_tex": "Retained constraints",
+          "value_tex": "Nonnegative c,d; source fixed charging/discharging ratings; bounded energy; exact constant-efficiency energy dynamics; X adds c\\_\\allowbreak{}t*d\\_\\allowbreak{}t=0 to the mapped R. Retains c/Pc+d/Pd<=1. Terminal=free; terminal\\_\\allowbreak{}floor=NOT\\_\\allowbreak{}APPLICABLE."
+        },
+        {
+          "field_tex": "Excluded components",
+          "value_tex": "Network/unit commitment, objectives, quadratic-loss variant and trust-region algorithm."
+        },
+        {
+          "field_tex": "Parameter source",
+          "value_tex": "lo=1/2; hi=7/10; charge\\_\\allowbreak{}rating=1/2; discharge\\_\\allowbreak{}rating=1/2; eta\\_\\allowbreak{}charge=91/100; eta\\_\\allowbreak{}discharge=91/100; T=5; interval\\_\\allowbreak{}h=1; energy\\_\\allowbreak{}unit=MWh; power\\_\\allowbreak{}unit=MW; terminal=free; terminal\\_\\allowbreak{}floor=NOT\\_\\allowbreak{}APPLICABLE | TableII devices; TableIII T24, TableV/Figs5-6 T5, pp10-11 PSEA T480,h=3/60. PSEA E is relative usable energy, not physical SOC0; energy-origin translation valid for rho=1. Use eta=.96, not rounded displayed loss coefficient .0416 as an independent exact value."
+        },
+        {
+          "field_tex": "Executed-instance exact mapping status",
+          "value_tex": "PARTIAL\\_\\allowbreak{}MAPPING\\_\\allowbreak{}DEVICE\\_\\allowbreak{}PATH\\_\\allowbreak{}ONLY\\_\\allowbreak{}NETWORK\\_\\allowbreak{}OBJECTIVE\\_\\allowbreak{}ALGORITHM\\_\\allowbreak{}EXCLUDED"
+        },
+        {
+          "field_tex": "Source sign convention",
+          "value_tex": "Source Eqs13-15: net discharge P=d-c; ell=(1/eta\\_\\allowbreak{}d-1)d+(1-eta\\_\\allowbreak{}c)c. This is the documented sign transformation."
+        },
+        {
+          "field_tex": "Documented transformation",
+          "value_tex": "Native net discharge P=d-c; p=P, no sign conversion."
+        },
+        {
+          "field_tex": "Reader-facing mapping scope",
+          "value_tex": "Specific device constraint path only."
+        },
+        {
+          "field_tex": "Domain-evaluation eligibility",
+          "value_tex": "YES\\_\\allowbreak{}RECORDED\\_\\allowbreak{}FOR\\_\\allowbreak{}DECLARED\\_\\allowbreak{}DEVICE\\_\\allowbreak{}SCOPE"
+        },
+        {
+          "field_tex": "Transition-evidence status",
+          "value_tex": "No certified state transition is available for this instance; this absence does not establish that such transitions are impossible."
+        },
+        {
+          "field_tex": "Limitation",
+          "value_tex": "New author full text closes prior mapping gap. Eqs11-16 loss-power chord is affinely equivalent to HULL. Six TableII devices at published T24 and T5, plus PSEA relative usable-energy T480 source mode. Not thirteen independent families. Network/unit commitment, objectives, quadratic-loss variant and trust-region algorithm."
+        }
+      ]
+    },
+    {
+      "legacy_heading": "19. TZIOVANI_PSEA_T480",
+      "fields": [
+        {
+          "field_tex": "Source identifier",
+          "value_tex": "Tziovani2024"
+        },
+        {
+          "field_tex": "Source",
+          "value_tex": "Tziovani2024 / TZIOVANI\\_\\allowbreak{}PSEA\\_\\allowbreak{}T480; Successive Convexification Algorithms for Optimizing Power Systems With Energy Storage Models; 10.1109/TSG.2023.3316720"
+        },
+        {
+          "field_tex": "Parameter instance",
+          "value_tex": "TZIOVANI\\_\\allowbreak{}PSEA\\_\\allowbreak{}T480"
+        },
+        {
+          "field_tex": "Source formulation",
+          "value_tex": "HULL"
+        },
+        {
+          "field_tex": "Source equations",
+          "value_tex": "Author manuscript pp3-4 Eqs1,2,11-16; p8 TableII; p8 TableV T5; pp10-11 PSEA T480"
+        },
+        {
+          "field_tex": "Mapped state",
+          "value_tex": "initial\\_\\allowbreak{}energy E0 in [0,6/5] MWh; state\\_\\allowbreak{}dimensions=initial\\_\\allowbreak{}energy; dimension\\_\\allowbreak{}count=1; relative usable-energy origin, not physical SOC=0"
+        },
+        {
+          "field_tex": "Declared query",
+          "value_tex": "pi=(d0-c0,...,d(T-1)-c(T-1)); entire net power trajectory"
+        },
+        {
+          "field_tex": "Mapped device variables",
+          "value_tex": "c\\_\\allowbreak{}t,d\\_\\allowbreak{}t >= 0 [MW]; E\\_\\allowbreak{}t [MWh]"
+        },
+        {
+          "field_tex": "Retained constraints",
+          "value_tex": "Nonnegative c,d; source fixed charging/discharging ratings; bounded energy; exact constant-efficiency energy dynamics; X adds c\\_\\allowbreak{}t*d\\_\\allowbreak{}t=0 to the mapped R. Retains c/Pc+d/Pd<=1. Terminal=free; terminal\\_\\allowbreak{}floor=NOT\\_\\allowbreak{}APPLICABLE."
+        },
+        {
+          "field_tex": "Excluded components",
+          "value_tex": "Network/unit commitment, objectives, quadratic-loss variant and trust-region algorithm."
+        },
+        {
+          "field_tex": "Parameter source",
+          "value_tex": "lo=0; hi=6/5; charge\\_\\allowbreak{}rating=12/5; discharge\\_\\allowbreak{}rating=12/5; eta\\_\\allowbreak{}charge=24/25; eta\\_\\allowbreak{}discharge=24/25; T=480; interval\\_\\allowbreak{}h=1/20; energy\\_\\allowbreak{}unit=MWh; power\\_\\allowbreak{}unit=MW; terminal=free; terminal\\_\\allowbreak{}floor=NOT\\_\\allowbreak{}APPLICABLE | TableII devices; TableIII T24, TableV/Figs5-6 T5, pp10-11 PSEA T480,h=3/60. PSEA E is relative usable energy, not physical SOC0; energy-origin translation valid for rho=1. Use eta=.96, not rounded displayed loss coefficient .0416 as an independent exact value."
+        },
+        {
+          "field_tex": "Executed-instance exact mapping status",
+          "value_tex": "PARTIAL\\_\\allowbreak{}MAPPING\\_\\allowbreak{}DEVICE\\_\\allowbreak{}PATH\\_\\allowbreak{}ONLY\\_\\allowbreak{}NETWORK\\_\\allowbreak{}OBJECTIVE\\_\\allowbreak{}ALGORITHM\\_\\allowbreak{}EXCLUDED"
+        },
+        {
+          "field_tex": "Source sign convention",
+          "value_tex": "Source Eqs13-15: net discharge P=d-c; ell=(1/eta\\_\\allowbreak{}d-1)d+(1-eta\\_\\allowbreak{}c)c. This is the documented sign transformation."
+        },
+        {
+          "field_tex": "Documented transformation",
+          "value_tex": "Native net discharge P=d-c; p=P, no sign conversion."
+        },
+        {
+          "field_tex": "Reader-facing mapping scope",
+          "value_tex": "Specific device constraint path only."
+        },
+        {
+          "field_tex": "Domain-evaluation eligibility",
+          "value_tex": "YES\\_\\allowbreak{}RECORDED\\_\\allowbreak{}FOR\\_\\allowbreak{}DECLARED\\_\\allowbreak{}DEVICE\\_\\allowbreak{}SCOPE"
+        },
+        {
+          "field_tex": "Transition-evidence status",
+          "value_tex": "No certified state transition is available for this instance; this absence does not establish that such transitions are impossible."
+        },
+        {
+          "field_tex": "Limitation",
+          "value_tex": "New author full text closes prior mapping gap. Eqs11-16 loss-power chord is affinely equivalent to HULL. Six TableII devices at published T24 and T5, plus PSEA relative usable-energy T480 source mode. Not thirteen independent families. Network/unit commitment, objectives, quadratic-loss variant and trust-region algorithm."
+        }
+      ]
+    },
+    {
+      "legacy_heading": "20. POZO_HCH",
+      "fields": [
+        {
+          "field_tex": "Source identifier",
+          "value_tex": "Pozo2023"
+        },
+        {
+          "field_tex": "Source",
+          "value_tex": "Pozo2023 / POZO\\_\\allowbreak{}HCH; Convex Hull Formulations for Linear Modeling of Energy Storage Systems; 10.1109/TPWRS.2023.3304131"
+        },
+        {
+          "field_tex": "Parameter instance",
+          "value_tex": "POZO\\_\\allowbreak{}HCH"
+        },
+        {
+          "field_tex": "Source formulation",
+          "value_tex": "HCH"
+        },
+        {
+          "field_tex": "Source equations",
+          "value_tex": "Pozo HCH / Morales Eq1-4 and Theorem1 Eq8-11; author scheduling.py and published first ESS row R000"
+        },
+        {
+          "field_tex": "Mapped state",
+          "value_tex": "initial\\_\\allowbreak{}energy E0 in [30,60] kWh; state\\_\\allowbreak{}dimensions=initial\\_\\allowbreak{}energy; dimension\\_\\allowbreak{}count=1"
+        },
+        {
+          "field_tex": "Declared query",
+          "value_tex": "pi=(d0-c0,...,d(T-1)-c(T-1)); entire net power trajectory"
+        },
+        {
+          "field_tex": "Mapped device variables",
+          "value_tex": "c\\_\\allowbreak{}t,d\\_\\allowbreak{}t >= 0 [kW]; E\\_\\allowbreak{}t [kWh]"
+        },
+        {
+          "field_tex": "Retained constraints",
+          "value_tex": "Nonnegative c,d; source fixed charging/discharging ratings; bounded energy; exact constant-efficiency energy dynamics; X adds c\\_\\allowbreak{}t*d\\_\\allowbreak{}t=0 to the mapped R. Retains c/Pc+d/Pd<=1 and initial/per-period charge/discharge energy-headroom rows. Terminal=free; terminal\\_\\allowbreak{}floor=NOT\\_\\allowbreak{}APPLICABLE."
+        },
+        {
+          "field_tex": "Excluded components",
+          "value_tex": "Ramps, reserve, network, objective and fleet claims; this is the HCH device formulation via the retained Morales source artifact."
+        },
+        {
+          "field_tex": "Parameter source",
+          "value_tex": "lo=30; hi=60; charge\\_\\allowbreak{}rating=20; discharge\\_\\allowbreak{}rating=20; eta\\_\\allowbreak{}charge=9/10; eta\\_\\allowbreak{}discharge=19/20; T=24; interval\\_\\allowbreak{}h=1; energy\\_\\allowbreak{}unit=kWh; power\\_\\allowbreak{}unit=kW; terminal=free; terminal\\_\\allowbreak{}floor=NOT\\_\\allowbreak{}APPLICABLE | Pozo HCH formulation; numerical device inherited from Morales published first ESS R000 and retained author scheduling.py. Shared parameter provenance with Morales, not an independent parameter dataset."
+        },
+        {
+          "field_tex": "Executed-instance exact mapping status",
+          "value_tex": "FULL\\_\\allowbreak{}DEVICE\\_\\allowbreak{}MAPPING"
+        },
+        {
+          "field_tex": "Source sign convention",
+          "value_tex": "Not established from the available source information"
+        },
+        {
+          "field_tex": "Documented transformation",
+          "value_tex": "Separate nonnegative charge/discharge variables; form p=d-c. No directional-flow sign conversion."
+        },
+        {
+          "field_tex": "Reader-facing mapping scope",
+          "value_tex": "Complete declared device reconstruction."
+        },
+        {
+          "field_tex": "Domain-evaluation eligibility",
+          "value_tex": "YES\\_\\allowbreak{}RECORDED\\_\\allowbreak{}FOR\\_\\allowbreak{}DECLARED\\_\\allowbreak{}DEVICE\\_\\allowbreak{}SCOPE"
+        },
+        {
+          "field_tex": "Transition-evidence status",
+          "value_tex": "No certified state transition is available for this instance; this absence does not establish that such transitions are impossible."
+        },
+        {
+          "field_tex": "Limitation",
+          "value_tex": "Whole source first-device state domain, including native headroom rows. Ramps, reserve, network, objective and fleet claims; this is the HCH device formulation via the retained Morales source artifact. | source-original net-power sign not separately recorded in inspected mapping authority; adapter query is separately recorded; primary mapping artifact is Morales2025.pdf; paper identity and parameter artifact are different provenance roles"
+        }
+      ]
+    },
+    {
+      "legacy_heading": "21. NAZIR_RELAXED_BASELINE",
+      "fields": [
+        {
+          "field_tex": "Source identifier",
+          "value_tex": "Nazir2023"
+        },
+        {
+          "field_tex": "Source",
+          "value_tex": "Nazir2023 / NAZIR\\_\\allowbreak{}RELAXED\\_\\allowbreak{}BASELINE; Guaranteeing a Physically Realizable Battery Dispatch Without Charge-Discharge Complementarity Constraints; 10.1109/TSG.2021.3109805"
+        },
+        {
+          "field_tex": "Parameter instance",
+          "value_tex": "NAZIR\\_\\allowbreak{}RELAXED\\_\\allowbreak{}BASELINE"
+        },
+        {
+          "field_tex": "Source formulation",
+          "value_tex": "BOX"
+        },
+        {
+          "field_tex": "Source equations",
+          "value_tex": "baseline affine dynamics and limits, sectionV; initial E domain [0,60]"
+        },
+        {
+          "field_tex": "Mapped state",
+          "value_tex": "initial\\_\\allowbreak{}energy E0 in [0,60] kWh; state\\_\\allowbreak{}dimensions=initial\\_\\allowbreak{}energy; dimension\\_\\allowbreak{}count=1"
+        },
+        {
+          "field_tex": "Declared query",
+          "value_tex": "pi=(d0-c0,...,d(T-1)-c(T-1)); entire net power trajectory"
+        },
+        {
+          "field_tex": "Mapped device variables",
+          "value_tex": "c\\_\\allowbreak{}t,d\\_\\allowbreak{}t >= 0 [kW]; E\\_\\allowbreak{}t [kWh]"
+        },
+        {
+          "field_tex": "Retained constraints",
+          "value_tex": "Nonnegative c,d; source fixed charging/discharging ratings; bounded energy; exact constant-efficiency energy dynamics; X adds c\\_\\allowbreak{}t*d\\_\\allowbreak{}t=0 to the mapped R. No sum-power hull row added by BOX adapter. Terminal=free; terminal\\_\\allowbreak{}floor=NOT\\_\\allowbreak{}APPLICABLE."
+        },
+        {
+          "field_tex": "Excluded components",
+          "value_tex": "Robust inner-approximation/dispatch method; this anchor is only the relaxed affine baseline."
+        },
+        {
+          "field_tex": "Parameter source",
+          "value_tex": "lo=0; hi=60; charge\\_\\allowbreak{}rating=15; discharge\\_\\allowbreak{}rating=15; eta\\_\\allowbreak{}charge=19/20; eta\\_\\allowbreak{}discharge=19/20; T=24; interval\\_\\allowbreak{}h=1; energy\\_\\allowbreak{}unit=kWh; power\\_\\allowbreak{}unit=kW; terminal=free; terminal\\_\\allowbreak{}floor=NOT\\_\\allowbreak{}APPLICABLE | Published section V relaxed-baseline parameters; numerical equation labels are not specified by the available source description."
+        },
+        {
+          "field_tex": "Executed-instance exact mapping status",
+          "value_tex": "PARTIAL\\_\\allowbreak{}DEVICE\\_\\allowbreak{}BASELINE\\_\\allowbreak{}NOT\\_\\allowbreak{}ROBUST\\_\\allowbreak{}INNER\\_\\allowbreak{}APPROXIMATION"
+        },
+        {
+          "field_tex": "Source sign convention",
+          "value_tex": "Not established from the available source information"
+        },
+        {
+          "field_tex": "Documented transformation",
+          "value_tex": "Source net-charging input Pb=Pc-Pd; manuscript p=-Pb=d-c."
+        },
+        {
+          "field_tex": "Reader-facing mapping scope",
+          "value_tex": "Partial device reconstruction: baseline only."
+        },
+        {
+          "field_tex": "Domain-evaluation eligibility",
+          "value_tex": "YES\\_\\allowbreak{}RECORDED\\_\\allowbreak{}FOR\\_\\allowbreak{}DECLARED\\_\\allowbreak{}DEVICE\\_\\allowbreak{}SCOPE"
+        },
+        {
+          "field_tex": "Transition-evidence status",
+          "value_tex": "No certified state transition is available for this instance; this absence does not establish that such transitions are impossible."
+        },
+        {
+          "field_tex": "Limitation",
+          "value_tex": "Published baseline constant-efficiency relaxation mapped over [0,60] despite absence of nominated E0. Robust inner envelope is not an outer relaxation containing source physical X and is not relabelled as equivalent R. Robust inner-approximation/dispatch method; this anchor is only the relaxed affine baseline. | source-original net-power sign not separately recorded in inspected mapping authority; adapter query is separately recorded; numerical source equation labels not recorded; section V locator retained"
+        }
+      ]
+    },
+    {
+      "legacy_heading": "22. ELSAADANY_RELAXED",
+      "fields": [
+        {
+          "field_tex": "Source identifier",
+          "value_tex": "Elsaadany2023"
+        },
+        {
+          "field_tex": "Source",
+          "value_tex": "Elsaadany2023 / ELSAADANY\\_\\allowbreak{}RELAXED; Battery Optimization for Power Systems: Feasibility and Optimality; 10.1109/CDC49753.2023.10384282"
+        },
+        {
+          "field_tex": "Parameter instance",
+          "value_tex": "ELSAADANY\\_\\allowbreak{}RELAXED"
+        },
+        {
+          "field_tex": "Source formulation",
+          "value_tex": "HULL"
+        },
+        {
+          "field_tex": "Source equations",
+          "value_tex": "Eq4a-e, Eq6b; Table I; Section V-C three-hour 5-minute price signal: 36 intervals. Index k=0..K interpreted as K+1=36 intervals, not37."
+        },
+        {
+          "field_tex": "Mapped state",
+          "value_tex": "initial\\_\\allowbreak{}energy E0 in [0,13] kWh; state\\_\\allowbreak{}dimensions=initial\\_\\allowbreak{}energy; dimension\\_\\allowbreak{}count=1"
+        },
+        {
+          "field_tex": "Declared query",
+          "value_tex": "pi=(d0-c0,...,d(T-1)-c(T-1)); entire net power trajectory"
+        },
+        {
+          "field_tex": "Mapped device variables",
+          "value_tex": "c\\_\\allowbreak{}t,d\\_\\allowbreak{}t >= 0 [kW]; E\\_\\allowbreak{}t [kWh]"
+        },
+        {
+          "field_tex": "Retained constraints",
+          "value_tex": "Nonnegative c,d; source fixed charging/discharging ratings; bounded energy; exact constant-efficiency energy dynamics; X adds c\\_\\allowbreak{}t*d\\_\\allowbreak{}t=0 to the mapped R. Retains c/Pc+d/Pd<=1. Terminal=free; terminal\\_\\allowbreak{}floor=NOT\\_\\allowbreak{}APPLICABLE."
+        },
+        {
+          "field_tex": "Excluded components",
+          "value_tex": "Objective-conditioned results and complete robust/two-stage procedure; source Eq6b remains in the selected device relaxation."
+        },
+        {
+          "field_tex": "Parameter source",
+          "value_tex": "lo=0; hi=13; charge\\_\\allowbreak{}rating=5; discharge\\_\\allowbreak{}rating=5; eta\\_\\allowbreak{}charge=19/20; eta\\_\\allowbreak{}discharge=19/20; T=36; interval\\_\\allowbreak{}h=1/12; energy\\_\\allowbreak{}unit=kWh; power\\_\\allowbreak{}unit=kW; terminal=free; terminal\\_\\allowbreak{}floor=NOT\\_\\allowbreak{}APPLICABLE | Table I and section V-C three-hour signal with five-minute intervals: 36 intervals, not37."
+        },
+        {
+          "field_tex": "Executed-instance exact mapping status",
+          "value_tex": "FULL\\_\\allowbreak{}DEVICE\\_\\allowbreak{}MAPPING\\_\\allowbreak{}OBJECTIVE\\_\\allowbreak{}EXCLUDED"
+        },
+        {
+          "field_tex": "Source sign convention",
+          "value_tex": "The mapped query is pi=d-c, with bijective reversal for charging-positive queries; the original net-power symbol was not established from the available source information."
+        },
+        {
+          "field_tex": "Documented transformation",
+          "value_tex": "Source Pnet=Pc-Pd is charging-positive; p=-Pnet=d-c."
+        },
+        {
+          "field_tex": "Reader-facing mapping scope",
+          "value_tex": "Complete declared relaxed device reconstruction; objective excluded. Source study only partially represented."
+        },
+        {
+          "field_tex": "Domain-evaluation eligibility",
+          "value_tex": "YES\\_\\allowbreak{}RECORDED\\_\\allowbreak{}FOR\\_\\allowbreak{}DECLARED\\_\\allowbreak{}DEVICE\\_\\allowbreak{}SCOPE"
+        },
+        {
+          "field_tex": "Transition-evidence status",
+          "value_tex": "No certified state transition is available for this instance; this absence does not establish that such transitions are impossible."
+        },
+        {
+          "field_tex": "Limitation",
+          "value_tex": "Published Eq6b sum-power row retained; TableI device, SectionV-C 3h horizon at5min (T36). Robust and two-stage optimization formulations excluded explicitly. Objective-conditioned results and complete robust/two-stage procedure; source Eq6b remains in the selected device relaxation."
+        }
+      ]
+    },
+    {
+      "legacy_heading": "23. CHANCELIER_ALPHA04",
+      "fields": [
+        {
+          "field_tex": "Source identifier",
+          "value_tex": "Chancelier2026"
+        },
+        {
+          "field_tex": "Source",
+          "value_tex": "Chancelier2026 / CHANCELIER\\_\\allowbreak{}ALPHA04; Optimal operation and valuation of electricity storage systems in intraday markets; 10.1007/s10287-026-00564-7"
+        },
+        {
+          "field_tex": "Parameter instance",
+          "value_tex": "CHANCELIER\\_\\allowbreak{}ALPHA04"
+        },
+        {
+          "field_tex": "Source formulation",
+          "value_tex": "BOX"
+        },
+        {
+          "field_tex": "Source equations",
+          "value_tex": "Section3.1 Eqs11b-e and12b-e; Section5.2; Fig5 explicitly publishes alpha0.4 and1; c-=1.05 is reciprocal discharge efficiency."
+        },
+        {
+          "field_tex": "Mapped state",
+          "value_tex": "initial\\_\\allowbreak{}energy E0 in [0,1] MWh; state\\_\\allowbreak{}dimensions=initial\\_\\allowbreak{}energy; dimension\\_\\allowbreak{}count=1"
+        },
+        {
+          "field_tex": "Declared query",
+          "value_tex": "pi=(d0-c0,...,d(T-1)-c(T-1)); entire net power trajectory"
+        },
+        {
+          "field_tex": "Mapped device variables",
+          "value_tex": "c\\_\\allowbreak{}t,d\\_\\allowbreak{}t >= 0 [MW]; E\\_\\allowbreak{}t [MWh]"
+        },
+        {
+          "field_tex": "Retained constraints",
+          "value_tex": "Nonnegative c,d; source fixed charging/discharging ratings; bounded energy; exact constant-efficiency energy dynamics; X adds c\\_\\allowbreak{}t*d\\_\\allowbreak{}t=0 to the mapped R. No sum-power hull row added by BOX adapter. Terminal=free; terminal\\_\\allowbreak{}floor=NOT\\_\\allowbreak{}APPLICABLE."
+        },
+        {
+          "field_tex": "Excluded components",
+          "value_tex": "Cash wealth, stochastic nonanticipativity, expected utility and stochastic policy equivalence/valuations."
+        },
+        {
+          "field_tex": "Parameter source",
+          "value_tex": "lo=0; hi=1; charge\\_\\allowbreak{}rating=2/5; discharge\\_\\allowbreak{}rating=2/5; eta\\_\\allowbreak{}charge=19/20; eta\\_\\allowbreak{}discharge=20/21; T=24; interval\\_\\allowbreak{}h=1; energy\\_\\allowbreak{}unit=MWh; power\\_\\allowbreak{}unit=MW; terminal=free; terminal\\_\\allowbreak{}floor=NOT\\_\\allowbreak{}APPLICABLE | Source Fig5 alpha=.4 and1; c+=.95, c-=1.05 maps to eta\\_\\allowbreak{}d=20/21, leakage0; U delivery energy converts to average MW at h=1. Illustrative, not measured, efficiencies. Source simulated E0=0; full admissible E0 domain is the conditioning variable."
+        },
+        {
+          "field_tex": "Executed-instance exact mapping status",
+          "value_tex": "PARTIAL\\_\\allowbreak{}MAPPING\\_\\allowbreak{}DEVICE\\_\\allowbreak{}PATH\\_\\allowbreak{}ONLY\\_\\allowbreak{}STOCHASTIC\\_\\allowbreak{}POLICY\\_\\allowbreak{}AND\\_\\allowbreak{}CASH\\_\\allowbreak{}EXCLUDED"
+        },
+        {
+          "field_tex": "Source sign convention",
+          "value_tex": "Not established from the available source information"
+        },
+        {
+          "field_tex": "Documented transformation",
+          "value_tex": "Source delivery u is charging-positive; p=-u/h, with h=1 h."
+        },
+        {
+          "field_tex": "Reader-facing mapping scope",
+          "value_tex": "Specific device constraint path only."
+        },
+        {
+          "field_tex": "Domain-evaluation eligibility",
+          "value_tex": "YES\\_\\allowbreak{}RECORDED\\_\\allowbreak{}FOR\\_\\allowbreak{}DECLARED\\_\\allowbreak{}DEVICE\\_\\allowbreak{}SCOPE"
+        },
+        {
+          "field_tex": "Transition-evidence status",
+          "value_tex": "No certified state transition is available for this instance; this absence does not establish that such transitions are impossible."
+        },
+        {
+          "field_tex": "Limitation",
+          "value_tex": "Eqs11-12 pathwise BOX relaxation/exclusive pair mapped for published alpha .4 and1, T24; cash, expected utility and nonanticipative stochastic policies excluded. Cash wealth, stochastic nonanticipativity, expected utility and stochastic policy equivalence/valuations. | source-original net-power sign not separately recorded in inspected mapping authority; adapter query is separately recorded"
+        }
+      ]
+    },
+    {
+      "legacy_heading": "24. CHANCELIER_ALPHA1",
+      "fields": [
+        {
+          "field_tex": "Source identifier",
+          "value_tex": "Chancelier2026"
+        },
+        {
+          "field_tex": "Source",
+          "value_tex": "Chancelier2026 / CHANCELIER\\_\\allowbreak{}ALPHA1; Optimal operation and valuation of electricity storage systems in intraday markets; 10.1007/s10287-026-00564-7"
+        },
+        {
+          "field_tex": "Parameter instance",
+          "value_tex": "CHANCELIER\\_\\allowbreak{}ALPHA1"
+        },
+        {
+          "field_tex": "Source formulation",
+          "value_tex": "BOX"
+        },
+        {
+          "field_tex": "Source equations",
+          "value_tex": "Section3.1 Eqs11b-e and12b-e; Section5.2; Fig5 explicitly publishes alpha0.4 and1; c-=1.05 is reciprocal discharge efficiency."
+        },
+        {
+          "field_tex": "Mapped state",
+          "value_tex": "initial\\_\\allowbreak{}energy E0 in [0,1] MWh; state\\_\\allowbreak{}dimensions=initial\\_\\allowbreak{}energy; dimension\\_\\allowbreak{}count=1"
+        },
+        {
+          "field_tex": "Declared query",
+          "value_tex": "pi=(d0-c0,...,d(T-1)-c(T-1)); entire net power trajectory"
+        },
+        {
+          "field_tex": "Mapped device variables",
+          "value_tex": "c\\_\\allowbreak{}t,d\\_\\allowbreak{}t >= 0 [MW]; E\\_\\allowbreak{}t [MWh]"
+        },
+        {
+          "field_tex": "Retained constraints",
+          "value_tex": "Nonnegative c,d; source fixed charging/discharging ratings; bounded energy; exact constant-efficiency energy dynamics; X adds c\\_\\allowbreak{}t*d\\_\\allowbreak{}t=0 to the mapped R. No sum-power hull row added by BOX adapter. Terminal=free; terminal\\_\\allowbreak{}floor=NOT\\_\\allowbreak{}APPLICABLE."
+        },
+        {
+          "field_tex": "Excluded components",
+          "value_tex": "Cash wealth, stochastic nonanticipativity, expected utility and stochastic policy equivalence/valuations."
+        },
+        {
+          "field_tex": "Parameter source",
+          "value_tex": "lo=0; hi=1; charge\\_\\allowbreak{}rating=1; discharge\\_\\allowbreak{}rating=1; eta\\_\\allowbreak{}charge=19/20; eta\\_\\allowbreak{}discharge=20/21; T=24; interval\\_\\allowbreak{}h=1; energy\\_\\allowbreak{}unit=MWh; power\\_\\allowbreak{}unit=MW; terminal=free; terminal\\_\\allowbreak{}floor=NOT\\_\\allowbreak{}APPLICABLE | Source Fig5 alpha=.4 and1; c+=.95, c-=1.05 maps to eta\\_\\allowbreak{}d=20/21, leakage0; U delivery energy converts to average MW at h=1. Illustrative, not measured, efficiencies. Source simulated E0=0; full admissible E0 domain is the conditioning variable."
+        },
+        {
+          "field_tex": "Executed-instance exact mapping status",
+          "value_tex": "PARTIAL\\_\\allowbreak{}MAPPING\\_\\allowbreak{}DEVICE\\_\\allowbreak{}PATH\\_\\allowbreak{}ONLY\\_\\allowbreak{}STOCHASTIC\\_\\allowbreak{}POLICY\\_\\allowbreak{}AND\\_\\allowbreak{}CASH\\_\\allowbreak{}EXCLUDED"
+        },
+        {
+          "field_tex": "Source sign convention",
+          "value_tex": "Not established from the available source information"
+        },
+        {
+          "field_tex": "Documented transformation",
+          "value_tex": "Source delivery u is charging-positive; p=-u/h, with h=1 h."
+        },
+        {
+          "field_tex": "Reader-facing mapping scope",
+          "value_tex": "Specific device constraint path only."
+        },
+        {
+          "field_tex": "Domain-evaluation eligibility",
+          "value_tex": "YES\\_\\allowbreak{}RECORDED\\_\\allowbreak{}FOR\\_\\allowbreak{}DECLARED\\_\\allowbreak{}DEVICE\\_\\allowbreak{}SCOPE"
+        },
+        {
+          "field_tex": "Transition-evidence status",
+          "value_tex": "No certified state transition is available for this instance; this absence does not establish that such transitions are impossible."
+        },
+        {
+          "field_tex": "Limitation",
+          "value_tex": "Eqs11-12 pathwise BOX relaxation/exclusive pair mapped for published alpha .4 and1, T24; cash, expected utility and nonanticipative stochastic policies excluded. Cash wealth, stochastic nonanticipativity, expected utility and stochastic policy equivalence/valuations. | source-original net-power sign not separately recorded in inspected mapping authority; adapter query is separately recorded"
+        }
+      ]
+    },
+    {
+      "legacy_heading": "25. ELGERSMA_BO_LP",
+      "fields": [
+        {
+          "field_tex": "Source identifier",
+          "value_tex": "Elgersma2026"
+        },
+        {
+          "field_tex": "Source",
+          "value_tex": "Elgersma2026 / ELGERSMA\\_\\allowbreak{}BO\\_\\allowbreak{}LP; Tight MIP Formulations for Optimal Operation and Investment of Storage Including Reserves; 10.1109/TPWRS.2026.3669407"
+        },
+        {
+          "field_tex": "Parameter instance",
+          "value_tex": "ELGERSMA\\_\\allowbreak{}BO\\_\\allowbreak{}LP"
+        },
+        {
+          "field_tex": "Source formulation",
+          "value_tex": "HULL"
+        },
+        {
+          "field_tex": "Source equations",
+          "value_tex": "BO Eq1 / TO Eq4; LP binary delta projected out exactly gives c/Pc+d/Pd<=1. Table IV operation column p9; Section IV-A two hourly periods p6."
+        },
+        {
+          "field_tex": "Mapped state",
+          "value_tex": "initial\\_\\allowbreak{}energy E0 in [5,13] MWh; state\\_\\allowbreak{}dimensions=initial\\_\\allowbreak{}energy; dimension\\_\\allowbreak{}count=1"
+        },
+        {
+          "field_tex": "Declared query",
+          "value_tex": "pi=(d0-c0,...,d(T-1)-c(T-1)); entire net power trajectory"
+        },
+        {
+          "field_tex": "Mapped device variables",
+          "value_tex": "c\\_\\allowbreak{}t,d\\_\\allowbreak{}t >= 0 [MW]; E\\_\\allowbreak{}t [MWh]"
+        },
+        {
+          "field_tex": "Retained constraints",
+          "value_tex": "Nonnegative c,d; source fixed charging/discharging ratings; bounded energy; exact constant-efficiency energy dynamics; X adds c\\_\\allowbreak{}t*d\\_\\allowbreak{}t=0 to the mapped R. Retains c/Pc+d/Pd<=1. Terminal=free; terminal\\_\\allowbreak{}floor=NOT\\_\\allowbreak{}APPLICABLE."
+        },
+        {
+          "field_tex": "Excluded components",
+          "value_tex": "Unit-commitment network, reserve/investment extensions, and objective-conditioned results; no whole-paper or full multiperiod-hull claim."
+        },
+        {
+          "field_tex": "Parameter source",
+          "value_tex": "lo=5; hi=13; charge\\_\\allowbreak{}rating=80/9; discharge\\_\\allowbreak{}rating=36/5; eta\\_\\allowbreak{}charge=9/10; eta\\_\\allowbreak{}discharge=9/10; T=2; interval\\_\\allowbreak{}h=1; energy\\_\\allowbreak{}unit=MWh; power\\_\\allowbreak{}unit=MW; terminal=free; terminal\\_\\allowbreak{}floor=NOT\\_\\allowbreak{}APPLICABLE | Table IV operation column p9 and section IV-A two hourly periods p6, retained Elgersma2024 preprint; the bibliographic description cites the 2026 journal version. Parameters were extracted from the retained preprint."
+        },
+        {
+          "field_tex": "Executed-instance exact mapping status",
+          "value_tex": "FULL\\_\\allowbreak{}DEVICE\\_\\allowbreak{}MAPPING\\_\\allowbreak{}NETWORK\\_\\allowbreak{}OBJECTIVE\\_\\allowbreak{}EXCLUDED"
+        },
+        {
+          "field_tex": "Source sign convention",
+          "value_tex": "The mapped query is pi=d-c, with bijective reversal for charging-positive queries; the original net-power symbol was not established from the available source information."
+        },
+        {
+          "field_tex": "Documented transformation",
+          "value_tex": "Separate nonnegative pC and pD; form p=pD-pC. No directional-flow conversion."
+        },
+        {
+          "field_tex": "Reader-facing mapping scope",
+          "value_tex": "Complete declared device reconstruction; network and objective excluded."
+        },
+        {
+          "field_tex": "Domain-evaluation eligibility",
+          "value_tex": "YES\\_\\allowbreak{}RECORDED\\_\\allowbreak{}FOR\\_\\allowbreak{}DECLARED\\_\\allowbreak{}DEVICE\\_\\allowbreak{}SCOPE"
+        },
+        {
+          "field_tex": "Transition-evidence status",
+          "value_tex": "No certified state transition is available for this instance; this absence does not establish that such transitions are impossible."
+        },
+        {
+          "field_tex": "Limitation",
+          "value_tex": "Author arXiv2411.17484v1 pp6/9 TableIV,T2. BO/TO device formulations; reserve,network,investment excluded. Both source families already represented, new parameter domain has boundary significance. Unit-commitment network, reserve/investment extensions, and objective-conditioned results; no whole-paper or full multiperiod-hull claim."
+        }
+      ]
+    },
+    {
+      "legacy_heading": "26. ELGERSMA_TO_LP",
+      "fields": [
+        {
+          "field_tex": "Source identifier",
+          "value_tex": "Elgersma2026"
+        },
+        {
+          "field_tex": "Source",
+          "value_tex": "Elgersma2026 / ELGERSMA\\_\\allowbreak{}TO\\_\\allowbreak{}LP; Tight MIP Formulations for Optimal Operation and Investment of Storage Including Reserves; 10.1109/TPWRS.2026.3669407"
+        },
+        {
+          "field_tex": "Parameter instance",
+          "value_tex": "ELGERSMA\\_\\allowbreak{}TO\\_\\allowbreak{}LP"
+        },
+        {
+          "field_tex": "Source formulation",
+          "value_tex": "HCH"
+        },
+        {
+          "field_tex": "Source equations",
+          "value_tex": "BO Eq1 / TO Eq4; LP binary delta projected out exactly gives c/Pc+d/Pd<=1. Table IV operation column p9; Section IV-A two hourly periods p6."
+        },
+        {
+          "field_tex": "Mapped state",
+          "value_tex": "initial\\_\\allowbreak{}energy E0 in [5,13] MWh; state\\_\\allowbreak{}dimensions=initial\\_\\allowbreak{}energy; dimension\\_\\allowbreak{}count=1"
+        },
+        {
+          "field_tex": "Declared query",
+          "value_tex": "pi=(d0-c0,...,d(T-1)-c(T-1)); entire net power trajectory"
+        },
+        {
+          "field_tex": "Mapped device variables",
+          "value_tex": "c\\_\\allowbreak{}t,d\\_\\allowbreak{}t >= 0 [MW]; E\\_\\allowbreak{}t [MWh]"
+        },
+        {
+          "field_tex": "Retained constraints",
+          "value_tex": "Nonnegative c,d; source fixed charging/discharging ratings; bounded energy; exact constant-efficiency energy dynamics; X adds c\\_\\allowbreak{}t*d\\_\\allowbreak{}t=0 to the mapped R. Retains c/Pc+d/Pd<=1 and initial/per-period charge/discharge energy-headroom rows. Terminal=free; terminal\\_\\allowbreak{}floor=NOT\\_\\allowbreak{}APPLICABLE."
+        },
+        {
+          "field_tex": "Excluded components",
+          "value_tex": "Unit-commitment network, reserve/investment extensions, and objective-conditioned results; no whole-paper or full multiperiod-hull claim."
+        },
+        {
+          "field_tex": "Parameter source",
+          "value_tex": "lo=5; hi=13; charge\\_\\allowbreak{}rating=80/9; discharge\\_\\allowbreak{}rating=36/5; eta\\_\\allowbreak{}charge=9/10; eta\\_\\allowbreak{}discharge=9/10; T=2; interval\\_\\allowbreak{}h=1; energy\\_\\allowbreak{}unit=MWh; power\\_\\allowbreak{}unit=MW; terminal=free; terminal\\_\\allowbreak{}floor=NOT\\_\\allowbreak{}APPLICABLE | Table IV operation column p9 and section IV-A two hourly periods p6, retained Elgersma2024 preprint; the bibliographic description cites the 2026 journal version. Parameters were extracted from the retained preprint."
+        },
+        {
+          "field_tex": "Executed-instance exact mapping status",
+          "value_tex": "FULL\\_\\allowbreak{}DEVICE\\_\\allowbreak{}MAPPING\\_\\allowbreak{}NETWORK\\_\\allowbreak{}OBJECTIVE\\_\\allowbreak{}EXCLUDED"
+        },
+        {
+          "field_tex": "Source sign convention",
+          "value_tex": "The mapped query is pi=d-c, with bijective reversal for charging-positive queries; the original net-power symbol was not established from the available source information."
+        },
+        {
+          "field_tex": "Documented transformation",
+          "value_tex": "Separate nonnegative pC and pD; form p=pD-pC. No directional-flow conversion."
+        },
+        {
+          "field_tex": "Reader-facing mapping scope",
+          "value_tex": "Complete declared device reconstruction; network and objective excluded."
+        },
+        {
+          "field_tex": "Domain-evaluation eligibility",
+          "value_tex": "YES\\_\\allowbreak{}RECORDED\\_\\allowbreak{}FOR\\_\\allowbreak{}DECLARED\\_\\allowbreak{}DEVICE\\_\\allowbreak{}SCOPE"
+        },
+        {
+          "field_tex": "Transition-evidence status",
+          "value_tex": "4 feasible transitions between equivalence and nonequivalence are documented for the fixed T2 parameters."
+        },
+        {
+          "field_tex": "Limitation",
+          "value_tex": "Author arXiv2411.17484v1 pp6/9 TableIV,T2. BO/TO device formulations; reserve,network,investment excluded. Both source families already represented, new parameter domain has boundary significance. Unit-commitment network, reserve/investment extensions, and objective-conditioned results; no whole-paper or full multiperiod-hull claim."
+        }
+      ]
+    },
+    {
+      "legacy_heading": "27. TZIOVANI2023_BOX_UC1_T24",
+      "fields": [
+        {
+          "field_tex": "Source identifier",
+          "value_tex": "Tziovani2023"
+        },
+        {
+          "field_tex": "Source",
+          "value_tex": "Tziovani2023 / TZIOVANI2023\\_\\allowbreak{}BOX\\_\\allowbreak{}UC1\\_\\allowbreak{}T24; Investigating Piecewise Linear Energy Storage Models for Optimization in Power Systems; 10.1109/PESGM52003.2023.10252737"
+        },
+        {
+          "field_tex": "Parameter instance",
+          "value_tex": "TZIOVANI2023\\_\\allowbreak{}BOX\\_\\allowbreak{}UC1\\_\\allowbreak{}T24"
+        },
+        {
+          "field_tex": "Source formulation",
+          "value_tex": "BOX"
+        },
+        {
+          "field_tex": "Source equations",
+          "value_tex": "Eqs1b,9a-b,12 relaxedR2; Eq8b exclusiveE2; TableII sixESS; TableIII24h and SectionV.A"
+        },
+        {
+          "field_tex": "Mapped state",
+          "value_tex": "initial\\_\\allowbreak{}energy E0 in [1,4] MWh; state\\_\\allowbreak{}dimensions=initial\\_\\allowbreak{}energy; dimension\\_\\allowbreak{}count=1"
+        },
+        {
+          "field_tex": "Declared query",
+          "value_tex": "pi=(d0-c0,...,d(T-1)-c(T-1)); entire net power trajectory"
+        },
+        {
+          "field_tex": "Mapped device variables",
+          "value_tex": "c\\_\\allowbreak{}t,d\\_\\allowbreak{}t >= 0 [MW]; E\\_\\allowbreak{}t [MWh]"
+        },
+        {
+          "field_tex": "Retained constraints",
+          "value_tex": "Nonnegative c,d; source fixed charging/discharging ratings; bounded energy; exact constant-efficiency energy dynamics; X adds c\\_\\allowbreak{}t*d\\_\\allowbreak{}t=0 to the mapped R. No sum-power hull row added by BOX adapter. Terminal=free; terminal\\_\\allowbreak{}floor=NOT\\_\\allowbreak{}APPLICABLE."
+        },
+        {
+          "field_tex": "Excluded components",
+          "value_tex": "Network/unit commitment and objective; R1/R3 reuse existing HULL family, not independent new mappings."
+        },
+        {
+          "field_tex": "Parameter source",
+          "value_tex": "lo=1; hi=4; charge\\_\\allowbreak{}rating=5; discharge\\_\\allowbreak{}rating=5; eta\\_\\allowbreak{}charge=89/100; eta\\_\\allowbreak{}discharge=89/100; T=24; interval\\_\\allowbreak{}h=1; energy\\_\\allowbreak{}unit=MWh; power\\_\\allowbreak{}unit=MW; terminal=free; terminal\\_\\allowbreak{}floor=NOT\\_\\allowbreak{}APPLICABLE | Native TableII six devices and 24h horizon; R2/E2 retains native dynamics/bounds and removes Eq8b only."
+        },
+        {
+          "field_tex": "Executed-instance exact mapping status",
+          "value_tex": "PARTIAL\\_\\allowbreak{}MAPPING\\_\\allowbreak{}DEVICE\\_\\allowbreak{}PATH\\_\\allowbreak{}ONLY\\_\\allowbreak{}NETWORK\\_\\allowbreak{}OBJECTIVE\\_\\allowbreak{}ALGORITHM\\_\\allowbreak{}EXCLUDED"
+        },
+        {
+          "field_tex": "Source sign convention",
+          "value_tex": "Not established from the available source information"
+        },
+        {
+          "field_tex": "Documented transformation",
+          "value_tex": "Directional charge/discharge powers retain their orientation; form p=d-c."
+        },
+        {
+          "field_tex": "Reader-facing mapping scope",
+          "value_tex": "Specific device constraint path only."
+        },
+        {
+          "field_tex": "Domain-evaluation eligibility",
+          "value_tex": "YES\\_\\allowbreak{}RECORDED\\_\\allowbreak{}FOR\\_\\allowbreak{}DECLARED\\_\\allowbreak{}DEVICE\\_\\allowbreak{}SCOPE"
+        },
+        {
+          "field_tex": "Transition-evidence status",
+          "value_tex": "No certified state transition is available for this instance; this absence does not establish that such transitions are impossible."
+        },
+        {
+          "field_tex": "Limitation",
+          "value_tex": "R2 Eqs9a-b/12 BOX: six TableII devices,24h.666new cells. R1/R3 HULL equivalent to six existing2024T24 anchors reused, not new independent families. Network/unit commitment and objective; R1/R3 reuse existing HULL family, not independent new mappings. | source-original net-power sign not separately recorded in inspected mapping authority; adapter query is separately recorded"
+        }
+      ]
+    },
+    {
+      "legacy_heading": "28. TZIOVANI2023_BOX_UC2_T24",
+      "fields": [
+        {
+          "field_tex": "Source identifier",
+          "value_tex": "Tziovani2023"
+        },
+        {
+          "field_tex": "Source",
+          "value_tex": "Tziovani2023 / TZIOVANI2023\\_\\allowbreak{}BOX\\_\\allowbreak{}UC2\\_\\allowbreak{}T24; Investigating Piecewise Linear Energy Storage Models for Optimization in Power Systems; 10.1109/PESGM52003.2023.10252737"
+        },
+        {
+          "field_tex": "Parameter instance",
+          "value_tex": "TZIOVANI2023\\_\\allowbreak{}BOX\\_\\allowbreak{}UC2\\_\\allowbreak{}T24"
+        },
+        {
+          "field_tex": "Source formulation",
+          "value_tex": "BOX"
+        },
+        {
+          "field_tex": "Source equations",
+          "value_tex": "Eqs1b,9a-b,12 relaxedR2; Eq8b exclusiveE2; TableII sixESS; TableIII24h and SectionV.A"
+        },
+        {
+          "field_tex": "Mapped state",
+          "value_tex": "initial\\_\\allowbreak{}energy E0 in [3,13/2] MWh; state\\_\\allowbreak{}dimensions=initial\\_\\allowbreak{}energy; dimension\\_\\allowbreak{}count=1"
+        },
+        {
+          "field_tex": "Declared query",
+          "value_tex": "pi=(d0-c0,...,d(T-1)-c(T-1)); entire net power trajectory"
+        },
+        {
+          "field_tex": "Mapped device variables",
+          "value_tex": "c\\_\\allowbreak{}t,d\\_\\allowbreak{}t >= 0 [MW]; E\\_\\allowbreak{}t [MWh]"
+        },
+        {
+          "field_tex": "Retained constraints",
+          "value_tex": "Nonnegative c,d; source fixed charging/discharging ratings; bounded energy; exact constant-efficiency energy dynamics; X adds c\\_\\allowbreak{}t*d\\_\\allowbreak{}t=0 to the mapped R. No sum-power hull row added by BOX adapter. Terminal=free; terminal\\_\\allowbreak{}floor=NOT\\_\\allowbreak{}APPLICABLE."
+        },
+        {
+          "field_tex": "Excluded components",
+          "value_tex": "Network/unit commitment and objective; R1/R3 reuse existing HULL family, not independent new mappings."
+        },
+        {
+          "field_tex": "Parameter source",
+          "value_tex": "lo=3; hi=13/2; charge\\_\\allowbreak{}rating=11/2; discharge\\_\\allowbreak{}rating=11/2; eta\\_\\allowbreak{}charge=91/100; eta\\_\\allowbreak{}discharge=91/100; T=24; interval\\_\\allowbreak{}h=1; energy\\_\\allowbreak{}unit=MWh; power\\_\\allowbreak{}unit=MW; terminal=free; terminal\\_\\allowbreak{}floor=NOT\\_\\allowbreak{}APPLICABLE | Native TableII six devices and 24h horizon; R2/E2 retains native dynamics/bounds and removes Eq8b only."
+        },
+        {
+          "field_tex": "Executed-instance exact mapping status",
+          "value_tex": "PARTIAL\\_\\allowbreak{}MAPPING\\_\\allowbreak{}DEVICE\\_\\allowbreak{}PATH\\_\\allowbreak{}ONLY\\_\\allowbreak{}NETWORK\\_\\allowbreak{}OBJECTIVE\\_\\allowbreak{}ALGORITHM\\_\\allowbreak{}EXCLUDED"
+        },
+        {
+          "field_tex": "Source sign convention",
+          "value_tex": "Not established from the available source information"
+        },
+        {
+          "field_tex": "Documented transformation",
+          "value_tex": "Directional charge/discharge powers retain their orientation; form p=d-c."
+        },
+        {
+          "field_tex": "Reader-facing mapping scope",
+          "value_tex": "Specific device constraint path only."
+        },
+        {
+          "field_tex": "Domain-evaluation eligibility",
+          "value_tex": "YES\\_\\allowbreak{}RECORDED\\_\\allowbreak{}FOR\\_\\allowbreak{}DECLARED\\_\\allowbreak{}DEVICE\\_\\allowbreak{}SCOPE"
+        },
+        {
+          "field_tex": "Transition-evidence status",
+          "value_tex": "No certified state transition is available for this instance; this absence does not establish that such transitions are impossible."
+        },
+        {
+          "field_tex": "Limitation",
+          "value_tex": "R2 Eqs9a-b/12 BOX: six TableII devices,24h.666new cells. R1/R3 HULL equivalent to six existing2024T24 anchors reused, not new independent families. Network/unit commitment and objective; R1/R3 reuse existing HULL family, not independent new mappings. | source-original net-power sign not separately recorded in inspected mapping authority; adapter query is separately recorded"
+        }
+      ]
+    },
+    {
+      "legacy_heading": "29. TZIOVANI2023_BOX_UC3_T24",
+      "fields": [
+        {
+          "field_tex": "Source identifier",
+          "value_tex": "Tziovani2023"
+        },
+        {
+          "field_tex": "Source",
+          "value_tex": "Tziovani2023 / TZIOVANI2023\\_\\allowbreak{}BOX\\_\\allowbreak{}UC3\\_\\allowbreak{}T24; Investigating Piecewise Linear Energy Storage Models for Optimization in Power Systems; 10.1109/PESGM52003.2023.10252737"
+        },
+        {
+          "field_tex": "Parameter instance",
+          "value_tex": "TZIOVANI2023\\_\\allowbreak{}BOX\\_\\allowbreak{}UC3\\_\\allowbreak{}T24"
+        },
+        {
+          "field_tex": "Source formulation",
+          "value_tex": "BOX"
+        },
+        {
+          "field_tex": "Source equations",
+          "value_tex": "Eqs1b,9a-b,12 relaxedR2; Eq8b exclusiveE2; TableII sixESS; TableIII24h and SectionV.A"
+        },
+        {
+          "field_tex": "Mapped state",
+          "value_tex": "initial\\_\\allowbreak{}energy E0 in [1/2,3/2] MWh; state\\_\\allowbreak{}dimensions=initial\\_\\allowbreak{}energy; dimension\\_\\allowbreak{}count=1"
+        },
+        {
+          "field_tex": "Declared query",
+          "value_tex": "pi=(d0-c0,...,d(T-1)-c(T-1)); entire net power trajectory"
+        },
+        {
+          "field_tex": "Mapped device variables",
+          "value_tex": "c\\_\\allowbreak{}t,d\\_\\allowbreak{}t >= 0 [MW]; E\\_\\allowbreak{}t [MWh]"
+        },
+        {
+          "field_tex": "Retained constraints",
+          "value_tex": "Nonnegative c,d; source fixed charging/discharging ratings; bounded energy; exact constant-efficiency energy dynamics; X adds c\\_\\allowbreak{}t*d\\_\\allowbreak{}t=0 to the mapped R. No sum-power hull row added by BOX adapter. Terminal=free; terminal\\_\\allowbreak{}floor=NOT\\_\\allowbreak{}APPLICABLE."
+        },
+        {
+          "field_tex": "Excluded components",
+          "value_tex": "Network/unit commitment and objective; R1/R3 reuse existing HULL family, not independent new mappings."
+        },
+        {
+          "field_tex": "Parameter source",
+          "value_tex": "lo=1/2; hi=3/2; charge\\_\\allowbreak{}rating=3/2; discharge\\_\\allowbreak{}rating=3/2; eta\\_\\allowbreak{}charge=22/25; eta\\_\\allowbreak{}discharge=22/25; T=24; interval\\_\\allowbreak{}h=1; energy\\_\\allowbreak{}unit=MWh; power\\_\\allowbreak{}unit=MW; terminal=free; terminal\\_\\allowbreak{}floor=NOT\\_\\allowbreak{}APPLICABLE | Native TableII six devices and 24h horizon; R2/E2 retains native dynamics/bounds and removes Eq8b only."
+        },
+        {
+          "field_tex": "Executed-instance exact mapping status",
+          "value_tex": "PARTIAL\\_\\allowbreak{}MAPPING\\_\\allowbreak{}DEVICE\\_\\allowbreak{}PATH\\_\\allowbreak{}ONLY\\_\\allowbreak{}NETWORK\\_\\allowbreak{}OBJECTIVE\\_\\allowbreak{}ALGORITHM\\_\\allowbreak{}EXCLUDED"
+        },
+        {
+          "field_tex": "Source sign convention",
+          "value_tex": "Not established from the available source information"
+        },
+        {
+          "field_tex": "Documented transformation",
+          "value_tex": "Directional charge/discharge powers retain their orientation; form p=d-c."
+        },
+        {
+          "field_tex": "Reader-facing mapping scope",
+          "value_tex": "Specific device constraint path only."
+        },
+        {
+          "field_tex": "Domain-evaluation eligibility",
+          "value_tex": "YES\\_\\allowbreak{}RECORDED\\_\\allowbreak{}FOR\\_\\allowbreak{}DECLARED\\_\\allowbreak{}DEVICE\\_\\allowbreak{}SCOPE"
+        },
+        {
+          "field_tex": "Transition-evidence status",
+          "value_tex": "No certified state transition is available for this instance; this absence does not establish that such transitions are impossible."
+        },
+        {
+          "field_tex": "Limitation",
+          "value_tex": "R2 Eqs9a-b/12 BOX: six TableII devices,24h.666new cells. R1/R3 HULL equivalent to six existing2024T24 anchors reused, not new independent families. Network/unit commitment and objective; R1/R3 reuse existing HULL family, not independent new mappings. | source-original net-power sign not separately recorded in inspected mapping authority; adapter query is separately recorded"
+        }
+      ]
+    },
+    {
+      "legacy_heading": "30. TZIOVANI2023_BOX_UC4_T24",
+      "fields": [
+        {
+          "field_tex": "Source identifier",
+          "value_tex": "Tziovani2023"
+        },
+        {
+          "field_tex": "Source",
+          "value_tex": "Tziovani2023 / TZIOVANI2023\\_\\allowbreak{}BOX\\_\\allowbreak{}UC4\\_\\allowbreak{}T24; Investigating Piecewise Linear Energy Storage Models for Optimization in Power Systems; 10.1109/PESGM52003.2023.10252737"
+        },
+        {
+          "field_tex": "Parameter instance",
+          "value_tex": "TZIOVANI2023\\_\\allowbreak{}BOX\\_\\allowbreak{}UC4\\_\\allowbreak{}T24"
+        },
+        {
+          "field_tex": "Source formulation",
+          "value_tex": "BOX"
+        },
+        {
+          "field_tex": "Source equations",
+          "value_tex": "Eqs1b,9a-b,12 relaxedR2; Eq8b exclusiveE2; TableII sixESS; TableIII24h and SectionV.A"
+        },
+        {
+          "field_tex": "Mapped state",
+          "value_tex": "initial\\_\\allowbreak{}energy E0 in [1/2,1] MWh; state\\_\\allowbreak{}dimensions=initial\\_\\allowbreak{}energy; dimension\\_\\allowbreak{}count=1"
+        },
+        {
+          "field_tex": "Declared query",
+          "value_tex": "pi=(d0-c0,...,d(T-1)-c(T-1)); entire net power trajectory"
+        },
+        {
+          "field_tex": "Mapped device variables",
+          "value_tex": "c\\_\\allowbreak{}t,d\\_\\allowbreak{}t >= 0 [MW]; E\\_\\allowbreak{}t [MWh]"
+        },
+        {
+          "field_tex": "Retained constraints",
+          "value_tex": "Nonnegative c,d; source fixed charging/discharging ratings; bounded energy; exact constant-efficiency energy dynamics; X adds c\\_\\allowbreak{}t*d\\_\\allowbreak{}t=0 to the mapped R. No sum-power hull row added by BOX adapter. Terminal=free; terminal\\_\\allowbreak{}floor=NOT\\_\\allowbreak{}APPLICABLE."
+        },
+        {
+          "field_tex": "Excluded components",
+          "value_tex": "Network/unit commitment and objective; R1/R3 reuse existing HULL family, not independent new mappings."
+        },
+        {
+          "field_tex": "Parameter source",
+          "value_tex": "lo=1/2; hi=1; charge\\_\\allowbreak{}rating=1/2; discharge\\_\\allowbreak{}rating=1/2; eta\\_\\allowbreak{}charge=23/25; eta\\_\\allowbreak{}discharge=23/25; T=24; interval\\_\\allowbreak{}h=1; energy\\_\\allowbreak{}unit=MWh; power\\_\\allowbreak{}unit=MW; terminal=free; terminal\\_\\allowbreak{}floor=NOT\\_\\allowbreak{}APPLICABLE | Native TableII six devices and 24h horizon; R2/E2 retains native dynamics/bounds and removes Eq8b only."
+        },
+        {
+          "field_tex": "Executed-instance exact mapping status",
+          "value_tex": "PARTIAL\\_\\allowbreak{}MAPPING\\_\\allowbreak{}DEVICE\\_\\allowbreak{}PATH\\_\\allowbreak{}ONLY\\_\\allowbreak{}NETWORK\\_\\allowbreak{}OBJECTIVE\\_\\allowbreak{}ALGORITHM\\_\\allowbreak{}EXCLUDED"
+        },
+        {
+          "field_tex": "Source sign convention",
+          "value_tex": "Not established from the available source information"
+        },
+        {
+          "field_tex": "Documented transformation",
+          "value_tex": "Directional charge/discharge powers retain their orientation; form p=d-c."
+        },
+        {
+          "field_tex": "Reader-facing mapping scope",
+          "value_tex": "Specific device constraint path only."
+        },
+        {
+          "field_tex": "Domain-evaluation eligibility",
+          "value_tex": "YES\\_\\allowbreak{}RECORDED\\_\\allowbreak{}FOR\\_\\allowbreak{}DECLARED\\_\\allowbreak{}DEVICE\\_\\allowbreak{}SCOPE"
+        },
+        {
+          "field_tex": "Transition-evidence status",
+          "value_tex": "No certified state transition is available for this instance; this absence does not establish that such transitions are impossible."
+        },
+        {
+          "field_tex": "Limitation",
+          "value_tex": "R2 Eqs9a-b/12 BOX: six TableII devices,24h.666new cells. R1/R3 HULL equivalent to six existing2024T24 anchors reused, not new independent families. Network/unit commitment and objective; R1/R3 reuse existing HULL family, not independent new mappings. | source-original net-power sign not separately recorded in inspected mapping authority; adapter query is separately recorded"
+        }
+      ]
+    },
+    {
+      "legacy_heading": "31. TZIOVANI2023_BOX_UC5_T24",
+      "fields": [
+        {
+          "field_tex": "Source identifier",
+          "value_tex": "Tziovani2023"
+        },
+        {
+          "field_tex": "Source",
+          "value_tex": "Tziovani2023 / TZIOVANI2023\\_\\allowbreak{}BOX\\_\\allowbreak{}UC5\\_\\allowbreak{}T24; Investigating Piecewise Linear Energy Storage Models for Optimization in Power Systems; 10.1109/PESGM52003.2023.10252737"
+        },
+        {
+          "field_tex": "Parameter instance",
+          "value_tex": "TZIOVANI2023\\_\\allowbreak{}BOX\\_\\allowbreak{}UC5\\_\\allowbreak{}T24"
+        },
+        {
+          "field_tex": "Source formulation",
+          "value_tex": "BOX"
+        },
+        {
+          "field_tex": "Source equations",
+          "value_tex": "Eqs1b,9a-b,12 relaxedR2; Eq8b exclusiveE2; TableII sixESS; TableIII24h and SectionV.A"
+        },
+        {
+          "field_tex": "Mapped state",
+          "value_tex": "initial\\_\\allowbreak{}energy E0 in [1/2,7/10] MWh; state\\_\\allowbreak{}dimensions=initial\\_\\allowbreak{}energy; dimension\\_\\allowbreak{}count=1"
+        },
+        {
+          "field_tex": "Declared query",
+          "value_tex": "pi=(d0-c0,...,d(T-1)-c(T-1)); entire net power trajectory"
+        },
+        {
+          "field_tex": "Mapped device variables",
+          "value_tex": "c\\_\\allowbreak{}t,d\\_\\allowbreak{}t >= 0 [MW]; E\\_\\allowbreak{}t [MWh]"
+        },
+        {
+          "field_tex": "Retained constraints",
+          "value_tex": "Nonnegative c,d; source fixed charging/discharging ratings; bounded energy; exact constant-efficiency energy dynamics; X adds c\\_\\allowbreak{}t*d\\_\\allowbreak{}t=0 to the mapped R. No sum-power hull row added by BOX adapter. Terminal=free; terminal\\_\\allowbreak{}floor=NOT\\_\\allowbreak{}APPLICABLE."
+        },
+        {
+          "field_tex": "Excluded components",
+          "value_tex": "Network/unit commitment and objective; R1/R3 reuse existing HULL family, not independent new mappings."
+        },
+        {
+          "field_tex": "Parameter source",
+          "value_tex": "lo=1/2; hi=7/10; charge\\_\\allowbreak{}rating=1/2; discharge\\_\\allowbreak{}rating=1/2; eta\\_\\allowbreak{}charge=89/100; eta\\_\\allowbreak{}discharge=89/100; T=24; interval\\_\\allowbreak{}h=1; energy\\_\\allowbreak{}unit=MWh; power\\_\\allowbreak{}unit=MW; terminal=free; terminal\\_\\allowbreak{}floor=NOT\\_\\allowbreak{}APPLICABLE | Native TableII six devices and 24h horizon; R2/E2 retains native dynamics/bounds and removes Eq8b only."
+        },
+        {
+          "field_tex": "Executed-instance exact mapping status",
+          "value_tex": "PARTIAL\\_\\allowbreak{}MAPPING\\_\\allowbreak{}DEVICE\\_\\allowbreak{}PATH\\_\\allowbreak{}ONLY\\_\\allowbreak{}NETWORK\\_\\allowbreak{}OBJECTIVE\\_\\allowbreak{}ALGORITHM\\_\\allowbreak{}EXCLUDED"
+        },
+        {
+          "field_tex": "Source sign convention",
+          "value_tex": "Not established from the available source information"
+        },
+        {
+          "field_tex": "Documented transformation",
+          "value_tex": "Directional charge/discharge powers retain their orientation; form p=d-c."
+        },
+        {
+          "field_tex": "Reader-facing mapping scope",
+          "value_tex": "Specific device constraint path only."
+        },
+        {
+          "field_tex": "Domain-evaluation eligibility",
+          "value_tex": "YES\\_\\allowbreak{}RECORDED\\_\\allowbreak{}FOR\\_\\allowbreak{}DECLARED\\_\\allowbreak{}DEVICE\\_\\allowbreak{}SCOPE"
+        },
+        {
+          "field_tex": "Transition-evidence status",
+          "value_tex": "No certified state transition is available for this instance; this absence does not establish that such transitions are impossible."
+        },
+        {
+          "field_tex": "Limitation",
+          "value_tex": "R2 Eqs9a-b/12 BOX: six TableII devices,24h.666new cells. R1/R3 HULL equivalent to six existing2024T24 anchors reused, not new independent families. Network/unit commitment and objective; R1/R3 reuse existing HULL family, not independent new mappings. | source-original net-power sign not separately recorded in inspected mapping authority; adapter query is separately recorded"
+        }
+      ]
+    },
+    {
+      "legacy_heading": "32. TZIOVANI2023_BOX_UC6_T24",
+      "fields": [
+        {
+          "field_tex": "Source identifier",
+          "value_tex": "Tziovani2023"
+        },
+        {
+          "field_tex": "Source",
+          "value_tex": "Tziovani2023 / TZIOVANI2023\\_\\allowbreak{}BOX\\_\\allowbreak{}UC6\\_\\allowbreak{}T24; Investigating Piecewise Linear Energy Storage Models for Optimization in Power Systems; 10.1109/PESGM52003.2023.10252737"
+        },
+        {
+          "field_tex": "Parameter instance",
+          "value_tex": "TZIOVANI2023\\_\\allowbreak{}BOX\\_\\allowbreak{}UC6\\_\\allowbreak{}T24"
+        },
+        {
+          "field_tex": "Source formulation",
+          "value_tex": "BOX"
+        },
+        {
+          "field_tex": "Source equations",
+          "value_tex": "Eqs1b,9a-b,12 relaxedR2; Eq8b exclusiveE2; TableII sixESS; TableIII24h and SectionV.A"
+        },
+        {
+          "field_tex": "Mapped state",
+          "value_tex": "initial\\_\\allowbreak{}energy E0 in [1/2,7/10] MWh; state\\_\\allowbreak{}dimensions=initial\\_\\allowbreak{}energy; dimension\\_\\allowbreak{}count=1"
+        },
+        {
+          "field_tex": "Declared query",
+          "value_tex": "pi=(d0-c0,...,d(T-1)-c(T-1)); entire net power trajectory"
+        },
+        {
+          "field_tex": "Mapped device variables",
+          "value_tex": "c\\_\\allowbreak{}t,d\\_\\allowbreak{}t >= 0 [MW]; E\\_\\allowbreak{}t [MWh]"
+        },
+        {
+          "field_tex": "Retained constraints",
+          "value_tex": "Nonnegative c,d; source fixed charging/discharging ratings; bounded energy; exact constant-efficiency energy dynamics; X adds c\\_\\allowbreak{}t*d\\_\\allowbreak{}t=0 to the mapped R. No sum-power hull row added by BOX adapter. Terminal=free; terminal\\_\\allowbreak{}floor=NOT\\_\\allowbreak{}APPLICABLE."
+        },
+        {
+          "field_tex": "Excluded components",
+          "value_tex": "Network/unit commitment and objective; R1/R3 reuse existing HULL family, not independent new mappings."
+        },
+        {
+          "field_tex": "Parameter source",
+          "value_tex": "lo=1/2; hi=7/10; charge\\_\\allowbreak{}rating=1/2; discharge\\_\\allowbreak{}rating=1/2; eta\\_\\allowbreak{}charge=91/100; eta\\_\\allowbreak{}discharge=91/100; T=24; interval\\_\\allowbreak{}h=1; energy\\_\\allowbreak{}unit=MWh; power\\_\\allowbreak{}unit=MW; terminal=free; terminal\\_\\allowbreak{}floor=NOT\\_\\allowbreak{}APPLICABLE | Native TableII six devices and 24h horizon; R2/E2 retains native dynamics/bounds and removes Eq8b only."
+        },
+        {
+          "field_tex": "Executed-instance exact mapping status",
+          "value_tex": "PARTIAL\\_\\allowbreak{}MAPPING\\_\\allowbreak{}DEVICE\\_\\allowbreak{}PATH\\_\\allowbreak{}ONLY\\_\\allowbreak{}NETWORK\\_\\allowbreak{}OBJECTIVE\\_\\allowbreak{}ALGORITHM\\_\\allowbreak{}EXCLUDED"
+        },
+        {
+          "field_tex": "Source sign convention",
+          "value_tex": "Not established from the available source information"
+        },
+        {
+          "field_tex": "Documented transformation",
+          "value_tex": "Directional charge/discharge powers retain their orientation; form p=d-c."
+        },
+        {
+          "field_tex": "Reader-facing mapping scope",
+          "value_tex": "Specific device constraint path only."
+        },
+        {
+          "field_tex": "Domain-evaluation eligibility",
+          "value_tex": "YES\\_\\allowbreak{}RECORDED\\_\\allowbreak{}FOR\\_\\allowbreak{}DECLARED\\_\\allowbreak{}DEVICE\\_\\allowbreak{}SCOPE"
+        },
+        {
+          "field_tex": "Transition-evidence status",
+          "value_tex": "No certified state transition is available for this instance; this absence does not establish that such transitions are impossible."
+        },
+        {
+          "field_tex": "Limitation",
+          "value_tex": "R2 Eqs9a-b/12 BOX: six TableII devices,24h.666new cells. R1/R3 HULL equivalent to six existing2024T24 anchors reused, not new independent families. Network/unit commitment and objective; R1/R3 reuse existing HULL family, not independent new mappings. | source-original net-power sign not separately recorded in inspected mapping authority; adapter query is separately recorded"
+        }
+      ]
+    },
+    {
+      "legacy_heading": "33. TZIOVANI_BUILDING_DAILY_T24",
+      "fields": [
+        {
+          "field_tex": "Source identifier",
+          "value_tex": "TziovaniBuilding2025"
+        },
+        {
+          "field_tex": "Source",
+          "value_tex": "TziovaniBuilding2025 / TZIOVANI\\_\\allowbreak{}BUILDING\\_\\allowbreak{}DAILY\\_\\allowbreak{}T24; Energy Management and Control of Battery Storage Systems in Buildings: Experimental Validation and Profitability Assessment; 10.1109/TIA.2025.3603751"
+        },
+        {
+          "field_tex": "Parameter instance",
+          "value_tex": "TZIOVANI\\_\\allowbreak{}BUILDING\\_\\allowbreak{}DAILY\\_\\allowbreak{}T24"
+        },
+        {
+          "field_tex": "Source formulation",
+          "value_tex": "BOX"
+        },
+        {
+          "field_tex": "Source equations",
+          "value_tex": "Eqs2,3a-b,4; Pn without degradation; aggregate Py device projection; SectionV.A andVI.C"
+        },
+        {
+          "field_tex": "Mapped state",
+          "value_tex": "initial\\_\\allowbreak{}energy E0 in [3/4,19/4] kWh; state\\_\\allowbreak{}dimensions=initial\\_\\allowbreak{}energy; dimension\\_\\allowbreak{}count=1"
+        },
+        {
+          "field_tex": "Declared query",
+          "value_tex": "pi=(d0-c0,...,d(T-1)-c(T-1)); entire net power trajectory"
+        },
+        {
+          "field_tex": "Mapped device variables",
+          "value_tex": "c\\_\\allowbreak{}t,d\\_\\allowbreak{}t >= 0 [kW]; E\\_\\allowbreak{}t [kWh]"
+        },
+        {
+          "field_tex": "Retained constraints",
+          "value_tex": "Nonnegative c,d; source fixed charging/discharging ratings; bounded energy; exact constant-efficiency energy dynamics; X adds c\\_\\allowbreak{}t*d\\_\\allowbreak{}t=0 to the mapped R. No sum-power hull row added by BOX adapter. Terminal=fixed\\_\\allowbreak{}floor; terminal\\_\\allowbreak{}floor=5/4."
+        },
+        {
+          "field_tex": "Excluded components",
+          "value_tex": "Network, monetary objective, degradation allocation, MPC softening and physical nonlinear efficiency; no measured-device truth claim."
+        },
+        {
+          "field_tex": "Parameter source",
+          "value_tex": "lo=3/4; hi=19/4; charge\\_\\allowbreak{}rating=5; discharge\\_\\allowbreak{}rating=5; eta\\_\\allowbreak{}charge=24/25; eta\\_\\allowbreak{}discharge=24/25; T=24; interval\\_\\allowbreak{}h=1; energy\\_\\allowbreak{}unit=kWh; power\\_\\allowbreak{}unit=kW; terminal=fixed\\_\\allowbreak{}floor; terminal\\_\\allowbreak{}floor=5/4 | Source daily 5kWh/.96 and experimental approximate 9.8kWh/.91 modes; 5kW inherited by source VI.C from V. Source SOC fraction converts to energy by capacity; terminal floor fixed independently of E0. No inferred physical nonlinear efficiency."
+        },
+        {
+          "field_tex": "Executed-instance exact mapping status",
+          "value_tex": "PARTIAL\\_\\allowbreak{}MAPPING\\_\\allowbreak{}CONSTANT\\_\\allowbreak{}EFFICIENCY\\_\\allowbreak{}DEVICE\\_\\allowbreak{}WITH\\_\\allowbreak{}TERMINAL\\_\\allowbreak{}FLOOR\\_\\allowbreak{}NOT\\_\\allowbreak{}MEASURED\\_\\allowbreak{}DEVICE\\_\\allowbreak{}TRUTH"
+        },
+        {
+          "field_tex": "Source sign convention",
+          "value_tex": "Not established from the available source information"
+        },
+        {
+          "field_tex": "Documented transformation",
+          "value_tex": "Pc and Pd are nonnegative charging/discharging powers; p=Pd-Pc. No directional sign conversion."
+        },
+        {
+          "field_tex": "Reader-facing mapping scope",
+          "value_tex": "Partial constant-efficiency device reconstruction."
+        },
+        {
+          "field_tex": "Domain-evaluation eligibility",
+          "value_tex": "YES\\_\\allowbreak{}RECORDED\\_\\allowbreak{}FOR\\_\\allowbreak{}DECLARED\\_\\allowbreak{}DEVICE\\_\\allowbreak{}SCOPE"
+        },
+        {
+          "field_tex": "Transition-evidence status",
+          "value_tex": "No certified state transition is available for this instance; this absence does not establish that such transitions are impossible."
+        },
+        {
+          "field_tex": "Limitation",
+          "value_tex": "Eqs2-4; fixed terminal floor retained. Daily5kWh96\\%T24 and source experimental approximate9.8kWh91\\%T480;222cells. Device submodel only; no new physical experiment.8760h same-mode analytical extension, no arbitrary removal of constraints. Network, monetary objective, degradation allocation, MPC softening and physical nonlinear efficiency; no measured-device truth claim. | source-original net-power sign not separately recorded in inspected mapping authority; adapter query is separately recorded"
+        }
+      ]
+    },
+    {
+      "legacy_heading": "34. TZIOVANI_BUILDING_EXPERIMENTAL_APPROX_T480",
+      "fields": [
+        {
+          "field_tex": "Source identifier",
+          "value_tex": "TziovaniBuilding2025"
+        },
+        {
+          "field_tex": "Source",
+          "value_tex": "TziovaniBuilding2025 / TZIOVANI\\_\\allowbreak{}BUILDING\\_\\allowbreak{}EXPERIMENTAL\\_\\allowbreak{}APPROX\\_\\allowbreak{}T480; Energy Management and Control of Battery Storage Systems in Buildings: Experimental Validation and Profitability Assessment; 10.1109/TIA.2025.3603751"
+        },
+        {
+          "field_tex": "Parameter instance",
+          "value_tex": "TZIOVANI\\_\\allowbreak{}BUILDING\\_\\allowbreak{}EXPERIMENTAL\\_\\allowbreak{}APPROX\\_\\allowbreak{}T480"
+        },
+        {
+          "field_tex": "Source formulation",
+          "value_tex": "BOX"
+        },
+        {
+          "field_tex": "Source equations",
+          "value_tex": "Eqs2,3a-b,4; Pn without degradation; aggregate Py device projection; SectionV.A andVI.C"
+        },
+        {
+          "field_tex": "Mapped state",
+          "value_tex": "initial\\_\\allowbreak{}energy E0 in [343/100,833/100] kWh; state\\_\\allowbreak{}dimensions=initial\\_\\allowbreak{}energy; dimension\\_\\allowbreak{}count=1"
+        },
+        {
+          "field_tex": "Declared query",
+          "value_tex": "pi=(d0-c0,...,d(T-1)-c(T-1)); entire net power trajectory"
+        },
+        {
+          "field_tex": "Mapped device variables",
+          "value_tex": "c\\_\\allowbreak{}t,d\\_\\allowbreak{}t >= 0 [kW]; E\\_\\allowbreak{}t [kWh]"
+        },
+        {
+          "field_tex": "Retained constraints",
+          "value_tex": "Nonnegative c,d; source fixed charging/discharging ratings; bounded energy; exact constant-efficiency energy dynamics; X adds c\\_\\allowbreak{}t*d\\_\\allowbreak{}t=0 to the mapped R. No sum-power hull row added by BOX adapter. Terminal=fixed\\_\\allowbreak{}floor; terminal\\_\\allowbreak{}floor=441/100."
+        },
+        {
+          "field_tex": "Excluded components",
+          "value_tex": "Network, monetary objective, degradation allocation, MPC softening and physical nonlinear efficiency; no measured-device truth claim."
+        },
+        {
+          "field_tex": "Parameter source",
+          "value_tex": "lo=343/100; hi=833/100; charge\\_\\allowbreak{}rating=5; discharge\\_\\allowbreak{}rating=5; eta\\_\\allowbreak{}charge=91/100; eta\\_\\allowbreak{}discharge=91/100; T=480; interval\\_\\allowbreak{}h=1/20; energy\\_\\allowbreak{}unit=kWh; power\\_\\allowbreak{}unit=kW; terminal=fixed\\_\\allowbreak{}floor; terminal\\_\\allowbreak{}floor=441/100 | Source daily 5kWh/.96 and experimental approximate 9.8kWh/.91 modes; 5kW inherited by source VI.C from V. Source SOC fraction converts to energy by capacity; terminal floor fixed independently of E0. No inferred physical nonlinear efficiency."
+        },
+        {
+          "field_tex": "Executed-instance exact mapping status",
+          "value_tex": "PARTIAL\\_\\allowbreak{}MAPPING\\_\\allowbreak{}CONSTANT\\_\\allowbreak{}EFFICIENCY\\_\\allowbreak{}DEVICE\\_\\allowbreak{}WITH\\_\\allowbreak{}TERMINAL\\_\\allowbreak{}FLOOR\\_\\allowbreak{}NOT\\_\\allowbreak{}MEASURED\\_\\allowbreak{}DEVICE\\_\\allowbreak{}TRUTH"
+        },
+        {
+          "field_tex": "Source sign convention",
+          "value_tex": "Not established from the available source information"
+        },
+        {
+          "field_tex": "Documented transformation",
+          "value_tex": "Pc and Pd are nonnegative charging/discharging powers; p=Pd-Pc. No directional sign conversion."
+        },
+        {
+          "field_tex": "Reader-facing mapping scope",
+          "value_tex": "Partial constant-efficiency device reconstruction."
+        },
+        {
+          "field_tex": "Domain-evaluation eligibility",
+          "value_tex": "YES\\_\\allowbreak{}RECORDED\\_\\allowbreak{}FOR\\_\\allowbreak{}DECLARED\\_\\allowbreak{}DEVICE\\_\\allowbreak{}SCOPE"
+        },
+        {
+          "field_tex": "Transition-evidence status",
+          "value_tex": "No certified state transition is available for this instance; this absence does not establish that such transitions are impossible."
+        },
+        {
+          "field_tex": "Limitation",
+          "value_tex": "Eqs2-4; fixed terminal floor retained. Daily5kWh96\\%T24 and source experimental approximate9.8kWh91\\%T480;222cells. Device submodel only; no new physical experiment.8760h same-mode analytical extension, no arbitrary removal of constraints. Network, monetary objective, degradation allocation, MPC softening and physical nonlinear efficiency; no measured-device truth claim. | source-original net-power sign not separately recorded in inspected mapping authority; adapter query is separately recorded"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "cases": 30,
+  "accepted": 24,
+  "negative_scope_refusals": 6,
+  "qa_failures": 0,
+  "equal": 0,
+  "strict": 24,
+  "SMT_unknown": 0,
+  "SMT_disagreement": 0
+}

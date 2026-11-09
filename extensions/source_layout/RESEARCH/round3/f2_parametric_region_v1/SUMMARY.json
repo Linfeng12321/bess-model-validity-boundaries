@@ -1,0 +1,28 @@
+{
+  "parameter_points": 330,
+  "qa_failures": 0,
+  "SMT_unknown": 0,
+  "regimes": {
+    "BOX": {
+      "empty": 0,
+      "strict": 20,
+      "nonempty_equal": 90,
+      "strict_below_SOC_headroom": 0,
+      "qe_complete": true
+    },
+    "END": {
+      "empty": 16,
+      "strict": 69,
+      "nonempty_equal": 25,
+      "strict_below_SOC_headroom": 56,
+      "qe_complete": false
+    },
+    "START": {
+      "empty": 20,
+      "strict": 56,
+      "nonempty_equal": 34,
+      "strict_below_SOC_headroom": 45,
+      "qe_complete": false
+    }
+  }
+}

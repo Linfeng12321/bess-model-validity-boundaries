@@ -1,0 +1,33 @@
+{
+  "models": 36,
+  "groups": {
+    "discharge_only": {
+      "cases": 12,
+      "equal": 12,
+      "strict": 0,
+      "SMT_unknown": 8,
+      "LP_seconds_total": 91.02231640007813,
+      "SMT_seconds_total": 47.445176600071136
+    },
+    "no_exchange": {
+      "cases": 12,
+      "equal": 12,
+      "strict": 0,
+      "SMT_unknown": 0,
+      "LP_seconds_total": 77.13204710010905,
+      "SMT_seconds_total": 0.7073719998588786
+    },
+    "bounded_charging": {
+      "cases": 12,
+      "equal": 0,
+      "strict": 12,
+      "SMT_unknown": 1,
+      "LP_seconds_total": 86.9561195000424,
+      "SMT_seconds_total": 8.973770899930969
+    }
+  },
+  "qa_failures": 0,
+  "SMT_disagreements": 0,
+  "bounded_charge_failures_below_SOC_upper": 12,
+  "maximum_numeric_residual": 1.8189894035458565e-12
+}

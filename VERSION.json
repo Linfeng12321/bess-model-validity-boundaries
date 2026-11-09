@@ -1,0 +1,7 @@
+{
+  "version": "1.0.0",
+  "scientific_baseline": "1.0.0-rc3",
+  "release_date": "2026-11-09",
+  "repository": "https://github.com/Linfeng12321/bess-model-validity-boundaries",
+  "change_scope": "First public release; SM author formatting retained; publication availability statements, licensing, citation and packaging updated. No new scientific experiments."
+}

@@ -1,0 +1,705 @@
+{
+  "timestamp": "2026-09-16T13:14:44.257779+00:00",
+  "risk_closed": "C5 strongest convex relaxation and C4 beyond SOC",
+  "constructed_cases": 9,
+  "SOC_valid_native_fail": 4,
+  "zero_difference_controls": 5,
+  "qa_failures": 0,
+  "records": [
+    {
+      "eta_c": "13/20",
+      "amplitude_MW": "0",
+      "earlier_state_MWh": "9/25",
+      "current_state_MWh": "519/1000",
+      "two_physical_components": [
+        {
+          "flows": [
+            [
+              "0",
+              "0"
+            ],
+            [
+              "109/445",
+              "0"
+            ]
+          ],
+          "states": [
+            "2069/4000",
+            "24711/44500"
+          ]
+        },
+        {
+          "flows": [
+            [
+              "0",
+              "0"
+            ],
+            [
+              "109/445",
+              "0"
+            ]
+          ],
+          "states": [
+            "2069/4000",
+            "24711/44500"
+          ]
+        }
+      ],
+      "convex_weights": [
+        "1/2",
+        "1/2"
+      ],
+      "midpoint_relaxed_flows": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "109/445",
+          "0"
+        ]
+      ],
+      "midpoint_relaxed_energy": [
+        "2069/4000",
+        "24711/44500"
+      ],
+      "net_executed_flows": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "109/445",
+          "0"
+        ]
+      ],
+      "net_executed_energy": [
+        "2069/4000",
+        "24711/44500"
+      ],
+      "physical_SOC_pass": true,
+      "native_power_violation_MW": "0",
+      "fraction_rated_power": "0",
+      "inside_exact_convex_hull": true,
+      "full_native_checker_rejects": false
+    },
+    {
+      "eta_c": "13/20",
+      "amplitude_MW": "1/20",
+      "earlier_state_MWh": "9/25",
+      "current_state_MWh": "519/1000",
+      "two_physical_components": [
+        {
+          "flows": [
+            [
+              "1/20",
+              "0"
+            ],
+            [
+              "371/1780",
+              "0"
+            ]
+          ],
+          "states": [
+            "4203/8000",
+            "49617/89000"
+          ]
+        },
+        {
+          "flows": [
+            [
+              "0",
+              "1/20"
+            ],
+            [
+              "134/445",
+              "0"
+            ]
+          ],
+          "states": [
+            "2019/4000",
+            "24561/44500"
+          ]
+        }
+      ],
+      "convex_weights": [
+        "1/2",
+        "1/2"
+      ],
+      "midpoint_relaxed_flows": [
+        [
+          "1/40",
+          "1/40"
+        ],
+        [
+          "907/3560",
+          "0"
+        ]
+      ],
+      "midpoint_relaxed_energy": [
+        "8241/16000",
+        "98739/178000"
+      ],
+      "net_executed_flows": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "907/3560",
+          "0"
+        ]
+      ],
+      "net_executed_energy": [
+        "2069/4000",
+        "793027/1424000"
+      ],
+      "physical_SOC_pass": true,
+      "native_power_violation_MW": "7/192",
+      "fraction_rated_power": "7/96",
+      "inside_exact_convex_hull": true,
+      "full_native_checker_rejects": true
+    },
+    {
+      "eta_c": "13/20",
+      "amplitude_MW": "1/10",
+      "earlier_state_MWh": "9/25",
+      "current_state_MWh": "519/1000",
+      "two_physical_components": [
+        {
+          "flows": [
+            [
+              "1/10",
+              "0"
+            ],
+            [
+              "153/890",
+              "0"
+            ]
+          ],
+          "states": [
+            "1067/2000",
+            "12453/22250"
+          ]
+        },
+        {
+          "flows": [
+            [
+              "0",
+              "1/10"
+            ],
+            [
+              "159/445",
+              "0"
+            ]
+          ],
+          "states": [
+            "1969/4000",
+            "24411/44500"
+          ]
+        }
+      ],
+      "convex_weights": [
+        "1/2",
+        "1/2"
+      ],
+      "midpoint_relaxed_flows": [
+        [
+          "1/20",
+          "1/20"
+        ],
+        [
+          "471/1780",
+          "0"
+        ]
+      ],
+      "midpoint_relaxed_energy": [
+        "4103/8000",
+        "49317/89000"
+      ],
+      "net_executed_flows": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "471/1780",
+          "0"
+        ]
+      ],
+      "net_executed_energy": [
+        "2069/4000",
+        "397651/712000"
+      ],
+      "physical_SOC_pass": true,
+      "native_power_violation_MW": "7/96",
+      "fraction_rated_power": "7/48",
+      "inside_exact_convex_hull": true,
+      "full_native_checker_rejects": true
+    },
+    {
+      "eta_c": "9/10",
+      "amplitude_MW": "0",
+      "earlier_state_MWh": "119/400",
+      "current_state_MWh": "519/1000",
+      "two_physical_components": [
+        {
+          "flows": [
+            [
+              "0",
+              "0"
+            ],
+            [
+              "109/570",
+              "0"
+            ]
+          ],
+          "states": [
+            "2069/4000",
+            "2653/4750"
+          ]
+        },
+        {
+          "flows": [
+            [
+              "0",
+              "0"
+            ],
+            [
+              "109/570",
+              "0"
+            ]
+          ],
+          "states": [
+            "2069/4000",
+            "2653/4750"
+          ]
+        }
+      ],
+      "convex_weights": [
+        "1/2",
+        "1/2"
+      ],
+      "midpoint_relaxed_flows": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "109/570",
+          "0"
+        ]
+      ],
+      "midpoint_relaxed_energy": [
+        "2069/4000",
+        "2653/4750"
+      ],
+      "net_executed_flows": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "109/570",
+          "0"
+        ]
+      ],
+      "net_executed_energy": [
+        "2069/4000",
+        "2653/4750"
+      ],
+      "physical_SOC_pass": true,
+      "native_power_violation_MW": "0",
+      "fraction_rated_power": "0",
+      "inside_exact_convex_hull": true,
+      "full_native_checker_rejects": false
+    },
+    {
+      "eta_c": "9/10",
+      "amplitude_MW": "1/20",
+      "earlier_state_MWh": "119/400",
+      "current_state_MWh": "519/1000",
+      "two_physical_components": [
+        {
+          "flows": [
+            [
+              "1/20",
+              "0"
+            ],
+            [
+              "173/1140",
+              "0"
+            ]
+          ],
+          "states": [
+            "1057/2000",
+            "10657/19000"
+          ]
+        },
+        {
+          "flows": [
+            [
+              "0",
+              "1/20"
+            ],
+            [
+              "67/285",
+              "0"
+            ]
+          ],
+          "states": [
+            "2019/4000",
+            "5281/9500"
+          ]
+        }
+      ],
+      "convex_weights": [
+        "1/2",
+        "1/2"
+      ],
+      "midpoint_relaxed_flows": [
+        [
+          "1/40",
+          "1/40"
+        ],
+        [
+          "147/760",
+          "0"
+        ]
+      ],
+      "midpoint_relaxed_energy": [
+        "4133/8000",
+        "21219/38000"
+      ],
+      "net_executed_flows": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "147/760",
+          "0"
+        ]
+      ],
+      "net_executed_energy": [
+        "2069/4000",
+        "84971/152000"
+      ],
+      "physical_SOC_pass": true,
+      "native_power_violation_MW": "1/96",
+      "fraction_rated_power": "1/48",
+      "inside_exact_convex_hull": true,
+      "full_native_checker_rejects": true
+    },
+    {
+      "eta_c": "9/10",
+      "amplitude_MW": "1/10",
+      "earlier_state_MWh": "119/400",
+      "current_state_MWh": "519/1000",
+      "two_physical_components": [
+        {
+          "flows": [
+            [
+              "1/10",
+              "0"
+            ],
+            [
+              "32/285",
+              "0"
+            ]
+          ],
+          "states": [
+            "2159/4000",
+            "5351/9500"
+          ]
+        },
+        {
+          "flows": [
+            [
+              "0",
+              "1/10"
+            ],
+            [
+              "53/190",
+              "0"
+            ]
+          ],
+          "states": [
+            "1969/4000",
+            "1314/2375"
+          ]
+        }
+      ],
+      "convex_weights": [
+        "1/2",
+        "1/2"
+      ],
+      "midpoint_relaxed_flows": [
+        [
+          "1/20",
+          "1/20"
+        ],
+        [
+          "223/1140",
+          "0"
+        ]
+      ],
+      "midpoint_relaxed_energy": [
+        "129/250",
+        "10607/19000"
+      ],
+      "net_executed_flows": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "223/1140",
+          "0"
+        ]
+      ],
+      "net_executed_energy": [
+        "2069/4000",
+        "42523/76000"
+      ],
+      "physical_SOC_pass": true,
+      "native_power_violation_MW": "1/48",
+      "fraction_rated_power": "1/24",
+      "inside_exact_convex_hull": true,
+      "full_native_checker_rejects": true
+    },
+    {
+      "eta_c": "1",
+      "amplitude_MW": "0",
+      "earlier_state_MWh": "109/400",
+      "current_state_MWh": "519/1000",
+      "two_physical_components": [
+        {
+          "flows": [
+            [
+              "0",
+              "0"
+            ],
+            [
+              "109/620",
+              "0"
+            ]
+          ],
+          "states": [
+            "2069/4000",
+            "17343/31000"
+          ]
+        },
+        {
+          "flows": [
+            [
+              "0",
+              "0"
+            ],
+            [
+              "109/620",
+              "0"
+            ]
+          ],
+          "states": [
+            "2069/4000",
+            "17343/31000"
+          ]
+        }
+      ],
+      "convex_weights": [
+        "1/2",
+        "1/2"
+      ],
+      "midpoint_relaxed_flows": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "109/620",
+          "0"
+        ]
+      ],
+      "midpoint_relaxed_energy": [
+        "2069/4000",
+        "17343/31000"
+      ],
+      "net_executed_flows": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "109/620",
+          "0"
+        ]
+      ],
+      "net_executed_energy": [
+        "2069/4000",
+        "17343/31000"
+      ],
+      "physical_SOC_pass": true,
+      "native_power_violation_MW": "0",
+      "fraction_rated_power": "0",
+      "inside_exact_convex_hull": true,
+      "full_native_checker_rejects": false
+    },
+    {
+      "eta_c": "1",
+      "amplitude_MW": "1/20",
+      "earlier_state_MWh": "109/400",
+      "current_state_MWh": "519/1000",
+      "two_physical_components": [
+        {
+          "flows": [
+            [
+              "1/20",
+              "0"
+            ],
+            [
+              "21/155",
+              "0"
+            ]
+          ],
+          "states": [
+            "2119/4000",
+            "8709/15500"
+          ]
+        },
+        {
+          "flows": [
+            [
+              "0",
+              "1/20"
+            ],
+            [
+              "67/310",
+              "0"
+            ]
+          ],
+          "states": [
+            "2019/4000",
+            "4317/7750"
+          ]
+        }
+      ],
+      "convex_weights": [
+        "1/2",
+        "1/2"
+      ],
+      "midpoint_relaxed_flows": [
+        [
+          "1/40",
+          "1/40"
+        ],
+        [
+          "109/620",
+          "0"
+        ]
+      ],
+      "midpoint_relaxed_energy": [
+        "2069/4000",
+        "17343/31000"
+      ],
+      "net_executed_flows": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "109/620",
+          "0"
+        ]
+      ],
+      "net_executed_energy": [
+        "2069/4000",
+        "17343/31000"
+      ],
+      "physical_SOC_pass": true,
+      "native_power_violation_MW": "0",
+      "fraction_rated_power": "0",
+      "inside_exact_convex_hull": true,
+      "full_native_checker_rejects": false
+    },
+    {
+      "eta_c": "1",
+      "amplitude_MW": "1/10",
+      "earlier_state_MWh": "109/400",
+      "current_state_MWh": "519/1000",
+      "two_physical_components": [
+        {
+          "flows": [
+            [
+              "1/10",
+              "0"
+            ],
+            [
+              "59/620",
+              "0"
+            ]
+          ],
+          "states": [
+            "2169/4000",
+            "17493/31000"
+          ]
+        },
+        {
+          "flows": [
+            [
+              "0",
+              "1/10"
+            ],
+            [
+              "159/620",
+              "0"
+            ]
+          ],
+          "states": [
+            "1969/4000",
+            "17193/31000"
+          ]
+        }
+      ],
+      "convex_weights": [
+        "1/2",
+        "1/2"
+      ],
+      "midpoint_relaxed_flows": [
+        [
+          "1/20",
+          "1/20"
+        ],
+        [
+          "109/620",
+          "0"
+        ]
+      ],
+      "midpoint_relaxed_energy": [
+        "2069/4000",
+        "17343/31000"
+      ],
+      "net_executed_flows": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "109/620",
+          "0"
+        ]
+      ],
+      "net_executed_energy": [
+        "2069/4000",
+        "17343/31000"
+      ],
+      "physical_SOC_pass": true,
+      "native_power_violation_MW": "0",
+      "fraction_rated_power": "0",
+      "inside_exact_convex_hull": true,
+      "full_native_checker_rejects": false
+    }
+  ],
+  "script_sha256": "5EC56D841F7FEBB99FBF3DCB166AC885F20546D221CF1EDADC3E0BA3BEA07354",
+  "protocol_sha256": "CDF422C0D8447B29FEE8B5070BA061CD1E73C41B892754024A5CD30FBEE6B73F"
+}

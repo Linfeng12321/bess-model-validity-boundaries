@@ -1,0 +1,33 @@
+setting,value_tex,unit,applicable_route,scientific_role,recorded_authority_type
+Python,3.12.14,,Long-horizon implementation,Recorded interpreter version,Long-horizon environment record
+NumPy,2.3.5,,Long-horizon implementation,Recorded array library version,Long-horizon environment record
+SciPy,1.16.2,,Reduced and full sign LP,Recorded LP interface version,Long-horizon environment record
+HiGHS,1.8.0,,Reduced and full sign LP,Recorded optimization backend version,Long-horizon environment record
+Z3,4.15.3,,Long-horizon SMT,Recorded exact SMT backend version,Long-horizon environment and individual route records
+LP method,highs,,Reduced and full sign LP,Selected SciPy linprog backend; not specified as a single simplex or interior-point choice,Long-horizon checker options
+LP presolve,Enabled,,Reduced and full sign LP,Preprocessing option,Long-horizon checker options
+LP threads,1,thread,Reduced and full sign LP,Per-call thread setting,Long-horizon checker options
+Primal feasibility tolerance,\(10^{-7}\),solver convention,Reduced and full sign LP,Floating-point feasibility setting,Long-horizon checker options
+Dual feasibility tolerance,\(10^{-7}\),solver convention,Reduced and full sign LP,Floating-point dual feasibility setting,Long-horizon checker options
+Interior-point optimality tolerance,\(10^{-8}\),solver convention,"LP backend, when applicable",Recorded option; does not imply every solve used the interior-point algorithm,Long-horizon checker options
+Floating decision threshold,\(10^{-8}\),native residual scale,Long-horizon LP,Flag a positive floating residual for candidate-witness checking,Long-horizon checker constants
+Regression / route comparison tolerance,\(10^{-7}\),"absolute, compared endpoint scale",Long-horizon regression and route comparison,Compare floating endpoints; not a tolerance for exact rational certification,Long-horizon protocol and checker constants
+SMT random seed,0,,Long-horizon SMT and mapped-device SMT,Fixed solver random seed,Long-horizon checker and mapped-device verifier
+SMT memory limit,768,"MB, Z3 setting",Long-horizon SMT and mapped-device SMT,Limit configured through max\_memory,Long-horizon checker and mapped-device verifier
+Shared SMT budget,300,s per state,Long-horizon SMT,"Includes building and sequential feasibility, violation and diagnostic queries; each check uses remaining time",Long-horizon protocol and exact\_route implementation
+Shared state working budget,1800,s per state,Long-horizon serial computation,Measured from before model construction; all applicable routes share the deadline,Long-horizon run\_state implementation
+Reduced LP subproblem cap,262144,planned subproblems per state,Reduced LP,Precheck of 1 feasibility LP plus sum of positive-sign subproblems over optimized rows,Long-horizon protocol and reduced\_route implementation
+LP call time limit,Remaining shared state time; minimum passed value 0.001,s,Reduced and full sign LP,Implementation refuses calls after deadline; positive remaining time is passed with a one-millisecond floor,Long-horizon run\_lp implementation
+Full sign reference applicability,\(T\leq8\),intervals,Full sign LP reference in long-horizon implementation,Predetermined horizon restriction,Long-horizon protocol and run\_state implementation
+Horizon design,"Regression: 2; main: 4, 5, 6, 7, 8, 10, 12, 14, 16, 20, 24; pressure: 32, 48, 96; conditional extension: 128, 192, 256",intervals,Long-horizon design,"Finite declared horizon coverage, not universal scalability",Long-horizon protocol and model design
+Route order,"SMT, reduced LP, full sign reference when eligible",,Long-horizon serial computation,Same order across states\newline and repeated timings,Long-horizon protocol and run\_state implementation
+Rational native-row arithmetic,Python fractions.Fraction; no floating acceptance tolerance,,Saved exact witnesses and structural certificates,"Exact relaxed feasibility, reconstruction and native-row residual checks",Native-row witness verifiers
+LP rational conversion,"Decimal-string rationals, then optional denominator limit \(10^9\)",,Long-horizon LP witness candidates,Recompute energy from converted flows; accept only if all exact checks are satisfied,Long-horizon floating\_witness implementation
+Repeated timing protocol,1 warm-up; 5 measured repetitions,executions per selected input,Long-horizon timing panel,Identical input and route settings; repeated timing is not a new scientific state,Long-horizon protocol and timing panel manifest
+Earlier independent check: SMT timeout,30000 per solver check,ms,Earlier independent native-row implementation,Per-check time limit in the retained implementation; not an aggregate two-query budget,Earlier native-row checker and its protocol
+Earlier independent check: numerical threshold,\(10^{-8}\),native residual scale,Earlier full sign LP comparison,Floating diagnostic threshold; exact SMT controls the decision,Earlier independent native-row checker
+Earlier independent check: versions,Python 3.12.14; NumPy 2.3.5; SciPy 1.16.2; Z3 4.15.3,,Earlier independent native-row implementation,Versions recorded for that implementation,Earlier independent implementation summary
+Earlier independent check: HiGHS version,Not available,,Earlier full sign LP comparison,The retained earlier summary does not record a backend version; a later version is not assigned retrospectively,Earlier independent implementation summary
+Earlier affine-row pilot: coefficient sign threshold,\(10^{-12}\),coefficient scale,Earlier reduced / full sign LP pilot,Floating coefficient partition in that pilot; later rational transforms use exact sign tests,Earlier affine-row pilot implementation
+Mapped-device SMT fallback budget,300,s shared by SMT queries,Mapped-device SMT fallback,Deadline starts after the attempted structural certificate; not identical to the long-horizon total-state timing scope,Mapped-device exact verifier
+Mapped-device solver versions,Z3 4.15.3; SciPy 1.16.2; HiGHS 1.8.0,,Mapped-device verification environment,"Z3 checked in regression records; SciPy/HiGHS provenance is the retained prior environment, not a claim that each exact check invokes LP",Mapped-device preflight version record

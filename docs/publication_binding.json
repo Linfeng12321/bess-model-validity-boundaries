@@ -1,0 +1,28 @@
+{
+  "materials_version": "1.0.0",
+  "scientific_baseline": "1.0.0-rc3",
+  "manuscript_title": "Validity Boundaries of Relaxed Battery Energy Storage System Models across Operating States",
+  "material_creators_in_manuscript_order": [
+    "Linfeng Liu",
+    "Filbert H. Juwono",
+    "Kai Jia",
+    "Nok Ko",
+    "Zhiqin Ma",
+    "Qin Wang"
+  ],
+  "manuscript_included": false,
+  "supplementary_pages": 39,
+  "files": {
+    "supplementary/Supplementary_Information.docx": {
+      "bytes": 2309041,
+      "sha256": "412ea085f8e680e1cd31eea1090bf2ced46d46eb2b97afbf2ec60ce2dd5d3807"
+    },
+    "supplementary/Supplementary_Information.pdf": {
+      "bytes": 6037372,
+      "sha256": "4d6886dc866a6ccab1b0985a1efc0a6cd1de06d05e19da4e334161bf8c6e3e60"
+    }
+  },
+  "change_scope": "Author-formatted SM adopted; only availability statements and document metadata updated; all 443 native formulas and scientific content retained. Figure S2 grouped labels preserve original classifications.",
+  "verification_entry": "python -B scripts/verify_release.py --report-dir reports",
+  "verification_scope": "Saved arithmetic, native constraints and fixed summaries; no new scientific solver runs or cases."
+}

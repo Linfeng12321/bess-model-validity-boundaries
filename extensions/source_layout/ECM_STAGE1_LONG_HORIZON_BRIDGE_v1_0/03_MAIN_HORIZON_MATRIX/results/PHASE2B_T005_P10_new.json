@@ -1,0 +1,826 @@
+{
+  "input": {
+    "paired_setting_id": "PHASE2B_T005_P10",
+    "phase": "PHASE2B",
+    "T": 5,
+    "eta_c": "13/20",
+    "eta_d": "1",
+    "rho": "1",
+    "h": "1/4",
+    "row_form": "G",
+    "initial_rule": "source60",
+    "e0": "9/25",
+    "e1": "879/2000",
+    "gain": "159/2000",
+    "eligible": true,
+    "valid_first_charge": true,
+    "not_applicable_reason": "",
+    "legacy_case_index": null,
+    "case_id": "PHASE2B_T005_P10_new",
+    "state": "new",
+    "effective_initial_energy": "879/2000",
+    "planned_work": {
+      "predicted_reduced_subproblems": 19,
+      "target_rows": 30,
+      "automatic_rows": 16,
+      "checked_rows": 14,
+      "predicted_full_sign_upper_bound": 1120
+    }
+  },
+  "classification": "STRICT",
+  "certificate_level": "STRICT_CERTIFIED",
+  "routes": {
+    "R2": {
+      "route": "R2",
+      "status": "COMPLETED",
+      "exact": "STRICT",
+      "queries": {
+        "feasible_smt": {
+          "status": "sat",
+          "reason": "",
+          "time": 0.0007777999999234453,
+          "timeout": false
+        },
+        "bad_smt": {
+          "status": "sat",
+          "reason": "",
+          "time": 0.0008219000010285527,
+          "timeout": false
+        },
+        "SOC_pass_power_fail_smt": {
+          "status": "sat",
+          "reason": "",
+          "time": 0.0012563999989652075,
+          "timeout": false
+        }
+      },
+      "witnesses": [
+        {
+          "relaxed_native_pass": true,
+          "recovered_dynamics_pass": true,
+          "exclusive_pass": true,
+          "SOC_pass": true,
+          "violations": [
+            {
+              "row_index": 16,
+              "row_name": "CHARGE_END_1",
+              "row_family": "CHARGE_END",
+              "period": 1,
+              "violation": "47/1460"
+            }
+          ],
+          "relaxed_vector": [
+            "57781/332150",
+            "1/2",
+            "47/1460",
+            "47/1460",
+            "47/1460",
+            "282/12775",
+            "0",
+            "0",
+            "0",
+            "0",
+            "921/2000",
+            "27/50",
+            "317393/584000",
+            "159713/292000",
+            "321459/584000"
+          ],
+          "recovered_vector": [
+            "7207/47450",
+            "1/2",
+            "47/1460",
+            "47/1460",
+            "47/1460",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "13503/29200",
+            "39561/73000",
+            "318521/584000",
+            "160277/292000",
+            "4419/8000"
+          ],
+          "certified": true,
+          "max_violation": "47/1460",
+          "query": "bad_smt",
+          "witness_type": "EXACT_RATIONAL"
+        },
+        {
+          "relaxed_native_pass": true,
+          "recovered_dynamics_pass": true,
+          "exclusive_pass": true,
+          "SOC_pass": true,
+          "violations": [
+            {
+              "row_index": 16,
+              "row_name": "CHARGE_END_1",
+              "row_family": "CHARGE_END",
+              "period": 1,
+              "violation": "143/2520"
+            },
+            {
+              "row_index": 25,
+              "row_name": "CHARGE_END_2",
+              "row_family": "CHARGE_END",
+              "period": 2,
+              "violation": "1133/13650"
+            },
+            {
+              "row_index": 32,
+              "row_name": "CHARGE_START_3",
+              "row_family": "CHARGE_START",
+              "period": 3,
+              "violation": "539/57850"
+            },
+            {
+              "row_index": 34,
+              "row_name": "CHARGE_END_3",
+              "row_family": "CHARGE_END",
+              "period": 3,
+              "violation": "7/1300"
+            },
+            {
+              "row_index": 41,
+              "row_name": "CHARGE_START_4",
+              "row_family": "CHARGE_START",
+              "period": 4,
+              "violation": "42/28925"
+            }
+          ],
+          "relaxed_vector": [
+            "1/2",
+            "79/210",
+            "3979/13650",
+            "539/57850",
+            "7/1300",
+            "0",
+            "13/105",
+            "1423/6825",
+            "0",
+            "0",
+            "519/1000",
+            "479/875",
+            "879/1625",
+            "25023/46280",
+            "4996501/9256000"
+          ],
+          "recovered_vector": [
+            "1/2",
+            "53/210",
+            "1133/13650",
+            "539/57850",
+            "7/1300",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "519/1000",
+            "23447/42000",
+            "57/100",
+            "50709/89000",
+            "405049/712000"
+          ],
+          "certified": true,
+          "max_violation": "1133/13650",
+          "query": "SOC_pass_power_fail_smt",
+          "witness_type": "EXACT_RATIONAL"
+        }
+      ],
+      "witness_verification_time": 0.0016436000005342066,
+      "wall_time": 0.0246517000014137,
+      "LP_calls": 0,
+      "solver_version": "4.15.3"
+    },
+    "R1": {
+      "route": "R1",
+      "predicted_subproblem_count": 19,
+      "auto_preserved_rows": 16,
+      "margin_scope": "NON_AUTOMATIC_TARGETS_PLUS_ZERO_UPPER_BOUNDS",
+      "status": "COMPLETED",
+      "LP_verdict": "POSITIVE",
+      "max_value": 1.049999999999999,
+      "global_max_value": 1.049999999999999,
+      "global_max_note": "Floating optimum across all targets only when complete and all optimized or positive maximum dominates auto-preserved targets; otherwise NOT_COMPUTED, partial best is a lower bound",
+      "LP_calls": 19,
+      "wall_time": 0.034009499999228865,
+      "feasible": true,
+      "row_results": [
+        {
+          "row_name": "E_hi_0",
+          "family": "SOC_UPPER",
+          "period": 0,
+          "mode": "REDUCED_FINITE_LP",
+          "max_value": -0.05100000000000002,
+          "subproblems": 1
+        },
+        {
+          "row_name": "E_lo_0",
+          "mode": "AUTO_PRESERVED",
+          "upper_bound": 0,
+          "max_value": null
+        },
+        {
+          "row_name": "CHARGE_START_0",
+          "mode": "AUTO_PRESERVED",
+          "upper_bound": 0,
+          "max_value": null
+        },
+        {
+          "row_name": "DISCHARGE_START_0",
+          "mode": "AUTO_PRESERVED",
+          "upper_bound": 0,
+          "max_value": null
+        },
+        {
+          "row_name": "CHARGE_END_0",
+          "family": "CHARGE_END",
+          "period": 0,
+          "mode": "REDUCED_FINITE_LP",
+          "max_value": -0.34999999999999987,
+          "subproblems": 1
+        },
+        {
+          "row_name": "DISCHARGE_END_0",
+          "mode": "AUTO_PRESERVED",
+          "upper_bound": 0,
+          "max_value": null
+        },
+        {
+          "row_name": "E_hi_1",
+          "family": "SOC_UPPER",
+          "period": 1,
+          "mode": "REDUCED_FINITE_LP",
+          "max_value": -0.011738095238095297,
+          "subproblems": 1
+        },
+        {
+          "row_name": "E_lo_1",
+          "mode": "AUTO_PRESERVED",
+          "upper_bound": 0,
+          "max_value": null
+        },
+        {
+          "row_name": "CHARGE_START_1",
+          "family": "CHARGE_START",
+          "period": 1,
+          "mode": "REDUCED_FINITE_LP",
+          "max_value": -0.5976190476190475,
+          "subproblems": 2
+        },
+        {
+          "row_name": "DISCHARGE_START_1",
+          "mode": "AUTO_PRESERVED",
+          "upper_bound": 0,
+          "max_value": null
+        },
+        {
+          "row_name": "CHARGE_END_1",
+          "family": "CHARGE_END",
+          "period": 1,
+          "mode": "REDUCED_FINITE_LP",
+          "max_value": 0.2068181818181829,
+          "subproblems": 1
+        },
+        {
+          "row_name": "DISCHARGE_END_1",
+          "mode": "AUTO_PRESERVED",
+          "upper_bound": 0,
+          "max_value": null
+        },
+        {
+          "row_name": "E_hi_2",
+          "family": "SOC_UPPER",
+          "period": 2,
+          "mode": "REDUCED_FINITE_LP",
+          "max_value": 0.007969765684051361,
+          "subproblems": 1
+        },
+        {
+          "row_name": "E_lo_2",
+          "mode": "AUTO_PRESERVED",
+          "upper_bound": 0,
+          "max_value": null
+        },
+        {
+          "row_name": "CHARGE_START_2",
+          "family": "CHARGE_START",
+          "period": 2,
+          "mode": "REDUCED_FINITE_LP",
+          "max_value": -0.06358654572940381,
+          "subproblems": 2
+        },
+        {
+          "row_name": "DISCHARGE_START_2",
+          "mode": "AUTO_PRESERVED",
+          "upper_bound": 0,
+          "max_value": null
+        },
+        {
+          "row_name": "CHARGE_END_2",
+          "family": "CHARGE_END",
+          "period": 2,
+          "mode": "REDUCED_FINITE_LP",
+          "max_value": 0.48787878787878824,
+          "subproblems": 1
+        },
+        {
+          "row_name": "DISCHARGE_END_2",
+          "mode": "AUTO_PRESERVED",
+          "upper_bound": 0,
+          "max_value": null
+        },
+        {
+          "row_name": "E_hi_3",
+          "family": "SOC_UPPER",
+          "period": 3,
+          "mode": "REDUCED_FINITE_LP",
+          "max_value": 0.025194573420196986,
+          "subproblems": 1
+        },
+        {
+          "row_name": "E_lo_3",
+          "mode": "AUTO_PRESERVED",
+          "upper_bound": 0,
+          "max_value": null
+        },
+        {
+          "row_name": "CHARGE_START_3",
+          "family": "CHARGE_START",
+          "period": 3,
+          "mode": "REDUCED_FINITE_LP",
+          "max_value": 0.24959747567457358,
+          "subproblems": 2
+        },
+        {
+          "row_name": "DISCHARGE_START_3",
+          "mode": "AUTO_PRESERVED",
+          "upper_bound": 0,
+          "max_value": null
+        },
+        {
+          "row_name": "CHARGE_END_3",
+          "family": "CHARGE_END",
+          "period": 3,
+          "mode": "REDUCED_FINITE_LP",
+          "max_value": 0.7689393939393931,
+          "subproblems": 1
+        },
+        {
+          "row_name": "DISCHARGE_END_3",
+          "mode": "AUTO_PRESERVED",
+          "upper_bound": 0,
+          "max_value": null
+        },
+        {
+          "row_name": "E_hi_4",
+          "family": "SOC_UPPER",
+          "period": 4,
+          "mode": "REDUCED_FINITE_LP",
+          "max_value": 0.042104072815263044,
+          "subproblems": 1
+        },
+        {
+          "row_name": "E_lo_4",
+          "mode": "AUTO_PRESERVED",
+          "upper_bound": 0,
+          "max_value": null
+        },
+        {
+          "row_name": "CHARGE_START_4",
+          "family": "CHARGE_START",
+          "period": 4,
+          "mode": "REDUCED_FINITE_LP",
+          "max_value": 0.5347372455883055,
+          "subproblems": 2
+        },
+        {
+          "row_name": "DISCHARGE_START_4",
+          "mode": "AUTO_PRESERVED",
+          "upper_bound": 0,
+          "max_value": null
+        },
+        {
+          "row_name": "CHARGE_END_4",
+          "family": "CHARGE_END",
+          "period": 4,
+          "mode": "REDUCED_FINITE_LP",
+          "max_value": 1.049999999999999,
+          "subproblems": 1
+        },
+        {
+          "row_name": "DISCHARGE_END_4",
+          "mode": "AUTO_PRESERVED",
+          "upper_bound": 0,
+          "max_value": null
+        }
+      ],
+      "witness": {
+        "relaxed_native_pass": true,
+        "recovered_dynamics_pass": true,
+        "exclusive_pass": true,
+        "SOC_pass": false,
+        "violations": [
+          {
+            "row_index": 39,
+            "row_name": "E_hi_4",
+            "row_family": "SOC_UPPER",
+            "period": 4,
+            "violation": "65999999999999909/2000000000000000000"
+          },
+          {
+            "row_index": 43,
+            "row_name": "CHARGE_END_4",
+            "row_family": "CHARGE_END",
+            "period": 4,
+            "violation": "125999999999999909/120000000000000000"
+          }
+        ],
+        "relaxed_vector": [
+          "1/2",
+          "13999999999999993/50000000000000000",
+          "1/4",
+          "1/4",
+          "1/2",
+          "0",
+          "11000000000000007/50000000000000000",
+          "1/4",
+          "1/4",
+          "0",
+          "519/1000",
+          "2030999999999999769/4000000000000000000",
+          "1936499999999999769/4000000000000000000",
+          "1841999999999999769/4000000000000000000",
+          "2159999999999999769/4000000000000000000"
+        ],
+        "recovered_vector": [
+          "1/2",
+          "1499999999999993/25000000000000000",
+          "0",
+          "0",
+          "1/2",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "519/1000",
+          "1053999999999999909/2000000000000000000",
+          "1050499999999999909/2000000000000000000",
+          "1046999999999999909/2000000000000000000",
+          "1205999999999999909/2000000000000000000"
+        ],
+        "certified": true,
+        "max_violation": "125999999999999909/120000000000000000",
+        "witness_type": "RATIONAL_REVERIFIED_LP",
+        "rational_conversion": "exact_decimal_strings"
+      }
+    },
+    "R3": {
+      "route": "R3",
+      "status": "COMPLETED",
+      "LP_calls": 1120,
+      "predicted_subproblem_count": 1120,
+      "feasible": true,
+      "max_value": 1.0500000000000007,
+      "max_SOC_valid_power_excess": 0.5000000000000009,
+      "SOC_power_partial_lower_bound": null,
+      "SOC_max_note": "Existing SOC-constrained power endpoint computed only where R3 permitted; at larger T exact existence and witness retained without a new optimizer",
+      "wall_time": 1.8295943999983137,
+      "LP_verdict": "POSITIVE",
+      "witness": {
+        "relaxed_native_pass": true,
+        "recovered_dynamics_pass": true,
+        "exclusive_pass": true,
+        "SOC_pass": false,
+        "violations": [
+          {
+            "row_index": 39,
+            "row_name": "E_hi_4",
+            "row_family": "SOC_UPPER",
+            "period": 4,
+            "violation": "131999999999999961/4000000000000000000"
+          },
+          {
+            "row_index": 43,
+            "row_name": "CHARGE_END_4",
+            "row_family": "CHARGE_END",
+            "period": 4,
+            "violation": "83999999999999987/80000000000000000"
+          }
+        ],
+        "relaxed_vector": [
+          "1/4",
+          "27999999999999997/100000000000000000",
+          "1/4",
+          "1/2",
+          "1/2",
+          "1/4",
+          "22000000000000003/100000000000000000",
+          "1/4",
+          "0",
+          "0",
+          "3327/8000",
+          "3236999999999999901/8000000000000000000",
+          "3047999999999999901/8000000000000000000",
+          "3683999999999999901/8000000000000000000",
+          "4319999999999999901/8000000000000000000"
+        ],
+        "recovered_vector": [
+          "0",
+          "2999999999999997/50000000000000000",
+          "0",
+          "1/2",
+          "1/2",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1751/4000",
+          "1782999999999999961/4000000000000000000",
+          "1775999999999999961/4000000000000000000",
+          "2093999999999999961/4000000000000000000",
+          "2411999999999999961/4000000000000000000"
+        ],
+        "certified": true,
+        "max_violation": "83999999999999987/80000000000000000",
+        "witness_type": "RATIONAL_REVERIFIED_LP",
+        "rational_conversion": "exact_decimal_strings"
+      }
+    }
+  },
+  "witnesses": [
+    {
+      "relaxed_native_pass": true,
+      "recovered_dynamics_pass": true,
+      "exclusive_pass": true,
+      "SOC_pass": true,
+      "violations": [
+        {
+          "row_index": 16,
+          "row_name": "CHARGE_END_1",
+          "row_family": "CHARGE_END",
+          "period": 1,
+          "violation": "47/1460"
+        }
+      ],
+      "relaxed_vector": [
+        "57781/332150",
+        "1/2",
+        "47/1460",
+        "47/1460",
+        "47/1460",
+        "282/12775",
+        "0",
+        "0",
+        "0",
+        "0",
+        "921/2000",
+        "27/50",
+        "317393/584000",
+        "159713/292000",
+        "321459/584000"
+      ],
+      "recovered_vector": [
+        "7207/47450",
+        "1/2",
+        "47/1460",
+        "47/1460",
+        "47/1460",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "13503/29200",
+        "39561/73000",
+        "318521/584000",
+        "160277/292000",
+        "4419/8000"
+      ],
+      "certified": true,
+      "max_violation": "47/1460",
+      "query": "bad_smt",
+      "witness_type": "EXACT_RATIONAL"
+    },
+    {
+      "relaxed_native_pass": true,
+      "recovered_dynamics_pass": true,
+      "exclusive_pass": true,
+      "SOC_pass": true,
+      "violations": [
+        {
+          "row_index": 16,
+          "row_name": "CHARGE_END_1",
+          "row_family": "CHARGE_END",
+          "period": 1,
+          "violation": "143/2520"
+        },
+        {
+          "row_index": 25,
+          "row_name": "CHARGE_END_2",
+          "row_family": "CHARGE_END",
+          "period": 2,
+          "violation": "1133/13650"
+        },
+        {
+          "row_index": 32,
+          "row_name": "CHARGE_START_3",
+          "row_family": "CHARGE_START",
+          "period": 3,
+          "violation": "539/57850"
+        },
+        {
+          "row_index": 34,
+          "row_name": "CHARGE_END_3",
+          "row_family": "CHARGE_END",
+          "period": 3,
+          "violation": "7/1300"
+        },
+        {
+          "row_index": 41,
+          "row_name": "CHARGE_START_4",
+          "row_family": "CHARGE_START",
+          "period": 4,
+          "violation": "42/28925"
+        }
+      ],
+      "relaxed_vector": [
+        "1/2",
+        "79/210",
+        "3979/13650",
+        "539/57850",
+        "7/1300",
+        "0",
+        "13/105",
+        "1423/6825",
+        "0",
+        "0",
+        "519/1000",
+        "479/875",
+        "879/1625",
+        "25023/46280",
+        "4996501/9256000"
+      ],
+      "recovered_vector": [
+        "1/2",
+        "53/210",
+        "1133/13650",
+        "539/57850",
+        "7/1300",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "519/1000",
+        "23447/42000",
+        "57/100",
+        "50709/89000",
+        "405049/712000"
+      ],
+      "certified": true,
+      "max_violation": "1133/13650",
+      "query": "SOC_pass_power_fail_smt",
+      "witness_type": "EXACT_RATIONAL"
+    },
+    {
+      "relaxed_native_pass": true,
+      "recovered_dynamics_pass": true,
+      "exclusive_pass": true,
+      "SOC_pass": false,
+      "violations": [
+        {
+          "row_index": 39,
+          "row_name": "E_hi_4",
+          "row_family": "SOC_UPPER",
+          "period": 4,
+          "violation": "65999999999999909/2000000000000000000"
+        },
+        {
+          "row_index": 43,
+          "row_name": "CHARGE_END_4",
+          "row_family": "CHARGE_END",
+          "period": 4,
+          "violation": "125999999999999909/120000000000000000"
+        }
+      ],
+      "relaxed_vector": [
+        "1/2",
+        "13999999999999993/50000000000000000",
+        "1/4",
+        "1/4",
+        "1/2",
+        "0",
+        "11000000000000007/50000000000000000",
+        "1/4",
+        "1/4",
+        "0",
+        "519/1000",
+        "2030999999999999769/4000000000000000000",
+        "1936499999999999769/4000000000000000000",
+        "1841999999999999769/4000000000000000000",
+        "2159999999999999769/4000000000000000000"
+      ],
+      "recovered_vector": [
+        "1/2",
+        "1499999999999993/25000000000000000",
+        "0",
+        "0",
+        "1/2",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "519/1000",
+        "1053999999999999909/2000000000000000000",
+        "1050499999999999909/2000000000000000000",
+        "1046999999999999909/2000000000000000000",
+        "1205999999999999909/2000000000000000000"
+      ],
+      "certified": true,
+      "max_violation": "125999999999999909/120000000000000000",
+      "witness_type": "RATIONAL_REVERIFIED_LP",
+      "rational_conversion": "exact_decimal_strings"
+    },
+    {
+      "relaxed_native_pass": true,
+      "recovered_dynamics_pass": true,
+      "exclusive_pass": true,
+      "SOC_pass": false,
+      "violations": [
+        {
+          "row_index": 39,
+          "row_name": "E_hi_4",
+          "row_family": "SOC_UPPER",
+          "period": 4,
+          "violation": "131999999999999961/4000000000000000000"
+        },
+        {
+          "row_index": 43,
+          "row_name": "CHARGE_END_4",
+          "row_family": "CHARGE_END",
+          "period": 4,
+          "violation": "83999999999999987/80000000000000000"
+        }
+      ],
+      "relaxed_vector": [
+        "1/4",
+        "27999999999999997/100000000000000000",
+        "1/4",
+        "1/2",
+        "1/2",
+        "1/4",
+        "22000000000000003/100000000000000000",
+        "1/4",
+        "0",
+        "0",
+        "3327/8000",
+        "3236999999999999901/8000000000000000000",
+        "3047999999999999901/8000000000000000000",
+        "3683999999999999901/8000000000000000000",
+        "4319999999999999901/8000000000000000000"
+      ],
+      "recovered_vector": [
+        "0",
+        "2999999999999997/50000000000000000",
+        "0",
+        "1/2",
+        "1/2",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "1751/4000",
+        "1782999999999999961/4000000000000000000",
+        "1775999999999999961/4000000000000000000",
+        "2093999999999999961/4000000000000000000",
+        "2411999999999999961/4000000000000000000"
+      ],
+      "certified": true,
+      "max_violation": "83999999999999987/80000000000000000",
+      "witness_type": "RATIONAL_REVERIFIED_LP",
+      "rational_conversion": "exact_decimal_strings"
+    }
+  ],
+  "model_construction_time": 0.00018280000222148374,
+  "transform_time": 0.0013937000003352296,
+  "total_wall_time": 1.9104565999987244,
+  "cpu_time": 1.890625,
+  "peak_memory": 107728896,
+  "errors": [],
+  "process_status": "PASS",
+  "attempt_history": [],
+  "input_hash": "277b513f7086b36c27b4e8dca8c96faaaad4cec9dd744c930bea21ba483cce59",
+  "implementation_hash": "28894b646da5e014ba54fe9c0a45f7d3c76797d77a19766b5f2fbb9f1e4b8b2a",
+  "environment_hash": "7f244610dcbe2bf4d744d150020a0753a636ffe8363e7cef19311d8f3bebeadb",
+  "completed_utc": "2026-10-02T18:27:35.650733+00:00",
+  "execution_id": "PHASE2B_T005_P10_new",
+  "payload_sha256": "d3d024e6ea074f6f64df0e97052190e1f4b50bcc87fc72f566124e0a3de8cfda"
+}

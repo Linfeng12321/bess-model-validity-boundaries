@@ -1,0 +1,17 @@
+{
+  "case_inputs": 6,
+  "repeats": 3,
+  "route_executions": 36,
+  "outcomes": {
+    "original": {
+      "UNRESOLVED": 18
+    },
+    "new": {
+      "EQ": 15,
+      "STRICT": 3
+    }
+  },
+  "wall_seconds": 601.3448726999923,
+  "scientific_sample_size": 6,
+  "interpretation": "Repeated timings are not additional scientific states. Same 30 s primary route budget. Preprocessing/validation may add bounded small overhead."
+}

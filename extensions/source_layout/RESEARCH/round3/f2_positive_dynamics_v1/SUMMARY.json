@@ -1,0 +1,10 @@
+{
+  "models": 24,
+  "equal": 0,
+  "strict": 24,
+  "empty": 0,
+  "SMT_unknown": 0,
+  "qa_failures": 0,
+  "scope_refusals": 4,
+  "maximum_numeric_residual": 3.552713678800501e-15
+}

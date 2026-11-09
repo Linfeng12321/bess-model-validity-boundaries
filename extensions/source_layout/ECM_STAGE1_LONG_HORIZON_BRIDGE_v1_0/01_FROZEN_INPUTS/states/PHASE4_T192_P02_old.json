@@ -1,0 +1,28 @@
+{
+  "paired_setting_id": "PHASE4_T192_P02",
+  "phase": "PHASE4",
+  "T": 192,
+  "eta_c": "13/20",
+  "eta_d": "1",
+  "rho": "1",
+  "h": "1/4",
+  "row_form": "N",
+  "initial_rule": "source60",
+  "e0": "9/25",
+  "e1": "879/2000",
+  "gain": "159/2000",
+  "eligible": true,
+  "valid_first_charge": true,
+  "not_applicable_reason": "",
+  "legacy_case_index": null,
+  "case_id": "PHASE4_T192_P02_old",
+  "state": "old",
+  "effective_initial_energy": "9/25",
+  "planned_work": {
+    "predicted_reduced_subproblems": 576,
+    "target_rows": 1152,
+    "automatic_rows": 577,
+    "checked_rows": 575,
+    "predicted_full_sign_upper_bound": 8436424732359698946595300984791103663241565717359662385332224
+  }
+}

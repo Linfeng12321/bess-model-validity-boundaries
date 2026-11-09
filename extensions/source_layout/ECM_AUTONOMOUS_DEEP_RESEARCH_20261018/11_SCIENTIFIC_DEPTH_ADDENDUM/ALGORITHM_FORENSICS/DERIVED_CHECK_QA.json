@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "saved_points": 24,
+  "points_with_binding_line_limits": 24,
+  "maximum_binding_line_rows": 8,
+  "minimum_binding_line_rows": 7,
+  "dual_reuse_example": "PASS",
+  "new_optimization_calls": 0,
+  "wall_seconds": 1.1008872000384144
+}

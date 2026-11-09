@@ -1,0 +1,5 @@
+﻿query_relation,economic_request_realisable,service_request_realisable,count,denominator_state_assessments
+EQ,TRUE,TRUE,7,26
+STRICT,FALSE,FALSE,16,26
+STRICT,TRUE,FALSE,1,26
+STRICT,TRUE,TRUE,2,26

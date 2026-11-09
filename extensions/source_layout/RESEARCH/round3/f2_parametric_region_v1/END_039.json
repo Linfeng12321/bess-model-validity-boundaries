@@ -1,0 +1,12 @@
+{
+  "regime": "END",
+  "e0": "3/10",
+  "ceiling": "2",
+  "feasible_smt": "sat",
+  "bad_smt": "unsat",
+  "errors": [],
+  "feasible_qe": "UNKNOWN",
+  "bad_qe": "UNKNOWN",
+  "lp_feasible": true,
+  "lp_max_margin": -0.07777777777777778
+}

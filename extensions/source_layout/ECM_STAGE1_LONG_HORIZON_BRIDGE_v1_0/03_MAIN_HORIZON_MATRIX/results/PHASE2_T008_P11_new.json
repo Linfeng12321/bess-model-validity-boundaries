@@ -1,0 +1,62 @@
+{
+  "classification": "NOT_APPLICABLE",
+  "reason": "INITIAL_STATE_OR_FIRST_NATIVE_ACTION_INVALID",
+  "process_status": "PASS",
+  "routes": {
+    "R1": {
+      "status": "NOT_APPLICABLE",
+      "reason": "INITIAL_STATE_OR_FIRST_NATIVE_ACTION_INVALID",
+      "wall_time": 0.0,
+      "LP_calls": 0
+    },
+    "R2": {
+      "status": "NOT_APPLICABLE",
+      "reason": "INITIAL_STATE_OR_FIRST_NATIVE_ACTION_INVALID",
+      "wall_time": 0.0,
+      "LP_calls": 0
+    },
+    "R3": {
+      "status": "NOT_APPLICABLE",
+      "reason": "INITIAL_STATE_OR_FIRST_NATIVE_ACTION_INVALID",
+      "wall_time": 0.0,
+      "LP_calls": 0
+    }
+  },
+  "witnesses": [],
+  "errors": [],
+  "total_wall_time": 0.0,
+  "input": {
+    "paired_setting_id": "PHASE2_T008_P11",
+    "phase": "PHASE2",
+    "T": 8,
+    "eta_c": "13/20",
+    "eta_d": "1",
+    "rho": "1",
+    "h": "1/4",
+    "row_form": "G",
+    "initial_rule": "boundary_relative",
+    "e0": "-99/1000",
+    "e1": "-39/2000",
+    "gain": "159/2000",
+    "eligible": false,
+    "valid_first_charge": false,
+    "not_applicable_reason": "INITIAL_STATE_OR_FIRST_NATIVE_ACTION_INVALID",
+    "legacy_case_index": null,
+    "case_id": "PHASE2_T008_P11_new",
+    "state": "new",
+    "effective_initial_energy": "-39/2000",
+    "planned_work": {
+      "predicted_reduced_subproblems": 31,
+      "target_rows": 48,
+      "automatic_rows": 25,
+      "checked_rows": 23,
+      "predicted_full_sign_upper_bound": 14336
+    }
+  },
+  "input_hash": "b339340caad5eb7c317573a51a524919dcf3f5cb885b986524d23fcc4def6540",
+  "implementation_hash": "28894b646da5e014ba54fe9c0a45f7d3c76797d77a19766b5f2fbb9f1e4b8b2a",
+  "environment_hash": "7f244610dcbe2bf4d744d150020a0753a636ffe8363e7cef19311d8f3bebeadb",
+  "completed_utc": "2026-10-02T12:47:31.886801+00:00",
+  "execution_id": "PHASE2_T008_P11_new",
+  "payload_sha256": "aef41a42420b7a0b502ae586d253cb248dfb038b9e077fd153e18bf0842079dc"
+}

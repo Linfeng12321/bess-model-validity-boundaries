@@ -1,0 +1,5 @@
+﻿query_relation,economic_request_realizable,service_request_realizable,n,N
+EQ,Yes,Yes,7,26
+STRICT,No,No,16,26
+STRICT,Yes,No,1,26
+STRICT,Yes,Yes,2,26

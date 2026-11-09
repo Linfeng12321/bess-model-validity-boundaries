@@ -1,0 +1,60 @@
+{
+  "cases": 63,
+  "analytic_feasible": 25,
+  "analytic_infeasible": 38,
+  "qa_failures": 0,
+  "generic_witnesses": 46,
+  "mesh_infeasible_but_continuous_feasible": 4,
+  "generic_time_limit": 1,
+  "by_ramp_ratio": [
+    {
+      "ratio": 0.00016666666666666666,
+      "infeasible": 2,
+      "max_constructive_repair_error": 0.00013333333333322983,
+      "repair_within_0_1_percent": 2,
+      "repair_within_1_percent": 2
+    },
+    {
+      "ratio": 0.0033333333333333335,
+      "infeasible": 2,
+      "max_constructive_repair_error": 0.0026666666666666393,
+      "repair_within_0_1_percent": 1,
+      "repair_within_1_percent": 2
+    },
+    {
+      "ratio": 0.0375,
+      "infeasible": 4,
+      "max_constructive_repair_error": 0.029999999999999936,
+      "repair_within_0_1_percent": 0,
+      "repair_within_1_percent": 2
+    },
+    {
+      "ratio": 0.15,
+      "infeasible": 7,
+      "max_constructive_repair_error": 0.20245192352257724,
+      "repair_within_0_1_percent": 0,
+      "repair_within_1_percent": 1
+    },
+    {
+      "ratio": 0.25,
+      "infeasible": 7,
+      "max_constructive_repair_error": 0.3281797492415824,
+      "repair_within_0_1_percent": 0,
+      "repair_within_1_percent": 0
+    },
+    {
+      "ratio": 0.5,
+      "infeasible": 7,
+      "max_constructive_repair_error": 0.5724683086797377,
+      "repair_within_0_1_percent": 0,
+      "repair_within_1_percent": 0
+    },
+    {
+      "ratio": 1.5,
+      "infeasible": 9,
+      "max_constructive_repair_error": 0.790735050261667,
+      "repair_within_0_1_percent": 0,
+      "repair_within_1_percent": 1
+    }
+  ]
+}

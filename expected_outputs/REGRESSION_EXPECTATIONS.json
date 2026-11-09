@@ -1,0 +1,108 @@
+{
+  "source": "V2 actual saved-record verification output; no new solve",
+  "canonical": {
+    "saved_record_audit": "PASS",
+    "internal_states": 936,
+    "external_states": 3772,
+    "paired_settings": 468,
+    "certified_transitions_preserved": 64,
+    "internal_saved_native_witnesses_rechecked": 331,
+    "external_saved_native_witnesses_rechecked": 3659,
+    "saved_external_EQ_records_preserved_not_resolved_again": 113,
+    "relaxed_native_rows_checked": 1518822,
+    "directional_zero_gaps": {
+      "41/50": 8,
+      "9/10": 7,
+      "1": 5
+    },
+    "measured_windows": 9,
+    "measured_timestamps": 14121,
+    "measured_physical_tuple_count_from_frozen_summaries": 7729,
+    "simulated_timestamps": 507,
+    "complete_simulated_model_states": 86,
+    "simulated_saved_witnesses_rechecked": 86,
+    "saved_quantified_results_preserved": 12,
+    "temporal_query_classifications": 65,
+    "saved_hull_controls": 9,
+    "solver_calls": 0,
+    "new_scientific_cases": 0,
+    "historical_profile_records": 132,
+    "historical_profile_fields": 1493,
+    "historical_setting_rows": 32,
+    "earlier_T2_controls_matched_to_existing_regression": 9,
+    "lossless_factor_rows": 312
+  },
+  "summary": {
+    "original_classifications": {
+      "EQ": 277,
+      "STRICT": 331,
+      "NOT_APPLICABLE": 176,
+      "TIMEOUT": 152
+    },
+    "cumulative_classifications": {
+      "EQ": 426,
+      "STRICT": 334,
+      "NOT_APPLICABLE": 176
+    },
+    "paired_settings": 468,
+    "original_pair_outcomes": {
+      "EQ/EQ": 106,
+      "EQ/STRICT": 64,
+      "STRICT/STRICT": 123,
+      "NOT_APPLICABLE/NOT_APPLICABLE": 88,
+      "TIMEOUT/TIMEOUT": 65,
+      "TIMEOUT/STRICT": 21,
+      "EQ/TIMEOUT": 1
+    },
+    "cumulative_pair_outcomes": {
+      "EQ/EQ": 172,
+      "EQ/STRICT": 82,
+      "STRICT/STRICT": 126,
+      "NOT_APPLICABLE/NOT_APPLICABLE": 88
+    },
+    "external_classifications": {
+      "STRICT": 3659,
+      "EQ": 113
+    },
+    "external_retained_witness_categories": {
+      "energy_and_power": 329,
+      "energy_only": 3330
+    },
+    "system_requests": {
+      "economic": {
+        "all": 26,
+        "unrealizable": 16,
+        "equal_objective_states": 10,
+        "unrealizable_with_equal_objective": 0
+      },
+      "service": {
+        "all": 26,
+        "unrealizable": 17,
+        "equal_objective_states": 14,
+        "unrealizable_with_equal_objective": 5
+      }
+    },
+    "representative_service_excess_exact_kWh": "4521359289/220281250",
+    "measured_summary_windows": 9,
+    "measured_summary_timestamps": 14121,
+    "measured_summary_physical_tuples": 7729,
+    "simulated_saved_timestamp_rows": 507,
+    "price_response_records": 744
+  },
+  "extensions": {
+    "additional_unchanged_original_inputs": 152,
+    "structural_EQ": 104,
+    "upper_bound_EQ": 45,
+    "rational_upper_bounds": 3417,
+    "additional_STRICT": 3,
+    "solver_calls": 0
+  },
+  "system": {
+    "stored_selected_vectors_checked": 104,
+    "original_states": 26,
+    "saved_global_EQ_decisions_preserved_not_resolved": 7,
+    "saved_global_STRICT_witnesses_rechecked": 19,
+    "exact_shared_service_cap": "101/100 times exclusive economic optimum at that state",
+    "solver_calls": 0
+  }
+}

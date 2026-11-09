@@ -1,0 +1,61 @@
+{
+  "role": "Exact textual specification of existing frozen checks, not new certificates",
+  "parameters": {
+    "e_domain": [
+      "0",
+      "1"
+    ],
+    "a_domain": [
+      "1/5",
+      "2"
+    ],
+    "h": "1/10",
+    "eta_c": "9/10",
+    "eta_d": "9/10",
+    "rho": "1",
+    "offset": "0",
+    "T": 2
+  },
+  "variables": [
+    "c0",
+    "d0",
+    "c1",
+    "d1"
+  ],
+  "relaxed_energy": "E[t+1]=E[t]+9*c[t]/100-d[t]/9; E[0]=e",
+  "exclusive_energy": "S[t+1]=S[t]+9*max(c[t]-d[t],0)/100-max(d[t]-c[t],0)/9; S[0]=e",
+  "native_rows": [
+    "c[t]>=0",
+    "d[t]>=0",
+    "c[t]+d[t]<=1",
+    "0<=E[t+1]<=1"
+  ],
+  "coupled_rows": {
+    "BOX": [],
+    "END": [
+      "c[t]+E[t+1]<=a"
+    ],
+    "START": [
+      "c[t]+E[t]<=a"
+    ]
+  },
+  "lifted_violation": "S[t+1]<0 or S[t+1]>1, or max(c[t]-d[t],0)+S[t+1]>a (END), or max(c[t]-d[t],0)+S[t]>a (START)",
+  "definitions": {
+    "F(e,a,y)": "native relaxed rows",
+    "B(e,a,y)": "F and at least one reconstructed native row > bound",
+    "Dhat": "Table S boundary nonempty expression",
+    "Vhat": "Table S boundary valid expression",
+    "P": "0<=e<=1 and 1/5<=a<=2"
+  },
+  "four_frozen_counterexample_queries": [
+    "exists e,a,y: P and not Dhat and F",
+    "exists e,a: P and Dhat and forall y:not F",
+    "exists e,a,y: P and Vhat and B",
+    "exists e,a: P and Dhat and not Vhat and forall y:not B"
+  ],
+  "saved_decisions": "all 12 unsat; evidence preserved, no SMT executed in this audit",
+  "original_closed_region_source": [
+    "RESEARCH\\round3\\check_closed_region_and_transition.py"
+  ],
+  "caution": "Historical QE incomplete branches are not replaced by false placeholders as proofs. Closed-domain queries and grid checks are separate evidence."
+}

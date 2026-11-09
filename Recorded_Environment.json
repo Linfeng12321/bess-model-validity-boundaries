@@ -1,0 +1,29 @@
+{
+  "python_version": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "numpy_version": "2.3.5",
+  "scipy_version": "1.16.2",
+  "z3_version": "4.15.3",
+  "HiGHS_version": "1.8.0",
+  "OS": "Windows-11-10.0.26200-SP0",
+  "CPU": "{\"Name\":\"13th Gen Intel(R) Core(TM) i9-13900HX\",\"NumberOfCores\":24,\"NumberOfLogicalProcessors\":32}",
+  "RAM_total_bytes": 16907100160,
+  "hash_scope": "interpreter, package entry modules, package pyd/dll binaries, versions/hardware; not a claim to hash entire OS",
+  "solver_options": {
+    "LP_method": "highs",
+    "threads": 1,
+    "primal_feasibility_tolerance": 1e-07,
+    "dual_feasibility_tolerance": 1e-07,
+    "ipm_optimality_tolerance": 1e-08,
+    "presolve": true,
+    "LP_decision_threshold": 1e-08,
+    "regression_absolute_tolerance": 1e-07,
+    "Z3_random_seed": 0,
+    "Z3_max_memory_MB": 768,
+    "SMT_budget_seconds_per_state": 300,
+    "state_wall_budget_seconds": 1800,
+    "process_grace_seconds": 30,
+    "max_reduced_LP_subproblems": 262144,
+    "automatic_transient_retries": 2
+  },
+  "environment_hash": "7f244610dcbe2bf4d744d150020a0753a636ffe8363e7cef19311d8f3bebeadb"
+}

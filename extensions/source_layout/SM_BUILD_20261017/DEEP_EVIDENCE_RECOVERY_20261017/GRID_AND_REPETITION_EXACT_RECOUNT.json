@@ -1,0 +1,29 @@
+{
+  "grid_formula_comparisons": 330,
+  "grid_counts": {
+    "BOX": {
+      "EQ": 90,
+      "STRICT": 20
+    },
+    "END": {
+      "STRICT": 69,
+      "EQ": 25,
+      "EMPTY": 16
+    },
+    "START": {
+      "STRICT": 56,
+      "EQ": 34,
+      "EMPTY": 20
+    }
+  },
+  "scheduled_measured_repetitions": 540,
+  "warmup_route_slots": 108,
+  "fixed_inputs": 36,
+  "measured_process_status": {
+    "COMPLETED": 365,
+    "SKIPPED_BY_PREDECLARED_RULE": 120,
+    "TIMEOUT": 55
+  },
+  "solver_calls": 0,
+  "interpretation": "Formula evaluation at existing coordinates; not new parametric scanning or a fresh proof of continuous domains"
+}

@@ -1,0 +1,2094 @@
+\section{Reconstruction, native constraints and parameter coverage}\label{sec:reconstruction}
+This section supplies the intermediate steps behind Main Sections~3.1--3.3.
+The battery energy storage system (BESS) query retains the complete discharge
+positive net power trajectory and any unchanged variables. Stored energy is
+denoted by $E$, power by $c,d,p$, and the known energy offset by $b$.
+Equal query sets are abbreviated EQ; STRICT denotes strict inclusion of the reference query set in the relaxed query set.
+State of charge (SOC) is a dimensionless fraction or a percentage; it is not
+interchanged with stored energy without a documented energy scale.
+
+\subsection{The structural candidate and the role of uniqueness}
+At a fixed parameter state, the reconstruction is defined in the structural
+set before its operating feasibility is tested. Nonnegative directional flows
+and exclusivity fix the charge and discharge powers from net power. Known
+initial energy and the deterministic recursion then fix every subsequent
+energy. Unchanged query variables supply the remaining coordinates.
+The operating inequalities determine whether this candidate is feasible.
+
+The reverse implication in Main Proposition~1 uses the fact that each
+structural fiber is a singleton. If an admitted query has a feasible reference
+realization, that realization must be the same structural candidate. A
+nonunique fiber would only establish existence of a feasible realization.
+The following counterexample isolates this role of uniqueness:
+\begin{equation}
+\mathcal P=\{a, b\},\quad R=X=\{a\},\quad
+\pi(a)=\pi(b)=0,\quad L(0)=b .\label{eq:nonunique}
+\end{equation}
+The two projected sets coincide, but this particular selector is infeasible.
+Sufficiency still holds for any feasible query preserving selector. The
+battery specialization avoids this ambiguity through its unique lift.
+
+
+Table~\ref{tab:assumption_roles} distinguishes the premises of the set argument,
+the battery reconstruction and the finite computational criterion. Coefficients
+may vary across intervals while remaining fixed with respect to the assessed
+parameter state. Each interval has one charge and discharge pair in the
+declared model. Allowing unrestricted switching within an interval would
+change the reference trajectory space and the reconstruction question.
+
+\begin{table}[htbp]
+\caption{Distinct roles of the mathematical premises.}\label{tab:assumption_roles}
+\begin{tabularx}{\linewidth}{@{}p{.22\linewidth}p{.41\linewidth}X@{}}
+\toprule Argument & Required structure & Consequence\\\midrule
+Projected set equivalence & Containment; the same query on both models; a total, unique structural lift for each admitted query & Identifies any feasible reference realization with that lift. Affinity and compactness are not premises of this set argument.\\[3pt]
+Battery reconstruction & Known initial energy and coefficients; finite horizon; nonnegative directional powers; positive efficiencies & Exclusivity fixes both powers and the deterministic recursion fixes energy. Unknown initial states or nonunique aggregate realizations require different quantifiers.\\[3pt]
+Energy ordering & Positive durations, nonnegative retention and efficiency product at most one & The energy shift is nonnegative. These sign conditions are distinct from the algebraic reconstruction identity and projected set logic.\\[3pt]
+Attained native residual maximum & Nonempty compact relaxed set; continuous reconstruction; complete finite affine operating rows & Every required inequality and both directions of each equality are preserved exactly when all row maxima are nonpositive.\\[3pt]
+Linear parameter characterization & Fixed horizon and coefficients; affine initial energy, offsets and right hand sides & Each row and sign region gives a linear parameter system. Variable coefficients, uncertain dynamics and invariance do not follow from this conclusion.\\
+\bottomrule\end{tabularx}
+\end{table}
+
+\subsection{Energy propagation and dimensional consistency}
+Let $w_t=\min(c_t,d_t)$. Substituting the absolute value forms of the
+exclusive powers into the energy input gives the intermediate identities
+\begin{equation}\begin{aligned}
+\eta_{c, t}c_t^*-d_t^*/\eta_{d, t}
+ &=-\alpha_t p_t-\tfrac 12\kappa_t|p_t|,\label{eq:input_star}\end{aligned}\end{equation}
+\begin{equation}\begin{aligned}
+\eta_{c, t}c_t-d_t/\eta_{d, t}
+ &=-\alpha_t p_t-\tfrac 12\kappa_t|p_t|-\kappa_tw_t .\label{eq:input_relaxed}
+\end{aligned}\end{equation}
+Here $\kappa_t=1/\eta_{d,t}-\eta_{c,t}$ and
+$\alpha_t=(\eta_{c,t}+1/\eta_{d,t})/2$, as in Main Section~3.2.
+Subtracting the two recursions eliminates the common known offset:
+\begin{equation}
+\delta E_t=\rho_t\delta E_{t-1}+h_t\kappa_tw_t,
+\qquad \delta E_0=0 .\label{eq:shift_recurrence}
+\end{equation}
+Forward substitution assigns the input at interval $t$ to each later
+energy through the product of subsequent retention factors. This produces
+the propagation matrix $G$ in the Main, with $G_{tt}=h_t$ and an empty
+retention product equal to one. Stacking the intervals yields
+\begin{equation}
+\delta E=G(\kappa\odot w).\label{eq:shift_stack}
+\end{equation}
+The offset is already an energy quantity and is not multiplied by duration
+a second time. The matrix has time units, the simultaneous component has
+power units, and their propagated product has energy units. Positive
+durations, nonnegative retention and an efficiency product at most one
+make the energy shift componentwise nonnegative. These sign conditions
+explain energy ordering; they do not establish feasibility of every native row.
+
+\subsection{Completeness and preservation of affine constraints}
+The constraint index covers every native operating inequality whose
+satisfaction must survive reconstruction. Deterministic dynamics already
+enforced by the structural lift are not duplicated. A retained operating
+equality contributes both inequality directions. Couplings involving the
+unchanged variables remain in the same row system.
+
+For a native row, the power terms at the reconstruction expand as
+\begin{equation}
+a_c^\top c^*+a_d^\top d^*
+=\tfrac 12(a_d-a_c)^\top p+\tfrac 12(a_c+a_d)^\top|p| .
+\label{eq:power_row}
+\end{equation}
+Combining this expansion with energy propagation gives the coefficients
+$s_j,\ell_j,v_j$ defined in Main Section~3.3. The row change is
+\begin{align}
+\Delta_j
+&=a_{E, j}^\top G(\kappa\odot w)
+ -(a_{c, j}+a_{d, j})^\top w\\
+&=-2v_j^\top w .\label{eq:row_change}
+\end{align}
+The unchanged variables cancel from this difference. If $v_j$ is
+componentwise nonnegative, the row cannot increase. A negative component
+does not itself prove a violation: feasible simultaneous flows and the
+original row slack still matter. Such rows require evaluation over the
+complete relaxed feasible set.
+
+The maximum residual in the Main is attained because the relaxed set is
+nonempty and compact and the reconstructed row is continuous. Its sign,
+rather than agreement on a selected dispatch, determines preservation of
+that row for all queries. Both directions of equalities must pass. If a row
+has units $U_j$, its residual and row change retain $U_j$. Residuals with
+different physical units or row scalings are not combined into a distance,
+probability or common physical margin.
+
+\subsection{Parameter regions and the scope of a reuse certificate}
+The pointwise criterion uses fixed known coefficients during an assessment.
+For a parameter region, keep horizon, durations, efficiencies, retention and
+native row coefficients fixed, while initial energy, known offsets and
+right hand sides may vary affinely. The zero power energy trajectory is
+then affine in the parameters. Within each net power sign region, relaxed
+feasibility and a positive reconstructed residual form linear systems in
+the trajectory and parameter variables. Projecting these systems and taking
+their finite union identifies the parameters admitting a violating query.
+The explicit sign-region reconstruction is
+\begin{equation}
+E^*_{\sigma}(\theta,p)=f(\theta)-G\left(\alpha\odot p+
+\frac{\kappa\odot\sigma\odot p}{2}\right),\qquad
+\sigma\in\{-1,1\}^T,\quad \sigma\odot p\geq0.
+\label{eq:parameter_sign_lift}
+\end{equation}
+For each row and sign vector, define the joint parameter and trajectory set
+\begin{equation}
+\begin{split}
+\mathcal B_{j,\sigma}=\bigl\{(\theta,y):\;&y\in R(\theta),\quad
+p=d-c,\quad\sigma\odot p\geq0,\\
+&a_{E,j}^{\top}f(\theta)+\ell_j^{\top}p+
+v_j^{\top}(\sigma\odot p)+a_{z,j}^{\top}z>r_j(\theta)\bigr\}.
+\end{split}\label{eq:parameter_bad_set}
+\end{equation}
+The trajectory and parameter dependence is affine because $G$, $\alpha$,
+$\kappa$, $\ell_j$ and $v_j$ are fixed with respect to $\theta$.
+Let $\operatorname{proj}_{\theta}$ eliminate the trajectory coordinates.
+The nonempty and valid parameter sets are therefore
+\begin{equation}
+D=\operatorname{proj}_{\theta}\{(\theta,y):y\in R(\theta)\},\qquad
+V=D\setminus\bigcup_{j,\sigma}\operatorname{proj}_{\theta}\mathcal B_{j,\sigma}.
+\label{eq:parameter_region_projection}
+\end{equation}
+Finite elimination of linear equalities and strict or nonstrict inequalities
+gives a finite Boolean linear description. Zero powers can lie in both
+adjacent sign regions because their reconstructed values agree. Strict
+inequalities preserve the difference between a violating query and an
+admissible boundary; closing the violation sets would change that meaning.
+This construction need not yield a small or convex region.
+
+Distinguish the true validity region $V$ from a proved
+covered set $\Omega\subseteq V$. For a feasible parameter state,
+\begin{equation}
+\theta\in\Omega\ \Longrightarrow\ \mathcal Q_R(\theta)=\mathcal Q_X(\theta),
+\qquad
+\theta\in D\setminus V\ \Longrightarrow\
+\mathcal Q_X(\theta)\subsetneq\mathcal Q_R(\theta).
+\label{eq:coverage}
+\end{equation}
+Leaving $\Omega$ alone establishes neither relation.
+
+
+
+
+
+\begin{table}[htbp]
+
+\caption{Scope of reuse after changes to a certified storage model.}
+\label{tab:si_certificate_reuse}
+
+\begin{tabularx}{\linewidth}{@{}p{.25\linewidth}XX@{}}
+\toprule
+Change & Available guarantee & Condition for reuse\\
+\midrule
+Initial energy, known offsets or operating limits
+& Equality throughout the proved parameter coverage
+& The complete updated state remains inside that coverage with its fixed coefficients.\\
+Efficiencies, retention or native row coefficients
+& The pointwise criterion remains applicable if its assumptions hold
+& Assess the revised model; the earlier parameter region does not automatically extend.\\
+Horizon or interval definition
+& The criterion can assess the revised finite trajectory space
+& Establish coverage for the new dynamics and complete query.\\
+Common restriction on certified query outputs
+& Equality is preserved by the same restriction in both query spaces
+& Restrict only outputs already retained by the certificate.\\
+Native operating constraints
+& The modified model pair can be assessed
+& Verify containment, unique reconstruction and all revised native rows.\\
+Reference model or query outputs
+& A common mapping of certified outputs preserves their set equality for the same reference
+& A changed reference or outputs not determined by the certified query require separate justification.\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+An identical restriction on certified queries differs from imposing an
+additional condition on internal charge, discharge or energy variables.
+The latter condition requires reconstruction feasibility to be checked
+again. Equality of restricted query sets can include an empty restricted
+set; operational use additionally requires an admissible request.
+Coverage does not establish that future operation remains inside the
+covered region.
+
+
+\section{Two interval validity boundaries}\label{sec:boundaries}
+The BOX, END and START models in Main Section~4.1 use the same energy
+scale and dynamics. This analytical study is separate from the illustrative
+device used for the state transitions in Section~\ref{sec:transitions}.
+There are two intervals of $0.1$~h, charging and discharging efficiencies
+of $0.9$, unit retention and zero energy offset. Energy bounds are
+$[0,1]$~MWh, the shared power bound is $c_t+d_t\leq1$~MW, and terminal
+energy is free within the energy bounds. The initial energy is fixed in
+each assessment.
+
+BOX retains only these power and energy bounds. The coupled models add
+a charging ceiling evaluated at different interval endpoints:
+\begin{equation}
+\begin{array}{ll}
+\mathrm{END}:&c_t+\beta E_t\leq A,\\
+\mathrm{START}:&c_t+\beta E_{t-1}\leq A,
+\end{array}
+\qquad \beta=1~\mathrm{h}^{-1}.\label{eq:boundary_models}
+\end{equation}
+The ceiling $A$ has power units. The coupling acts on charging power,
+not on discharge positive net power. The numerical parameter domain is
+$0\leq E_0\leq1$~MWh and $0.2\leq A\leq2$~MW.
+
+\subsection{Exact feasible and valid domains}
+Use dimensionless coordinates $e=E_0/(1~\mathrm{MWh})$ and
+$a=A/(1~\mathrm{MW})$. Define $I(u)=[0,u]$ for $u\geq0$ and
+$I(u)=\varnothing$ otherwise. Table~\ref{tab:boundary_domains} gives
+the exact domains in these coordinates.
+
+\begin{table}[htbp]
+\caption{Feasible and valid initial energy domains of the two interval models.}
+\label{tab:boundary_domains}
+\begin{tabularx}{\linewidth}{@{}l p{.25\linewidth} X@{}}
+\toprule Model & Nonempty domain $D$ & Validity domain $V$\\\midrule
+BOX & $[0,1]$ & $[0,41/50]$\\[4pt]
+END & $[0,\min(1,a+1/9)]$ &
+$\bigl(\{a+1/9\}\cap[0,1]\bigr)\cup I(\min(41/50,a-59/50))$\\[4pt]
+START & $[0,\min(1,a)]$ &
+$\bigl(\{a\}\cap[0,1]\bigr)\cup I(\min(41/50,a-109/100))$\\
+\bottomrule\end{tabularx}
+\end{table}
+
+The singleton terms retain the one dimensional valid branches at the lower
+feasibility boundaries. A state in $D\setminus V$ has strict query set
+inclusion. A state outside $D$ has an empty relaxed model and is not a
+validity certificate at an admissible operating state.
+
+For the two dimensional valid portions, the charging ceilings differ by
+$59/50-109/100=0.09$ in the fixed numerical power coordinate.
+At $E_0=0.30$~MWh and $A=1.40$~MW, BOX and START are valid, while
+END is feasible with strict inclusion. These statements include the exact
+boundaries rather than an interpolation through plotted cells.
+
+\subsection{Recorded quantified checks and discrete verification}
+The saved decision systems compare each predicted domain with the native
+model in both directions. For each model they test feasibility outside the
+proposed nonempty domain, emptiness inside that domain, a violating query
+inside the proposed valid domain, and a valid state outside that domain.
+All four violation systems were recorded as unsatisfiable for each of the
+three models. The corresponding quantified formulas and results are
+retained with the computational material. Quantifier elimination and its
+exact formula records provide a separate source of the boundary expressions.
+
+Table~\ref{tab:boundary_grid} summarizes the accompanying grid of 330 fixed checks, 110 per model. The
+selected coordinates are $e=0,0.1,\ldots,1$ and
+$a=0.2,0.4,\ldots,2$. They verify the stated classifications at those
+coordinates. The continuous characterization follows from the recorded
+quantified checks, not from the number or visual density of grid cells.
+
+
+\begin{table}[htbp]
+\caption{Exact classifications at the 330 prescribed model and parameter states.}
+\label{tab:boundary_grid}
+\begin{tabular}{@{}lrrrr@{}}\toprule
+Model & EQ & STRICT & Empty & Total\\\midrule
+BOX &90&20&0&110\\
+END &25&69&16&110\\
+START &34&56&20&110\\
+\bottomrule\end{tabular}
+\end{table}
+
+
+\subsection{Logical form of the continuous boundary checks}
+The twelve saved decisions concern the declared parameter rectangle, not
+just the grid. Let $P(e,a)$ denote that rectangle, let $F(e,a,y)$ denote
+native relaxed feasibility, and let $B(e,a,y)$ denote relaxed feasibility
+together with at least one strict reconstructed violation. Write
+$\widehat D$ and $\widehat V$ for the expressions in
+Table~\ref{tab:boundary_domains}. For each model the four counterexample
+systems are
+\begin{equation}\begin{aligned}
+&\exists e,a,y:\ P(e,a)\land\neg\widehat D(e,a)\land F(e,a,y),
+\label{eq:domain_check_one}\end{aligned}\end{equation}
+\begin{equation}\begin{aligned}
+&\exists e,a:\ P(e,a)\land\widehat D(e,a)\land
+                 \forall y\,\neg F(e,a,y),\label{eq:domain_check_two}\end{aligned}\end{equation}
+\begin{equation}\begin{aligned}
+&\exists e,a,y:\ P(e,a)\land\widehat V(e,a)\land B(e,a,y),
+\label{eq:domain_check_three}\end{aligned}\end{equation}
+\begin{equation}\begin{aligned}
+&\exists e,a:\ P(e,a)\land\widehat D(e,a)\land\neg\widehat V(e,a)
+                 \land\forall y\,\neg B(e,a,y).\label{eq:domain_check_four}
+\end{aligned}\end{equation}
+Their recorded unsatisfiability establishes both inclusions of each proposed
+domain. The universal variables range over the complete relaxed flow vector;
+feasibility is included in $F$ and $B$. Strict violations retain admissible
+boundary equalities. Four charge or discharge sign assignments make each
+reconstruction affine, including zero power in either adjacent region.
+The companion \texttt{data/Boundary\_Check\_Specification.json} states the exact
+rational recursions and each native row. The original builder and closed
+region script are supplied with their original module names under
+\texttt{code/original\_layout/RESEARCH/round3/}. Earlier incomplete quantifier
+elimination records are not equality certificates. The saved decisions are
+not newly solved by the saved record verifier.
+
+
+\section{State transition design and saved reconstruction witnesses}\label{sec:transitions}
+\subsection{Illustrative device and native operating constraints}
+The device settings follow Rosewater's illustrative energy reservoir model,
+Section~2.3.1, Eqs.~(2.3.4) and (2.3.6)--(2.3.9), and Table~2.5
+\cite{rosewater2020battery}. The source represents an illustrative device,
+rather than an identified installation. Its energy coordinate places
+conversion loss on charging. The source charging efficiency is $0.65$;
+$0.90$ is a sensitivity setting and $1$ is a lossless control. Discharging
+efficiency and retention are one. The common parameters and their roles
+are consolidated in Table~\ref{tab:internal_parameters}.
+
+\begin{table}[htbp]
+\caption{Illustrative device parameters and selected study settings.}\label{tab:internal_parameters}
+\begin{tabularx}{\linewidth}{@{}p{.33\linewidth} p{.26\linewidth} X@{}}
+\toprule Quantity & Value & Origin or use\\\midrule
+Nominal energy capacity & $0.6$ MWh & Source SOC to energy scale\\
+SOC limits / source initial SOC & $20$ to $95\%$ / $60\%$ & Source fractions of nominal capacity\\
+Energy bounds & $0.12$ to $0.57$ MWh & Source capacity and SOC range\\
+Shared power rating & $0.5$ MW & Study split power bound\\
+Charging taper coefficient & $50/3~\mathrm{h}^{-1}$ & Source signed power constraint\\
+Discharging taper coefficient & $25/3~\mathrm{h}^{-1}$ & Source signed power constraint\\
+Auxiliary power & $0.007$ MW & Constant energy drain\\
+Charging efficiency & $0.65,0.90,1$ & Source, sensitivity and control\\
+Source initial energy & $0.36$ MWh & Source initial SOC\\
+Charging taper knee & $0.54$ MWh & Boundary initialization reference\\
+Initialization margin & $0.003$ MWh & Selected study margin\\
+Interval duration & $1,5,15$ min & Selected temporal discretizations\\
+\bottomrule\end{tabularx}
+\end{table}
+
+The source's printed charge/discharge labels and footnote are inconsistent
+with the adjacent signed equation. The mapping follows the signed equation
+and its explicit slope and intercept expressions. The shared split power
+bound and enforcement at both interval endpoints are declared study choices.
+The source economic objective and terminal cycle constraint are not retained.
+
+Both relaxed formulations satisfy
+\begin{equation}\begin{aligned}
+E_t&=E_{t-1}+h(\eta_c c_t-d_t-P_{\mathrm{aux}}),\label{eq:internal_dynamics}\end{aligned}\end{equation}
+\begin{equation}\begin{aligned}
+c_t, d_t&\geq 0,\qquad c_t+d_t\leq P,\qquad
+ E_{\min}\leq E_t\leq E_{\max}.\label{eq:internal_box}
+\end{aligned}\end{equation}
+For both $s=t-1$ and $s=t$, the net power relaxation also imposes
+\begin{equation}
+c_t-d_t+\beta_cE_s\leq\beta_cE_{\max},\qquad
+d_t-c_t-\beta_dE_s\leq-\beta_dE_{\min}.\label{eq:internal_net}
+\end{equation}
+The gross power tightening replaces the flow terms by $c_t$ and $d_t$:
+\begin{equation}
+c_t+\beta_cE_s\leq\beta_cE_{\max},\qquad
+d_t-\beta_dE_s\leq-\beta_dE_{\min}.\label{eq:internal_gross}
+\end{equation}
+The exclusive reference adds $c_td_t=0$. Under the stated energy bounds,
+the two formulations represent the same exclusive device, but their
+relaxed feasible sets differ. In each assessment the query is the entire
+net power trajectory $p=d-c$.
+
+\subsection{Initialization and feasibility of the state update}
+The source initialization fixes $E_0=0.36$~MWh. The second initialization
+places the state relative to the charging boundary:
+\begin{equation}
+E_0=0.54~\mathrm{MWh}
+-Th\bigl(\eta_c\,0.5~\mathrm{MW}-0.007~\mathrm{MW}\bigr)
+-0.003~\mathrm{MWh}.\label{eq:initialization}
+\end{equation}
+Here $h$ is expressed in hours. One exclusive full power charging action
+then gives the updated energy
+\begin{equation}
+E_1=E_0+h(\eta_cP-P_{\mathrm{aux}}).\label{eq:update}
+\end{equation}
+The two assessments use $E_0$ and $E_1$ as their respective fixed initial
+energies while retaining horizon, coefficients, constraints and query.
+The update action is separate from the assessment horizon.
+
+Eligibility requires both initial energies and the actual update action to
+satisfy the rating, energy bounds and both endpoint native power limits.
+Invalid inputs are not clipped or replaced. Both slots of such a pair remain
+in the design as inapplicable. They are neither empty relaxed models nor
+unresolved solver assessments.
+
+\subsection{Factor design and accounting units}
+At each selected horizon through 24 intervals, the design crosses three
+charging efficiencies, three durations, two row formulations and two
+initializations. This gives 36 pairs and 72 state slots per horizon.
+The evaluated horizons are $4,5,6,7,8,10,12,14,16,20,24$.
+At $32,48,96,128,192,256$ intervals, the panel retains all efficiencies
+and both formulations, but only the one and fifteen minute durations and
+the source initialization. This gives 12 pairs and 24 state slots per horizon.
+The conditional entry rules are stated in Section~\ref{sec:computation}.
+
+The scientific design therefore contains 468 pairs and 936 state slots.
+The separate two interval regression has 36 pairs and 72 slots and is used
+only to compare implementations. It is excluded from the scientific totals.
+Table~\ref{tab:horizons} preserves the horizon specific denominators and
+lossless controls. These are structured model assessments, not a sample
+of independent devices or an estimate of operating failure frequency.
+\begin{table}[htbp]
+\begingroup
+\caption{State assessments and lossless controls at the evaluated horizons.}\label{tab:horizons}
+\begin{tabular}{@{}rrrrrrrrr@{}}
+\toprule
+ &\multicolumn{5}{c}{All state assessments}&\multicolumn{3}{c}{Lossless subset}\\
+
+$T$ & States & EQ & STRICT & Unresolved & Inapplicable & EQ & Unresolved & Inapplicable\\
+\midrule
+4 & 72 & 44 & 20 & 0 & 8 & 20 & 0 & 4\\
+5 & 72 & 42 & 22 & 0 & 8 & 20 & 0 & 4\\
+6 & 72 & 38 & 22 & 0 & 12 & 20 & 0 & 4\\
+7 & 72 & 36 & 24 & 0 & 12 & 20 & 0 & 4\\
+8 & 72 & 36 & 24 & 0 & 12 & 20 & 0 & 4\\
+10 & 72 & 36 & 24 & 0 & 12 & 20 & 0 & 4\\
+12 & 72 & 30 & 22 & 0 & 20 & 16 & 0 & 8\\
+14 & 72 & 15 & 22 & 15 & 20 & 8 & 8 & 8\\
+16 & 72 & 0 & 20 & 28 & 24 & 0 & 16 & 8\\
+20 & 72 & 0 & 20 & 28 & 24 & 0 & 16 & 8\\
+24 & 72 & 0 & 22 & 26 & 24 & 0 & 16 & 8\\
+32 & 24 & 0 & 12 & 12 & 0 & 0 & 8 & 0\\
+48 & 24 & 0 & 16 & 8 & 0 & 0 & 8 & 0\\
+96 & 24 & 0 & 16 & 8 & 0 & 0 & 8 & 0\\
+128 & 24 & 0 & 16 & 8 & 0 & 0 & 8 & 0\\
+192 & 24 & 0 & 14 & 10 & 0 & 0 & 8 & 0\\
+256 & 24 & 0 & 15 & 9 & 0 & 0 & 8 & 0\\
+\bottomrule\end{tabular}
+\par\smallskip\raggedright Each state is a fixed parameter assessment. Lossless controls are subsets of the same design. The separate two interval implementation regression is excluded. No lossless state was certified STRICT.
+\endgroup
+\end{table}
+
+
+\subsection{Conditional composition of the paired outcomes}
+The paired classifications are grouped by charging efficiency and initialization
+in Table~\ref{tab:residual_paired_conditions}. The source initialization fixes
+initial stored energy at $0.36$~MWh; the boundary relative initialization uses
+Eq.~\eqref{eq:initialization}. Each entry counts
+a predefined pair of before and after validity assessments with the same horizon,
+coefficients, operating constraints and complete net power query.
+
+\begin{table}[htbp]
+\caption{Paired outcome conditions.}\label{tab:residual_paired_conditions}
+
+\begin{tabular}{@{}c l r r r r r r@{}}
+\toprule
+$\eta_c$ & Initialization & Pairs & EQ$\to$EQ & EQ$\to$STRICT & STRICT$\to$STRICT & Unresolved pair & Inapplicable pair\\
+\midrule
+0.65 & Source & 90 & 19 & 2 & 59 & 10 & 0 \\
+0.65 & Boundary relative & 66 & 0 & 33 & 0 & 9 & 24 \\
+0.90 & Source & 90 & 15 & 2 & 64 & 9 & 0 \\
+0.90 & Boundary relative & 66 & 0 & 27 & 0 & 7 & 32 \\
+1.00 & Source & 90 & 44 & 0 & 0 & 46 & 0 \\
+1.00 & Boundary relative & 66 & 28 & 0 & 0 & 6 & 32 \\
+\midrule
+ & Total & 468 & 106 & 64 & 123 & 87 & 88\\
+\bottomrule
+\end{tabular}
+\par\smallskip
+\begin{minipage}{\linewidth}
+EQ denotes complete query set equality, and STRICT denotes strict inclusion.
+An unresolved pair has at least one assessment without an accepted decision;
+the other assessment may be certified. Inapplicable pairs fail the prescribed
+initialization or update eligibility checks. The restricted panel above
+24 intervals includes only the source initialization, so the row totals do
+not represent matched sampling across the two initializations.
+\end{minipage}
+\end{table}
+
+Of the 64 certified equality to strict inclusion transitions, 60 used the
+boundary relative initialization and four used the source initialization.
+All occurred at evaluated horizons from 4 to 14 intervals with charging
+efficiency below one. At every transition, the retained energy admissible
+reconstruction witnesses violated the charging constraint at the end of the
+last interval. These observations describe the saved witness set; they do
+not establish uniqueness of the violated constraint across all possible
+queries or absence of transitions in unresolved settings.
+
+Matching the two relaxed row formulations at the same parameter state gave
+eight differing classification labels, each involving an unresolved
+assessment. There was no disagreement between two certified labels.
+Agreement of classification labels does not assert equality of the relaxed
+query sets of the two formulations.
+
+
+\subsection{Representative native power violation}
+The four interval net power example uses one minute intervals and
+$\eta_c=0.65$. The eligible charging update changes initial energy from
+$0.5158$ to $0.5211$~MWh. Table~\ref{tab:transition_vector} records the
+saved relaxed trajectory and its exclusive reconstruction at the updated
+state. Discharging after reconstruction is zero, so the common query is
+$p_t=-c_t^*$. The charging row residual is
+\begin{equation}
+r_t=c_t^*-d_t^*+\frac{50}{3}E_t^*-\frac{19}{2} .\label{eq:witness_residual}
+\end{equation}
+Power is in MW and energy in MWh. The last residual is exactly
+$161/19800$~MW. The complete relaxed trajectory is feasible; reconstructed
+energy remains between $0.12$ and $0.57$~MWh. All other native inequalities
+hold for this witness. A saved excess is distinct from a maximum over all
+queries, even when another verification route reports the same value.
+
+\begin{table}[htbp]
+\caption{Saved four interval trajectory and exclusive reconstruction.}\label{tab:transition_vector}
+\begin{tabular}{@{}rrrrrrr@{}}\toprule
+$t$ & $c_t$ & $d_t$ & $c_t^*$ & $E_t$ & $E_t^*$ & $1000r_t$\\
+ & MW & MW & MW & MWh & MWh & kW\\\midrule
+1&0.416364&0.083636&0.332727&0.524100&0.524588&$-424.141414$\\
+2&0.500000&0&0.500000&0.529400&0.529888&$-168.535354$\\
+3&0.500000&0&0.500000&0.534700&0.535188&$-80.202020$\\
+4&0.500000&0&0.500000&0.540000&0.540488&$8.131313$\\
+\bottomrule\end{tabular}
+\end{table}
+
+The table is rounded for display. Exact fractional vectors and all native
+row residuals are retained in the accompanying computational records.
+Each of the original 64 certified transitions is linked to its two assessed states and at least
+one saved energy feasible reconstruction with a native power violation.
+This existence statement does not describe every admitted relaxed query.
+
+\subsection{Earlier two interval controls}
+Table~\ref{tab:t2_controls} retains nine settings from the earlier two interval
+benchmark represented in the implementation regression. The boundary relative
+initialization changes with both efficiency and duration; the updated energy
+is therefore stated for each setting. The power values are positive parts of
+saved numerical LP maxima subject to feasible reconstructed energy. Stored
+exact logical queries separately test the existence of an energy feasible
+native power violation. These are prescribed comparisons at different initial
+states, rather than an isolated duration effect at a common state. A zero
+numerical maximum alone does not establish complete query equality.
+
+\begin{table}[H]
+\caption{Saved two interval controls under boundary relative initialization.}
+\label{tab:t2_controls}
+\begin{tabular}{@{}rrrrl@{}}\toprule
+$\eta_c$ & Duration (min) & Updated $E_0$ (MWh) & Excess (kW) & Exact existence query\\\midrule
+0.65 & 1 & 0.531700 & 8.131 & Satisfiable\\
+0.65 & 5 & 0.510500 & 83.081 & Satisfiable\\
+0.65 & 15 & 0.457500 & 270.455 & Satisfiable\\
+0.90 & 1 & 0.529617 & 3.845 & Satisfiable\\
+0.90 & 5 & 0.500083 & 29.751 & Satisfiable\\
+0.90 & 15 & 0.426250 & 94.518 & Satisfiable\\
+1.00 & 1 & 0.528783 & 0.000 & Unsatisfiable\\
+1.00 & 5 & 0.495917 & 0.000 & Unsatisfiable\\
+1.00 & 15 & 0.413750 & 0.000 & Unsatisfiable\\
+\bottomrule\end{tabular}
+\end{table}
+
+The lookup and original records are linked to the generalized regression by
+their actual input parameters. They remain part of the separate two interval
+implementation evidence and are not added to the 936 scientific state slots
+or the 64 certified transitions. The LP maxima in this table are distinct
+from the selected four interval witness residual in Table~\ref{tab:transition_vector}.
+
+
+\section{Computational certification and timing}\label{sec:computation}
+
+
+Classifications and computation times in this section describe the original
+verification protocol. Section~\ref{sec:sat_certificate_followup} reports the
+subsequent certificates for the same inputs, including the 104 originally
+unresolved lossless cases. The retained figures and tables preserve the
+original protocol outcomes.
+
+\subsection{Reduced linear programming evaluation}
+Linear programming (LP) evaluates the reconstructed native row after
+substitution of the exclusive lift. The finite formulation below applies to
+the continuous affine relaxed models used in the computational study.
+Rows shown to be automatically preserved in Section~\ref{sec:reconstruction}
+remain native constraints even when their optimization is omitted.
+
+For a row requiring evaluation, define $J_j^+=\{t:v_{j,t}>0\}$ and
+$J_j^-=\{t:v_{j,t}<0\}$. For each assignment
+$\sigma\in\{-1,1\}^{J_j^+}$, the reduced subproblem is
+\begin{equation}
+\begin{aligned}
+\max_{y, u}\quad & a_{E, j}^\top f+\ell_j^\top p+a_{z, j}^\top z-r_j
+ +\sum_{t\in J_j^+}v_{j, t}\sigma_tp_t
+ +\sum_{t\in J_j^-}v_{j, t}u_t\\
+\text{subject to}\quad &y\in R(\theta),\quad p=d-c,\\
+&u_t\geq p_t,\quad u_t\geq-p_t,\qquad t\in J_j^-.
+\end{aligned}\label{eq:reduced_lp}
+\end{equation}
+Negative coefficients make the epigraph tight at an optimum. Positive
+absolute value terms are represented by the finite maximum over signs.
+Taking the largest subproblem optimum therefore gives the mathematical row
+maximum. This reduced formulation does not impose sign restrictions on
+the net power itself. A positive absolute value coefficient cannot instead
+multiply an unconstrained epigraph variable in this maximization.
+
+The planned computational workload is one relaxed feasibility LP plus
+$\sum_j2^{|J_j^+|}$ for the rows selected for optimization. If a completed
+positive maximum dominates the zero upper bounds for automatically
+preserved rows, it is also the maximum over the target rows. A nonpositive
+value computed only over selected rows is not their signed global maximum.
+A best value at interruption is a lower bound on an unfinished maximum.
+
+\subsubsection*{Simpler rows and fixed sign queries}
+The enumeration bound is sufficient for the stated implementation, not a
+lower bound on certification cost. A reconstructed charging ceiling has the
+elementary equivalent form
+\begin{equation}
+\max\{-p_t,0\}+\beta E_t^*\leq A
+\quad\Longleftrightarrow\quad
+\begin{cases}
+-p_t+\beta E_t^*\leq A,\\
+\beta E_t^*\leq A.
+\end{cases}\label{eq:charging_normalization}
+\end{equation}
+For $\beta\geq0$, the second inequality is automatic if reconstructed energy
+is already known to obey an upper bound $U$ throughout the assessed relaxed
+set and $A\geq\beta U$. Under the propagation and efficiency sign conditions
+of Section~\ref{sec:reconstruction}, $E_t^*$ is concave in net power, so the
+remaining row maximum has an ordinary LP representation using negative
+absolute value coefficients. The reconstructed energy premise must be
+established separately; it cannot be inferred from relaxed energy feasibility.
+For $\beta<0$, cancellation instead decreases the original charging row
+directly. A row $d_t-\beta E_t\leq A$ is similarly preserved for $\beta\geq0$.
+
+If all net power signs are fixed by the assessed operating envelope, the
+entire reconstruction is affine and ordinary polyhedral row implication
+suffices. These elementary special cases are retained as baselines for
+interpreting the general signed row formulation. They add no solver runs
+and do not change the recorded implementation counts or timings.
+
+\subsection{Full sign reference and exact logical decision}
+The full sign reference enumerates $\sigma\in\{-1,1\}^T$, imposes
+$\sigma_tp_t\geq0$, and substitutes $|p_t|=\sigma_tp_t$. Infeasible sign
+regions are omitted. Zero powers can belong to adjacent regions without
+changing the maximum. In the horizon study this reference is used only for
+$T\leq8$. It also solves the existing constrained power violation problem
+with reconstructed energy bounds imposed. Its workload therefore differs
+from that of the reduced formulation.
+
+Satisfiability modulo theories (SMT) supplies an exact route over linear
+real arithmetic. At fixed rational coefficients, conditional linear
+expressions encode the max formulas for exclusive charge and discharge.
+The native relaxed constraints and reconstructed energy recursion remain
+explicit. The decision first tests relaxed nonemptiness, then the existence
+of a violating relaxed query:
+\begin{equation}
+\exists y\in R(\theta):\quad
+\bigvee_{j\in\mathcal J}
+\left[a_{E, j}^\top E^*+a_{c, j}^\top c^*
++a_{d, j}^\top d^*+a_{z, j}^\top z>r_j\right].\label{eq:smt_violation}
+\end{equation}
+Equalities contribute both directions. Unsatisfiability of this violation
+query, together with nonemptiness, certifies complete query equality.
+A satisfiable result supplies a candidate whose native feasibility and
+violation are rechecked exactly. A separate diagnostic query asks whether
+reconstructed energy can remain feasible while a native power row fails.
+This is an existence test, not a maximum power violation computation.
+
+\subsection{Certificates and saved witnesses}
+Table~\ref{tab:semantics} distinguishes certified query relations from unavailable assessments.
+
+\begin{table}[htbp]
+\caption{Interpretation of state assessments and unavailable decisions.}\label{tab:semantics}
+\begin{tabularx}{\linewidth}{@{}p{.20\linewidth} X@{}}\toprule
+Outcome & Required evidence\\\midrule
+Equality & A nonempty relaxed model and exact absence of a violating query\\
+Strict inclusion & At least one exactly verified relaxed feasible query with an infeasible exclusive reconstruction\\
+Empty model & Exact relaxed infeasibility, placing the parameter outside the declared nonempty domain\\
+Unresolved & Neither accepted exact relation is established within the permitted computation\\
+Inapplicable & The designed initialization or update fails the specified eligibility checks\\
+Unassessable measured state & Native model information is insufficient to instantiate the compared sets\\
+\bottomrule\end{tabularx}
+\end{table}
+
+A floating LP residual, including a nonpositive result within tolerance,
+is not an equality certificate. A verified violating witness establishes
+nonemptiness and strict inclusion even if a separate route or diagnostic
+query remains unresolved. Eighteen internal assessments retained rationally
+verified violations despite exhaustion of the SMT budget. They remain
+certified states rather than additional unresolved assessments.
+
+Witness checking preserves the complete net power query, exclusivity,
+nonnegative directional flows, initial condition and energy dynamics. It
+then checks every native energy, power, coupling and terminal row. A nonzero
+exact residual violates an equality; its sign is not silently discarded.
+Saved SMT assignments use exact fractional arithmetic. LP candidate flows
+are converted from decimal strings to rationals; a further recorded attempt
+limits denominators to $10^9$. Energy is recomputed with the same source
+coefficients. Acceptance requires exact relaxed feasibility and a positive
+reconstructed violation. Conversion does not repair an infeasible candidate
+or introduce a feasibility tolerance.
+
+Some external device instances also admit exact structural certificates
+or constructive rational witnesses before the SMT fallback. In a lossless
+constant efficiency device, cancellation preserves energy. Nonnegative
+charge plus discharge coefficient sums then preserve the retained native
+inequalities; equality rows require zero sums. A feasible idle trajectory
+establishes nonemptiness in the implemented certificate. Constructive lossy
+witnesses are accepted only after checking the complete mapped native system.
+
+\subsection{Recorded settings and resource limits}
+Table~\ref{tab:solver_settings} records the numerical settings and hardware used for the horizon study.
+
+\begin{table}[htbp]
+\caption{Software and numerical settings of the horizon study.}\label{tab:solver_settings}
+\begin{tabularx}{\linewidth}{@{}p{.43\linewidth} X@{}}\toprule
+Setting & Recorded value\\\midrule
+Python / NumPy / SciPy & 3.12.14 / 2.3.5 / 1.16.2\\
+HiGHS / Z3 & 1.8.0 / 4.15.3\\
+SciPy LP method / presolve & \texttt{highs} / enabled\\
+LP threads & 1 per call\\
+Primal / dual feasibility tolerance & $10^{-7}$ / $10^{-7}$\\
+Interior point optimality option & $10^{-8}$, when that backend applies\\
+Positive floating residual threshold & $10^{-8}$ on the native row scale\\
+Floating route comparison tolerance & $10^{-7}$ absolute\\
+Z3 random seed / memory option & 0 / 768 MB\\
+Shared SMT budget & 300 s per state\\
+Shared state working budget & 1800 s from model construction\\
+Reduced subproblem cap & 262144 planned subproblems per state\\
+Full sign reference & Evaluated only at $T\leq8$\\
+Exact rational acceptance tolerance & None\\
+Processor & Intel Core i 9-13900HX; 24 cores,32 logical processors\\
+Recorded physical memory & 16,907,100,160 bytes\\
+Operating system & Windows 11, build 26200\\
+\bottomrule\end{tabularx}
+\end{table}
+
+The serial order is SMT, reduced LP, then the full sign reference when
+eligible. The SMT feasibility, violation and diagnostic queries share the
+300 s allowance. The state deadline includes construction and preprocessing;
+the 1800 s state allowance and 300 s SMT allowance are not additive.
+Each LP uses the remaining state time, with a minimum passed time limit of
+0.001 s after a positive remaining-time check. The reduced route is not
+started if its predicted subproblem count exceeds the cap.
+
+Escalation through the pressure horizons proceeds unless every eligible
+state has only unresolved or budget limited routes and no exact certificate.
+The extension beyond 96 intervals is entered after an exact certificate or a
+completed reduced LP result at the preceding horizon. Two consecutive
+extension horizons with neither stop further extension. Unentered design
+slots remain separately accounted for. In the retained study, all 17 stated
+horizons were reached.
+
+The mapped device SMT fallback has a separate 300 s deadline starting after
+attempted structural certification. Earlier native row checks used 30000 ms
+per solver check, and the earlier affine row pilot used a coefficient sign
+threshold of $10^{-12}$. These historical settings are not overwritten with
+the horizon study settings. Exact classifications always retain the
+applicable implementation and certificate basis.
+
+\subsection{Timing design and noncompleted computations}
+Original state wall times include construction, preprocessing and all
+prescribed routes, not just time to the first certificate. Timings describe
+the recorded machine and implementation. SMT performs an additional
+diagnostic existence test, while the full sign reference performs an
+additional constrained optimization. Their raw time ratios are not a
+controlled solver speedup comparison.
+
+Figure~\ref{fig:repeated_timing} shows the within input timing variation.
+The repeated panel contains 36 fixed inputs at horizons 4,8,12,16,24 and 32.
+For each horizon, all three efficiencies and both row forms are represented.
+Using zero based efficiency and row indices $i,j$, duration is selected from
+$(1/60,1/4)$~h by $(i+j)\bmod2$, and the before/after state by
+$(i+j+T/4)\bmod2$. Source initialization is used throughout. Selection
+preceded the observed timing results.
+
+Each input receives one warmup and five measured repetitions under the
+same options. The companion contains 108 input and route records and all
+scheduled outcomes. Of 540 scheduled route repetitions,365 completed,
+55 timed out and 120 full sign repetitions were skipped by the horizon rule.
+A recorded zero for a skipped route is an availability placeholder, not a
+measured time. Completed-only summaries are identified as such. Repetitions
+measure timing variability of the same inputs and add no scientific states.
+
+
+Markers give medians and bars the range of completed repetitions. R1 is reduced LP, R2 exact SMT and R3 the full sign reference. Timed out and skipped repetitions remain in the source records and are not plotted as completed times.
+
+FIGINSERT1END
+
+
+
+\subsection{Joint factor structure of the lossless control}
+Figure~\ref{fig:lossless_factors} retains the joint classifications that are
+not identifiable from horizon totals alone. Under the original protocol, the 312 lossless state slots
+comprise 144 equality certificates, 104 unresolved assessments and 64
+inapplicable assessments; no strict inclusion is certified in this control.
+The marked factor combinations distinguish interval duration, net or gross
+power rows, initialization and the before or after state. A dash denotes a
+combination outside the prescribed long horizon panel, rather than another
+assessed state. The complete lookup is supplied separately from the figure. The 104 originally unresolved lossless inputs are resolved by the later structural certificates described in Section~\ref{sec:sat_certificate_followup}.
+
+
+N and G identify net and gross power rows. Source and boundary identify initialization rules. A dash denotes an unassessed combination outside the prescribed design. This figure retains the original protocol outcomes; later structural certificates resolve the originally unresolved inputs.
+
+FIGINSERT2END
+
+
+
+\section{Exact convex hull construction and numerical controls}\label{sec:hull}
+The construction in Main Section~3.4 uses the net power formulation of
+Section~\ref{sec:transitions}, specialized to two intervals. Initial energy
+is $e=0.519$~MWh, duration is $h=0.25$~h, and the endpoint amplitude is
+$a\in\{0,0.05,0.10\}$~MW. The nine cases cross these amplitudes with
+$\eta_c\in\{0.65,0.90,1\}$. The remaining bounds, auxiliary drain,
+discharging efficiency and native start/end limits are unchanged.
+
+\subsection{Complete exclusive endpoints}
+Write $\eta=\eta_c$, $U=0.57$~MWh and $\beta=50/3$~h$^{-1}$.
+The first endpoint charges at amplitude $a$ in interval one; the second
+discharges at the same amplitude. Their first energies are the values in
+Main Section~3.4. Both endpoints charge exclusively in interval two.
+Imposing the final charging boundary gives the intermediate calculation
+\begin{align}
+c_2^\nu+\beta\bigl(E_1^\nu+h(\eta c_2^\nu-P_{\mathrm{aux}})\bigr)
+ &=\beta U,\\
+(1+\beta h\eta)c_2^\nu
+ &=\beta(U-E_1^\nu+hP_{\mathrm{aux}}),\qquad \nu\in\{+,-\}.
+\label{eq:endpoint_construction}
+\end{align}
+The positive denominator determines $c_2^\nu$ uniquely. Reaching this
+boundary alone is insufficient to establish endpoint feasibility. With
+$E_0^\nu=e$, $k_\nu=c_2^\nu$ and
+$E_2^\nu=E_1^\nu+h(\eta k_\nu-P_{\mathrm{aux}})$, the remaining
+conditions can be written compactly in charging positive power coordinates:
+\begin{equation}\begin{aligned}
+0&\leq a\leq P,\qquad E_{\min}\leq E_1^\nu\leq U,\\
+-\beta_d(E_s^\nu-E_{\min})&\leq u_1^\nu
+\leq\beta(U-E_s^\nu),\quad s=0,1,\label{eq:endpoint_first}\end{aligned}\end{equation}
+\begin{equation}\begin{aligned}
+0&\leq k_\nu\leq P,\qquad E_{\min}\leq E_2^\nu\leq U,\\
+-\beta_d(E_s^\nu-E_{\min})&\leq k_\nu
+\leq\beta(U-E_s^\nu),\quad s=1,2.\label{eq:endpoint_second}
+\end{aligned}\end{equation}
+Here $u_1^+=a$ and $u_1^-=-a$; the manuscript net powers are their
+negatives. These are substitutions into the native constraints, not
+additional restrictions invented for the example. Every saved endpoint
+satisfies them, the shared power bound and the energy recursion.
+
+\subsection{Midpoint, reconstruction and residual}
+Average the complete endpoint vectors, including stored energy.
+Affine dynamics and native relaxed inequalities preserve this midpoint,
+which belongs to the exact convex hull of the exclusive set. The first
+flows are both $a/2$, while the second charge is
+$(c_2^++c_2^-)/2$ and the second discharge is zero.
+Exclusive reconstruction removes the equal first flows and retains the
+second interval power. Thus
+\begin{equation}
+E_1^*-\bar E_1=E_2^*-\bar E_2
+=\frac{h(1-\eta)a}{2}.\label{eq:hull_energy_shift}
+\end{equation}
+The midpoint final charging row is active, so its reconstructed excess is
+\begin{equation}
+\bar c_2+\beta E_2^*-\beta U
+=\beta(E_2^*-\bar E_2)
+=\frac{\beta h(1-\eta)a}{2}.\label{eq:hull_power_shift}
+\end{equation}
+The energy difference is in MWh and the power row excess is in MW.
+With feasible endpoints, positive amplitude and charging losses give a
+strictly positive excess. Reconstructed energy feasibility is checked
+separately and holds for all nine stored constructions.
+
+Table~\ref{tab:residual_controls} gives the energy shifts and native charging excesses for all nine controls.
+Each midpoint is the equal weight combination of two feasible exclusive
+trajectories. The table records the first interval energy increase
+$\Delta E_1$ and the second interval charging constraint residual $\Delta P_2$.
+All reconstructed energy trajectories satisfy their bounds.
+
+\begin{table}[htbp]
+\caption{Convexification controls.}\label{tab:residual_controls}
+
+\begin{tabular}{@{}c c c c@{}}
+\toprule
+Charging efficiency & Amplitude (MW) & $\Delta E_1$ (kWh) & $\Delta P_2$ (kW)\\
+\midrule
+$0.65$ & $0$ & $0$ & $0$ \\
+$0.65$ & $0.05$ & $2.1875$ & $875/24$ \\
+$0.65$ & $0.1$ & $4.375$ & $875/12$ \\
+$0.9$ & $0$ & $0$ & $0$ \\
+$0.9$ & $0.05$ & $0.625$ & $125/12$ \\
+$0.9$ & $0.1$ & $1.25$ & $125/6$ \\
+$1$ & $0$ & $0$ & $0$ \\
+$1$ & $0.05$ & $0$ & $0$ \\
+$1$ & $0.1$ & $0$ & $0$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Four constructions have a positive residual; five have zero residual.
+The zero cases arise from zero amplitude or unit charging efficiency.
+They establish feasibility of the stored midpoint reconstruction,
+not equality of the complete query sets.
+
+
+\subsection{Linear objectives and complete query realizability}
+For any linear objective on the complete variable vector, its value at a
+convex combination is the same combination of endpoint values. Taking a
+supremum over the exclusive set or its convex hull therefore gives the
+same value whenever that value is well defined. With an attained optimum
+this is equality of optimal values. The same statement applies to linear
+objectives of the projected query.
+
+This property does not require every projected hull point to lie in the
+original query set. In the stored construction, the unique exclusive lift
+of the midpoint query violates a native row. Uniqueness rules out another
+reference realization with that query. It follows that equality of all
+linear support values can coexist with different query sets. Agreement
+for only eight selected objectives provides a still narrower comparison.
+
+In the same complete trajectory coordinates, any convex outer approximation
+containing the exclusive set also contains the two feasible endpoints and
+their midpoint. It therefore retains this nonrealizable query. Additional
+valid convex cuts in those coordinates cannot exclude the midpoint while
+retaining every exclusive trajectory. This is a direct containment
+consequence of the construction, with the same declared linear query;
+it does not extend the statement to a changed query or reference model.
+
+
+\section{Temporal queries and objective comparisons}
+\label{si:temporal_queries}
+
+\subsection{Model conditions and query projections}
+\label{si:temporal_setup}
+The comparisons specialize the model pair and reconstruction defined in the main Methods to the BOX formulation used for the analytical validity domains. There are two intervals of $h=0.1$~h, with $\eta_c=\eta_d=0.9$, unit retention, zero energy offset, energy bounds $[0,1]$~MWh and the shared power limit $c_t+d_t\leq1$~MW. Initial energy is fixed during each assessment, and terminal energy is free within its bounds. No additional coupling constraint is imposed.
+
+The complete query is $p=(p_1,p_2)$, where $p_t=d_t-c_t$. Its scalar projections are $p_1$, $p_2$, $p_1+p_2$ and $p_1-p_2$. The corresponding equality domains are given in Table~\ref{tab:si_temporal_domains}. Here equality (EQ) means that the relaxed and exclusive models admit exactly the same values of the specified query; strict inclusion (STRICT) means that the relaxed image contains an additional value.
+
+For the derivations, use dimensionless coordinates $e=E_0/E_s$, $x_t=p_t/P_s$ and $v_t=w_t/P_s$, with $E_s=1$~MWh, $P_s=1$~MW and $\tau=hP_s/E_s=1/10$. The simultaneous component satisfies $0\leq v_t\leq(1-|x_t|)/2$. Define $\eta=9/10$, $\kappa=1/\eta-\eta=19/90$ and $\alpha=(\eta+1/\eta)/2=181/180$. The energy reconstruction identity in the main Methods reduces to
+\begin{equation}
+\frac{E_t^*}{E_s}
+=e-\tau\sum_{s=1}^{t}\left(\alpha x_s+\frac{\kappa}{2}|x_s|\right),
+\qquad
+E_t^*-E_t=\tau E_s\kappa\sum_{s=1}^{t}v_s.
+\label{eq:si_temporal_reconstruction}
+\end{equation}
+
+\begin{table}[t]
+
+\caption{Query preservation domains.}
+\label{tab:si_temporal_domains}
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+\toprule
+Query & Initial stored energy preserving equality (MWh) \\
+\midrule
+$p_1$ & $[0,0.91]$ \\
+$p_2$ & $[0,1]$ \\
+$p_1+p_2$ & $[0,0.82]$ \\
+$p_1-p_2$ & $[0,0.91]$ \\
+$(p_1,p_2)$ & $[0,0.82]$ \\
+\bottomrule
+\end{tabularx}
+\par\smallskip
+\begin{minipage}{\linewidth}
+The model conditions are specified in Section~\ref{si:temporal_setup}. Each scalar query is a projection of the complete two interval net power trajectory. All interval endpoints are included.
+\end{minipage}
+\end{table}
+
+
+
+\subsection{Exact query domains}
+\label{si:temporal_domains_proof}
+For the first period, the exclusive and relaxed scalar images, in units of $P_s$, are respectively
+\begin{equation}\begin{aligned}
+\mathcal I_{1, X}(e)&=\left[-\min\left\{1,\frac{1-e}{\tau\eta}\right\},\ \min\left\{1,\frac{e\eta}{\tau}\right\}\right],\label{eq:si_p1X}\end{aligned}\end{equation}
+\begin{equation}\begin{aligned}
+\mathcal I_{1, R}(e)&=\left[-\min\left\{1,\frac{1-e+\tau\kappa/2}{\tau\alpha}\right\},\ \min\left\{1,\frac{e\eta}{\tau}\right\}\right].\label{eq:si_p1R}
+\end{aligned}\end{equation}
+At fixed charging net power, the smallest relaxed energy is obtained at the largest permitted simultaneous component. This gives the lower endpoint in Eq.~\eqref{eq:si_p1R}; pure discharging gives the common upper endpoint. The charging endpoints agree up to $e=1-\tau\eta=0.91$ and differ strictly above it.
+
+Both models have the same second period image,
+\begin{equation}
+\mathcal I_2(e)=\left[-1,\ \min\left\{1,\frac{e\eta}{\tau}+\eta^2\right\}\right].
+\label{eq:si_p2}
+\end{equation}
+The extreme first period energies, $\max\{0,e-\tau/\eta\}$ and $\min\{1,e+\tau\eta\}$, are attainable exclusively. The minimum permits full charging in period two, while the maximum determines the largest discharge. Simultaneous operation cannot extend either required energy extreme. Within each power sign region the feasible scalar image is an interval containing the idle query, so these endpoints determine the complete scalar images.
+
+For the complete query, removing simultaneous operation raises energy and reduces the shared power use. Lower energy bounds therefore remain satisfied. If $e\leq1-2\tau\eta=0.82$, reconstructed energy cannot exceed $e+2\tau\eta\leq1$, proving complete query equality on this entire closed interval. For $0.82<e\leq0.91$, define
+\begin{equation}
+C_X(e)=\frac{1-e}{\tau\eta},\qquad
+C_R(e)=\frac{1-e+\tau\kappa}{\tau\alpha}.
+\label{eq:si_temporal_cuts}
+\end{equation}
+Then $C_R>C_X$. The query $x_1=x_2=-C_R/2$ is relaxed feasible when $v_t=(1-|x_t|)/2$: its energies are $(e+1)/2$ and $1$. Its exclusive terminal energy is $e+\tau\eta C_R>1$. For $e>0.91$, Eqs.~\eqref{eq:si_p1X}--\eqref{eq:si_p1R} already give a first period query available only to the relaxation; setting the second period powers to zero extends it to a full trajectory. Thus the complete equality domain is exactly $[0,0.82]$~MWh, consistent with the complete-query domain in Table~\ref{tab:boundary_domains}.
+
+For the sum query, the common upper endpoint is $\min\{2,e\eta/\tau\}$. Its relaxed lower endpoint is $-\min\{2,C_R(e)\}$, while the exclusive lower endpoint is $-C_\Sigma(e)$, where
+\begin{equation}
+C_\Sigma(e)=
+\begin{cases}
+2,&0\leq e\leq 0.82,\\
+(1-e)/(\tau\eta),&0.82<e\leq 0.91,\\
+1-\eta^2+\eta(1-e)/\tau,&0.91<e\leq 1.
+\end{cases}
+\label{eq:si_sum_endpoint}
+\end{equation}
+The last branch uses a first period discharge of $\eta(e-0.91)/\tau$ followed by unit charging. Comparing the four exclusive mode sequences shows that this gives more total net charging than two charging periods when $e>0.91$. A final discharge cannot improve the minimum sum, and two discharges give a nonnegative sum. The sum images therefore agree exactly for $e\leq0.82$.
+
+For the difference query, the common upper endpoint is $1+\min\{1,e\eta/\tau\}$. For $e\leq0.91$, the common lower endpoint is $-1-\min\{1,\eta(e+\tau\eta)/\tau\}$, attained by full charging followed by the largest feasible discharge. Above $0.91$, it equals the respective first period lower endpoint in Eqs.~\eqref{eq:si_p1X}--\eqref{eq:si_p1R}, minus one. These facts establish the remaining equality domain in Table~\ref{tab:si_temporal_domains} without interpolation between evaluated states.
+
+\subsection{Directional objective comparisons}
+\label{si:temporal_objectives}
+On $e\in[0.82,0.91]$, the exclusive query set in dimensionless coordinates is the square $[-1,1]^2$ intersected with $x_1+x_2\geq-C_X(e)$. The relaxed query set has the corresponding cut $-C_R(e)$. These cuts affect only the corner with two charging periods because both constants lie in $[1,2]$. The first period upper energy bound and all lower energy bounds are satisfied throughout this square on the stated slice. For the relaxation, maximal simultaneous components give the minimum terminal energy $e-\tau\alpha(x_1+x_2)-\tau\kappa$, which proves the relaxed projection formula.
+
+For the objective $\max[-wp_1-(1-w)p_2]$, $w\in[0,1]$, the optimal value for a cut constant $C$ is
+\begin{equation}
+P_s\bigl[\max\{w,1-w\}+\min\{w,1-w\}(C-1)\bigr].
+\end{equation}
+The relaxed optimum minus the exclusive optimum is consequently
+\begin{equation}
+\Delta(E_0, w)=\min\{w,1-w\}\, K(E_0-E_c),\quad
+K=\frac{1900}{1629}\,\mathrm{MW\, MWh^{-1}},\quad E_c=0.82~\mathrm{MWh}.
+\label{eq:si_temporal_gap}
+\end{equation}
+Equation~\eqref{eq:si_temporal_gap} applies only to $E_0\in[0.82,0.91]$~MWh. At $w=0$ or $1$ the gap is zero throughout this slice, although complete query equality fails for $E_0>0.82$~MWh. At $E_0=0.90$~MWh and $w=1/2$, it is $76/1629$~MW, approximately $46.6544$~kW.
+
+The directional comparisons use eight vectors $u$ with $\|u\|_1=1$ and plot the gaps between the maxima of $u^\mathsf{T}p$. Their order follows objective angle. They are selected objective comparisons, rather than scores of model quality. Zero gaps in a finite set of directions do not establish complete query equality. Even equality of every linear support function identifies convex hulls unless further set structure is established.
+
+Table~\ref{tab:directions} lists all eight coefficient vectors and the 24 displayed gaps, including every zero. Figure~\ref{fig:si_temporal_response} separates the objective response from a selected trajectory witness.
+\begingroup
+\begin{longtable}{@{}p{0.12\linewidth}p{0.09\linewidth}p{0.09\linewidth}p{0.19\linewidth}p{0.19\linewidth}p{0.19\linewidth}@{}}
+\caption{Coefficients and objective gaps for all displayed directional objectives.}\label{tab:directions}\\
+\toprule Direction & $u_1$ & $u_2$ & 0.82 MWh (kW) & 0.90 MWh (kW) & 1.00 MWh (kW)\\
+\midrule\bottomrule
+D1 & 1 & 0 & 0 & 0 & 0\\
+D2 & 0.5 & 0.5 & 0 & 0 & 0\\
+D3 & 0 & 1 & 0 & 0 & 0\\
+D4 & -0.5 & 0.5 & 0 & 0 & 52.486188\\
+D5 & -1 & 0 & 0 & 0 & 104.972376\\
+D6 & -0.5 & -0.5 & 0 & 46.654389 & 9.972376\\
+D7 & 0 & -1 & 0 & 0 & 0\\
+D8 & 0.5 & -0.5 & 0 & 0 & 0\\
+\end{longtable}
+ The gap is the relaxed maximum minus the exclusive maximum of the same linear objective. All 24 entries, including zeros, are retained. Values are rounded for display; the companion data retain exact fractional gaps and both optimal values. The zero gap counts are 8,7 and 5 for the three energy states, respectively. Lines in the radar display join discrete objectives only.
+\endgroup
+
+
+
+Panel (a) shows the linear objective gap over the stated initial energy and weight slice. Panel (b) shows a selected feasible relaxed query with an 8 kWh upper energy violation after reconstruction. The trajectory in panel (b) is not asserted to optimize panel (a).
+
+FIGINSERT3END
+
+
+\subsection{A native energy violation witness}
+\label{si:temporal_witness}
+At $E_0=0.90$~MWh, choose $c_1=c_2=0.8$~MW and $d_1=d_2=0.2$~MW. The shared power limit is satisfied, and the relaxed energies are $2137/2250$ and $2249/2250$~MWh. Both net powers are $-0.6$~MW. Their unique exclusive reconstruction has $c_1^*=c_2^*=0.6$~MW and $d_1^*=d_2^*=0$, with energies $477/500$ and $126/125$~MWh. The relaxed trajectory is feasible, whereas reconstruction exceeds the upper energy bound by $1/125$~MWh, or $8$~kWh (Fig.~\ref{fig:si_temporal_response}b).
+
+
+This is a selected feasible-query witness, not necessarily an optimizer of the displayed objective. Table~\ref{tab:si_temporal_values} separately reports the largest reconstructed upper energy residual over the relaxed feasible set. The failure here concerns an energy bound; it is distinct from the native power constraint violation with admissible reconstructed energy reported in the main Results.
+
+\begin{table}[t]
+
+\caption{Representative query comparisons.}
+\label{tab:si_temporal_values}
+
+
+\begin{tabularx}{\linewidth}{@{}l l l l X X@{}}
+\toprule
+$E_0$ (MWh) & $p_1$ & $p_2$ & Full query & Objective gap (kW) & Energy excess (kWh) \\
+\midrule
+0.82 & EQ & EQ & EQ & 0.000 & 0.000 \\
+0.90 & EQ & EQ & STRICT & 46.654 & 8.398 \\
+0.91 & EQ & EQ & STRICT & 52.486 & 9.448 \\
+1.00 & STRICT & EQ & STRICT & 9.972 & 18.895 \\
+\bottomrule
+\end{tabularx}
+\par\smallskip
+\begin{minipage}{\linewidth}
+The objective is $\max[-(p_1+p_2)/2]$; its gap is the relaxed optimum minus the exclusive optimum. Energy excess is the nonnegative maximum reconstructed upper energy residual over the relaxed feasible set. At $E_0=0.90$~MWh this worst excess differs from the selected witness's $8$~kWh violation. Exact rational values are retained in the source data.
+\end{minipage}
+\end{table}
+
+
+
+\subsection{Extension to finite horizons}
+\label{si:temporal_horizon}
+Retain the same coefficients, free terminal energy and $E_0=0.90$~MWh, but allow any finite horizon $T$. Every first period exclusive power in $[-1,1]$~MW gives energy in $[71/90,99/100]$~MWh. For any later target period, discharge at $1$~MW in the first period and remain idle until the target. Energy before the target is $71/90$~MWh. Applying any target power in $[-1,1]$~MW then gives energy in $[61/90,791/900]$~MWh. Remaining idle preserves feasibility. Thus every individual period has the same scalar image $[-1,1]$~MW under both models.
+
+For every finite $T\geq2$, extend the preceding two period relaxed witness by idle intervals. Its energy remains $2249/2250$~MWh after period two, while its unique exclusive reconstruction remains at $126/125$~MWh. Hence the full query sets differ for every such horizon, despite equality of each individual period image. At $T=1$, the full query is scalar and equality holds. The argument depends on the stated retention, offset and terminal conditions; it does not extend unchanged to additional couplings or different dynamics.
+
+\subsection{Reproducibility and interpretation}
+The source data retain exact rational objective values, scalar interval endpoints, feasible relaxed vertices and reconstructed energy residuals. The displayed classification matrix comprises thirteen prescribed energy states and five queries. The directional profiles use eight fixed objective vectors, with three representative states shown. These are deterministic comparisons, rather than independent devices or operating frequencies. A separate reconstruction in net power and simultaneous-component coordinates verifies the saved values. Analytical boundaries and the finite horizon statement follow from the preceding proofs, rather than from the number of verification points or the rendering grid.
+
+
+\section{Source specific device mappings}\label{sec:external}
+\subsection{Common coordinates and source scope}
+Each executable mapping defines a fixed device instance, a relaxed set and
+its exclusive reference. Initial stored energy is the conditioning state;
+the published or documented ratings, efficiencies, duration, horizon and
+terminal rule remain fixed within that instance. The query retains the
+complete discharge positive power trajectory. Independent price, network,
+investment and policy decisions are excluded when they cannot be represented
+by the documented device constraints. A source's physical experiment does
+not change the evidence level of this separate mathematical device assessment.
+
+All instances have nonnegative directional powers, separate ratings and
+bounded stored energy. In their documented source units the common dynamics are
+\begin{equation}
+E_t=E_{t-1}+h(\eta_cc_t-d_t/\eta_d),\qquad
+0\leq c_t\leq P_c,\quad 0\leq d_t\leq P_d .\label{eq:external_common}
+\end{equation}
+Retention is one and the selected device equations have zero auxiliary
+offset. Source units are retained: kW with kWh, or MW with MWh.
+The source of each numerical parameter and the omitted components are
+specified in Table~\ref{tab:source_locators}. Table~\ref{tab:external_parameters}
+gives every executed instance rather than only representative parameters.
+Instance identifiers connect these tables to the accompanying state records.
+
+The box family retains the dynamics, separate power ratings and energy
+bounds. The power convex hull family additionally retains
+\begin{equation}
+\frac{c_t}{P_c}+\frac{d_t}{P_d}\leq 1 .\label{eq:external_hull}
+\end{equation}
+The headroom family also retains the beginning of interval bounds
+\begin{equation}
+h\eta_cc_t+E_{t-1}\leq E_{\max},\qquad
+\frac{h}{\eta_d}d_t-E_{t-1}\leq-E_{\min} .\label{eq:external_headroom}
+\end{equation}
+The valid inequality family adds the source reachable power limits and
+multiperiod linear rows. Their coefficients depend on the documented
+ratings, energy range, efficiency, initial state and remaining periods.
+They are retained as linear rows at each fixed assessed state. Conic
+extensions are excluded. The accompanying model builder records the exact
+coefficient construction and fixes a directional flow to zero when its
+available bound is zero, rather than introducing division by a small positive
+number. Every mapped reference adds charge and discharge exclusivity to the
+same retained native rows.
+
+\begin{landscape}
+\begingroup
+\begin{longtable}{@{}p{0.16\linewidth}p{0.27\linewidth}p{0.29\linewidth}p{0.21\linewidth}@{}}
+\caption{Source equations, numerical provenance and components outside the mapped device.}\label{tab:source_locators}\\
+\toprule Source & Retained equations or source locator & Numerical parameters and transformations & Components outside the comparison\\
+\midrule\bottomrule
+Pozo~\cite{pozo2023convex} & Energy headroom formulation; implemented with the documented Morales device, Eqs.~(1)--(4) and the corresponding headroom rows. & First storage device, R000, in the Morales numerical example and accompanying author code. Numerical provenance is shared with the two Morales instances. & Ramps, reserves, network, objective and fleet operation.\\
+Morales~\cite{morales2025linear} & Eqs.~(1)--(4); Theorem~1, Eqs.~(8)--(11). Natural relaxation and linear cuts are separate instances. & First storage device R000 in the source numerical example and author code. Only rows of the selected linear formulation are retained. & Network, objective, fleet operation and conic extensions.\\
+Prat et al.~\cite{prat2025sufficient} & Eqs.~(1)--(5), Section~3.3 and Table~1, pp.~8--9. & First illustrative instance and three tabulated modes: lossless, lossy and slow. Selected leakage is zero. & Prices, objective dependent optimality and dispatch policy.\\
+Nazir and Almassalkhi~\cite{nazir2021guaranteeing} & Constant efficiency dynamics and limits of the relaxed baseline in Section~V. & Published numerical baseline with initial energy assessed over $[0,60]$~kWh. Charging positive source power is negated for the query. & Robust inner dispatch approximation and its recovery guarantee.\\
+Elgersma et al.~\cite{elgersma2026tight} & Basic operation, Eq.~(1), and time indexed operation, Eq.~(4). Retained 2024 preprint: Section~IV-A, p.~6; Table~IV, operation column, p.~9. & Two hourly intervals. Operation ratings are evaluated from source expressions. Eliminating the relaxed mode variable gives the normalized sum power bound exactly. & Network, reserves and investment; no extension of a single period hull theorem to the complete horizon.\\
+Elsaadany and Almassalkhi~\cite{elsaadany2023battery} & Eqs.~(4a)--(4e) and (6b), Table~I and Section~V-C. & Three hour signal at five minute resolution: 36 intervals. The inclusive source index denotes these 36 intervals. & Objective dependent results and the full robust optimization procedure.\\
+Chancelier et al.~\cite{chancelier2026optimal} & Section~3.1, Eqs.~(11b)--(11e) and (12b)--(12e); Section~5.2 and Fig.~5. & Published modes 0.4 and 1. Source coefficients 0.95 and 1.05 give efficiencies 0.95 and $20/21$. Delivery energy is divided by duration and negated for net power. & Cash, stochastic nonanticipativity, expected utility and trading policies.\\
+Tziovani et al., successive convexification~\cite{tziovani2023successive} & Author manuscript, pp.~3--4, Eqs.~(1), (2) and (11)--(16); Tables~II, III and V; extended device, pp.~10--11. & Six devices at 24 and five intervals, plus the extended 480 interval case at $h=0.05$~h. The latter uses translated usable energy and efficiency 0.96. & Network, unit commitment, objectives, quadratic losses and trust region iterations.\\
+Tziovani et al., piecewise linear comparison~\cite{tziovani2023investigating} & Eqs.~(1b), (9a), (9b) and (12); exclusive constraint (8b); Tables~II and III, Section~V-A. & Six source devices over 24 hourly intervals. Native dynamics and box limits are retained; complementarity is removed. & Network, unit commitment and objective. Other loss variants are not counted as new mappings.\\
+Tziovani et al., buildings~\cite{tziovani2025energy} & Eqs.~(2), (3a), (3b) and (4); Sections~V-A and VI-C. & Daily device: 5~kWh, efficiency 0.96. Experimental approximation: 9.8~kWh, efficiency 0.91. The latter retains the 5~kW rating carried from Section~V. SOC is converted using capacity; terminal floors are fixed. & Network, monetary objective, degradation allocation, controller softening and nonlinear efficiency.\\
+\end{longtable}
+ Locators identify the primary source versions used for mapping. Pagination can differ in a later version of record, including the published Elgersma article. The Pozo and Morales instances share numerical provenance. Identifiers in Table~\ref{tab:external_parameters} distinguish executed formulations and parameter settings, rather than independent device datasets.
+\endgroup
+\end{landscape}
+
+\begin{landscape}
+\begingroup
+\setlength{\LTpost}{3pt}
+\begin{longtable}{@{}p{0.045\linewidth}p{0.28\linewidth}p{0.09\linewidth}p{0.09\linewidth}p{0.1\linewidth}p{0.09\linewidth}p{0.04\linewidth}p{0.07\linewidth}p{0.09\linewidth}@{}}
+\caption{Parameters and outcomes of the 34 mapped device instances.}\label{tab:external_parameters}\\
+\toprule ID & Operating instance & Power / energy units & Energy bounds & $P_c; P_d$ & $\eta_c; \eta_d$ & $T$ & $h$ (h) & EQ; STRICT\\
+\midrule\bottomrule
+1 & Pozo: energy headroom & kW/kWh & $[30,60]$ & 20; 20 & 0.9; 0.95 & 24 & 1 & 0; 111\\
+2 & Morales: natural relaxation & kW/kWh & $[30,60]$ & 20; 20 & 0.9; 0.95 & 24 & 1 & 0; 111\\
+3 & Morales: linear cuts & kW/kWh & $[30,60]$ & 20; 20 & 0.9; 0.95 & 24 & 1 & 0; 111\\
+4 & Prat: first example & MW/MWh & $[0,1]$ & 1.5; 1.5 & 0.9; 0.9 & 24 & 1 & 0; 111\\
+5 & Prat: lossless mode & MW/MWh & $[0,1]$ & 0.6; 0.6 & 1; 1 & 24 & 1 & 111; 0\\
+6 & Prat: lossy mode & MW/MWh & $[0,1]$ & 0.6; 0.6 & 0.9; 0.9 & 24 & 1 & 0; 111\\
+7 & Prat: slow mode & MW/MWh & $[0,1]$ & 0.2; 0.2 & 0.9; 0.9 & 24 & 1 & 0; 111\\
+8 & Nazir: relaxed baseline & kW/kWh & $[0,60]$ & 15; 15 & 0.95; 0.95 & 24 & 1 & 0; 111\\
+9 & Elgersma: basic operation & MW/MWh & $[5,13]$ & $80/9$; 7.2 & 0.9; 0.9 & 2 & 1 & 0; 111\\
+10 & Elgersma: time indexed operation & MW/MWh & $[5,13]$ & $80/9$; 7.2 & 0.9; 0.9 & 2 & 1 & 2; 107\\
+11 & Elsaadany: device relaxation & kW/kWh & $[0,13]$ & 5; 5 & 0.95; 0.95 & 36 & $1/12$ & 0; 111\\
+12 & Chancelier: mode 0.4 & MW/MWh & $[0,1]$ & 0.4; 0.4 & 0.95; $20/21$ & 24 & 1 & 0; 111\\
+13 & Chancelier: mode 1 & MW/MWh & $[0,1]$ & 1; 1 & 0.95; $20/21$ & 24 & 1 & 0; 111\\
+14 & Tziovani: device 1, 24 intervals & MW/MWh & $[1,4]$ & 5; 5 & 0.89; 0.89 & 24 & 1 & 0; 111\\
+15 & Tziovani: device 2, 24 intervals & MW/MWh & $[3,6.5]$ & 5.5; 5.5 & 0.91; 0.91 & 24 & 1 & 0; 111\\
+16 & Tziovani: device 3, 24 intervals & MW/MWh & $[0.5,1.5]$ & 1.5; 1.5 & 0.88; 0.88 & 24 & 1 & 0; 111\\
+17 & Tziovani: device 4, 24 intervals & MW/MWh & $[0.5,1]$ & 0.5; 0.5 & 0.92; 0.92 & 24 & 1 & 0; 111\\
+18 & Tziovani: device 5, 24 intervals & MW/MWh & $[0.5,0.7]$ & 0.5; 0.5 & 0.89; 0.89 & 24 & 1 & 0; 111\\
+19 & Tziovani: device 6, 24 intervals & MW/MWh & $[0.5,0.7]$ & 0.5; 0.5 & 0.91; 0.91 & 24 & 1 & 0; 111\\
+20 & Tziovani: device 1, 5 intervals & MW/MWh & $[1,4]$ & 5; 5 & 0.89; 0.89 & 5 & 1 & 0; 111\\
+21 & Tziovani: device 2, 5 intervals & MW/MWh & $[3,6.5]$ & 5.5; 5.5 & 0.91; 0.91 & 5 & 1 & 0; 111\\
+22 & Tziovani: device 3, 5 intervals & MW/MWh & $[0.5,1.5]$ & 1.5; 1.5 & 0.88; 0.88 & 5 & 1 & 0; 111\\
+23 & Tziovani: device 4, 5 intervals & MW/MWh & $[0.5,1]$ & 0.5; 0.5 & 0.92; 0.92 & 5 & 1 & 0; 111\\
+24 & Tziovani: device 5, 5 intervals & MW/MWh & $[0.5,0.7]$ & 0.5; 0.5 & 0.89; 0.89 & 5 & 1 & 0; 111\\
+25 & Tziovani: device 6, 5 intervals & MW/MWh & $[0.5,0.7]$ & 0.5; 0.5 & 0.91; 0.91 & 5 & 1 & 0; 111\\
+26 & Tziovani: extended device & MW/MWh & $[0,1.2]$ & 2.4; 2.4 & 0.96; 0.96 & 480 & 0.05 & 0; 111\\
+27 & Tziovani: box device 1 & MW/MWh & $[1,4]$ & 5; 5 & 0.89; 0.89 & 24 & 1 & 0; 111\\
+28 & Tziovani: box device 2 & MW/MWh & $[3,6.5]$ & 5.5; 5.5 & 0.91; 0.91 & 24 & 1 & 0; 111\\
+29 & Tziovani: box device 3 & MW/MWh & $[0.5,1.5]$ & 1.5; 1.5 & 0.88; 0.88 & 24 & 1 & 0; 111\\
+30 & Tziovani: box device 4 & MW/MWh & $[0.5,1]$ & 0.5; 0.5 & 0.92; 0.92 & 24 & 1 & 0; 111\\
+31 & Tziovani: box device 5 & MW/MWh & $[0.5,0.7]$ & 0.5; 0.5 & 0.89; 0.89 & 24 & 1 & 0; 111\\
+32 & Tziovani: box device 6 & MW/MWh & $[0.5,0.7]$ & 0.5; 0.5 & 0.91; 0.91 & 24 & 1 & 0; 111\\
+33 & Tziovani: daily building device & kW/kWh & $[0.75,4.75]$ & 5; 5 & 0.96; 0.96 & 24 & 1 & 0; 111\\
+34 & Tziovani: experimental approximation & kW/kWh & $[3.43,8.33]$ & 5; 5 & 0.91; 0.91 & 480 & 0.05 & 0; 111\\
+\end{longtable}
+ Power and efficiency pairs list charging then discharging. All instances use unit retention and zero offset; initial energy varies within the listed bounds. Fixed terminal floors are 1.25~kWh (ID33) and 4.41~kWh (ID34), independently of assessed initial energy.
+\endgroup
+\end{landscape}
+
+
+\subsection{Transformations and interpretation by source}
+\paragraph{Pozo and Morales.}
+The Pozo headroom formulation~\cite{pozo2023convex} uses the documented
+numerical device also used for the Morales example. The two Morales
+instances~\cite{morales2025linear} distinguish the natural linear
+relaxation from the strengthened linear inequalities. Shared parameters
+are not independent evidence from different devices. Source equation
+locators that mention both variants do not mean that every row is active
+in the natural relaxation. The retained model family determines the rows.
+
+\paragraph{Prat and coauthors.}
+Four source parameter settings cover the first illustrative case and the
+three Table~1 modes~\cite{prat2025sufficient}. The selected leakage is zero.
+No normalized sum power inequality is added to the box adapter. The lossless
+mode has 111 equality states; the other three settings have 111 strict
+inclusion states each. These are parameter instances of one source.
+
+\paragraph{Nazir and Almassalkhi.}
+The evaluated instance is the constant efficiency relaxed baseline from
+the source numerical section~\cite{nazir2021guaranteeing}. It is not the
+robust inner dispatch envelope developed in that study. The source uses
+charging positive net power, so the declared power query is its negative.
+The bijective sign change preserves the question of equality of query sets.
+
+\paragraph{Elgersma and coauthors.}
+The basic operation and time indexed operation instances retain the source
+operation parameters~\cite{elgersma2026tight}. Eliminating the relaxed mode
+variable is exact because, for positive ratings,
+\begin{equation}
+\delta_t\in[c_t/P_c,\;1-d_t/P_d]
+\quad\Longleftrightarrow\quad c_t/P_c+d_t/P_d\leq 1 .\label{eq:mode_elimination}
+\end{equation}
+The time indexed model also retains the energy headroom rows. Operation
+ratings are evaluated from the published expressions, not rounded before
+the assessment. The retained source version is documented in the mapping
+locators. Network, reserves and investment are excluded. A source theorem
+about a single period hull is not attributed to the full multiperiod query.
+
+\paragraph{Elsaadany and Almassalkhi.}
+The selected device relaxation retains the published sum power inequality,
+as well as energy dynamics and bounds~\cite{elsaadany2023battery}.
+The three hour signal with five minute intervals has 36 intervals. This
+resolves the source indexing convention without adding a 37th interval.
+The source robust optimization and objective conditioned guarantees are
+outside the mapped device comparison.
+
+\paragraph{Chancelier and coauthors.}
+Two documented operating modes retain deterministic device paths from the
+stochastic trading formulation~\cite{chancelier2026optimal}. Charging
+positive delivery energy is divided by the published duration and negated
+to obtain average discharge positive power. A discharged energy coefficient
+of 1.05 corresponds to directional efficiency $20/21$, rather than 1.05.
+Cash, utility and nonanticipative policies are excluded. The two modes
+come from the source examples; the evaluated initial energies are not
+reported field observations.
+
+\paragraph{Tziovani sources.}
+The earlier piecewise linear comparison contributes six box device instances
+with its complementarity constraint removed~\cite{tziovani2023investigating}.
+The successive convexification study contributes the documented 24 interval,
+five interval and extended device cases~\cite{tziovani2023successive}.
+Its linear loss coordinates map to directional powers through
+\begin{equation}
+P_t=d_t-c_t,\qquad
+\ell_t=(1/\eta_d-1)d_t+(1-\eta_c)c_t .\label{eq:loss_coordinates}
+\end{equation}
+The retained loss envelope corresponds to nonnegative flows and the
+normalized sum power bound. The extended device translates the energy
+origin to the lower usable energy level. Its relative zero does not mean
+physical zero SOC. The documented efficiency 0.96 is retained, rather than
+treating a rounded displayed loss coefficient as a different exact parameter.
+
+The building study contributes a daily model and a constant efficiency
+approximation of its experimental device~\cite{tziovani2025energy}.
+SOC fraction is multiplied by capacity to obtain energy. The final energy
+lower bound is fixed independently of the initial energy being assessed.
+The two native terminal rows are
+\begin{equation}
+E_T\geq 1.25~\mathrm{kWh}\quad\text{(daily device)},\qquad
+E_T\geq 4.41~\mathrm{kWh}\quad\text{(experimental approximation)}.
+\label{eq:terminal_floors}
+\end{equation}
+These bounds are fixed as initial energy varies. The executable terminal
+adapter adds this row to the common device builder before verification.
+The mapping retains that terminal floor and excludes degradation allocation,
+controller softening and nonlinear efficiency. It does not certify the
+measured device's complete native query set.
+
+\subsection{Initial energy sampling and nested outcome units}
+The initial grid uses 101 uniformly spaced inclusive states. With
+$q=(E_0-E_{\min})/(E_{\max}-E_{\min})$, these are $q=i/100$ for
+$i=0,\ldots,100$. For an instance with one common grid classification,
+the ten additional fractions are
+\begin{equation}
+q\in\left\{\frac18,\frac58,\frac38,\frac78,\frac1{16},\frac9{16},
+\frac5{16},\frac{13}{16},\frac3{16},\frac{11}{16}\right\}.
+\label{eq:external_extra_states}
+\end{equation}
+For the time indexed Elgersma instance, the eight boundary refinements are
+$q=1/(100\,2^k)$ and $q=1-1/(100\,2^k)$, for $k=1,2,3,4$.
+The original endpoints are already in the inclusive grid. Repeated complete
+model states are identified by the fixed parameters and initial energy
+rather than counted again as new device instances.
+The time indexed Elgersma panel has 109 retained states; the other 33
+instances have 111 each. This gives 3772 state-instance assessments.
+The 113 equality cases consist of 111 Prat lossless states and the two
+Elgersma endpoints. The 3659 strict cases have retained exact witnesses.
+Full state locations, certificate bases and preserved source scope are in
+the companion data. The grid is a deterministic design, not a probability
+distribution over storage operation.
+
+\subsection{Elgersma endpoint proof and feasible updates}
+For the mapped time indexed operation device, $h=1$~h,
+$\eta_c=\eta_d=0.9$, the energy range is $[5,13]$~MWh,
+$P_c=80/9$~MW and $P_d=36/5$~MW. At the lower initial endpoint,
+first interval discharge headroom forces zero discharge. At the upper
+endpoint, charge headroom forces zero charge. Removing simultaneous flows
+therefore leaves the first energy unchanged. In interval two the exclusive
+directional powers are no larger than the relaxed ones. The unchanged
+preceding energy and retained headroom rows preserve the bounds. Both
+endpoints have nonempty feasible sets and preserve the complete query.
+
+For an interior energy $e$, let $L=5$ and $U=13$ in MWh. The saved
+interior witness chooses positive discharge $D$ satisfying
+\begin{equation}
+D<\tfrac 14\min\{(e-L)\eta_d/h,\;(U-e)\eta_d/h,\;
+P_d,\;P_c\eta_c\eta_d\},\qquad C=D/(\eta_c\eta_d).
+\label{eq:elgersma_interior}
+\end{equation}
+Charging at $C$ and discharging at $D$ leaves the first relaxed energy
+equal to $e$. Exclusive reconstruction increases it by
+$hD(1/\eta_d-\eta_c)>0$. A second exclusive charge of
+$(U-e)/(h\eta_c)$ reaches $U$ in the relaxed trajectory and exceeds it
+after reconstruction. These flows satisfy the retained rating and
+headroom conditions under the stated choice of $D$. This is the study's
+query characterization for the mapped device, not a theorem attributed
+to the source publication.
+
+Table~\ref{tab:external_transitions} lists the four saved feasible updates.
+
+\begin{table}[htbp]
+\caption{Certified feasible updates at the mapped device endpoints.}\label{tab:external_transitions}
+\begin{tabular}{@{}rrrrl@{}}\toprule
+$E_0$ (MWh)&Updated (MWh)&Charge (MW)&Discharge (MW)&Query relation\\\midrule
+5&5.005&$1/180$&0&EQ to STRICT\\
+5.005&5&0&$9/2000$&STRICT to EQ\\
+13&12.995&0&$9/2000$&EQ to STRICT\\
+12.995&13&$1/180$&0&STRICT to EQ\\
+\bottomrule\end{tabular}
+\end{table}
+
+Each action lasts one hour. The complete two interval query and all device
+coefficients remain fixed between the corresponding assessments.
+The recorded 0.005 MWh boundary brackets are discrete endpoint/interior
+checks; the endpoint locations follow from the analytical argument.
+
+Table~\ref{tab:residual_family_witnesses} separates energy and power failures in the retained witnesses.
+\subsection{Witness categories by formulation}
+The classification below links each mapped constraint family to the
+failure categories of its retained witnesses. Counts refer to model states,
+which remain nested within source formulations and operating instances.
+
+\begin{table}[htbp]
+\caption{Witness categories by formulation.}\label{tab:residual_family_witnesses}
+\begin{tabular}{@{}l r r r@{}}
+\toprule
+Constraint family & Energy only & Power only & Energy and power\\
+\midrule
+Energy headroom & 0 & 0 & 218 \\
+Power convex hull & 1776 & 0 & 0 \\
+Valid inequalities & 0 & 0 & 111 \\
+Box limits & 1554 & 0 & 0 \\
+\bottomrule
+\end{tabular}
+\par\smallskip
+\begin{minipage}{\linewidth}
+Power categories refer to the retained device power or energy headroom
+inequalities. Their residuals keep the units of the source row and do not
+represent a common delivered power overload.
+\end{minipage}
+\end{table}
+
+The 3659 model states represented by these counts are certified cases of strict
+query set inclusion. Energy headroom and valid inequality cases retained
+combined energy and power violations; box and power convex hull cases
+retained energy violations alone. No retained external witness exhibited
+power failure with an admissible stored energy trajectory. These categories
+refer to the frozen witnesses rather than all possible witnesses or an
+operational failure probability. The 113 equality cases are not included
+in the failure counts.
+
+
+
+Within the box and normalized power rating families, removing the common
+charge and discharge component cannot violate a retained rating. In the
+headroom family, exclusive next-interval energy feasibility implies the
+corresponding charging or discharging headroom row. The source valid
+inequalities likewise retain their validity for an exclusive device
+trajectory satisfying the native energy and rating constraints. This gives
+a structural explanation for the absence of energy feasible power failures
+in these particular mappings. The state dependent taper constraints used in
+Section~\ref{sec:transitions} impose a different relationship between power
+and stored energy and are not covered by that argument.
+
+
+\section{Simulated and measured operating states}\label{sec:operating_states}
+\subsection{Simulation driven by public electricity prices}
+The source driven simulation uses day ahead prices from the Danish DK1 bidding zone for
+January 2025 and a documented device with energy limits 30 to 60 kWh,
+charge and discharge ratings 20 kW, efficiencies 0.9 and 0.95, unit retention
+and one hour intervals. The device retains the headroom formulation
+described in Section~\ref{sec:external}. Its declared query horizon is four
+intervals. The first 168 price observations define a right continuous
+empirical cumulative distribution. Calibration observations are excluded
+from the assessed windows.
+
+Starting at 55 kWh, a bounded tracking rule maps the current price quantile
+to a target energy between 30 and 60 kWh. At each interval it charges or
+discharges exclusively toward that target, subject to the directional
+20 kW rating and the same device dynamics. A higher price quantile sets a
+higher energy target. This rule was selected for state coverage and does
+not claim economic optimality. The original policy, input identity and
+exact trajectory values are retained with the computational records.
+
+The windows start on 8,16 and 25 January 2025 and each contain 168 hourly
+actions plus their final energy timestamp. Their 507 timestamp records map
+to 86 distinct complete model states. Each complete state has a saved strict
+inclusion certificate. Repeated visits are not additional model states.
+Public market inputs driving a simulated device remain separate from
+measurements of a physical battery.
+
+\subsection{Measurement fields and selection of windows}
+Figure~\ref{fig:measured_coverage} displays the measured power and SOC coverage.
+The measured windows originate from ACEN's New England BESS public
+operating data and the Electric Power Research Institute (EPRI) PERIOD data resource. Source references and
+access conditions are provided in the accompanying data guide. ACEN records
+contain dashboard alternating current (AC) power and battery management system (BMS) SOC for two device
+units. EPRI records contain direct current (DC) battery power, battery SOC and
+the reported SOC limits. Source power scaling, measurement side and time
+columns are preserved. A nominal capacity times BMS SOC is an energy
+proxy, not an independent measurement of thermodynamic stored energy.
+
+After metadata screening, the procedure selects earliest, middle and latest
+complete seven day windows. A complete shorter daily window is used in
+the broader screening procedure only when source duration or resolution
+prevents a seven day choice. The nine retained windows are all seven days,
+with both interval endpoints retained. This gives 2017 timestamps at five
+minute resolution or 673 timestamps at fifteen minute resolution. EPRI
+timestamps use the source Coordinated Universal Time (UTC) field. ACEN's source-local time is retained
+without assigning an undocumented timezone.
+
+Table~\ref{tab:windows} identifies all nine windows and their source time conventions.
+\begingroup
+\begin{longtable}{@{}p{0.24\linewidth}p{0.25\linewidth}p{0.11\linewidth}p{0.15\linewidth}p{0.18\linewidth}@{}}
+\caption{Operational windows and distinct recorded physical states.}\label{tab:windows}\\
+\toprule Source and window & Dates (inclusive endpoints) & Timestamps & Distinct physical tuples & Resolution / time basis\\
+\midrule\bottomrule
+ACEN DUID1 EARLIEST & 2026-05-01 to 2026-05-08 & 2017 & 1065 & 5 min; source local\\
+ACEN DUID1 LATEST & 2026-08-25 to 2026-09-01 & 2017 & 1824 & 5 min; source local\\
+ACEN DUID1 MIDDLE & 2026-07-02 to 2026-07-09 & 2017 & 1705 & 5 min; source local\\
+ACEN DUID2 EARLIEST & 2026-05-01 to 2026-05-08 & 2017 & 306 & 5 min; source local\\
+ACEN DUID2 LATEST & 2026-08-25 to 2026-09-01 & 2017 & 645 & 5 min; source local\\
+ACEN DUID2 MIDDLE & 2026-07-02 to 2026-07-09 & 2017 & 994 & 5 min; source local\\
+EPRI EARLIEST & 2024-01-02 to 2024-01-09 & 673 & 421 & 15 min; UTC\\
+EPRI LATEST & 2024-12-24 to 2024-12-31 & 673 & 324 & 15 min; UTC\\
+EPRI MIDDLE & 2024-06-24 to 2024-07-01 & 673 & 445 & 15 min; UTC\\
+\end{longtable}
+
+\endgroup
+
+
+Exact rational serialization of the reported SOC values determines repeated
+states. The physical tuple comprises source, device, SOC and available SOC
+limits. There are 7729 globally distinct tuples among 14121 timestamps, with
+no exact tuple shared between the retained windows under this definition.
+Measured power is a contextual time series field rather than a tuple
+coordinate. A separate engineering bin width of 0.1 percentage point is
+used only for descriptive SOC coverage. Binning does not replace exact
+state identities or establish statistical independence.
+
+\subsection{Eligibility for a complete native query assessment}
+Applying the criterion requires more than a visited SOC. The native model
+must identify its state and directional flow definitions, measurement side,
+sign convention, time base, coefficients, operating constraints and any
+controller rules that determine admissible operation. An energy scale is
+required when constraints are expressed in stored energy. Auxiliary
+consumption, retention and multiport relationships must be specified when
+they enter the model. An economic objective is not required for this
+objective independent device comparison.
+
+For ACEN, registered directional efficiencies of 0.9 and 0.9 are available;
+missing efficiency is not the final eligibility limitation. The native
+energy tracker, dynamic bid and ancillary service constraints still lack
+the required complete link to BMS SOC and power. For EPRI, the documented
+5000 versus 5140 kWh capacity discrepancy remains unresolved. An inverter
+efficiency is not substituted for battery directional efficiencies.
+Neither measured source supplies a complete native model for the same
+query set certification used in the simulations.
+
+The broader source screening also distinguishes usable physical data from
+a complete model. StoreNet requires a verified household/controller identity
+and consistent grid alternating current and photovoltaic direct current
+port definitions; parameters from a related publication are not attached
+automatically to an unlinked trace. Yangon data include timestamped SOC
+and directional powers, but reported mean round trip performance does not
+identify two directional efficiencies, and inaccessible energy management
+rules and operating thresholds are not estimated from observed extrema.
+Access blocked source archives remain access limitations, not nonexistent
+datasets or negative physical validation results.
+
+Sign and alignment diagnostics retain gaps, interpolation qualifications,
+state resets and observed excursions. They do not clamp SOC to make a trace
+fit a candidate model. A unit efficiency energy balance diagnostic does not
+estimate efficiency, and an integrated state column is not automatically
+a measured state. Native model incompleteness is distinct from an empty
+feasible set or a solver timeout. No complete native query was assessed
+for any of the nine measured windows.
+
+
+Panel (a) retains ACEN dashboard AC power in MW; panel (b) retains EPRI battery DC power in kW. These points describe visited physical conditions and do not identify native capability curves or certified query sets.
+
+FIGINSERT4END
+
+
+
+
+\section{Data and software interfaces}\label{sec:reproducibility}
+The accompanying computational package supplies the saved inputs, classifications,
+exact vectors and implementation sources supporting this document. Table~\ref{tab:data_interfaces}
+identifies the main entry files. The complete file descriptions, source units
+and missing value conventions are given in \texttt{DATA\_GUIDE.md}.
+Fraction strings preserve exact values, and decimal conversion is used only
+for display. Records are linked by case and instance identifiers.
+Expanded source descriptions retain the complete earlier source, device and
+operational metadata fields. Device records are linked by their stable anchor
+names; an earlier display ordinal is not a new device identifier. The data
+guide also distinguishes historical route settings from the horizon study
+environment.
+
+\begin{longtable}{@{}p{.43\linewidth}p{.51\linewidth}@{}}
+\caption{Entry points to the accompanying computational files.}\label{tab:data_interfaces}\\
+\toprule File within the package & Scientific function\\\midrule
+\bottomrule
+\texttt{data/Internal\_Pairs.csv} &468 before/after pairs with fixed parameter and eligibility links\\
+\texttt{data/Internal\_Assessments.csv} &936 scientific state slots; the 72 regression slots are separate\\
+\texttt{data/Internal\_Saved\_States.jsonl} &Complete saved state results and exact native witness vectors\\
+\texttt{data/External\_Instances.csv} &All 34 executed device parameter instances, including source units and terminal rules\\
+\texttt{data/External\_Saved\_States.jsonl} &Frozen inputs and saved results for 3772 external states\\
+\texttt{data/Source\_Mapping\_Details.json} &Source equations, retained rows, transformations, exclusions and unavailable fields\\
+\texttt{data/Repeated\_Timing\_Summaries.csv} &All 108 input/route summaries, including noncompleted repetitions\\
+\texttt{data/Directional\_Objective\_Values.csv} &Exact values for 13 states and 8 directions, including all 24 displayed entries\\
+\texttt{data/Temporal\_Query\_Classifications.csv} &The 65 recorded state and query classifications\\
+\texttt{data/Exact\_Hull\_Constructions.json} &Nine endpoint, midpoint and reconstruction records\\
+\texttt{data/Boundary\_Quantified\_Results.json} &Twelve saved quantified domain checks; grid records are separate\\
+\texttt{data/Simulation\_Saved\_States.jsonl} &Saved inputs, certificates and exact witnesses for 86 complete simulated states\\
+\texttt{data/Measured\_Window\_Summaries.csv} &Nine measured windows and physical state counts; no native query outcomes\\
+\texttt{verify\_saved\_records.py} &Portable verification of saved records using exact arithmetic; no optimization is run\\
+\end{longtable}
+
+The default entry can be run from the computational package without access
+to the author's original working directory. It checks counting units and
+saved native feasibility, query preservation and reconstructed violations.
+It preserves the accepted equality certificates without rerunning their
+logical decision. Numerical reproduction of a scientific solve is distinct
+from verification of a saved result. The original model and route functions,
+recorded library versions and source parameter inputs identify that separate
+computational procedure. The companion retains their original module names
+and relative hierarchy under \texttt{code/original\_layout/}. Its dependency
+guide separates model inspection, saved record verification and scientific
+solver execution. Historical campaign drivers require their documented
+configuration and output layout; they are not run by the default verifier. The terminal adapter retains the two fixed building
+energy floors before any native verification.
+
+Source driven simulation files preserve the calibration rule, recorded
+trajectories and input fingerprint. The original market price response must
+be obtained from its provider under the applicable terms; it is not included
+in the review export. Physical measurement summaries instead retain
+their original source, time base and eligibility limits. The original ACEN
+and EPRI raw measurement archives and copyrighted literature PDFs are not
+redistributed as author generated data. The documented provider references
+are \url{https://acenrenewables.com.au/new-england-bess/} and
+\url{https://msites.epri.com/period}. Access to the original material remains
+subject to the provider's terms. These files have not been assigned a public
+repository DOI.
+
+The editable Word source, bibliography and native figure projects accompany the PDF. Document rendering is separate from scientific solver execution.
+The corresponding data guide and machine readable files provide the
+reproducibility interface for each scientific section.
+
+
+Earlier algebraic and implementation checks are retained in
+\texttt{historical\_validation/}, with a scope guide and original record
+identities. These include affine row identities, positive dynamics, model
+scope refusals and restricted operating envelopes. Their designs are
+separate from the horizon and literature panels reported here. Historical
+within interval switching records use a different reference trajectory
+space. Neither they nor earlier implementation tests add assessments to
+the current numerical totals.
+
+\subsection{Additional certificate and system interfaces}
+The later certificates are stored under \texttt{extensions/certification/}.
+Their identity table links each originally unresolved input to its accepted
+certificate and the unchanged paired design. System input tables, exact
+query certificates and saved request records are supplied under
+\texttt{extensions/synthetic/} and \texttt{extensions/rts/}. The extension guide
+identifies the original implementation hierarchy and verification entry
+points. These files supplement the original data package; they do not
+replace its classifications or timing records.
+
+
+\section{Additional certificates for the fixed horizon design}
+\label{sec:sat_certificate_followup}
+
+\subsection{Population and certificate types}
+The original panel contains 936 assessments in 468 paired settings. Its
+recorded outcomes remain 277 equality certificates, 331 strict inclusion
+certificates, 152 unresolved assessments and 176 inapplicable assessments.
+The subsequent certification addresses exactly those 152 unresolved input identities.
+No horizon, initial state, coefficient, native constraint or query is
+changed. Table~\ref{tab:sat_certificate_types} separates the proof routes.
+
+\begin{table}[htbp]
+\caption{Additional certificates on the original unresolved inputs.}
+\label{tab:sat_certificate_types}
+\begin{tabularx}{\linewidth}{@{}p{.27\linewidth}rX@{}}\toprule
+Certificate & Inputs & Acceptance condition\\\midrule
+Structural preservation & 104 & Complete native row preservation and an exactly feasible point; all are lossless instances of the declared net or gross power model.\\
+Rational row upper bounds & 45 & Every required reconstructed row and positive coefficient branch is covered; 3,417 exact nonpositive upper bounds are verified.\\
+Rational violating queries & 3 & Exact relaxed feasibility, complete query preservation, exclusivity and dynamics, and a strictly positive reconstructed native residual.\\\bottomrule
+\end{tabularx}
+\end{table}
+
+
+
+\begin{table}[htbp]
+
+\caption{Original and cumulative classifications by horizon.}
+\label{tab:si_horizon_followup}
+
+\begin{tabular}{@{}rrrrrrr@{}}
+\toprule
+ & & \multicolumn{3}{c}{Original protocol} & \multicolumn{2}{c}{With later certificates}\\
+
+$T$ & Applicable & EQ & STRICT & Unresolved & EQ & STRICT\\
+\midrule
+4 & 64 & 44 & 20 & 0 & 44 & 20\\
+5 & 64 & 42 & 22 & 0 & 42 & 22\\
+6 & 60 & 38 & 22 & 0 & 38 & 22\\
+7 & 60 & 36 & 24 & 0 & 36 & 24\\
+8 & 60 & 36 & 24 & 0 & 36 & 24\\
+10 & 60 & 36 & 24 & 0 & 36 & 24\\
+12 & 52 & 30 & 22 & 0 & 30 & 22\\
+14 & 52 & 15 & 22 & 15 & 30 & 22\\
+16 & 48 & 0 & 20 & 28 & 28 & 20\\
+20 & 48 & 0 & 20 & 28 & 28 & 20\\
+24 & 48 & 0 & 22 & 26 & 26 & 22\\
+32 & 24 & 0 & 12 & 12 & 12 & 12\\
+48 & 24 & 0 & 16 & 8 & 8 & 16\\
+96 & 24 & 0 & 16 & 8 & 8 & 16\\
+128 & 24 & 0 & 16 & 8 & 8 & 16\\
+192 & 24 & 0 & 14 & 10 & 8 & 16\\
+256 & 24 & 0 & 15 & 9 & 8 & 16\\
+\midrule
+Total & 760 & 277 & 331 & 152 & 426 & 334\\
+\bottomrule
+\end{tabular}
+
+\smallskip
+\begin{minipage}{\linewidth}
+The horizon $T$ counts operating intervals. Both classifications concern
+the same applicable inputs. The 176 inapplicable assessments remain outside
+these counts. Later certificates resolve the original unresolved inputs
+without changing parameters, constraints or queries. They do not change
+the original computation times or supply additional experiments.
+\end{minipage}
+\end{table}
+
+
+
+The structural route requires the complete native model. Losslessness alone
+does not imply preservation of arbitrary additional constraints. For the
+retained rows, cancellation preserves stored energy, reduces both
+nonnegative directional powers and preserves their difference. Separate
+ratings, the shared rating and the declared net or gross state dependent
+power rows are then preserved. The saved nonempty point is checked against
+the same native equations.
+
+The row upper bound route uses the reduced formulation in
+Eq.~\eqref{eq:reduced_lp}. Its rational multipliers have the required signs.
+Any remaining stationarity residual is bounded using valid variable bounds,
+and its correction is included in the final upper bound. Equality is
+accepted only after all required branches have a nonpositive bound and
+nonemptiness is established. A nonpositive floating optimum is not used as
+the certificate. The three strict cases have explicit rational witnesses.
+The 45 upper bound cases extend through 32 intervals; equality at longer
+horizons in this subsequent certification comes from the structural route. The three
+new strict cases occur at 192 and 256 intervals.
+
+\subsection{Versioned state and pair accounting}
+With the additional certificates, the same applicable population contains
+426 equality and 334 strict inclusion assessments. The original
+classifications describe the original protocol and budget; they are not
+overwritten by the later certificate record. Table~\ref{tab:sat_pair_accounting}
+shows the corresponding pair accounting.
+
+\begin{table}[htbp]
+\caption{Pair classifications before and after additional certification.}
+\label{tab:sat_pair_accounting}
+\begin{tabular}{@{}lrr@{}}\toprule
+Pair outcome & Original & With additional certificates\\\midrule
+Equality to equality & 106 & 172\\
+Equality to strict inclusion & 64 & 82\\
+Strict inclusion to strict inclusion & 123 & 126\\
+At least one unresolved assessment & 87 & 0\\
+Inapplicable update & 88 & 88\\\midrule
+Total predefined pairs & 468 & 468\\\bottomrule
+\end{tabular}
+\end{table}
+
+The 18 newly classified transitions are members of the original paired
+design. Their feasible charging updates preserve the original horizon,
+efficiencies and native constraints. They are not an additional sample of
+18 experiments. The saved energy feasible power violation witnesses for
+the original 64 transitions remain a separately defined witness population.
+Neither the additional certificates nor repeated timing executions increase
+the number of predefined inputs.
+
+\subsection{Timing evidence and reproducibility}
+The original 36 input repetition study in Section~\ref{sec:computation}
+and the later matched route comparison have different purposes. The latter
+uses six original inputs, two routes and three repetitions, giving 36 timing
+executions. Both routes use the same processor affinity, one linear algebra
+thread, alternating order and a 30~s primary certification budget. The
+archived route remains unresolved in all 18 executions, while the new route
+returns verified certificates in all 18. These are censored completion
+comparisons, not a finite speedup ratio. The original route also attempts
+an additional state of charge constrained witness query within its budget.
+The comparison concerns the full certification workflows, rather than
+isolated solver kernels. It establishes no general complexity bound or
+real time capability.
+
+The accompanying state reconciliation identifies every original input,
+original outcome, additional certificate and pair membership. Certificate
+checking requires no optimization: it checks structural row conditions,
+nonempty points, rational multipliers and bounds, or saved violating queries.
+Historical solver outputs and timings retain their own protocol versions.
+
+
+
+\section{Selected requests in the synthetic system case}
+\label{sec:sat_selected_requests}
+
+\subsection{Declared model and scheduling outputs}
+The illustrative case combines the public synthetic three bus network and
+load profiles with study specified storage and service constraints.
+The source is a pinned PyPSA example snapshot\cite{pypsa_examples_snapshot_23e2436}.
+The predefined settings, profile identities and source digests are retained
+in the registered system design. The network is an illustrative model,
+rather than a measured grid. Four one hour intervals are used. The storage
+energy range is 0 to 6~MWh, its shared power limit is 1~MW, and the main
+lossy settings use charging efficiency 0.9, discharging efficiency 0.95 and
+retention 0.99. Optional state dependent charging limits, lossless and
+other context controls are specified in the registered settings. Such
+capability constraints are study assumptions, rather than capability curves
+measured by the public network source.
+
+The three generators each have a 100~MW upper bound and zero lower bound,
+with cost coefficients 10, 20 and 100 in the source objective units.
+The lines joining buses 1--2, 2--3 and 1--3 have respective ratings
+100, 100 and 10~MW. Each normalized direct current (DC) flow is the difference
+of its endpoint angle coordinates; bus 3 is the angle reference. Load is
+placed at bus 3, and storage at bus 1. The declared angle bounds are
+$[-1000,1000]$ in model coordinates. The profiles and their exact load
+fractions are supplied in \texttt{REGISTERED\_SYSTEM\_CASES.json}.
+No physical currency or field calibration is inferred from these normalized
+network and objective coefficients.
+The optional taper is the end of interval native row
+\begin{equation}
+-p_t+\beta E_t\leq 1\ \mathrm{MW},\qquad
+\beta=\frac{1}{6}\ \mathrm{h}^{-1}.
+\label{eq:sat_synthetic_taper}
+\end{equation}
+This is distinct from the steeper charging limits in the controlled
+state transition study. The representative Figure~9 request uses the box
+device, without this optional taper row.
+
+Thirteen registered paired settings give 26 state assessments. Their
+before and after members are related by the declared feasible first action.
+They are not 26 statistically independent networks. The query retains net
+power and every generator output, branch flow and bus angle throughout the
+horizon. The reference adds charge and discharge exclusivity to the same
+native model. Reconstruction fixes the exclusive powers from net power and
+recomputes stored energy, leaving all retained variables unchanged.
+
+Economic dispatch minimizes generation cost. For the service request,
+the sum of net power over the last two intervals is minimized under a
+common cost cap equal to 1.01 times the exclusive economic optimum at
+that state. Cost is then minimized at the optimal primary value.
+This cap is shared by the relaxed and exclusive service problems at a
+given state, but can change between members of a state pair because their
+economic optima differ. It is a request selection condition and does not
+restrict the complete global query set used for equality assessment.
+The saved service value uses a positive benefit convention in the data
+table; the corresponding minimized objective value is its negative.
+Agreement of this primary value does not establish agreement of the
+secondary costs. The original selection and tie rules are unchanged.
+
+
+\subsection{Public load transformation and registered settings}
+The variable profile uses the London column of the public meshed example
+load file. Its first four observations are divided by the maximum over
+the complete ten observation source column and multiplied by 100 MW.
+London is a source column label; this transformation supplies an illustrative
+load profile rather than metered system demand. The resulting loads are
+3.664552010121, 100, 25.653256677878 and 13.385529985646 MW.
+Their exact fractions and the separate flat 100 MW control are retained in
+the registered input file.
+
+The source network notebook supplies the triangle topology, normalized
+reactances, line ratings and generator cost coefficients. Placement of the
+storage, its energy and power ratings, loss allocation, retention, free
+terminal energy and optional taper define the combined study model.
+Auxiliary consumption is zero. The seven pilot settings were registered
+before solving; the six context settings were admitted by the registered
+pilot outcome rule. No new settings were selected for this document.
+Table~\ref{tab:registered_system_settings} lists every retained pair.
+The updated initial energy follows the first exclusive economic action.
+The same fixed load profile and complete horizon are then reassessed;
+this operation is not a rolling horizon shift.
+\begin{table}[htbp]
+\caption{Registered synthetic system settings.}\label{tab:registered_system_settings}
+\begin{tabular}{lllllll}
+\toprule
+Pair & Profile & Device & $\eta_c/\eta_d$ & Initial (MWh) & Updated (MWh) & Relation\\\midrule
+1 & Variable & Box & 0.90/0.95 & 6/5 & 643/4750 & EQ to EQ\\
+2 & Variable & Box & 0.90/0.95 & 3 & 3643/1900 & STRICT to EQ\\
+3 & Variable & Box & 0.90/0.95 & 24/5 & 8786/2375 & STRICT to STRICT\\
+4 & Variable & Taper & 0.90/0.95 & 6/5 & 643/4750 & STRICT to STRICT\\
+5 & Variable & Taper & 0.90/0.95 & 3 & 3643/1900 & STRICT to STRICT\\
+6 & Variable & Taper & 0.90/0.95 & 24/5 & 8786/2375 & STRICT to STRICT\\
+7 & Variable & Box & 1/1 & 3 & 197/100 & EQ to EQ\\
+8 & Flat & Box & 0.90/0.95 & 6/5 & 261/125 & EQ to EQ\\
+9 & Flat & Box & 0.90/0.95 & 3 & 387/100 & STRICT to STRICT\\
+10 & Flat & Box & 0.90/0.95 & 24/5 & 1413/250 & STRICT to STRICT\\
+11 & Flat & Taper & 0.90/0.95 & 6/5 & 1044/575 & STRICT to STRICT\\
+12 & Flat & Taper & 0.90/0.95 & 3 & 387/115 & STRICT to STRICT\\
+13 & Flat & Taper & 0.90/0.95 & 24/5 & 2826/575 & STRICT to STRICT\\
+\bottomrule\end{tabular}\end{table}
+
+The pair numbers in this table follow the registered case order. Complete
+identifiers, exact load fractions and query vectors are provided in
+\texttt{extensions/synthetic/REGISTERED\_SYSTEM\_CASES.json} and
+\texttt{extensions/synthetic/SYSTEM\_STATE\_PAIRS.csv}. Numerical selection used
+the recorded 60 s solver limits. Exact feasibility and request preservation
+were checked separately in the saved certificate implementation.
+
+\subsection{Counts and the representative service request}
+Table~\ref{tab:sat_selected_counts} separates complete query classifications
+from the selected request outcomes. A strict query inclusion certificate
+does not imply that every selected request fails.
+
+\begin{table}[htbp]
+\caption{Selected request outcomes in the 26 predefined assessments.}
+\label{tab:sat_selected_counts}
+\begin{tabular}{@{}lrr@{}}\toprule
+Complete query relation & Economic request & Service request\\\midrule
+Equality: 7 states & 7 realizable & 7 realizable\\
+Strict inclusion: 16 states & 16 unrealizable & 16 unrealizable\\
+Strict inclusion: 1 state & 1 realizable & 1 unrealizable\\
+Strict inclusion: 2 states & 2 realizable & 2 realizable\\\midrule
+Unrealizable selected requests & 16/26 & 17/26\\
+States with equal primary values & 10 & 14\\
+Unrealizable within that subset & 0/10 & 5/14\\\bottomrule
+\end{tabular}
+\end{table}
+
+The representative request is the selected service output for the
+\texttt{PUBLIC\_FIRST\_FOUR\_BOX\_E4of5} before state, with initial energy
+4.8~MWh. Table~\ref{tab:sat_service_energy} gives its stored energy and
+native upper bound margin. The final relaxed energy is exactly 6~MWh.
+The exclusive final energy and its excess are
+\begin{equation}
+E_4^*=\frac{1326208859289}{220281250000}\ \mathrm{MWh},
+\qquad
+E_4^*-6\ \mathrm{MWh}=\frac{4521359289}{220281250}\ \mathrm{kWh}.
+\label{eq:sat_service_final}
+\end{equation}
+The right hand quantity is 20.52539328245141~kWh. It is the service request
+violation; the economic request at the same state has a feasible exclusive
+reconstruction. The primary service benefit is 2 in both model optimizations,
+while the secondary costs differ. The exact complete query is preserved
+by the reconstruction that violates the bound.
+
+\begin{table}[htbp]
+\caption{Representative service request energy and native bound margin.}
+\label{tab:sat_service_energy}
+\begin{tabular}{@{}rrrrr@{}}\toprule
+Boundary & Relaxed (MWh) & Exclusive (MWh) & Headroom (kWh) & Margin (kWh)\\\midrule
+0 & 4.800000 & 4.800000 & 1200.000000 & 1200.000000\\
+1 & 3.699368 & 3.699368 & 2300.631579 & 2300.631579\\
+2 & 4.294460 & 4.315402 & 1705.540251 & 1684.598109\\
+3 & 5.151515 & 5.172248 & 848.484848 & 827.752128\\
+4 & 6.000000 & 6.020525 & 0.000000 & $-20.525393$\\\bottomrule
+\end{tabular}
+\end{table}
+
+Headroom is the native upper bound minus relaxed energy; margin is that
+bound minus reconstructed energy. Positive reconstruction shifts at earlier
+boundaries remain feasible because headroom is still available. Exact
+fractions, complete request vectors, every native residual and the full
+26 state mapping accompany the source data; displayed decimals are rounded.
+The Figure~9 display uses an explicitly labeled inverse hyperbolic sine
+scale for the signed margin and retains the full energy context. Connecting
+lines join saved boundary values and do not certify an intermediate
+violation time.
+
+
+
+\section{Supporting network certificates and request scope}
+\label{sec:sat_network_scope}
+
+\subsection{Mapped benchmark and unchanged query}
+The Reliability Test System developed by the Grid Modernization Laboratory
+Consortium (RTS GMLC) supplies the fixed 73 bus, 120 branch network and
+24 hourly inputs for 1 January 2020. The source is the pinned public RTS GMLC dataset\cite{rts_gmlc_source_3ece0d3}.
+The mapped continuous direct current (DC) dispatch model includes generator
+capacity and ramp constraints, nodal balances, branch flow equations and
+ratings, reference fixed bus angles and the declared storage equations.
+It uses zero generator lower bounds and does not reproduce unit commitment,
+reserve, reactive power or a complete original plant controller. The
+source head and tail volumes are represented by the study's equivalent
+affine energy model. Shared power and optional charging taper constraints
+are study assumptions. Verification concerns this complete declared model.
+
+The global query retains all 24 storage net powers and all generator, flow
+and angle coordinates. Economic and service budgets used to select requests
+do not restrict that global query domain. A policy constructing a network
+extension may choose generator outputs, but a reconstruction of a given
+complete query must preserve its already specified outputs.
+
+
+\subsection{Network and storage parameter mapping}
+Source bus 101 fixes the reference angle. The DC branch coefficient is
+the 100 MVA base divided by source reactance and tap ratio; a zero source
+tap denotes a ratio of one. Loads are allocated from the hourly regional
+series in proportion to the source bus demands. The continuous dispatch
+retains 153 active generators. The three synchronous condensers and the
+unmapped concentrating solar unit are excluded; source storage at bus 313
+is represented separately.
+
+Wind, photovoltaic, rooftop photovoltaic and hydro availability is the
+smaller of source nameplate capacity and the hourly series. Thermal
+marginal cost uses source fuel price times the first incremental heat rate,
+divided by 1000, plus variable operation and maintenance cost. The average
+heat rate at zero output is the documented fallback. Hourly ramp limits
+are 60 times the source per minute rate. Generator lower bounds are zero,
+and no preceding horizon ramp is imposed. These choices define a
+continuous dispatch comparison, rather than a unit commitment reproduction.
+
+Source storage has 50 MW charging and discharging ratings, 0.15 GWh upper
+and 0.075 GWh initial head volume. The equivalent head energy range is
+0 to 150 MWh, initially 75 MWh; tail energy is 150 MWh minus head energy.
+The study allocates the source 85 percent round trip efficiency to charging,
+with discharging efficiency one. The lossless control sets both to one.
+Retention is one, auxiliary consumption is zero and terminal energy is free.
+The shared rating and optional end of interval gross charging row are
+declared study constraints:
+\begin{equation}
+c_t+d_t\leq 50~\mathrm{MW},\qquad
+c_t+\frac{1}{3}~\mathrm{h}^{-1}E_t\leq50~\mathrm{MW}.
+\label{eq:rts_study_rows}
+\end{equation}
+The second row is included only in taper settings. The energy coordinate
+is an affine equivalent of source reservoir volume; it is not a calibrated
+battery capability model. Reactive power, voltage magnitudes, AC losses,
+commitment, reserves, contingencies and the complete plant controller are
+outside this declared dispatch model.
+
+The RTS service objective maximizes net discharge over the six hours with
+the highest gross load, with earlier hours breaking ties. These are source
+periods 10, 17, 18, 19, 20 and 21. This differs from the last two interval
+charging request in the synthetic case. Its cost cap uses 1.01 times the
+numerical exclusive economic optimum. Secondary cost selection uses a
+primary objective band of $10^{-6}$, rather than exact lexicographic
+optimization. The original numerical solve limit is 30 s, within a
+240 s state limit. Native numerical checks use absolute tolerance $10^{-5}$
+and relative tolerance $10^{-8}$; cost agreement uses the larger of 0.01
+and $10^{-8}$ times the absolute exclusive cost. Exact set certificates
+remain separate from these numerical request checks.
+\begin{table}[htbp]
+\caption{Complete query certificate inputs for the mapped RTS case.}\label{tab:rts_certificate_inputs}
+\begin{tabular}{lllll}
+\toprule
+Setting & Member & Initial (MWh) & Relation & Native rows\\\midrule
+L0 / T0 & new & 25 & EQ & 25038\\
+L0 / T0 & old & 75 & EQ & 25038\\
+L0 / T1 & new & 375/4 & EQ & 25062\\
+L0 / T1 & old & 75 & EQ & 25062\\
+L1 / T0 & new & 75 & STRICT & 25038\\
+L1 / T0 & old & 75 & STRICT & 25038\\
+L1 / T1 & new & 7050/77 & STRICT & 25062\\
+L1 / T1 & old & 75 & STRICT & 25062\\
+\bottomrule\end{tabular}\end{table}
+
+L0 and L1 denote lossless and lossy conversion, while T0 and T1 denote
+absence and presence of the study taper. The two identical 75 MWh members
+of L1/T0 are two assessment slots at one parameter state. The eight records
+therefore cover seven distinct complete states. Native row counts include
+both directions of equalities; they are not numbers of independent tests.
+
+\subsection{Network extension and complete query certificates}
+The saved exact network baseline sets the colocated generator to
+177.5~MW. Every storage power trajectory in the declared power box has a
+network extension under
+\begin{equation}
+g_{313,t}=177.5-p_t,\qquad -50\leq p_t\leq50.
+\label{eq:sat_network_policy}
+\end{equation}
+All other generator outputs, flows and angles remain at their exact baseline
+values. Colocation cancels the net injection change. The generator range
+127.5 to 227.5~MW respects its 355~MW capacity; its greatest possible
+adjacent change is 100~MW, below the 248.4~MW ramp limit. These checks cover
+the continuous power box, rather than a finite set of sampled trajectories.
+The saved row certificate checks all 24,798 network rows, including
+4,656 equality rows; a separate implementation checks the network relations.
+The policy establishes network feasibility, rather than storage feasibility
+for every power trajectory in the box.
+
+When the device and network couple only through net power and use the same
+network constraints, a device query without an exclusive realization
+remains a missing complete system query whenever it has a feasible network
+extension. Conversely, preservation of the device query preserves those
+network rows because the reconstruction leaves all net powers and retained
+network variables unchanged. This is a consequence of the shared model
+structure, rather than a new general network theorem. Constraints directly
+coupling network decisions to internal energy or directional powers require
+the complete native constraint test again.
+
+Four original and four updated assessments have complete query certificates:
+four establish equality in the lossless controls and four establish strict
+inclusion in the lossy models. They represent seven distinct parameter
+states because one update has zero first action. Equality certificates
+check every native preservation condition and exact nonemptiness. Strict
+certificates provide exactly feasible complete relaxed queries and their
+unique, query preserving, infeasible exclusive reconstructions. A
+restricted sign search used to construct a violating witness is not used
+as a proof of equality.
+
+\subsection{Selected numerical requests and nearby exact points}
+The original eight selected network requests are two request types for each
+of four original model states. They passed numerical native reconstruction
+checks. A separate panel contains six saved optimization outputs per model
+state: economic, primary service and secondary service outputs from each
+member of the model pair, giving 24 outputs. These outputs are not 24
+additional network model states.
+
+All 24 outputs have saved nearby rational feasible points, whose exclusive
+reconstructions also pass the native model. Comparison with the original
+saved decimal queries gives identical net power in two cases, identical
+retained network coordinates in none, and an identical complete query in
+none. Exact nearby feasibility therefore does not certify exact preservation
+of the original requested outputs or exact optimality of their floating
+solutions. The nearby conditions retain the original tolerances: $10^{-5}$
+for powers and energies, $10^{-7}$ for angles, a cost allowance of the larger
+of 0.01 and $10^{-8}$ times the original absolute cost, and a primary service
+face tolerance of $10^{-6}$.
+
+The recovery comparison uses the same four model states and 24 outputs.
+Four exclusive economic outputs were development inputs; 20 were held out
+at the output level. They are not independent held out model states. The
+generic exact nearby implementation timed out on all 24 outputs under its
+specified budget; the recorded physical elimination and rational candidate
+route accepted all 24 after exact checking. Its selected active faces were
+zero dimensional for this panel. This finite comparison supports neither
+completeness of the recovery heuristic nor a general solver speedup claim.
+All timeouts and failed diagnostics remain in the research archive.
+
+The network extension also explains a negative engineering result: binding
+line limits in selected outputs do not show that the network excludes
+storage queries, because the feasible colocated policy leaves baseline
+flows unchanged. This fixed case establishes complete certificate closure
+and distinct request guarantees; it does not establish congestion caused
+failures, field performance or a broadly representative economic effect.

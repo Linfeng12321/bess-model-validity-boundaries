@@ -1,0 +1,13 @@
+{
+  "phase": "census",
+  "cases_run": 48,
+  "lossless_already_certified_by_M1": 104,
+  "outcomes": {
+    "EQ": 45,
+    "STRICT": 3
+  },
+  "new_exact_certificates": 48,
+  "false_classifications": 0,
+  "wall_seconds": 43.25339130003704,
+  "budget_per_state": 300.0
+}

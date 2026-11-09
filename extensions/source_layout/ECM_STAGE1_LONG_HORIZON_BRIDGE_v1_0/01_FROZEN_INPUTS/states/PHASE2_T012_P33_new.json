@@ -1,0 +1,28 @@
+{
+  "paired_setting_id": "PHASE2_T012_P33",
+  "phase": "PHASE2",
+  "T": 12,
+  "eta_c": "1",
+  "eta_d": "1",
+  "rho": "1",
+  "h": "1/4",
+  "row_form": "N",
+  "initial_rule": "boundary_relative",
+  "e0": "-471/500",
+  "e1": "-131/160",
+  "gain": "493/4000",
+  "eligible": false,
+  "valid_first_charge": false,
+  "not_applicable_reason": "INITIAL_STATE_OR_FIRST_NATIVE_ACTION_INVALID",
+  "legacy_case_index": null,
+  "case_id": "PHASE2_T012_P33_new",
+  "state": "new",
+  "effective_initial_energy": "-131/160",
+  "planned_work": {
+    "predicted_reduced_subproblems": 1,
+    "target_rows": 72,
+    "automatic_rows": 72,
+    "checked_rows": 0,
+    "predicted_full_sign_upper_bound": 200704
+  }
+}

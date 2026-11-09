@@ -1,0 +1,28 @@
+{
+  "paired_setting_id": "REGRESSION_T002_P35",
+  "phase": "REGRESSION",
+  "T": 2,
+  "eta_c": "1",
+  "eta_d": "1",
+  "rho": "1",
+  "h": "1/4",
+  "row_form": "G",
+  "initial_rule": "boundary_relative",
+  "e0": "581/2000",
+  "e1": "331/800",
+  "gain": "493/4000",
+  "eligible": true,
+  "valid_first_charge": true,
+  "not_applicable_reason": "",
+  "legacy_case_index": 35,
+  "case_id": "REGRESSION_T002_P35_old",
+  "state": "old",
+  "effective_initial_energy": "581/2000",
+  "planned_work": {
+    "predicted_reduced_subproblems": 21,
+    "target_rows": 12,
+    "automatic_rows": 12,
+    "checked_rows": 12,
+    "predicted_full_sign_upper_bound": 84
+  }
+}

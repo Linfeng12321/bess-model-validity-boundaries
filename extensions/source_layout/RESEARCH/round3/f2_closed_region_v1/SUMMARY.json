@@ -1,0 +1,9 @@
+{
+  "hypothesis_checks": 12,
+  "proved_unsat": 12,
+  "counterexamples": 0,
+  "unknown": 0,
+  "state_transition_SOC_pass_native_fail": true,
+  "power_row_violation_MW": "19/18000",
+  "execution_qa_failures": 0
+}

@@ -1,0 +1,21 @@
+{
+  "models": 34,
+  "decisions": {
+    "EQ": 17,
+    "STRICT": 15,
+    "EMPTY": 2,
+    "UNKNOWN": 0
+  },
+  "qa_failures": 0,
+  "numerical_boundary_unresolved": 0,
+  "exact_witnesses": 15,
+  "identity_probes": 544,
+  "identity_comparisons": 13408,
+  "refusals": 4,
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "scipy": "1.16.2",
+    "z3": "4.15.3"
+  }
+}

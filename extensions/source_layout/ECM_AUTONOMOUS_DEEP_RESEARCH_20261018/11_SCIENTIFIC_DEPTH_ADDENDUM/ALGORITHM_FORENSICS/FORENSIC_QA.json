@@ -1,0 +1,58 @@
+{
+  "status": "PASS",
+  "saved_formulas_analyzed": 24,
+  "underlying_model_states": 4,
+  "no_new_solver_calls": true,
+  "real_variable_counts": [
+    8376
+  ],
+  "assertion_counts": [
+    31545,
+    31556,
+    31557,
+    31559,
+    31561,
+    31562,
+    31594,
+    31595,
+    31598,
+    31602,
+    31603,
+    31605,
+    31608,
+    31609,
+    31614,
+    31642,
+    31646,
+    31650,
+    31652
+  ],
+  "OR_nodes": 288,
+  "ITE_nodes": 0,
+  "maximum_rational_numerator_bits": 67,
+  "maximum_rational_denominator_bits": 1,
+  "candidate_free_parameters": {
+    "0": 24
+  },
+  "candidate_free_physical_range": [
+    36,
+    57
+  ],
+  "active_face_failure_control": {
+    "epsilon": "1/20000000",
+    "snapped_point": "0",
+    "within_original_nearby_box": true,
+    "violates_constraint": "x>=1/20000000",
+    "status": "REJECT_OR_INCONSISTENT_FACE;notfalsefeasibility",
+    "meaning": "Refutes completeness of numericfaceheuristic,not original24certificates"
+  },
+  "RTS_taper_absolute_coefficients": {
+    "current": "19/40",
+    "earlier": "-1/40",
+    "positive_coefficients_per_taper_row": 1,
+    "energy_upper_positive_coefficients": 0,
+    "attribution": "Already frozenSI_S4 reducedLPmethod;notnewalgorithm"
+  },
+  "causal_bottleneck": "BooleanchoicecanbeexcludedifOR/ITEcounts0;dimension/conditioning/narrowbox/timecoupling are notindividuallyidentified withoutcontrolledablations",
+  "wall_seconds": 70.3431150999968
+}

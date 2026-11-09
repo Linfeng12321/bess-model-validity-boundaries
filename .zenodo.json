@@ -1,0 +1,43 @@
+{
+  "title": "Validity Boundaries of Relaxed Battery Energy Storage System Models across Operating States: Code and Supplementary Information",
+  "description": "Research software, Supplementary Information, redistributable inputs, saved results and certificates for the study of complete query set validity of relaxed battery energy storage models across operating states. This first public release packages scientific baseline 1.0.0-rc3; it adds no new experiments. The included quick verifier checks saved arithmetic, native constraints and fixed summaries without rerunning scientific solvers. Raw ACEN/EPRI measurement archives and publisher articles are not redistributed. The six creators identify the research material collection in manuscript author order; individual software development or CRediT roles are not asserted.",
+  "creators": [
+    {
+      "name": "Liu, Linfeng"
+    },
+    {
+      "name": "Juwono, Filbert H."
+    },
+    {
+      "name": "Jia, Kai"
+    },
+    {
+      "name": "Ko, Nok"
+    },
+    {
+      "name": "Ma, Zhiqin"
+    },
+    {
+      "name": "Wang, Qin"
+    }
+  ],
+  "version": "1.0.0",
+  "upload_type": "software",
+  "publication_date": "2026-11-09",
+  "license": "MIT",
+  "access_right": "open",
+  "keywords": [
+    "battery energy storage",
+    "convex relaxation",
+    "physical realizability",
+    "model validity",
+    "reproducibility"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/Linfeng12321/bess-model-validity-boundaries",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ]
+}

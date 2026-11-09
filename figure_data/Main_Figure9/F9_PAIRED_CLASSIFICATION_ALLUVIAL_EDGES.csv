@@ -1,0 +1,8 @@
+﻿stage_from,node_from,stage_to,node_to,cohort_relation,count,N
+Query-set relation,EQ,Economic selected query,Realizable,EQ,7,26
+Query-set relation,STRICT,Economic selected query,Realizable,STRICT,3,26
+Query-set relation,STRICT,Economic selected query,Not realizable,STRICT,16,26
+Economic selected query,Realizable,Service selected query,Realizable,EQ,7,26
+Economic selected query,Realizable,Service selected query,Realizable,STRICT,2,26
+Economic selected query,Realizable,Service selected query,Not realizable,STRICT,1,26
+Economic selected query,Not realizable,Service selected query,Not realizable,STRICT,16,26

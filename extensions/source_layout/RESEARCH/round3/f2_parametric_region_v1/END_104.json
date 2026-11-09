@@ -1,0 +1,18 @@
+{
+  "regime": "END",
+  "e0": "1",
+  "ceiling": "1",
+  "feasible_smt": "sat",
+  "bad_smt": "sat",
+  "errors": [],
+  "witness": {
+    "c0": "50/1081",
+    "d0": "1031/1081",
+    "c1": "99050/1060461",
+    "d1": "0"
+  },
+  "feasible_qe": "UNKNOWN",
+  "bad_qe": "UNKNOWN",
+  "lp_feasible": true,
+  "lp_max_margin": 0.001952924247096366
+}

@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "files": 24,
+  "original_fractions_are_constant_divisions": true,
+  "max_semantic_denominator_bits": 67,
+  "max_semantic_numerator_bits": 60,
+  "all288ORclauses_already_implied_by_explicit_mode_zeros": true,
+  "OR_clauses": 288,
+  "query_same_p": 2,
+  "query_same_z": 0,
+  "query_same_complete": 0,
+  "interpretation": "syntaxASTdenominator1wasnotsemanticprecision;conjunctivefixedmodesalreadyimplyremainingORs;nearbyrecoverycannotbecalledpreservingoriginalquery",
+  "causal_limit": "dimension,narrowfeasiblebox,precisionandcouplingnotindividuallyisolated bytiming",
+  "wall_seconds": 30.54680599999847
+}

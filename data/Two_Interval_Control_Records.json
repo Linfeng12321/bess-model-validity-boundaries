@@ -1,0 +1,437 @@
+[
+  {
+    "case_id": "case_001",
+    "original_sha256": "119370fb6b3259b3b768bbdeae8a2f645fad3d6d24e6f9ed3c20da1d8149a830",
+    "saved_record": {
+      "initial_rule": "boundary_relative",
+      "valid_first_charge": true,
+      "old": {
+        "e0_MWh": "329/625",
+        "eta_c": "13/20",
+        "step_hours": "1/60",
+        "row_form": "N",
+        "feasible_smt": "sat",
+        "bad_smt": "unsat",
+        "SOC_pass_power_fail_smt": "unsat",
+        "lp_max_all_row_margin": -0.033,
+        "lp_max_SOC_valid_power_excess_MW": -0.04999999999999993,
+        "errors": []
+      },
+      "new": {
+        "e0_MWh": "5317/10000",
+        "eta_c": "13/20",
+        "step_hours": "1/60",
+        "row_form": "N",
+        "feasible_smt": "sat",
+        "bad_smt": "sat",
+        "SOC_pass_power_fail_smt": "sat",
+        "lp_max_all_row_margin": 0.0081313131313131,
+        "lp_max_SOC_valid_power_excess_MW": 0.0081313131313131,
+        "errors": [],
+        "exact_witness": {
+          "variables": [
+            "236074991/568750000",
+            "72449991/875000000",
+            "1/2",
+            "0"
+          ],
+          "sign_branch": 0,
+          "power_row_margins_MW": [
+            "-1492025027/4875000000",
+            "-18345162473/4875000000",
+            "-1934450051/7800000000",
+            "-295786549529/78000000000",
+            "-240850003/3000000000",
+            "-23759149997/6000000000",
+            "8049999/1000000000",
+            "-8008049999/2000000000"
+          ],
+          "max_excess_MW": "8049999/1000000000",
+          "fraction_rated_power": "8049999/500000000",
+          "ordinary_executed_SOC_check": "PASS",
+          "complete_native_check": "FAIL"
+        }
+      },
+      "stale_GO_native_failure": true
+    }
+  },
+  {
+    "case_id": "case_005",
+    "original_sha256": "e15bf142b12ebbbe772b8788ceb89ebe6e99fb0005f6840a434a3e2f851dfe65",
+    "saved_record": {
+      "initial_rule": "boundary_relative",
+      "valid_first_charge": true,
+      "old": {
+        "e0_MWh": "121/250",
+        "eta_c": "13/20",
+        "step_hours": "1/12",
+        "row_form": "N",
+        "feasible_smt": "sat",
+        "bad_smt": "unsat",
+        "SOC_pass_power_fail_smt": "unsat",
+        "lp_max_all_row_margin": -0.033,
+        "lp_max_SOC_valid_power_excess_MW": -0.050000000000000044,
+        "errors": []
+      },
+      "new": {
+        "e0_MWh": "1021/2000",
+        "eta_c": "13/20",
+        "step_hours": "1/12",
+        "row_form": "N",
+        "feasible_smt": "sat",
+        "bad_smt": "sat",
+        "SOC_pass_power_fail_smt": "sat",
+        "lp_max_all_row_margin": 0.08308080808080809,
+        "lp_max_SOC_valid_power_excess_MW": 0.08308080808080809,
+        "errors": [],
+        "exact_witness": {
+          "variables": [
+            "1061/3250",
+            "423/2500",
+            "1/2",
+            "0"
+          ],
+          "sign_branch": 0,
+          "power_row_margins_MW": [
+            "-162709/195000",
+            "-1330457/390000",
+            "-547681/780000",
+            "-5424983/1560000",
+            "-4313/12000",
+            "-91687/24000",
+            "329/4000",
+            "-32329/8000"
+          ],
+          "max_excess_MW": "329/4000",
+          "fraction_rated_power": "329/2000",
+          "ordinary_executed_SOC_check": "PASS",
+          "complete_native_check": "FAIL"
+        }
+      },
+      "stale_GO_native_failure": true
+    }
+  },
+  {
+    "case_id": "case_009",
+    "original_sha256": "1f6ecf0bc22cbe7aa0304077b904ec484f9dca81f78b220b29553651a695f71b",
+    "saved_record": {
+      "initial_rule": "boundary_relative",
+      "valid_first_charge": true,
+      "old": {
+        "e0_MWh": "189/500",
+        "eta_c": "13/20",
+        "step_hours": "1/4",
+        "row_form": "N",
+        "feasible_smt": "sat",
+        "bad_smt": "unsat",
+        "SOC_pass_power_fail_smt": "unsat",
+        "lp_max_all_row_margin": 0.0,
+        "lp_max_SOC_valid_power_excess_MW": 0.0,
+        "errors": []
+      },
+      "new": {
+        "e0_MWh": "183/400",
+        "eta_c": "13/20",
+        "step_hours": "1/4",
+        "row_form": "N",
+        "feasible_smt": "sat",
+        "bad_smt": "sat",
+        "SOC_pass_power_fail_smt": "sat",
+        "lp_max_all_row_margin": 0.2704545454545457,
+        "lp_max_SOC_valid_power_excess_MW": 0.2704545454545457,
+        "errors": [],
+        "exact_witness": {
+          "variables": [
+            "1013/3250",
+            "459/2500",
+            "1/2",
+            "0"
+          ],
+          "sign_branch": 0,
+          "power_row_margins_MW": [
+            "-113549/65000",
+            "-382277/130000",
+            "-371581/260000",
+            "-1611723/520000",
+            "-4229/4000",
+            "-27771/8000",
+            "1071/4000",
+            "-33071/8000"
+          ],
+          "max_excess_MW": "1071/4000",
+          "fraction_rated_power": "1071/2000",
+          "ordinary_executed_SOC_check": "PASS",
+          "complete_native_check": "FAIL"
+        }
+      },
+      "stale_GO_native_failure": true
+    }
+  },
+  {
+    "case_id": "case_013",
+    "original_sha256": "92456276552d7db9b15f1724c3ec3a5170b0b1a5897121594748583c3d28fa73",
+    "saved_record": {
+      "initial_rule": "boundary_relative",
+      "valid_first_charge": true,
+      "old": {
+        "e0_MWh": "15667/30000",
+        "eta_c": "9/10",
+        "step_hours": "1/60",
+        "row_form": "N",
+        "feasible_smt": "sat",
+        "bad_smt": "unsat",
+        "SOC_pass_power_fail_smt": "unsat",
+        "lp_max_all_row_margin": -0.033,
+        "lp_max_SOC_valid_power_excess_MW": -0.050000000000000044,
+        "errors": []
+      },
+      "new": {
+        "e0_MWh": "31777/60000",
+        "eta_c": "9/10",
+        "step_hours": "1/60",
+        "row_form": "N",
+        "feasible_smt": "sat",
+        "bad_smt": "sat",
+        "SOC_pass_power_fail_smt": "sat",
+        "lp_max_all_row_margin": 0.003845029239766151,
+        "lp_max_SOC_valid_power_excess_MW": 0.003845029239766151,
+        "errors": [],
+        "exact_witness": {
+          "variables": [
+            "40504601/112500000",
+            "17129601/125000000",
+            "1/2",
+            "0"
+          ],
+          "sign_branch": 0,
+          "power_row_margins_MW": [
+            "-506307899/1125000000",
+            "-454559539/125000000",
+            "-356620399/900000000",
+            "-3663379601/1000000000",
+            "-536620399/4500000000",
+            "-35463379601/9000000000",
+            "1903289/500000000",
+            "-4001903289/1000000000"
+          ],
+          "max_excess_MW": "1903289/500000000",
+          "fraction_rated_power": "1903289/250000000",
+          "ordinary_executed_SOC_check": "PASS",
+          "complete_native_check": "FAIL"
+        }
+      },
+      "stale_GO_native_failure": true
+    }
+  },
+  {
+    "case_id": "case_017",
+    "original_sha256": "e451f078b713310d2cfd2dbab9f7f307afc366813213e3adbe0ecc1548a9cb4a",
+    "saved_record": {
+      "initial_rule": "boundary_relative",
+      "valid_first_charge": true,
+      "old": {
+        "e0_MWh": "2779/6000",
+        "eta_c": "9/10",
+        "step_hours": "1/12",
+        "row_form": "N",
+        "feasible_smt": "sat",
+        "bad_smt": "unsat",
+        "SOC_pass_power_fail_smt": "unsat",
+        "lp_max_all_row_margin": -0.033,
+        "lp_max_SOC_valid_power_excess_MW": -0.050000000000000044,
+        "errors": []
+      },
+      "new": {
+        "e0_MWh": "6001/12000",
+        "eta_c": "9/10",
+        "step_hours": "1/12",
+        "row_form": "N",
+        "feasible_smt": "sat",
+        "bad_smt": "sat",
+        "SOC_pass_power_fail_smt": "sat",
+        "lp_max_all_row_margin": 0.02975146198830414,
+        "lp_max_SOC_valid_power_excess_MW": 0.02975146198830414,
+        "errors": [],
+        "exact_witness": {
+          "variables": [
+            "318835523/1125000000",
+            "265085523/1250000000",
+            "1/2",
+            "0"
+          ],
+          "sign_branch": 0,
+          "power_row_margins_MW": [
+            "-1367421053/1250000000",
+            "-36435398023/11250000000",
+            "-5072414477/5000000000",
+            "-295058611799/90000000000",
+            "-5272414477/9000000000",
+            "-66727585523/18000000000",
+            "29453947/1000000000",
+            "-8029453947/2000000000"
+          ],
+          "max_excess_MW": "29453947/1000000000",
+          "fraction_rated_power": "29453947/500000000",
+          "ordinary_executed_SOC_check": "PASS",
+          "complete_native_check": "FAIL"
+        }
+      },
+      "stale_GO_native_failure": true
+    }
+  },
+  {
+    "case_id": "case_021",
+    "original_sha256": "972ac2683b5066e3d55ff7d6772a5d6a7d6f6891666e3869d3ff305e1ff7c080",
+    "saved_record": {
+      "initial_rule": "boundary_relative",
+      "valid_first_charge": true,
+      "old": {
+        "e0_MWh": "631/2000",
+        "eta_c": "9/10",
+        "step_hours": "1/4",
+        "row_form": "N",
+        "feasible_smt": "sat",
+        "bad_smt": "unsat",
+        "SOC_pass_power_fail_smt": "unsat",
+        "lp_max_all_row_margin": 0.0,
+        "lp_max_SOC_valid_power_excess_MW": 0.0,
+        "errors": []
+      },
+      "new": {
+        "e0_MWh": "341/800",
+        "eta_c": "9/10",
+        "step_hours": "1/4",
+        "row_form": "N",
+        "feasible_smt": "sat",
+        "bad_smt": "sat",
+        "SOC_pass_power_fail_smt": "sat",
+        "lp_max_all_row_margin": 0.09451754385964906,
+        "lp_max_SOC_valid_power_excess_MW": 0.09451754385964906,
+        "errors": [],
+        "exact_witness": {
+          "variables": [
+            "9514597/35156250",
+            "17544819/78125000",
+            "1/2",
+            "0"
+          ],
+          "sign_branch": 0,
+          "power_row_margins_MW": [
+            "-3304363487/1406250000",
+            "-7307288651/2812500000",
+            "-6204929689/2812500000",
+            "-15018374587/5625000000",
+            "-328548931/187500000",
+            "-1171451069/375000000",
+            "5848273/62500000",
+            "-505848273/125000000"
+          ],
+          "max_excess_MW": "5848273/62500000",
+          "fraction_rated_power": "5848273/31250000",
+          "ordinary_executed_SOC_check": "PASS",
+          "complete_native_check": "FAIL"
+        }
+      },
+      "stale_GO_native_failure": true
+    }
+  },
+  {
+    "case_id": "case_025",
+    "original_sha256": "62d7b47e355adddadbccdb2a62ac194a7ca7865be2df42a0afaac6eb30e6470e",
+    "saved_record": {
+      "initial_rule": "boundary_relative",
+      "valid_first_charge": true,
+      "old": {
+        "e0_MWh": "15617/30000",
+        "eta_c": "1",
+        "step_hours": "1/60",
+        "row_form": "N",
+        "feasible_smt": "sat",
+        "bad_smt": "unsat",
+        "SOC_pass_power_fail_smt": "unsat",
+        "lp_max_all_row_margin": -0.033,
+        "lp_max_SOC_valid_power_excess_MW": -0.050000000000000044,
+        "errors": []
+      },
+      "new": {
+        "e0_MWh": "31727/60000",
+        "eta_c": "1",
+        "step_hours": "1/60",
+        "row_form": "N",
+        "feasible_smt": "sat",
+        "bad_smt": "unsat",
+        "SOC_pass_power_fail_smt": "unsat",
+        "lp_max_all_row_margin": 0.0,
+        "lp_max_SOC_valid_power_excess_MW": 0.0,
+        "errors": []
+      },
+      "stale_GO_native_failure": false
+    }
+  },
+  {
+    "case_id": "case_029",
+    "original_sha256": "4e80196d5c02bc4b86325dcbecf4c29e17b9e3d2e7c50196d0a0587ba85b7818",
+    "saved_record": {
+      "initial_rule": "boundary_relative",
+      "valid_first_charge": true,
+      "old": {
+        "e0_MWh": "2729/6000",
+        "eta_c": "1",
+        "step_hours": "1/12",
+        "row_form": "N",
+        "feasible_smt": "sat",
+        "bad_smt": "unsat",
+        "SOC_pass_power_fail_smt": "unsat",
+        "lp_max_all_row_margin": -0.033,
+        "lp_max_SOC_valid_power_excess_MW": -0.050000000000000044,
+        "errors": []
+      },
+      "new": {
+        "e0_MWh": "5951/12000",
+        "eta_c": "1",
+        "step_hours": "1/12",
+        "row_form": "N",
+        "feasible_smt": "sat",
+        "bad_smt": "unsat",
+        "SOC_pass_power_fail_smt": "unsat",
+        "lp_max_all_row_margin": 0.0,
+        "lp_max_SOC_valid_power_excess_MW": 0.0,
+        "errors": []
+      },
+      "stale_GO_native_failure": false
+    }
+  },
+  {
+    "case_id": "case_033",
+    "original_sha256": "a810f501f83a362c6d8908a2912979270862dd854ae47e0f9503ca368b31dce6",
+    "saved_record": {
+      "initial_rule": "boundary_relative",
+      "valid_first_charge": true,
+      "old": {
+        "e0_MWh": "581/2000",
+        "eta_c": "1",
+        "step_hours": "1/4",
+        "row_form": "N",
+        "feasible_smt": "sat",
+        "bad_smt": "unsat",
+        "SOC_pass_power_fail_smt": "unsat",
+        "lp_max_all_row_margin": 0.0,
+        "lp_max_SOC_valid_power_excess_MW": 0.0,
+        "errors": []
+      },
+      "new": {
+        "e0_MWh": "331/800",
+        "eta_c": "1",
+        "step_hours": "1/4",
+        "row_form": "N",
+        "feasible_smt": "sat",
+        "bad_smt": "unsat",
+        "SOC_pass_power_fail_smt": "unsat",
+        "lp_max_all_row_margin": 0.0,
+        "lp_max_SOC_valid_power_excess_MW": 0.0,
+        "errors": []
+      },
+      "stale_GO_native_failure": false
+    }
+  }
+]

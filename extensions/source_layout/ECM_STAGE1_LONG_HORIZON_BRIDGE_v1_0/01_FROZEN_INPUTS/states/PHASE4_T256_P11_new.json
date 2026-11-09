@@ -1,0 +1,28 @@
+{
+  "paired_setting_id": "PHASE4_T256_P11",
+  "phase": "PHASE4",
+  "T": 256,
+  "eta_c": "1",
+  "eta_d": "1",
+  "rho": "1",
+  "h": "1/4",
+  "row_form": "G",
+  "initial_rule": "source60",
+  "e0": "9/25",
+  "e1": "1933/4000",
+  "gain": "493/4000",
+  "eligible": true,
+  "valid_first_charge": true,
+  "not_applicable_reason": "",
+  "legacy_case_index": null,
+  "case_id": "PHASE4_T256_P11_new",
+  "state": "new",
+  "effective_initial_energy": "1933/4000",
+  "planned_work": {
+    "predicted_reduced_subproblems": 1,
+    "target_rows": 1536,
+    "automatic_rows": 1536,
+    "checked_rows": 0,
+    "predicted_full_sign_upper_bound": 118686891468249100309160259633905105549601734282281578140444023608110957880934400
+  }
+}

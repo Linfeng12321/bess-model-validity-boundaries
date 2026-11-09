@@ -1,0 +1,28 @@
+{
+  "paired_setting_id": "PHASE2_T016_P30",
+  "phase": "PHASE2",
+  "T": 16,
+  "eta_c": "1",
+  "eta_d": "1",
+  "rho": "1",
+  "h": "1/12",
+  "row_form": "G",
+  "initial_rule": "source60",
+  "e0": "9/25",
+  "e1": "4813/12000",
+  "gain": "493/12000",
+  "eligible": true,
+  "valid_first_charge": true,
+  "not_applicable_reason": "",
+  "legacy_case_index": null,
+  "case_id": "PHASE2_T016_P30_new",
+  "state": "new",
+  "effective_initial_energy": "4813/12000",
+  "planned_work": {
+    "predicted_reduced_subproblems": 1,
+    "target_rows": 96,
+    "automatic_rows": 96,
+    "checked_rows": 0,
+    "predicted_full_sign_upper_bound": 4259840
+  }
+}

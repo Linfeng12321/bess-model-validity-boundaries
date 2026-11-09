@@ -1,0 +1,2 @@
+# Python3.12 standard library only. Tested3.12.14 on Windows. No pip dependencies for scripts/verify_release.py.
+# Scientific solvers and plotting dependencies are optional and separately documented.

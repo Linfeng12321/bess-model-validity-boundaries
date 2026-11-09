@@ -1,0 +1,67 @@
+{
+  "time": "2026-10-04T08:38:01.180250+00:00",
+  "source_sha256": "9da54c4e2b45bd8d780e3fdc23100d0b0151316a4d814eb9e483984c843725b7",
+  "policy": "preregistered bounded tracking of right-continuous empirical CDF of first168price observations; upward target with price as specified, no economic optimality claim",
+  "evaluation_excludes_calibration": true,
+  "source_parameters": {
+    "id": "POZO_SOURCE_COVERAGE_T4",
+    "family": "HCH",
+    "lo": "30",
+    "hi": "60",
+    "pc": "20",
+    "pd": "20",
+    "eta_c": "9/10",
+    "eta_d": "19/20",
+    "T": 4,
+    "h": "1",
+    "source_sha256": "bcd6eeae6ea26a3d9498ba60a3ad7e93c14fd41dcda5ef612628a8306a66ebe2",
+    "equations": "Pozo HCH / Morales Eq1-4 and Theorem1 Eq8-11; author scheduling.py and published first ESS row R000",
+    "scope": "FULL_DEVICE_MAPPING",
+    "state_dimensions": [
+      "initial_energy"
+    ],
+    "independent_family": "HCH"
+  },
+  "windows": [
+    {
+      "window": "EARLIEST",
+      "timestamps": 169,
+      "unique_energy": 58,
+      "engineering_bin_kWh": ".06",
+      "unique_engineering_bins": 58,
+      "Emin": "1035/28",
+      "Emax": "60",
+      "fraction_declared_domain": "43/56",
+      "largest_exact_state_fraction": 0.07692307692307693,
+      "at_lower": 0,
+      "at_upper": 4
+    },
+    {
+      "window": "MIDDLE",
+      "timestamps": 169,
+      "unique_energy": 42,
+      "engineering_bin_kWh": ".06",
+      "unique_engineering_bins": 42,
+      "Emin": "1325/28",
+      "Emax": "60",
+      "fraction_declared_domain": "71/168",
+      "largest_exact_state_fraction": 0.3136094674556213,
+      "at_lower": 0,
+      "at_upper": 53
+    },
+    {
+      "window": "LATEST",
+      "timestamps": 169,
+      "unique_energy": 65,
+      "engineering_bin_kWh": ".06",
+      "unique_engineering_bins": 65,
+      "Emin": "495/14",
+      "Emax": "60",
+      "fraction_declared_domain": "23/28",
+      "largest_exact_state_fraction": 0.07100591715976332,
+      "at_lower": 0,
+      "at_upper": 12
+    }
+  ],
+  "trajectory_sha256": "7d21b22460e9493d0bf472e3636a1e38861cfae6fab596bd10302075bad7e584"
+}

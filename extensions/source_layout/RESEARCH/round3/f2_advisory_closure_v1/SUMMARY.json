@@ -1,0 +1,38 @@
+{
+  "status": "COMPLETE_EXPLORATORY",
+  "calls_completed": 32,
+  "failure": null,
+  "by_condition": {
+    "DIRECT": {
+      "n": 16,
+      "all_correct": 6,
+      "each_correct": {
+        "model_use": 10,
+        "plan": 12,
+        "physical_SOC": 14
+      },
+      "false_equivalence": 3,
+      "false_plan_acceptance": 0,
+      "parse_failures": 0,
+      "truncated": 0
+    },
+    "CURRENT_AUDIT": {
+      "n": 16,
+      "all_correct": 10,
+      "each_correct": {
+        "model_use": 13,
+        "plan": 11,
+        "physical_SOC": 14
+      },
+      "false_equivalence": 0,
+      "false_plan_acceptance": 0,
+      "parse_failures": 1,
+      "truncated": 1
+    }
+  },
+  "deterministic_audit_template": {
+    "cases": 16,
+    "all_three_labels_correct_by_construction": 16
+  },
+  "limits": "Sixteen deliberately constructed dependent-context cases; one quantized model, fixed stochastic seed. Tool condition receives verdicts. No population accuracy, operator evidence or causal human benefit."
+}

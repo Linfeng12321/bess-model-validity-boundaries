@@ -1,0 +1,66 @@
+[
+  {
+    "case_id": "RTS_L0_T0_N0",
+    "loss": false,
+    "taper": false,
+    "network": false,
+    "e0": "75",
+    "state": "old"
+  },
+  {
+    "case_id": "RTS_L0_T0_N1",
+    "loss": false,
+    "taper": false,
+    "network": true,
+    "e0": "75",
+    "state": "old"
+  },
+  {
+    "case_id": "RTS_L0_T1_N0",
+    "loss": false,
+    "taper": true,
+    "network": false,
+    "e0": "75",
+    "state": "old"
+  },
+  {
+    "case_id": "RTS_L0_T1_N1",
+    "loss": false,
+    "taper": true,
+    "network": true,
+    "e0": "75",
+    "state": "old"
+  },
+  {
+    "case_id": "RTS_L1_T0_N0",
+    "loss": true,
+    "taper": false,
+    "network": false,
+    "e0": "75",
+    "state": "old"
+  },
+  {
+    "case_id": "RTS_L1_T0_N1",
+    "loss": true,
+    "taper": false,
+    "network": true,
+    "e0": "75",
+    "state": "old"
+  },
+  {
+    "case_id": "RTS_L1_T1_N0",
+    "loss": true,
+    "taper": true,
+    "network": false,
+    "e0": "75",
+    "state": "old"
+  },
+  {
+    "case_id": "RTS_L1_T1_N1",
+    "loss": true,
+    "taper": true,
+    "network": true,
+    "e0": "75",
+    "state": "old"
+  }
+]
