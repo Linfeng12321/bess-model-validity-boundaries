@@ -4,6 +4,8 @@ Research software and supporting materials for the study of complete query set v
 
 **[Read the Supplementary Information](supplementary/Supplementary_Information.pdf)** · [Editable Word source](supplementary/Supplementary_Information.docx) · [Version 1.0.0](https://github.com/Linfeng12321/bess-model-validity-boundaries/releases/tag/v1.0.0)
 
+**Archived materials:** [Version 1.0.0](https://doi.org/10.5281/zenodo.24071383) · [All versions](https://doi.org/10.5281/zenodo.24071382)
+
 ## Quick start
 
 With Python 3.12, run from the repository root. Only the Python standard library is needed:
@@ -51,8 +53,10 @@ The quickstart verifies saved arithmetic, native constraints and fixed summaries
 
 ## Citation
 
-Use [CITATION.cff](CITATION.cff) to cite the research material collection. This first public version, `1.0.0`, packages scientific baseline `1.0.0-rc3` with updated presentation and documentation. The materials are a separate citation object from the manuscript. The [publication binding](docs/publication_binding.json) identifies the included Supplementary Information. The manuscript itself is not redistributed here.
+Use [CITATION.cff](CITATION.cff) to cite the research material collection. The version DOI is [10.5281/zenodo.24071383](https://doi.org/10.5281/zenodo.24071383). This first public version, `1.0.0`, packages scientific baseline `1.0.0-rc3` with updated presentation and documentation. The materials are a separate citation object from the manuscript. The [publication binding](docs/publication_binding.json) identifies the included Supplementary Information. The manuscript itself is not redistributed here.
 
 ## License
 
 Author-owned materials are released under [MIT](LICENSE). Third-party files retain their own terms and attribution; see [license scope](LICENSE_INFORMATION.md) and [third-party notices](THIRD_PARTY_NOTICES.md).
+
+The version archive and tag `v1.0.0` preserve commit `10caf75cedb7e0faf9077efab89344fae1329a33`. The default branch subsequently adds the issued DOI to citation documentation; archived scientific files and the tag are unchanged.
