@@ -1,6 +1,21 @@
 # Figures and tables
 
-This index covers nine main figures, four main tables, four Supplementary Material (SM) figures and 28 SM tables. Displays are grouped by research question. All stable labels and full source bindings remain in the [192 object map](main_sm_code_data_crosswalk.csv).
+The archived v1.0.0 source map records nine main figures, four main tables, four Supplementary Material (SM) figures and 28 SM tables. The current manuscript contains ten main figures, including an Introduction overview. The display numbers below follow the current manuscript; stable labels and full archived source bindings remain in the [192 object map](main_sm_code_data_crosswalk.csv). No scientific records have changed.
+
+| Current main figure | Archived v1.0.0 figure | Stable paper label |
+|---|---|---|
+| 1 | Not included | `fig:intro_overview` |
+| 2 | 1 | `fig:related_work_perspectives` |
+| 3 | 2 | `fig:methods_query_validity` |
+| 4 | 3 | `fig:results_validity_regions` |
+| 5 | 4 | `fig:results_state_transition_composite` |
+| 6 | 5 | `fig:results_convexification` |
+| 7 | 6 | `fig:results_horizon_certification` |
+| 8 | 7 | `fig:results_external_evidence` |
+| 9 | 9 | `fig:dispatch_request_realizability` |
+| 10 | 8 | `fig:discussion_temporal_queries` |
+
+The Introduction overview is conceptual and adds no new numerical evidence; it is not an asset in the archived v1.0.0 source map.
 
 The [figure data](../figure_data/) contain the released display values. Native OriginPro projects and image exports are held separately, except for the grouped [Figure S2 source](../figure_source/SI_RF01_20261109/README.md) included in this revision. Figure S4 measurement trajectories, derived plot data and native graphs are excluded pending redistribution permission. The [external data guide](external_data_access.md) describes access.
 
@@ -10,10 +25,10 @@ Sources: [Supplementary_Derivations.tex](../proofs/Supplementary_Derivations.tex
 
 | Display | Stable paper label |
 |---|---|
-| Main Figure 1 | `fig:related_work_perspectives` |
-| Main Figure 2 | `fig:methods_query_validity` |
-| Main Figure 3 | `fig:results_validity_regions` |
-| Main Figure 5 | `fig:results_convexification` |
+| Main Figure 2 | `fig:related_work_perspectives` |
+| Main Figure 3 | `fig:methods_query_validity` |
+| Main Figure 4 | `fig:results_validity_regions` |
+| Main Figure 6 | `fig:results_convexification` |
 | Main Table 2 | `tab:validity_conditions` |
 | Table S1 | `tab:assumption_roles` |
 | Table S2 | `tab:si_certificate_reuse` |
@@ -27,8 +42,8 @@ Sources: [Internal_Pairs.csv](../data/Internal_Pairs.csv), [Internal_Assessments
 
 | Display | Stable paper label |
 |---|---|
-| Main Figure 4 | `fig:results_state_transition_composite` |
-| Main Figure 6 | `fig:results_horizon_certification` |
+| Main Figure 5 | `fig:results_state_transition_composite` |
+| Main Figure 7 | `fig:results_horizon_certification` |
 | Main Table 3 | `tab:numerical_settings` |
 | Figure S1 | `fig:repeated_timing` |
 | Figure S2 | `fig:lossless_factors` |
@@ -51,7 +66,7 @@ Sources: [External_Instances.csv](../data/External_Instances.csv), [External_Ass
 
 | Display | Stable paper label |
 |---|---|
-| Main Figure 7 | `fig:results_external_evidence` |
+| Main Figure 8 | `fig:results_external_evidence` |
 | Main Table 1 | `tab:related_work_comparison` |
 | Main Table 4 | `tab:results_evidence_scope_candidate` |
 | Table S16 | `tab:source_locators` |
@@ -65,13 +80,13 @@ Sources: [Temporal_Query_Classifications.csv](../data/Temporal_Query_Classificat
 
 | Display | Stable paper label |
 |---|---|
-| Main Figure 8 | `fig:discussion_temporal_queries` |
+| Main Figure 10 | `fig:discussion_temporal_queries` |
 | Figure S3 | `fig:si_temporal_response` |
 | Table S13 | `tab:si_temporal_domains` |
 | Table S14 | `tab:directions` |
 | Table S15 | `tab:si_temporal_values` |
 
-Figure 8 compares temporal query guarantees and directional objective values. Its data are distinct from Figure 9 selected dispatch requests.
+Figure 10 compares temporal query guarantees and directional objective values. Figure 9 concerns selected dispatch requests; its data are distinct.
 
 ## Three bus dispatch
 

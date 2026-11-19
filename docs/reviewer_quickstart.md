@@ -32,6 +32,6 @@ The report directory is new output. The supplied research records remain unchang
 
 ## Find a paper result
 
-The [figure and table index](figures_and_tables.md) groups displays by research question. Figure 8 concerns temporal queries and directional objectives. Figure 9 concerns selected economic and service requests. Supplementary Material (SM) Sections S10, S11 and S12 contain later horizon certification, three bus dispatch and network evidence, respectively.
+The [figure and table index](figures_and_tables.md) groups displays by research question. In the current manuscript, Figure 10 concerns temporal queries and directional objectives; Figure 9 concerns selected economic and service requests. For the archived figure numbering, use the stable-label crosswalk in the figure and table index. Supplementary Material (SM) Sections S10, S11 and S12 contain later horizon certification, three bus dispatch and network evidence, respectively.
 
 Use the [data guide](../DATA_GUIDE.md) for counts and units, the [field dictionary](data_dictionary.md) for columns and the [code guide](code_provenance.md) for implementation locations. The [model scope](study_scope_and_model_assumptions.md) explains the guarantees attached to each evidence type.
